@@ -89,11 +89,21 @@ const Calculator = () => {
         </div>
       </section>
 
-      {/* Calculator Section - Reorganized for mobile */}
+      {/* Calculator Section - Always show results first on mobile */}
       <section className="py-2 md:py-4 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className={`grid grid-cols-1 ${isMobile ? 'flex flex-col-reverse' : 'md:grid-cols-2'} gap-4 md:gap-8`}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+              {isMobile && (
+                <CalculatorResults
+                  resultMinutes={resultMinutes}
+                  wkg={wkg}
+                  weight={weight}
+                  power={power}
+                  formatTimeDisplay={formatTimeDisplay}
+                />
+              )}
+              
               <CalculatorInput 
                 weight={weight}
                 power={power}
@@ -103,13 +113,15 @@ const Calculator = () => {
                 getRandomValues={getRandomValues}
               />
               
-              <CalculatorResults
-                resultMinutes={resultMinutes}
-                wkg={wkg}
-                weight={weight}
-                power={power}
-                formatTimeDisplay={formatTimeDisplay}
-              />
+              {!isMobile && (
+                <CalculatorResults
+                  resultMinutes={resultMinutes}
+                  wkg={wkg}
+                  weight={weight}
+                  power={power}
+                  formatTimeDisplay={formatTimeDisplay}
+                />
+              )}
             </div>
 
             {/* Data Visualization Section */}
