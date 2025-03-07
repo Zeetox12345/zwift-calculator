@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Calculator as CalcIcon, Clock, Bike, Dices } from "lucide-react";
+import { Calculator as CalcIcon, Clock, Bike, Dices, Info } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
 import AnimatedButton from "@/components/AnimatedButton";
 import AnimatedCard from "@/components/AnimatedCard";
@@ -11,8 +11,7 @@ import { Input } from "@/components/ui/input";
 const Calculator = () => {
   const [weight, setWeight] = useState(75);
   const [power, setPower] = useState(250);
-  const [result, setResult] = useState<number | null>(null);
-  const [isCalculating, setIsCalculating] = useState(false);
+  const [resultMinutes, setResultMinutes] = useState<number | null>(null);
   const [wkg, setWkg] = useState(0);
   const { toast } = useToast();
 
@@ -21,41 +20,19 @@ const Calculator = () => {
   }, []);
 
   useEffect(() => {
-    // Calculate watts per kilogram
+    // Calculate watts per kilogram and result immediately
     if (weight > 0) {
-      setWkg(parseFloat((power / weight).toFixed(2)));
+      const newWkg = parseFloat((power / weight).toFixed(2));
+      setWkg(newWkg);
+      
+      // Using the exact regression function: Time (seconds) = 353.53 * (W/KG)^2 - 3194.97 * (W/KG) + 10143.05
+      const timeInSeconds = 353.53 * Math.pow(newWkg, 2) - 3194.97 * newWkg + 10143.05;
+      
+      // Convert to minutes and round to 1 decimal place
+      const timeInMinutes = parseFloat((timeInSeconds / 60).toFixed(1));
+      setResultMinutes(timeInMinutes);
     }
   }, [weight, power]);
-
-  const calculateTime = () => {
-    if (weight <= 0 || power <= 0) {
-      toast({
-        title: "Invalid input",
-        description: "Please enter valid weight and power values.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsCalculating(true);
-    
-    // Simulate calculation with a slight delay for effect
-    setTimeout(() => {
-      // Formula based on regression analysis of ZwiftPower data
-      // This is a simplified formula for demonstration
-      const wattsPerKg = power / weight;
-      const estimatedTimeMinutes = 60 / wattsPerKg + (Math.random() * 2 - 1);
-      const timeInMinutes = Math.max(30, Math.min(120, estimatedTimeMinutes));
-      setResult(parseFloat(timeInMinutes.toFixed(1)));
-      setIsCalculating(false);
-      
-      toast({
-        title: "Calculation complete!",
-        description: `Your estimated time is ${timeInMinutes.toFixed(1)} minutes.`,
-        variant: "default",
-      });
-    }, 800);
-  };
 
   const getRandomValues = () => {
     const randomWeight = Math.floor(Math.random() * (95 - 55)) + 55;
@@ -79,7 +56,7 @@ const Calculator = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       {/* Header Section */}
-      <section className="relative pt-24 md:pt-32 pb-12 md:pb-16 overflow-hidden">
+      <section className="relative pt-24 md:pt-28 pb-8 md:pb-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-zwift-blue/10 to-transparent -z-10"></div>
         
         <div className="container mx-auto px-4">
@@ -93,22 +70,22 @@ const Calculator = () => {
             
             <AnimatedText delay={300} className="mt-4">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                Calculate Your <span className="text-zwift-orange">Climb Time</span>
+                Calculate Your <span className="text-zwift-orange">Alpe du Zwift</span> Time
               </h1>
             </AnimatedText>
             
-            <AnimatedText delay={500} className="mt-6 max-w-2xl">
+            <AnimatedText delay={500} className="mt-4 max-w-2xl mb-4">
               <p className="text-lg text-muted-foreground">
-                Use our advanced calculator to estimate how long it will take you to conquer 
-                the 21 hairpins of Alpe du Zwift based on your weight and power.
+                Using a precise regression formula based on ZwiftPower data to predict 
+                your climb time for the iconic 21 hairpins of Alpe du Zwift.
               </p>
             </AnimatedText>
           </div>
         </div>
       </section>
 
-      {/* Calculator Section */}
-      <section className="py-8 md:py-12 relative flex-grow">
+      {/* Calculator Section - Moved to the top */}
+      <section className="py-0 md:py-4 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -182,18 +159,7 @@ const Calculator = () => {
                   </div>
                 </div>
 
-                <div className="mt-8 space-y-3">
-                  <AnimatedButton
-                    onClick={calculateTime}
-                    variant="primary"
-                    size="lg"
-                    icon={<CalcIcon size={20} />}
-                    className="w-full"
-                    disabled={isCalculating}
-                  >
-                    {isCalculating ? "Calculating..." : "Calculate Time"}
-                  </AnimatedButton>
-                  
+                <div className="mt-8">
                   <AnimatedButton
                     onClick={getRandomValues}
                     variant="outline"
@@ -218,24 +184,16 @@ const Calculator = () => {
                 </div>
 
                 <div className="flex-grow flex flex-col items-center justify-center py-8">
-                  {isCalculating ? (
-                    <div className="text-center">
-                      <div className="inline-block w-16 h-16 border-4 border-zwift-orange/30 border-t-zwift-orange rounded-full animate-spin mb-4"></div>
-                      <p className="text-lg font-medium">Calculating...</p>
-                      <p className="text-sm text-muted-foreground mt-2">
-                        Analyzing your data against our model...
-                      </p>
-                    </div>
-                  ) : result ? (
+                  {resultMinutes ? (
                     <div className="text-center animate-scale-up">
                       <p className="text-sm text-muted-foreground mb-2">
                         Estimated Time
                       </p>
                       <div className="text-5xl sm:text-6xl font-bold text-zwift-green mb-2">
-                        {formatTimeDisplay(result)}
+                        {formatTimeDisplay(resultMinutes)}
                       </div>
                       <p className="text-base text-muted-foreground mt-4 max-w-xs mx-auto">
-                        With {power}W at {weight}kg ({wkg} W/kg), you'll conquer the Alpe in approximately {formatTimeDisplay(result)}.
+                        With {power}W at {weight}kg ({wkg} W/kg), you'll conquer the Alpe in approximately {formatTimeDisplay(resultMinutes)}.
                       </p>
                     </div>
                   ) : (
@@ -243,10 +201,7 @@ const Calculator = () => {
                       <div className="w-24 h-24 rounded-full bg-muted/50 flex items-center justify-center mx-auto mb-4">
                         <Clock size={40} className="text-muted-foreground/50" />
                       </div>
-                      <p className="text-lg font-medium">No Results Yet</p>
-                      <p className="text-sm text-muted-foreground mt-2 max-w-xs mx-auto">
-                        Enter your weight and power, then click "Calculate Time" to see your estimated Alpe du Zwift climbing time.
-                      </p>
+                      <p className="text-lg font-medium">Calculating...</p>
                     </div>
                   )}
                 </div>
@@ -254,14 +209,63 @@ const Calculator = () => {
                 <div className="mt-4 p-4 bg-muted/30 rounded-lg text-sm">
                   <h3 className="font-medium mb-2">About This Calculation</h3>
                   <p className="text-muted-foreground text-sm">
-                    This calculation uses a model based on real-world data from ZwiftPower. 
-                    Actual times may vary based on drafting, equipment choice, and riding style.
+                    This calculation uses a regression model based on real-world data from ZwiftPower:
+                    <br />
+                    <span className="font-mono bg-muted px-2 py-1 rounded mt-2 inline-block">
+                      Time (seconds) = 353.53·(W/KG)² - 3194.97·(W/KG) + 10143.05
+                    </span>
                   </p>
                 </div>
               </AnimatedCard>
             </div>
 
             <AnimatedText delay={700} className="mt-12">
+              <div className="bg-gradient-to-br from-zwift-orange/10 to-zwift-blue/10 rounded-xl p-6 border border-white/10">
+                <h3 className="text-xl font-bold mb-3 flex items-center">
+                  <Info size={20} className="mr-2 text-zwift-orange" />
+                  About the Alpe du Zwift Calculation
+                </h3>
+                <p className="mb-4 text-sm">
+                  Our calculator uses a regression formula derived from thousands of Zwift rides:
+                  <span className="font-mono bg-white/20 dark:bg-black/20 px-3 py-1.5 rounded mt-2 mb-4 inline-block">
+                    Time (seconds) = 353.53·(W/KG)² - 3194.97·(W/KG) + 10143.05
+                  </span>
+                </p>
+                <p className="mb-4 text-sm">
+                  This formula provides an accurate estimate for most riders. The calculation accounts for the relationship between power-to-weight ratio and climbing speed, which follows a non-linear pattern due to factors like air resistance and gradient changes.
+                </p>
+                <p className="text-sm">
+                  <strong>Factors that may affect actual times:</strong>
+                </p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-2">
+                  <li className="flex items-start">
+                    <span className="text-zwift-orange mr-2">•</span>
+                    <span>Equipment choice and virtual weight</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-zwift-orange mr-2">•</span>
+                    <span>Drafting effects if riding in a group</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-zwift-orange mr-2">•</span>
+                    <span>Variable power output vs. steady power</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-zwift-orange mr-2">•</span>
+                    <span>PowerUps used during the climb</span>
+                  </li>
+                </ul>
+              </div>
+            </AnimatedText>
+          </div>
+        </div>
+      </section>
+
+      {/* Alpe du Zwift Facts Section */}
+      <section className="py-16 relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <AnimatedText delay={700} className="mt-4">
               <div className="bg-gradient-to-br from-zwift-orange/10 to-zwift-blue/10 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-bold mb-3">Alpe du Zwift Facts</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
@@ -288,6 +292,14 @@ const Calculator = () => {
                   <li className="flex items-start">
                     <span className="text-zwift-orange mr-2">•</span>
                     <span><strong>Inspired by:</strong> Alpe d'Huez</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-zwift-orange mr-2">•</span>
+                    <span><strong>Unlockable Item:</strong> Lightweight Meilensteins</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-zwift-orange mr-2">•</span>
+                    <span><strong>Badge:</strong> "Masochist" for 25 completions</span>
                   </li>
                 </ul>
               </div>

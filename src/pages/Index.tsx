@@ -21,7 +21,7 @@ const Index = () => {
       setTimeout(() => {
         toast({
           title: "Welcome to ZwiftCalculator.com!",
-          description: "Calculate your Alpe du Zwift time with our calculator.",
+          description: "Calculate your Zwift climbing times with our calculators.",
           variant: "default",
           duration: 5000,
         });
@@ -52,13 +52,13 @@ const Index = () => {
             
             <AnimatedText delay={300} className="mt-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                Calculate Your <span className="zwift-gradient-text">Alpe du Zwift</span> Time
+                Calculate Your <span className="zwift-gradient-text">Zwift</span> Times
               </h1>
             </AnimatedText>
             
             <AnimatedText delay={500} className="mt-6 max-w-2xl">
               <p className="text-lg md:text-xl text-muted-foreground">
-                Predict how fast you'll conquer the 21 hairpins of Alpe du Zwift
+                Predict how fast you'll conquer the iconic climbs and routes in Zwift
                 based on your weight and power. Fast, accurate, and built for Zwifters.
               </p>
             </AnimatedText>
@@ -91,14 +91,14 @@ const Index = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-radial from-zwift-orange/20 to-transparent rounded-3xl blur-2xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-                alt="Cyclist climbing a mountain"
+                src="/lovable-uploads/32504d7a-839e-48f6-8ba9-3540734cf037.png"
+                alt="Zwift virtual cycling screenshot"
                 className="w-full h-auto rounded-3xl shadow-xl border border-white/10 object-cover aspect-[16/9]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-3xl"></div>
               <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 text-white">
-                <h3 className="text-xl md:text-2xl font-bold">Alpe du Zwift</h3>
-                <p className="text-sm md:text-base text-white/80">21 hairpins, 1,036m elevation gain, 12.2km</p>
+                <h3 className="text-xl md:text-2xl font-bold">Iconic Zwift Routes</h3>
+                <p className="text-sm md:text-base text-white/80">Epic climbs, challenging sprints, and beautiful scenery</p>
               </div>
             </div>
           </AnimatedText>
@@ -115,7 +115,7 @@ const Index = () => {
               How <span className="zwift-gradient-text">ZwiftCalculator</span> Works
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Using real-world data from thousands of Zwift rides to predict your Alpe du Zwift climbing time with precision.
+              Using real-world data from thousands of Zwift rides to predict your climbing and route times with precision.
             </p>
           </AnimatedText>
 
@@ -127,7 +127,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Input Your Stats</h3>
                 <p className="text-muted-foreground">
-                  Enter your weight and the power you can sustain for a climb.
+                  Enter your weight and the power you can sustain for a climb or route.
                 </p>
               </div>
             </AnimatedCard>
@@ -139,7 +139,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Advanced Algorithm</h3>
                 <p className="text-muted-foreground">
-                  Our formula uses regression analysis on ZwiftPower data.
+                  Our formulas use regression analysis on ZwiftPower data for various segments.
                 </p>
               </div>
             </AnimatedCard>
@@ -151,7 +151,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Get Your Time</h3>
                 <p className="text-muted-foreground">
-                  Receive an accurate estimate of your Alpe du Zwift climb time.
+                  Receive accurate estimates for your Zwift segment completion times.
                 </p>
               </div>
             </AnimatedCard>
@@ -169,10 +169,10 @@ const Index = () => {
               <div className="flex flex-col justify-center">
                 <AnimatedText>
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Ready to predict your <span className="zwift-gradient-text">climbing time</span>?
+                    Ready to predict your <span className="zwift-gradient-text">Zwift times</span>?
                   </h2>
                   <p className="text-muted-foreground mb-8">
-                    Find out how long it will take you to conquer the Alpe du Zwift. Our calculator provides accurate estimates based on your stats.
+                    Find out how long it will take you to conquer the famous Zwift climbs and routes. Our calculators provide accurate estimates based on your stats.
                   </p>
                   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <AnimatedButton
@@ -191,8 +191,8 @@ const Index = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-radial from-zwift-orange/30 to-transparent rounded-xl blur-xl"></div>
                   <img
-                    src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                    alt="Cyclist on a trainer"
+                    src="/lovable-uploads/32504d7a-839e-48f6-8ba9-3540734cf037.png"
+                    alt="Zwift virtual cycling"
                     className="rounded-xl shadow-lg border border-white/10 max-h-80 object-cover"
                   />
                 </div>
@@ -210,7 +210,7 @@ const Index = () => {
               Trusted by <span className="zwift-gradient-text">Zwifters</span>
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Join thousands of cyclists who use our calculator to prepare for their virtual climbs.
+              Join thousands of cyclists who use our calculators to prepare for their virtual rides.
             </p>
           </AnimatedText>
 
@@ -218,7 +218,7 @@ const Index = () => {
             <AnimatedCard delay={200} className="flex flex-col items-center">
               <TrendingUp size={32} className="text-zwift-orange mb-4" />
               <div className="text-3xl font-bold">12,500+</div>
-              <div className="text-muted-foreground">Climbs Calculated</div>
+              <div className="text-muted-foreground">Rides Calculated</div>
             </AnimatedCard>
             
             <AnimatedCard delay={300} className="flex flex-col items-center">
@@ -235,8 +235,8 @@ const Index = () => {
             
             <AnimatedCard delay={500} className="flex flex-col items-center">
               <Zap size={32} className="text-zwift-orange mb-4" />
-              <div className="text-3xl font-bold">21</div>
-              <div className="text-muted-foreground">Epic Hairpins</div>
+              <div className="text-3xl font-bold">20+</div>
+              <div className="text-muted-foreground">Zwift Segments</div>
             </AnimatedCard>
           </div>
           
