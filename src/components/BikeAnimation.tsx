@@ -1,6 +1,7 @@
 
 import { Bike } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface BikeAnimationProps {
   delay?: number;
@@ -14,6 +15,7 @@ const BikeAnimation = ({
   color = "#f68b1f" 
 }: BikeAnimationProps) => {
   const [animate, setAnimate] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,9 +25,21 @@ const BikeAnimation = ({
     return () => clearTimeout(timer);
   }, [delay]);
 
+  // Adjust position based on mobile or desktop
+  const positionClass = isMobile 
+    ? "absolute -left-10 top-1/4" 
+    : "absolute -left-10 top-1/3";
+
   return (
-    <div className={`absolute -left-10 top-1/3 ${animate ? "animate-bike-ride" : ""}`} style={{ animationDelay: `${delay}ms` }}>
-      <Bike size={size} color={color} className="animate-float" />
+    <div 
+      className={`${positionClass} ${animate ? "animate-bike-ride" : ""}`} 
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      <Bike 
+        size={size} 
+        color={color} 
+        className="animate-float drop-shadow-lg" 
+      />
     </div>
   );
 };

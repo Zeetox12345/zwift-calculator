@@ -87,18 +87,18 @@ const Index = () => {
           </div>
 
           {/* Hero Image */}
-          <AnimatedText delay={900} className="mt-12 mx-auto max-w-4xl">
+          <AnimatedText delay={900} className="mt-12 mx-auto max-w-5xl">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-radial from-zwift-orange/20 to-transparent rounded-3xl blur-2xl"></div>
               <img
-                src="/lovable-uploads/32504d7a-839e-48f6-8ba9-3540734cf037.png"
-                alt="Zwift virtual cycling screenshot"
+                src="/lovable-uploads/d4903085-9006-4d56-9c7a-27c2978bea52.png"
+                alt="Zwift virtual cycling with neon bikes"
                 className="w-full h-auto rounded-3xl shadow-xl border border-white/10 object-cover aspect-[16/9]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-3xl"></div>
               <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 text-white">
-                <h3 className="text-xl md:text-2xl font-bold">Iconic Zwift Routes</h3>
-                <p className="text-sm md:text-base text-white/80">Epic climbs, challenging sprints, and beautiful scenery</p>
+                <h3 className="text-xl md:text-2xl font-bold">Race Through Watopia</h3>
+                <p className="text-sm md:text-base text-white/80">Epic climbs, challenging routes, and futuristic landscapes</p>
               </div>
             </div>
           </AnimatedText>
@@ -191,8 +191,8 @@ const Index = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-radial from-zwift-orange/30 to-transparent rounded-xl blur-xl"></div>
                   <img
-                    src="/lovable-uploads/32504d7a-839e-48f6-8ba9-3540734cf037.png"
-                    alt="Zwift virtual cycling"
+                    src="/lovable-uploads/9742c196-2bd2-472b-a58d-e9bb34062de4.png"
+                    alt="Zwift virtual cycling with bright neon effects"
                     className="rounded-xl shadow-lg border border-white/10 max-h-80 object-cover"
                   />
                 </div>

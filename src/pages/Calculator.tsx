@@ -56,43 +56,42 @@ const Calculator = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       {/* Header Section */}
-      <section className="relative pt-24 md:pt-28 pb-8 md:pb-10 overflow-hidden">
+      <section className="relative pt-16 md:pt-20 pb-4 md:pb-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-zwift-blue/10 to-transparent -z-10"></div>
         
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center text-center">
             <AnimatedText delay={100}>
-              <div className="inline-flex items-center space-x-2 bg-white/80 dark:bg-zwift-dark/80 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium text-zwift-blue shadow-sm border border-blue-100 dark:border-blue-900/20 mb-6">
+              <div className="inline-flex items-center space-x-2 bg-white/80 dark:bg-zwift-dark/80 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium text-zwift-blue shadow-sm border border-blue-100 dark:border-blue-900/20 mb-4">
                 <CalcIcon size={16} className="text-zwift-blue" />
                 <span>Alpe du Zwift Calculator</span>
               </div>
             </AnimatedText>
             
-            <AnimatedText delay={300} className="mt-4">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <AnimatedText delay={200} className="mt-2">
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
                 Calculate Your <span className="text-zwift-orange">Alpe du Zwift</span> Time
               </h1>
             </AnimatedText>
             
-            <AnimatedText delay={500} className="mt-4 max-w-2xl mb-4">
-              <p className="text-lg text-muted-foreground">
-                Using a precise regression formula based on ZwiftPower data to predict 
-                your climb time for the iconic 21 hairpins of Alpe du Zwift.
+            <AnimatedText delay={300} className="mt-2 max-w-2xl mb-2">
+              <p className="text-base text-muted-foreground">
+                Using real Zwift data to predict your climb time for the iconic 21 hairpins of Alpe du Zwift.
               </p>
             </AnimatedText>
           </div>
         </div>
       </section>
 
-      {/* Calculator Section - Moved to the top */}
-      <section className="py-0 md:py-4 relative">
+      {/* Calculator Section - At the top of the page */}
+      <section className="py-2 md:py-4 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-              <AnimatedCard delay={300} className="flex flex-col h-full">
-                <div className="mb-6">
-                  <h2 className="text-2xl font-bold mb-4 flex items-center">
-                    <Bike className="mr-2 text-zwift-orange" size={24} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+              <AnimatedCard delay={200} className="flex flex-col h-full">
+                <div className="mb-4">
+                  <h2 className="text-xl font-bold mb-2 flex items-center">
+                    <Bike className="mr-2 text-zwift-orange" size={22} />
                     Your Information
                   </h2>
                   <p className="text-muted-foreground text-sm">
@@ -100,9 +99,9 @@ const Calculator = () => {
                   </p>
                 </div>
 
-                <div className="space-y-6 flex-grow">
+                <div className="space-y-4 flex-grow">
                   <div>
-                    <div className="flex justify-between mb-2">
+                    <div className="flex justify-between mb-1">
                       <label className="text-sm font-medium">Weight (kg)</label>
                       <span className="text-sm font-medium">{weight} kg</span>
                     </div>
@@ -112,7 +111,7 @@ const Calculator = () => {
                       max={120}
                       step={1}
                       onValueChange={(value) => setWeight(value[0])}
-                      className="my-4"
+                      className="my-3"
                     />
                     <div className="mt-2">
                       <Input
@@ -127,7 +126,7 @@ const Calculator = () => {
                   </div>
 
                   <div>
-                    <div className="flex justify-between mb-2">
+                    <div className="flex justify-between mb-1">
                       <label className="text-sm font-medium">Power (watts)</label>
                       <span className="text-sm font-medium">{power} W</span>
                     </div>
@@ -137,7 +136,7 @@ const Calculator = () => {
                       max={500}
                       step={5}
                       onValueChange={(value) => setPower(value[0])}
-                      className="my-4"
+                      className="my-3"
                     />
                     <div className="mt-2">
                       <Input
@@ -151,7 +150,7 @@ const Calculator = () => {
                     </div>
                   </div>
 
-                  <div className="bg-muted/50 rounded-lg p-4">
+                  <div className="bg-muted/50 rounded-lg p-3">
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-medium">Power to Weight Ratio</span>
                       <span className="text-lg font-bold text-zwift-orange">{wkg} W/kg</span>
@@ -159,7 +158,7 @@ const Calculator = () => {
                   </div>
                 </div>
 
-                <div className="mt-8">
+                <div className="mt-4">
                   <AnimatedButton
                     onClick={getRandomValues}
                     variant="outline"
@@ -172,10 +171,10 @@ const Calculator = () => {
                 </div>
               </AnimatedCard>
 
-              <AnimatedCard delay={500} className="flex flex-col h-full">
-                <div className="mb-6">
-                  <h2 className="text-2xl font-bold mb-4 flex items-center">
-                    <Clock className="mr-2 text-zwift-orange" size={24} />
+              <AnimatedCard delay={300} className="flex flex-col h-full">
+                <div className="mb-4">
+                  <h2 className="text-xl font-bold mb-2 flex items-center">
+                    <Clock className="mr-2 text-zwift-orange" size={22} />
                     Your Results
                   </h2>
                   <p className="text-muted-foreground text-sm">
@@ -183,16 +182,16 @@ const Calculator = () => {
                   </p>
                 </div>
 
-                <div className="flex-grow flex flex-col items-center justify-center py-8">
+                <div className="flex-grow flex flex-col items-center justify-center py-6">
                   {resultMinutes ? (
                     <div className="text-center animate-scale-up">
-                      <p className="text-sm text-muted-foreground mb-2">
+                      <p className="text-sm text-muted-foreground mb-1">
                         Estimated Time
                       </p>
-                      <div className="text-5xl sm:text-6xl font-bold text-zwift-green mb-2">
+                      <div className="text-4xl sm:text-5xl font-bold text-zwift-green mb-2">
                         {formatTimeDisplay(resultMinutes)}
                       </div>
-                      <p className="text-base text-muted-foreground mt-4 max-w-xs mx-auto">
+                      <p className="text-sm text-muted-foreground mt-3 max-w-xs mx-auto">
                         With {power}W at {weight}kg ({wkg} W/kg), you'll conquer the Alpe in approximately {formatTimeDisplay(resultMinutes)}.
                       </p>
                     </div>
@@ -205,34 +204,20 @@ const Calculator = () => {
                     </div>
                   )}
                 </div>
-
-                <div className="mt-4 p-4 bg-muted/30 rounded-lg text-sm">
-                  <h3 className="font-medium mb-2">About This Calculation</h3>
-                  <p className="text-muted-foreground text-sm">
-                    This calculation uses a regression model based on real-world data from ZwiftPower:
-                    <br />
-                    <span className="font-mono bg-muted px-2 py-1 rounded mt-2 inline-block">
-                      Time (seconds) = 353.53·(W/KG)² - 3194.97·(W/KG) + 10143.05
-                    </span>
-                  </p>
-                </div>
               </AnimatedCard>
             </div>
 
-            <AnimatedText delay={700} className="mt-12">
+            <AnimatedText delay={400} className="mt-8">
               <div className="bg-gradient-to-br from-zwift-orange/10 to-zwift-blue/10 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-bold mb-3 flex items-center">
                   <Info size={20} className="mr-2 text-zwift-orange" />
                   About the Alpe du Zwift Calculation
                 </h3>
                 <p className="mb-4 text-sm">
-                  Our calculator uses a regression formula derived from thousands of Zwift rides:
-                  <span className="font-mono bg-white/20 dark:bg-black/20 px-3 py-1.5 rounded mt-2 mb-4 inline-block">
-                    Time (seconds) = 353.53·(W/KG)² - 3194.97·(W/KG) + 10143.05
-                  </span>
+                  Our calculator uses real ZwiftPower data to accurately predict your climbing time based on your power-to-weight ratio.
                 </p>
                 <p className="mb-4 text-sm">
-                  This formula provides an accurate estimate for most riders. The calculation accounts for the relationship between power-to-weight ratio and climbing speed, which follows a non-linear pattern due to factors like air resistance and gradient changes.
+                  This calculation provides an accurate estimate for most riders. The calculation accounts for the relationship between power-to-weight ratio and climbing speed, which follows a non-linear pattern due to factors like air resistance and gradient changes.
                 </p>
                 <p className="text-sm">
                   <strong>Factors that may affect actual times:</strong>
@@ -262,10 +247,10 @@ const Calculator = () => {
       </section>
 
       {/* Alpe du Zwift Facts Section */}
-      <section className="py-16 relative">
+      <section className="py-12 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <AnimatedText delay={700} className="mt-4">
+            <AnimatedText delay={500} className="mt-4">
               <div className="bg-gradient-to-br from-zwift-orange/10 to-zwift-blue/10 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-bold mb-3">Alpe du Zwift Facts</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
@@ -309,13 +294,13 @@ const Calculator = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-t from-zwift-dark/10 to-transparent">
+      <section className="py-12 bg-gradient-to-t from-zwift-dark/10 to-transparent">
         <div className="container mx-auto px-4">
           <AnimatedText className="text-center max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold mb-4">
               Ready to Take on the Challenge?
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground mb-6">
               Now that you know your estimated time, hop on Zwift and conquer the Alpe!
             </p>
             <AnimatedButton
