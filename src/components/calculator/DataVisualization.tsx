@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Info, FileChart } from "lucide-react";
+import { Info, LineChart } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
 
 const DataVisualization: React.FC = () => {
@@ -8,7 +8,7 @@ const DataVisualization: React.FC = () => {
     <AnimatedText delay={400} className="mt-8">
       <div className="bg-gradient-to-br from-zwift-orange/10 to-zwift-blue/10 rounded-xl p-6 border border-white/10">
         <h3 className="text-xl font-bold mb-3 flex items-center">
-          <FileChart size={20} className="mr-2 text-zwift-orange" />
+          <LineChart size={20} className="mr-2 text-zwift-orange" />
           Data Behind the Calculator
         </h3>
         <p className="mb-4 text-sm">
