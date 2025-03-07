@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Bike, Calculator, Timer, TrendingUp, Trophy, Zap } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
@@ -65,7 +64,7 @@ const Index = () => {
             
             <AnimatedText delay={700} className="mt-10 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
               <AnimatedButton
-                to="/calculator"
+                to="/alpeduzwiftcalculator"
                 variant="primary"
                 size="lg"
                 icon={<Calculator size={20} />}
@@ -176,7 +175,7 @@ const Index = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <AnimatedButton
-                      to="/calculator"
+                      to="/alpeduzwiftcalculator"
                       variant="primary"
                       size="lg"
                       icon={<Calculator size={20} />}
@@ -242,7 +241,7 @@ const Index = () => {
           
           <AnimatedText delay={600} className="mt-20 text-center">
             <AnimatedButton
-              to="/calculator"
+              to="/alpeduzwiftcalculator"
               variant="primary"
               size="lg"
               icon={<Calculator size={20} />}

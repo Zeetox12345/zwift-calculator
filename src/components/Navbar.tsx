@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Bike, Calculator, Menu, X } from "lucide-react";
@@ -30,7 +29,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Calculator", path: "/calculator" },
+    { name: "Calculator", path: "/alpeduzwiftcalculator" },
   ];
 
   return (
@@ -68,7 +67,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link
-            to="/calculator"
+            to="/alpeduzwiftcalculator"
             className="flex items-center space-x-2 px-4 py-2 rounded-full bg-zwift-orange text-white hover:bg-zwift-orange/90 transition-all shadow-neon-orange hover-scale"
           >
             <Calculator size={18} />
@@ -105,7 +104,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
-              to="/calculator"
+              to="/alpeduzwiftcalculator"
               className="flex items-center justify-center space-x-2 py-3 rounded-full bg-zwift-orange text-white hover:bg-zwift-orange/90 transition-all shadow-neon-orange"
               onClick={() => setMobileMenuOpen(false)}
             >

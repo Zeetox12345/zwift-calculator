@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Bike, Heart } from "lucide-react";
 
@@ -39,7 +38,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    to="/calculator"
+                    to="/alpeduzwiftcalculator"
                     className="text-muted-foreground hover:text-zwift-orange transition-colors"
                   >
                     Alpe du Zwift Calculator
