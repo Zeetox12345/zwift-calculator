@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-sm">
+          <div className="grid grid-cols-1 gap-x-12 gap-y-4 text-sm">
             <div>
               <h3 className="font-semibold mb-3 text-foreground">Links</h3>
               <ul className="space-y-2">
@@ -44,31 +44,6 @@ const Footer = () => {
                   >
                     Alpe du Zwift Calculator
                   </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-3 text-foreground">Follow Us</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-zwift-orange transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-zwift-orange transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Instagram
-                  </a>
                 </li>
               </ul>
             </div>

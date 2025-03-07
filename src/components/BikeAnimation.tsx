@@ -27,12 +27,12 @@ const BikeAnimation = ({
 
   // Adjust position based on mobile or desktop
   const positionClass = isMobile 
-    ? "absolute -left-10 top-1/4" 
+    ? "absolute -left-10 top-1/2 transform -translate-y-1/2" 
     : "absolute -left-10 top-1/3";
 
   return (
     <div 
-      className={`${positionClass} ${animate ? "animate-bike-ride" : ""}`} 
+      className={`${positionClass} ${animate ? "animate-bike-ride" : "opacity-0"} z-10`} 
       style={{ animationDelay: `${delay}ms` }}
     >
       <Bike 
