@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Info } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
@@ -38,6 +37,41 @@ const CalculatorInfo: React.FC = () => {
             <span>PowerUps used during the climb</span>
           </li>
         </ul>
+
+        <div className="mt-4 pt-4 border-t border-white/10">
+          <p className="text-sm">
+            <strong>Realistic Power-to-Weight Ratios:</strong>
+          </p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-2">
+            <li className="flex items-start">
+              <span className="text-zwift-orange mr-2">•</span>
+              <span><strong>Beginner/Casual:</strong> 1.5-2.5 W/kg</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-zwift-orange mr-2">•</span>
+              <span><strong>Intermediate:</strong> 2.5-3.5 W/kg</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-zwift-orange mr-2">•</span>
+              <span><strong>Advanced:</strong> 3.5-4.5 W/kg</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-zwift-orange mr-2">•</span>
+              <span><strong>Elite/Cat 1:</strong> 4.5-5.5 W/kg</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-zwift-orange mr-2">•</span>
+              <span><strong>Professional:</strong> 5.5-6.8 W/kg</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-zwift-orange mr-2">•</span>
+              <span><strong>World Tour/Record:</strong> 6.8-7.5 W/kg</span>
+            </li>
+          </ul>
+          <p className="text-xs mt-3 text-muted-foreground">
+            Values above 7.5 W/kg for a sustained climb like Alpe du Zwift exceed human physiological limits and have never been achieved in verified competition.
+          </p>
+        </div>
       </div>
     </AnimatedText>
   );

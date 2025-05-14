@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Clock } from "lucide-react";
+import { Clock, AlertTriangle } from "lucide-react";
 import AnimatedCard from "@/components/AnimatedCard";
 
 interface CalculatorResultsProps {
@@ -9,6 +8,7 @@ interface CalculatorResultsProps {
   weight: number;
   power: number;
   formatTimeDisplay: (minutes: number) => string;
+  isWorldRecord: boolean;
 }
 
 const CalculatorResults: React.FC<CalculatorResultsProps> = ({
@@ -17,6 +17,7 @@ const CalculatorResults: React.FC<CalculatorResultsProps> = ({
   weight,
   power,
   formatTimeDisplay,
+  isWorldRecord,
 }) => {
   return (
     <AnimatedCard delay={300} className="flex flex-col h-full">
@@ -31,7 +32,19 @@ const CalculatorResults: React.FC<CalculatorResultsProps> = ({
       </div>
 
       <div className="flex-grow flex flex-col items-center justify-center py-6">
-        {resultMinutes ? (
+        {isWorldRecord ? (
+          <div className="text-center animate-scale-up">
+            <div className="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
+              <AlertTriangle size={32} className="text-amber-600" />
+            </div>
+            <div className="text-3xl sm:text-4xl font-bold text-amber-600 mb-2">
+              World Record Territory!
+            </div>
+            <p className="text-sm text-muted-foreground mt-3 max-w-sm mx-auto">
+              {power}W at {weight}kg ({wkg.toFixed(2)} W/kg) has never been achieved on Alpe du Zwift. This power-to-weight ratio exceeds human capabilities for a sustained climb.
+            </p>
+          </div>
+        ) : resultMinutes ? (
           <div className="text-center animate-scale-up">
             <p className="text-sm text-muted-foreground mb-1">
               Estimated Time

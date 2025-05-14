@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Bike, Dices } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
@@ -69,7 +68,7 @@ const CalculatorInput: React.FC<CalculatorInputProps> = ({
           <Slider
             value={[power]}
             min={100}
-            max={500}
+            max={800}
             step={5}
             onValueChange={(value) => setPower(value[0])}
             className="my-3"
@@ -80,7 +79,7 @@ const CalculatorInput: React.FC<CalculatorInputProps> = ({
               value={power}
               onChange={(e) => setPower(Number(e.target.value))}
               min={100}
-              max={500}
+              max={800}
               className="w-full"
             />
           </div>

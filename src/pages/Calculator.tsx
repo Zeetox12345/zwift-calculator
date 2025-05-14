@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Calculator as CalcIcon } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
@@ -18,6 +17,7 @@ const Calculator = () => {
   const [power, setPower] = useState(250);
   const [resultMinutes, setResultMinutes] = useState<number | null>(null);
   const [wkg, setWkg] = useState(0);
+  const [isWorldRecord, setIsWorldRecord] = useState(false);
   const { toast } = useToast();
   const isMobile = useIsMobile();
 
@@ -31,12 +31,19 @@ const Calculator = () => {
       const newWkg = parseFloat((power / weight).toFixed(2));
       setWkg(newWkg);
       
-      // Updated calculation formula: Time (seconds) = 148.60 * (W/KG)^2 - 1954.08 * (W/KG) + 8329.87
-      const timeInSeconds = 148.60 * Math.pow(newWkg, 2) - 1954.08 * newWkg + 8329.87;
-      
-      // Convert to minutes and round to 1 decimal place
-      const timeInMinutes = parseFloat((timeInSeconds / 60).toFixed(1));
-      setResultMinutes(timeInMinutes);
+      // Check if W/kg is over 7.5, which has never been done before
+      if (newWkg > 7.5) {
+        setIsWorldRecord(true);
+        setResultMinutes(null); // We won't calculate a time for this
+      } else {
+        setIsWorldRecord(false);
+        // Updated calculation formula: Time (seconds) = 148.60 * (W/KG)^2 - 1954.08 * (W/KG) + 8329.87
+        const timeInSeconds = 148.60 * Math.pow(newWkg, 2) - 1954.08 * newWkg + 8329.87;
+        
+        // Convert to minutes and round to 1 decimal place
+        const timeInMinutes = parseFloat((timeInSeconds / 60).toFixed(1));
+        setResultMinutes(timeInMinutes);
+      }
     }
   }, [weight, power]);
 
@@ -101,6 +108,7 @@ const Calculator = () => {
                   weight={weight}
                   power={power}
                   formatTimeDisplay={formatTimeDisplay}
+                  isWorldRecord={isWorldRecord}
                 />
               )}
               
@@ -120,6 +128,7 @@ const Calculator = () => {
                   weight={weight}
                   power={power}
                   formatTimeDisplay={formatTimeDisplay}
+                  isWorldRecord={isWorldRecord}
                 />
               )}
             </div>

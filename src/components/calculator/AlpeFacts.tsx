@@ -37,6 +37,10 @@ const AlpeFacts: React.FC = () => {
           </li>
           <li className="flex items-start">
             <span className="text-zwift-orange mr-2">•</span>
+            <span><strong>Pro W/kg:</strong> 5.5-6.8 W/kg sustainable</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-zwift-orange mr-2">•</span>
             <span><strong>Badge:</strong> "Masochist" for 25 completions</span>
           </li>
         </ul>
