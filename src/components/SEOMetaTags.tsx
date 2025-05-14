@@ -24,9 +24,9 @@ const routeMetadata: Record<string, MetaTagsProps> = {
     canonicalUrl: `${BASE_URL}/`
   },
   "/alpeduzwiftcalculator": {
-    title: "Alpe du Zwift Time Calculator | Predict Your Climbing Time Accurately",
+    title: "Alpe du Zwift Calculator | Predict Your Climbing TIme",
     description: "Predict your Alpe du Zwift climbing time with our accurate calculator. Enter your weight and power to get precise estimates based on real Zwift rider data. Beat your PR!",
-    ogTitle: "Alpe du Zwift Time Calculator | Predict Your Climbing Time Accurately",
+    ogTitle: "Alpe du Zwift Calculator | Predict Your Climbing TIme",
     ogDescription: "Predict your Alpe du Zwift climbing time with our accurate calculator. Enter your weight and power to get precise estimates based on real Zwift rider data. Beat your PR!",
     keywords: "Alpe du Zwift, Zwift climbing calculator, Zwift time predictor, Alpe du Zwift time, Zwift w/kg calculator, cycling power calculator, virtual climbing",
     canonicalUrl: `${BASE_URL}/alpeduzwiftcalculator`
