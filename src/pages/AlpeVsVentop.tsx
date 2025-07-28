@@ -327,38 +327,76 @@ const AlpeVsVentop = () => {
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <div className="overflow-x-auto">
-                          <div className="min-w-full space-y-3">
-                            <div className="grid grid-cols-5 gap-4 pb-3 border-b-2 border-border font-semibold text-sm">
-                              <div>Aspect</div>
-                              <div className="text-center text-zwift-orange">Alpe du Zwift</div>
-                              <div className="text-center text-zwift-blue">Ven-Top</div>
-                              <div className="text-center">Advantage</div>
-                              <div className="text-center hidden lg:block">Notes</div>
-                            </div>
-                            {routeComparison.map((item, index) => (
-                              <div key={index} className="grid grid-cols-5 gap-4 py-3 border-b border-border/30 last:border-b-0 hover:bg-muted/30 transition-colors rounded-lg">
-                                <div className="font-medium text-sm">{item.aspect}</div>
-                                <div className={`text-center text-sm p-2 rounded ${item.winner === 'alpe' ? 'bg-zwift-orange/10 text-zwift-orange font-medium border border-zwift-orange/20' : 'text-muted-foreground'}`}>
-                                  {item.alpe}
-                                </div>
-                                <div className={`text-center text-sm p-2 rounded ${item.winner === 'ventop' ? 'bg-zwift-blue/10 text-zwift-blue font-medium border border-zwift-blue/20' : 'text-muted-foreground'}`}>
-                                  {item.ventop}
-                                </div>
-                                <div className="text-center">
-                                  {item.winner === 'tie' ? (
-                                    <span className="text-lg">🤝</span>
-                                  ) : item.winner === 'alpe' ? (
-                                    <span className="text-zwift-orange text-lg font-bold">🟠</span>
-                                  ) : (
-                                    <span className="text-zwift-blue text-lg font-bold">🔵</span>
-                                  )}
-                                </div>
-                                <div className="text-xs text-muted-foreground hidden lg:block">{item.description}</div>
+                        {/* Desktop/Tablet View */}
+                        <div className="hidden md:block">
+                          <div className="overflow-x-auto">
+                            <div className="min-w-full space-y-3">
+                              <div className="grid grid-cols-5 gap-4 pb-3 border-b-2 border-border font-semibold text-sm">
+                                <div>Aspect</div>
+                                <div className="text-center text-zwift-orange">Alpe du Zwift</div>
+                                <div className="text-center text-zwift-blue">Ven-Top</div>
+                                <div className="text-center">Advantage</div>
+                                <div className="text-center">Notes</div>
                               </div>
-                            ))}
+                              {routeComparison.map((item, index) => (
+                                <div key={index} className="grid grid-cols-5 gap-4 py-3 border-b border-border/30 last:border-b-0 hover:bg-muted/30 transition-colors rounded-lg">
+                                  <div className="font-medium text-sm">{item.aspect}</div>
+                                  <div className={`text-center text-sm p-2 rounded ${item.winner === 'alpe' ? 'bg-zwift-orange/10 text-zwift-orange font-medium border border-zwift-orange/20' : 'text-muted-foreground'}`}>
+                                    {item.alpe}
+                                  </div>
+                                  <div className={`text-center text-sm p-2 rounded ${item.winner === 'ventop' ? 'bg-zwift-blue/10 text-zwift-blue font-medium border border-zwift-blue/20' : 'text-muted-foreground'}`}>
+                                    {item.ventop}
+                                  </div>
+                                  <div className="text-center">
+                                    {item.winner === 'tie' ? (
+                                      <span className="text-lg">🤝</span>
+                                    ) : item.winner === 'alpe' ? (
+                                      <span className="text-zwift-orange text-lg font-bold">🟠</span>
+                                    ) : (
+                                      <span className="text-zwift-blue text-lg font-bold">🔵</span>
+                                    )}
+                                  </div>
+                                  <div className="text-xs text-muted-foreground">{item.description}</div>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
+
+                        {/* Mobile View - Card Layout */}
+                        <div className="md:hidden space-y-4">
+                          {routeComparison.map((item, index) => (
+                            <div key={index} className="border border-border/50 rounded-lg p-4 space-y-3">
+                              <div className="flex items-center justify-between">
+                                <h4 className="font-semibold text-base">{item.aspect}</h4>
+                                <div className="text-xl">
+                                  {item.winner === 'tie' ? '🤝' : item.winner === 'alpe' ? '🟠' : '🔵'}
+                                </div>
+                              </div>
+                              
+                              <div className="space-y-3">
+                                <div className={`p-3 rounded-lg ${item.winner === 'alpe' ? 'bg-zwift-orange/10 border border-zwift-orange/20' : 'bg-muted/30'}`}>
+                                  <div className="text-xs font-medium text-zwift-orange mb-1">ALPE DU ZWIFT</div>
+                                  <div className={`text-sm ${item.winner === 'alpe' ? 'text-zwift-orange font-medium' : 'text-muted-foreground'}`}>
+                                    {item.alpe}
+                                  </div>
+                                </div>
+                                
+                                <div className={`p-3 rounded-lg ${item.winner === 'ventop' ? 'bg-zwift-blue/10 border border-zwift-blue/20' : 'bg-muted/30'}`}>
+                                  <div className="text-xs font-medium text-zwift-blue mb-1">VEN-TOP</div>
+                                  <div className={`text-sm ${item.winner === 'ventop' ? 'text-zwift-blue font-medium' : 'text-muted-foreground'}`}>
+                                    {item.ventop}
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div className="text-xs text-muted-foreground pt-2 border-t border-border/30">
+                                {item.description}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
                         <div className="mt-6 text-center">
                           <p className="text-sm text-muted-foreground">
                             🟠 = Alpe du Zwift advantage • 🔵 = Ven-Top advantage • 🤝 = Both routes excel
@@ -800,46 +838,46 @@ const AlpeVsVentop = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="p-6 bg-zwift-orange/10 rounded-xl border border-zwift-orange/20">
-                        <h4 className="text-xl font-bold text-zwift-orange mb-4">Choose Alpe du Zwift If You Want:</h4>
-                        <ul className="space-y-2 text-left">
-                          <li className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-zwift-orange rounded-full"></span>
-                            <span>Structured, time-efficient workouts (30-90 min)</span>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      <div className="p-4 sm:p-6 bg-zwift-orange/10 rounded-xl border border-zwift-orange/20">
+                        <h4 className="text-lg sm:text-xl font-bold text-zwift-orange mb-4">Choose Alpe du Zwift If You Want:</h4>
+                        <ul className="space-y-3 text-left">
+                          <li className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-zwift-orange rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-sm sm:text-base">Structured, time-efficient workouts (30-90 min)</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-zwift-orange rounded-full"></span>
-                            <span>FTP testing and threshold power development</span>
+                          <li className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-zwift-orange rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-sm sm:text-base">FTP testing and threshold power development</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-zwift-orange rounded-full"></span>
-                            <span>Predictable, repeatable training sessions</span>
+                          <li className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-zwift-orange rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-sm sm:text-base">Predictable, repeatable training sessions</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-zwift-orange rounded-full"></span>
-                            <span>Mental challenge with clear progress markers</span>
+                          <li className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-zwift-orange rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-sm sm:text-base">Mental challenge with clear progress markers</span>
                           </li>
                         </ul>
                       </div>
-                      <div className="p-6 bg-zwift-blue/10 rounded-xl border border-zwift-blue/20">
-                        <h4 className="text-xl font-bold text-zwift-blue mb-4">Choose Ven-Top If You Want:</h4>
-                        <ul className="space-y-2 text-left">
-                          <li className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-zwift-blue rounded-full"></span>
-                            <span>Endurance base building (42-150+ min)</span>
+                      <div className="p-4 sm:p-6 bg-zwift-blue/10 rounded-xl border border-zwift-blue/20">
+                        <h4 className="text-lg sm:text-xl font-bold text-zwift-blue mb-4">Choose Ven-Top If You Want:</h4>
+                        <ul className="space-y-3 text-left">
+                          <li className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-zwift-blue rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-sm sm:text-base">Endurance base building (42-150+ min)</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-zwift-blue rounded-full"></span>
-                            <span>Aerobic capacity and steady-state power</span>
+                          <li className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-zwift-blue rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-sm sm:text-base">Aerobic capacity and steady-state power</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-zwift-blue rounded-full"></span>
-                            <span>Variable, dynamic climbing experience</span>
+                          <li className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-zwift-blue rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-sm sm:text-base">Variable, dynamic climbing experience</span>
                           </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-zwift-blue rounded-full"></span>
-                            <span>Long-distance event preparation</span>
+                          <li className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-zwift-blue rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="text-sm sm:text-base">Long-distance event preparation</span>
                           </li>
                         </ul>
                       </div>
@@ -928,46 +966,46 @@ const AlpeVsVentop = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       <div className="space-y-4">
                         <h4 className="font-semibold text-zwift-orange text-lg">Alpe du Zwift Times</h4>
                         <div className="space-y-3">
-                          <div className="flex justify-between items-center p-3 bg-zwift-orange/5 rounded-lg">
-                            <span className="font-medium">Recreational (2.5 W/kg):</span>
-                            <span className="text-zwift-orange font-bold">75-90 minutes</span>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-zwift-orange/5 rounded-lg gap-1 sm:gap-0">
+                            <span className="font-medium text-sm">Recreational (2.5 W/kg):</span>
+                            <span className="text-zwift-orange font-bold text-sm">75-90 minutes</span>
                           </div>
-                          <div className="flex justify-between items-center p-3 bg-zwift-orange/5 rounded-lg">
-                            <span className="font-medium">Enthusiast (3.5 W/kg):</span>
-                            <span className="text-zwift-orange font-bold">55-65 minutes</span>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-zwift-orange/5 rounded-lg gap-1 sm:gap-0">
+                            <span className="font-medium text-sm">Enthusiast (3.5 W/kg):</span>
+                            <span className="text-zwift-orange font-bold text-sm">55-65 minutes</span>
                           </div>
-                          <div className="flex justify-between items-center p-3 bg-zwift-orange/5 rounded-lg">
-                            <span className="font-medium">Competitive (4.5 W/kg):</span>
-                            <span className="text-zwift-orange font-bold">45-50 minutes</span>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-zwift-orange/5 rounded-lg gap-1 sm:gap-0">
+                            <span className="font-medium text-sm">Competitive (4.5 W/kg):</span>
+                            <span className="text-zwift-orange font-bold text-sm">45-50 minutes</span>
                           </div>
-                          <div className="flex justify-between items-center p-3 bg-zwift-orange/5 rounded-lg">
-                            <span className="font-medium">Elite (6.0 W/kg):</span>
-                            <span className="text-zwift-orange font-bold">35-40 minutes</span>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-zwift-orange/5 rounded-lg gap-1 sm:gap-0">
+                            <span className="font-medium text-sm">Elite (6.0 W/kg):</span>
+                            <span className="text-zwift-orange font-bold text-sm">35-40 minutes</span>
                           </div>
                         </div>
                       </div>
                       <div className="space-y-4">
                         <h4 className="font-semibold text-zwift-blue text-lg">Ven-Top Times</h4>
                         <div className="space-y-3">
-                          <div className="flex justify-between items-center p-3 bg-zwift-blue/5 rounded-lg">
-                            <span className="font-medium">Recreational (2.5 W/kg):</span>
-                            <span className="text-zwift-blue font-bold">100-120 minutes</span>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-zwift-blue/5 rounded-lg gap-1 sm:gap-0">
+                            <span className="font-medium text-sm">Recreational (2.5 W/kg):</span>
+                            <span className="text-zwift-blue font-bold text-sm">100-120 minutes</span>
                           </div>
-                          <div className="flex justify-between items-center p-3 bg-zwift-blue/5 rounded-lg">
-                            <span className="font-medium">Enthusiast (3.5 W/kg):</span>
-                            <span className="text-zwift-blue font-bold">75-85 minutes</span>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-zwift-blue/5 rounded-lg gap-1 sm:gap-0">
+                            <span className="font-medium text-sm">Enthusiast (3.5 W/kg):</span>
+                            <span className="text-zwift-blue font-bold text-sm">75-85 minutes</span>
                           </div>
-                          <div className="flex justify-between items-center p-3 bg-zwift-blue/5 rounded-lg">
-                            <span className="font-medium">Competitive (4.5 W/kg):</span>
-                            <span className="text-zwift-blue font-bold">60-65 minutes</span>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-zwift-blue/5 rounded-lg gap-1 sm:gap-0">
+                            <span className="font-medium text-sm">Competitive (4.5 W/kg):</span>
+                            <span className="text-zwift-blue font-bold text-sm">60-65 minutes</span>
                           </div>
-                          <div className="flex justify-between items-center p-3 bg-zwift-blue/5 rounded-lg">
-                            <span className="font-medium">Elite (6.0 W/kg):</span>
-                            <span className="text-zwift-blue font-bold">45-50 minutes</span>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-zwift-blue/5 rounded-lg gap-1 sm:gap-0">
+                            <span className="font-medium text-sm">Elite (6.0 W/kg):</span>
+                            <span className="text-zwift-blue font-bold text-sm">45-50 minutes</span>
                           </div>
                         </div>
                       </div>
