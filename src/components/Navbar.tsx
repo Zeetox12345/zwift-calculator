@@ -29,7 +29,8 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Calculator", path: "/alpeduzwiftcalculator" },
+    { name: "Alpe du Zwift", path: "/alpeduzwiftcalculator" },
+    { name: "Ven Top Calculator", path: "/ventop-calculator" },
   ];
 
   return (

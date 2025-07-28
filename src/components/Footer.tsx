@@ -44,6 +44,14 @@ const Footer = () => {
                     Alpe du Zwift Calculator
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/ventop-calculator"
+                    className="text-muted-foreground hover:text-zwift-orange transition-colors"
+                  >
+                    Ven Top Zwift Time Calculator
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

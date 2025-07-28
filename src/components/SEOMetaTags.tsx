@@ -30,6 +30,14 @@ const routeMetadata: Record<string, MetaTagsProps> = {
     ogDescription: "Predict your Alpe du Zwift climbing time with our accurate calculator. Enter your weight and power to get precise estimates based on real Zwift rider data. Beat your PR!",
     keywords: "Alpe du Zwift, Zwift climbing calculator, Zwift time predictor, Alpe du Zwift time, Zwift w/kg calculator, cycling power calculator, virtual climbing",
     canonicalUrl: `${BASE_URL}/alpeduzwiftcalculator`
+  },
+  "/ventop-calculator": {
+    title: "Ven Top Zwift Time Calculator | Predict Your Climbing Time Accurately",
+    description: "Use our Ven top Zwift time calculator to predict your completion time. Enter your weight and power for precise estimates based on real Zwift performance data. Plan your climb today!",
+    ogTitle: "Ven Top Zwift Time Calculator | Predict Your Climbing Time Accurately",
+    ogDescription: "Use our Ven top Zwift time calculator to predict your completion time. Enter your weight and power for precise estimates based on real Zwift performance data. Plan your climb today!",
+    keywords: "Ven top Zwift time calculator, Ven Top calculator, Zwift Ven Top time, Ven Top climbing calculator, Zwift time predictor, Ven Top route calculator, Zwift w/kg calculator, Watopia climbing time",
+    canonicalUrl: `${BASE_URL}/ventop-calculator`
   }
 };
 

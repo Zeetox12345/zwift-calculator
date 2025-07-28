@@ -69,7 +69,16 @@ const Index = () => {
                 size="lg"
                 icon={<Calculator size={20} />}
               >
-                Try The Calculator
+                Alpe du Zwift
+              </AnimatedButton>
+              
+              <AnimatedButton
+                to="/ventop-calculator"
+                variant="primary"
+                size="lg"
+                icon={<Calculator size={20} />}
+              >
+                Ven Top
               </AnimatedButton>
               
               <AnimatedButton
@@ -180,7 +189,15 @@ const Index = () => {
                       size="lg"
                       icon={<Calculator size={20} />}
                     >
-                      Try It Now
+                      Alpe du Zwift
+                    </AnimatedButton>
+                    <AnimatedButton
+                      to="/ventop-calculator"
+                      variant="outline"
+                      size="lg"
+                      icon={<Calculator size={20} />}
+                    >
+                      Ven Top
                     </AnimatedButton>
                   </div>
                 </AnimatedText>
@@ -240,15 +257,24 @@ const Index = () => {
           </div>
           
           <AnimatedText delay={600} className="mt-20 text-center">
-            <AnimatedButton
-              to="/alpeduzwiftcalculator"
-              variant="primary"
-              size="lg"
-              icon={<Calculator size={20} />}
-              className="mx-auto"
-            >
-              Calculate Your Time Now
-            </AnimatedButton>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <AnimatedButton
+                to="/alpeduzwiftcalculator"
+                variant="primary"
+                size="lg"
+                icon={<Calculator size={20} />}
+              >
+                Alpe du Zwift Calculator
+              </AnimatedButton>
+              <AnimatedButton
+                to="/ventop-calculator"
+                variant="outline"
+                size="lg"
+                icon={<Calculator size={20} />}
+              >
+                Ven Top Zwift Time Calculator
+              </AnimatedButton>
+            </div>
           </AnimatedText>
         </div>
       </section>
