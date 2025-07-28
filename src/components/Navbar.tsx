@@ -31,6 +31,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Alpe du Zwift", path: "/alpeduzwiftcalculator" },
     { name: "Ven Top Calculator", path: "/ventop-calculator" },
+    { name: "Alpe vs Ven-Top", path: "/alpe-vs-ventop" },
   ];
 
   return (

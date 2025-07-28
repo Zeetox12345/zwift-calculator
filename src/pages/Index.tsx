@@ -200,6 +200,17 @@ const Index = () => {
                       Ven Top
                     </AnimatedButton>
                   </div>
+                  <div className="mt-6">
+                    <AnimatedButton
+                      to="/alpe-vs-ventop"
+                      variant="secondary"
+                      size="lg"
+                      icon={<TrendingUp size={20} />}
+                      className="w-full sm:w-auto bg-gradient-to-r from-zwift-orange/20 to-zwift-blue/20 border-gradient"
+                    >
+                      Compare Alpe vs Ven-Top
+                    </AnimatedButton>
+                  </div>
                 </AnimatedText>
               </div>
               

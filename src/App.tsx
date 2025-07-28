@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Index from "./pages/Index";
 import Calculator from "./pages/Calculator";
 import VentopCalculator from "./pages/VentopCalculator";
+import AlpeVsVentop from "./pages/AlpeVsVentop";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -55,6 +56,7 @@ const App = () => {
                 <Route path="/" element={<Index />} />
                 <Route path="/alpeduzwiftcalculator" element={<Calculator />} />
                 <Route path="/ventop-calculator" element={<VentopCalculator />} />
+                <Route path="/alpe-vs-ventop" element={<AlpeVsVentop />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

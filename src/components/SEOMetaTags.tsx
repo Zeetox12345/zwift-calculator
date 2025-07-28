@@ -38,6 +38,14 @@ const routeMetadata: Record<string, MetaTagsProps> = {
     ogDescription: "Use our Ven top Zwift time calculator to predict your completion time. Enter your weight and power for precise estimates based on real Zwift performance data. Plan your climb today!",
     keywords: "Ven top Zwift time calculator, Ven Top calculator, Zwift Ven Top time, Ven Top climbing calculator, Zwift time predictor, Ven Top route calculator, Zwift w/kg calculator, Watopia climbing time",
     canonicalUrl: `${BASE_URL}/ventop-calculator`
+  },
+  "/alpe-vs-ventop": {
+    title: "Alpe du Zwift vs Ven-Top: Complete Comparison Guide & Calculators",
+    description: "Compare Alpe du Zwift vs Ven-Top with detailed route analysis, interactive time calculators, and expert insights. Discover which Zwift climb suits your training goals best.",
+    ogTitle: "Alpe du Zwift vs Ven-Top: Complete Comparison Guide & Calculators",
+    ogDescription: "Compare Alpe du Zwift vs Ven-Top with detailed route analysis, interactive time calculators, and expert insights. Discover which Zwift climb suits your training goals best.",
+    keywords: "alpe du zwift vs ven top, zwift climbing comparison, alpe du zwift calculator, ven top calculator, zwift routes comparison, zwift climbing times, zwift climb analysis, watopia climbs",
+    canonicalUrl: `${BASE_URL}/alpe-vs-ventop`
   }
 };
 
