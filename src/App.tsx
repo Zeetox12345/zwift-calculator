@@ -15,6 +15,16 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SEOMetaTags from "./components/SEOMetaTags";
+import ConquerAlpeDuZwift from "./pages/blog/ConquerAlpeDuZwift";
+import MasteringVenTop from "./pages/blog/MasteringVenTop";
+import ZwiftTrainingPlans101 from "./pages/blog/ZwiftTrainingPlans101";
+import ZwiftRacingForBeginners from "./pages/blog/ZwiftRacingForBeginners";
+import ZwiftSetupGuide from "./pages/blog/ZwiftSetupGuide";
+import UnlockingZwiftAchievements from "./pages/blog/UnlockingZwiftAchievements";
+import ZwiftPowerUpsGuide from "./pages/blog/ZwiftPowerUpsGuide";
+import LevelUpFastInZwift from "./pages/blog/LevelUpFastInZwift";
+import ZwiftVsOutdoorCycling from "./pages/blog/ZwiftVsOutdoorCycling";
+import GetFitAndLoseWeightWithZwift from "./pages/blog/GetFitAndLoseWeightWithZwift";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +73,16 @@ const App = () => {
                 <Route path="/author" element={<Author />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/conquer-alpe-du-zwift" element={<ConquerAlpeDuZwift />} />
+                <Route path="/blog/mastering-ven-top" element={<MasteringVenTop />} />
+                <Route path="/blog/zwift-training-plans-101" element={<ZwiftTrainingPlans101 />} />
+                <Route path="/blog/zwift-racing-for-beginners" element={<ZwiftRacingForBeginners />} />
+                <Route path="/blog/zwift-setup-guide" element={<ZwiftSetupGuide />} />
+                <Route path="/blog/unlocking-zwift-achievements" element={<UnlockingZwiftAchievements />} />
+                <Route path="/blog/zwift-powerups-guide" element={<ZwiftPowerUpsGuide />} />
+                <Route path="/blog/level-up-fast-in-zwift" element={<LevelUpFastInZwift />} />
+                <Route path="/blog/zwift-vs-outdoor-cycling" element={<ZwiftVsOutdoorCycling />} />
+                <Route path="/blog/get-fit-and-lose-weight-with-zwift" element={<GetFitAndLoseWeightWithZwift />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { BookOpen, Calendar, ArrowRight } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
 import AnimatedCard from "@/components/AnimatedCard";
@@ -10,7 +11,6 @@ const Blog = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Placeholder for future blog posts
   const blogPosts: Array<{
     id: string;
     title: string;
@@ -18,8 +18,98 @@ const Blog = () => {
     date: string;
     readTime: string;
     category: string;
+    slug: string;
   }> = [
-    // Add blog posts here in the future
+    {
+      id: "1",
+      title: "Conquer the Alpe du Zwift: Tips for a Faster Climb",
+      excerpt: "Master Alpe du Zwift with expert pacing strategies, training tips, and in-game tactics. Learn how to break the one-hour barrier and improve your climbing performance on Zwift's most iconic ascent.",
+      date: "12-11-2025",
+      readTime: "8 min",
+      category: "Training",
+      slug: "/blog/conquer-alpe-du-zwift"
+    },
+    {
+      id: "2",
+      title: "Mastering Ven-Top: Surviving Zwift's Toughest Ascent",
+      excerpt: "Conquer Zwift's longest climb - Ven-Top (Mont Ventoux). Learn pacing strategies, fueling tips, and mental tactics to survive this 20.9km, 1,534m ascent. Complete guide for mastering Zwift's toughest climb.",
+      date: "12-11-2025",
+      readTime: "9 min",
+      category: "Training",
+      slug: "/blog/mastering-ven-top"
+    },
+    {
+      id: "3",
+      title: "Zwift Training Plans 101: How to Boost Your FTP and Fitness",
+      excerpt: "Discover how Zwift's structured training plans can boost your FTP and cycling fitness. Learn about FTP Builder, Build Me Up, and other plans designed by professional coaches to help you get stronger and faster.",
+      date: "12-11-2025",
+      readTime: "10 min",
+      category: "Training",
+      slug: "/blog/zwift-training-plans-101"
+    },
+    {
+      id: "4",
+      title: "Zwift Racing for Beginners: Tips to Ride and Win Your First Virtual Race",
+      excerpt: "Complete beginner's guide to Zwift racing. Learn race categories, drafting tactics, powerup strategies, and finishing techniques. Master your first virtual race with expert tips and tactics.",
+      date: "12-11-2025",
+      readTime: "12 min",
+      category: "Racing",
+      slug: "/blog/zwift-racing-for-beginners"
+    },
+    {
+      id: "5",
+      title: "Zwift Setup Guide: Essential Gear for Your Ultimate Indoor Pain Cave",
+      excerpt: "Complete Zwift setup guide: essential gear for your indoor training pain cave. Learn about smart trainers, bikes, devices, cooling, and accessories needed to start Zwifting effectively.",
+      date: "12-11-2025",
+      readTime: "11 min",
+      category: "Setup",
+      slug: "/blog/zwift-setup-guide"
+    },
+    {
+      id: "6",
+      title: "Unlocking Zwift Achievements: From Route Badges to the Coveted Tron Bike",
+      excerpt: "Complete guide to Zwift achievements and badges. Learn how to unlock the legendary Tron bike by climbing 50,000m, earn route badges, and level up faster with XP bonuses.",
+      date: "12-11-2025",
+      readTime: "10 min",
+      category: "Gaming",
+      slug: "/blog/unlocking-zwift-achievements"
+    },
+    {
+      id: "7",
+      title: "Zwift PowerUps Guide: How to Use In-Game Boosts Like a Pro",
+      excerpt: "Master Zwift PowerUps: Learn how to use Feather, Aero, Draft Boost, Burrito, Ghost, Steamroller, and Anvil powerups strategically in races and rides. Complete guide to Zwift's in-game boosts.",
+      date: "12-11-2025",
+      readTime: "9 min",
+      category: "Racing",
+      slug: "/blog/zwift-powerups-guide"
+    },
+    {
+      id: "8",
+      title: "Level Up Fast in Zwift: Earning XP and Unlocking New Gear Quickly",
+      excerpt: "Learn how to level up fast in Zwift and unlock new gear quickly. Discover XP farming strategies, route badges, workout tips, and accelerated leveling techniques to reach higher levels faster.",
+      date: "12-11-2025",
+      readTime: "8 min",
+      category: "Gaming",
+      slug: "/blog/level-up-fast-in-zwift"
+    },
+    {
+      id: "9",
+      title: "Zwift vs Outdoor Cycling: Key Differences and Real-World Benefits",
+      excerpt: "Compare Zwift indoor cycling vs outdoor cycling. Learn about power differences, FTP variations, drafting dynamics, and how Zwift training translates to improved outdoor performance.",
+      date: "12-11-2025",
+      readTime: "11 min",
+      category: "Training",
+      slug: "/blog/zwift-vs-outdoor-cycling"
+    },
+    {
+      id: "10",
+      title: "Get Fit and Lose Weight with Zwift: Indoor Cycling for Weight Loss",
+      excerpt: "Discover how Zwift can help you lose weight and get fit. Learn about calorie burn, best workouts for weight loss, diet integration, and how to stay motivated with Zwift's engaging platform.",
+      date: "12-11-2025",
+      readTime: "9 min",
+      category: "Fitness",
+      slug: "/blog/get-fit-and-lose-weight-with-zwift"
+    }
   ];
 
   return (
@@ -56,36 +146,11 @@ const Blog = () => {
       <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            {blogPosts.length === 0 ? (
-              <AnimatedCard delay={200}>
-                <Card className="border-2">
-                  <CardHeader className="text-center">
-                    <BookOpen size={48} className="mx-auto mb-4 text-zwift-orange opacity-50" />
-                    <CardTitle className="text-2xl">Coming Soon</CardTitle>
-                    <CardDescription className="text-base mt-2">
-                      Blog posts are coming soon! Check back for training tips, performance analysis, and Zwift insights.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-muted-foreground mb-6">
-                      We're preparing valuable content about Zwift training, triathlon preparation, power analysis, and more.
-                    </p>
-                    <Button
-                      onClick={() => window.history.back()}
-                      variant="outline"
-                      className="mx-auto"
-                    >
-                      <ArrowRight size={16} className="mr-2 rotate-180" />
-                      Go Back
-                    </Button>
-                  </CardContent>
-                </Card>
-              </AnimatedCard>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {blogPosts.map((post, index) => (
-                  <AnimatedCard key={post.id} delay={index * 100}>
-                    <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {blogPosts.map((post, index) => (
+                <AnimatedCard key={post.id} delay={index * 100}>
+                  <Link to={post.slug} className="block h-full">
+                    <Card className="h-full hover:shadow-lg transition-all border-2 hover:border-zwift-orange/50 cursor-pointer group">
                       <CardHeader>
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-xs font-medium px-2 py-1 bg-zwift-orange/10 text-zwift-orange rounded">
@@ -96,23 +161,25 @@ const Blog = () => {
                             {post.date}
                           </div>
                         </div>
-                        <CardTitle className="text-xl">{post.title}</CardTitle>
+                        <CardTitle className="text-xl group-hover:text-zwift-orange transition-colors">
+                          {post.title}
+                        </CardTitle>
                       </CardHeader>
                       <CardContent>
                         <CardDescription className="mb-4">{post.excerpt}</CardDescription>
                         <div className="flex items-center justify-between">
                           <span className="text-xs text-muted-foreground">{post.readTime} read</span>
-                          <Button variant="ghost" size="sm">
+                          <div className="flex items-center text-xs text-zwift-orange group-hover:translate-x-1 transition-transform">
                             Read More
                             <ArrowRight size={14} className="ml-2" />
-                          </Button>
+                          </div>
                         </div>
                       </CardContent>
                     </Card>
-                  </AnimatedCard>
-                ))}
-              </div>
-            )}
+                  </Link>
+                </AnimatedCard>
+              ))}
+            </div>
           </div>
         </div>
       </section>
