@@ -62,25 +62,16 @@ const PrivacyPolicy = () => {
                   <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
                     <li>Remember preferences.</li>
                     <li>Measure site performance.</li>
-                    <li>Serve personalized and non-personalized ads via Ezoic and other partners.</li>
+                    <li>Serve personalized and non-personalized ads via third-party partners.</li>
                   </ul>
                   <p className="mt-2">You can manage cookies in your browser settings. Disabling cookies may affect site functionality.</p>
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-foreground mb-3">4) Advertising & Third-Party Partners (Including Ezoic)</h2>
-                  <p className="mb-2">
-                    We partner with Ezoic to display ads. Ezoic and its partners may use cookies, web beacons, device identifiers, and similar technologies to deliver and measure ads and to personalize content.
+                  <h2 className="text-2xl font-bold text-foreground mb-3">4) Advertising & Third-Party Partners</h2>
+                  <p>
+                    We partner with third-party advertising partners to display ads. These partners may use cookies, web beacons, device identifiers, and similar technologies to deliver and measure ads and to personalize content. Some partners may receive limited data to provide analytics, ad measurement, fraud prevention, and similar services.
                   </p>
-                  <p className="mb-2">
-                    For details on how Ezoic processes data for ZwiftCalculator.com, see:
-                  </p>
-                  <p className="mb-2">
-                    <a href="https://g.ezoic.net/privacy/zwiftcalculator.com" className="text-zwift-orange hover:text-zwift-orange/80 underline" target="_blank" rel="noopener noreferrer">
-                      Ezoic Privacy Policy for this site
-                    </a>
-                  </p>
-                  <p>Some partners may receive limited data to provide analytics, ad measurement, fraud prevention, and similar services.</p>
                 </div>
 
                 <div>
