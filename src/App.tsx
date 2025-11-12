@@ -10,6 +10,7 @@ import VentopCalculator from "./pages/VentopCalculator";
 import AlpeVsVentop from "./pages/AlpeVsVentop";
 import Author from "./pages/Author";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -61,6 +62,7 @@ const App = () => {
                 <Route path="/alpe-vs-ventop" element={<AlpeVsVentop />} />
                 <Route path="/author" element={<Author />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/blog" element={<Blog />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

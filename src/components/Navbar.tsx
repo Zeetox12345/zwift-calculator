@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Bike, Calculator, Menu, X } from "lucide-react";
+import { Bike, Calculator, Menu, X, BookOpen } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navbar = () => {
@@ -32,6 +32,7 @@ const Navbar = () => {
     { name: "Alpe du Zwift", path: "/alpeduzwiftcalculator" },
     { name: "Ven Top Calculator", path: "/ventop-calculator" },
     { name: "Alpe vs Ven-Top", path: "/alpe-vs-ventop" },
+    { name: "Blog", path: "/blog" },
     { name: "Author", path: "/author" },
   ];
 
