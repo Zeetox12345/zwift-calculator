@@ -262,8 +262,8 @@ const Index = () => {
             
             <AnimatedCard delay={500} className="flex flex-col items-center">
               <Zap size={32} className="text-zwift-orange mb-4" />
-              <div className="text-3xl font-bold">20+</div>
-              <div className="text-muted-foreground">Zwift Segments</div>
+              <div className="text-3xl font-bold">2</div>
+              <div className="text-muted-foreground">segments</div>
             </AnimatedCard>
           </div>
           
