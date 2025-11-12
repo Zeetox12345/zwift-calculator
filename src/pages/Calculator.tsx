@@ -11,6 +11,7 @@ import DataVisualization from "@/components/calculator/DataVisualization";
 import CalculatorInfo from "@/components/calculator/CalculatorInfo";
 import AlpeFacts from "@/components/calculator/AlpeFacts";
 import CallToAction from "@/components/calculator/CallToAction";
+import Author from "@/components/Author";
 
 const Calculator = () => {
   const [weight, setWeight] = useState(75);
@@ -92,6 +93,15 @@ const Calculator = () => {
                 Using real Zwift data to predict your climb time for the iconic 21 hairpins of Alpe du Zwift.
               </p>
             </AnimatedText>
+          </div>
+        </div>
+      </section>
+
+      {/* Author Section */}
+      <section className="py-4">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Author />
           </div>
         </div>
       </section>

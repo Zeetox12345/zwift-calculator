@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
 import { useIsMobile } from "@/hooks/use-mobile";
 import SEOMetaTags from "@/components/SEOMetaTags";
+import Author from "@/components/Author";
 
 // Import calculator components
 import CalculatorInput from "@/components/calculator/CalculatorInput";
@@ -201,6 +202,15 @@ const AlpeVsVentop = () => {
                   </Badge>
                 </div>
               </AnimatedText>
+            </div>
+          </div>
+        </section>
+
+        {/* Author Section */}
+        <section className="py-4">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <Author />
             </div>
           </div>
         </section>

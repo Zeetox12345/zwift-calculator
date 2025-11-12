@@ -11,6 +11,7 @@ import VentopDataVisualization from "@/components/calculator/VentopDataVisualiza
 import VentopCalculatorInfo from "@/components/calculator/VentopCalculatorInfo";
 import VentopFacts from "@/components/calculator/VentopFacts";
 import CallToAction from "@/components/calculator/CallToAction";
+import Author from "@/components/Author";
 
 const VentopCalculator = () => {
   const [weight, setWeight] = useState(75);
@@ -94,6 +95,15 @@ const VentopCalculator = () => {
                 Our Ven top Zwift time calculator uses real performance data to accurately predict your completion time for this challenging Watopia climb.
               </p>
             </AnimatedText>
+          </div>
+        </div>
+      </section>
+
+      {/* Author Section */}
+      <section className="py-4">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Author />
           </div>
         </div>
       </section>
