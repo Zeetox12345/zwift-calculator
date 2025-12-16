@@ -78,6 +78,14 @@ const Footer = () => {
                   Author
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-sm text-muted-foreground hover:text-zwift-orange transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 

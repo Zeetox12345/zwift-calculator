@@ -10,6 +10,7 @@ import VentopCalculator from "./pages/VentopCalculator";
 import AlpeVsVentop from "./pages/AlpeVsVentop";
 import Author from "./pages/Author";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
@@ -76,6 +77,7 @@ const App = () => {
                 <Route path="/alpe-vs-ventop" element={<AlpeVsVentop />} />
                 <Route path="/author" element={<Author />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/conquer-alpe-du-zwift" element={<ConquerAlpeDuZwift />} />
                 <Route path="/blog/mastering-ven-top" element={<MasteringVenTop />} />
