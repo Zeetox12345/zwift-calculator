@@ -25,6 +25,10 @@ import ZwiftPowerUpsGuide from "./pages/blog/ZwiftPowerUpsGuide";
 import LevelUpFastInZwift from "./pages/blog/LevelUpFastInZwift";
 import ZwiftVsOutdoorCycling from "./pages/blog/ZwiftVsOutdoorCycling";
 import GetFitAndLoseWeightWithZwift from "./pages/blog/GetFitAndLoseWeightWithZwift";
+import GhostInTheMachine from "./pages/blog/GhostInTheMachine";
+import ArchitectureOfSweat from "./pages/blog/ArchitectureOfSweat";
+import GlucoseAlchemist from "./pages/blog/GlucoseAlchemist";
+import CalculusOfPainCave from "./pages/blog/CalculusOfPainCave";
 
 const queryClient = new QueryClient();
 
@@ -83,6 +87,10 @@ const App = () => {
                 <Route path="/blog/level-up-fast-in-zwift" element={<LevelUpFastInZwift />} />
                 <Route path="/blog/zwift-vs-outdoor-cycling" element={<ZwiftVsOutdoorCycling />} />
                 <Route path="/blog/get-fit-and-lose-weight-with-zwift" element={<GetFitAndLoseWeightWithZwift />} />
+                <Route path="/blog/ghost-in-the-machine-why-your-brain-allows-you-to-suffer-more-in-watopia" element={<GhostInTheMachine />} />
+                <Route path="/blog/the-architecture-of-sweat-a-field-guide-to-the-invisible-nation-of-watopia" element={<ArchitectureOfSweat />} />
+                <Route path="/blog/the-glucose-alchemist-how-to-fuel-a-world-tour-effort-on-a-ramen-budget" element={<GlucoseAlchemist />} />
+                <Route path="/blog/the-calculus-of-the-pain-cave-a-mechanical-autopsy-of-speed" element={<CalculusOfPainCave />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import AnimatedText from "@/components/AnimatedText";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -70,7 +71,18 @@ const Author = () => {
                     </p>
 
                     <p>
-                      A bit about me: I'm 25 years old, live in Aalborg, Denmark, and I'm currently training for a full-distance Ironman, with Ironman Copenhagen as my main goal. I'm also finishing my Master's degree in Mechanical Engineering at Aalborg University, and I've been combining my background in engineering, data, and endurance sports to build tools that help athletes make better training decisions.
+                      A bit about me: I'm 25 years old, live in Aalborg, Denmark, and I'm currently training for a full-distance Ironman, with Ironman Copenhagen as my main goal. I'm also doing my Master's degree in Mechanical Engineering at Aalborg University, and I've been combining my background in engineering, data, and endurance sports to build tools that help athletes make better training decisions.
+                    </p>
+
+                    <p>
+                      As a dedicated Zwifter myself—I even own the coveted Tron bike!—I understand the passion and dedication that goes into virtual cycling. My love for data analysis and physics, combined with my mechanical engineering studies, makes it very natural for me to create physics calculators like the{" "}
+                      <Link
+                        to="/alpeduzwiftcalculator"
+                        className="text-zwift-orange hover:text-zwift-orange/80 underline font-medium"
+                      >
+                        Alpe du Zwift calculator
+                      </Link>
+                      {" "}based on real data and scientific principles.
                     </p>
 
                     <p>

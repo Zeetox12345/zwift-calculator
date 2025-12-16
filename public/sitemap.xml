@@ -102,4 +102,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://zwiftcalculator.com/blog/ghost-in-the-machine-why-your-brain-allows-you-to-suffer-more-in-watopia</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zwiftcalculator.com/blog/the-architecture-of-sweat-a-field-guide-to-the-invisible-nation-of-watopia</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zwiftcalculator.com/blog/the-glucose-alchemist-how-to-fuel-a-world-tour-effort-on-a-ramen-budget</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zwiftcalculator.com/blog/the-calculus-of-the-pain-cave-a-mechanical-autopsy-of-speed</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset> 

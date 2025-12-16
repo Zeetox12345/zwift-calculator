@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Bike, Calculator, Timer, TrendingUp, Trophy, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Bike, Calculator, Timer, TrendingUp, Trophy, Zap, BookOpen, ArrowRight } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
 import AnimatedButton from "@/components/AnimatedButton";
 import AnimatedCard from "@/components/AnimatedCard";
@@ -164,6 +165,59 @@ const Index = () => {
               </div>
             </AnimatedCard>
           </div>
+        </div>
+      </section>
+
+      {/* Featured Blog Post Section */}
+      <section className="py-16 md:py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zwift-blue/5 to-transparent -z-10"></div>
+        
+        <div className="container mx-auto px-4">
+          <AnimatedCard delay={200}>
+            <Link 
+              to="/blog/the-calculus-of-the-pain-cave-a-mechanical-autopsy-of-speed"
+              className="block group"
+            >
+              <div className="bg-white dark:bg-zwift-dark rounded-2xl overflow-hidden border-2 border-zwift-orange/30 hover:border-zwift-orange/50 transition-all shadow-lg hover:shadow-xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
+                  <div className="flex flex-col justify-center">
+                    <div className="inline-flex items-center space-x-2 bg-zwift-orange/10 dark:bg-zwift-orange/20 text-zwift-orange border border-zwift-orange/30 px-3 py-1.5 rounded-full text-sm font-medium mb-4 w-fit">
+                      <BookOpen size={14} />
+                      <span>Featured Article</span>
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-3 text-foreground group-hover:text-zwift-orange transition-colors">
+                      The Calculus of the Pain Cave: A Mechanical Autopsy of Speed
+                    </h2>
+                    <p className="text-foreground/80 dark:text-foreground/70 mb-6 text-base leading-relaxed">
+                      Explore the physics and mechanics behind cycling performance in Zwift. Understand aerodynamic drag, drivetrain efficiency, flywheel inertia, and the thermodynamics of the human engine from an engineering perspective.
+                    </p>
+                    <div className="flex items-center text-zwift-orange font-semibold group-hover:translate-x-2 transition-transform">
+                      <span>Read the full article</span>
+                      <ArrowRight size={18} className="ml-2" />
+                    </div>
+                  </div>
+                  
+                  <div className="relative flex items-center justify-center">
+                    <div className="relative w-full">
+                      <div className="absolute inset-0 bg-gradient-radial from-zwift-orange/20 to-transparent rounded-xl blur-xl"></div>
+                      <div className="relative bg-gradient-to-br from-zwift-orange/10 to-zwift-blue/10 dark:from-zwift-orange/20 dark:to-zwift-blue/20 rounded-xl p-8 border border-zwift-orange/20 dark:border-white/10">
+                        <div className="space-y-4">
+                          <div className="flex items-center space-x-2 text-foreground/90 dark:text-white/90">
+                            <Calculator size={20} />
+                            <span className="font-semibold">Physics & Engineering</span>
+                          </div>
+                          <div className="text-4xl font-bold text-foreground dark:text-white mb-2 font-mono">τ = F × r × sin(θ)</div>
+                          <p className="text-foreground/70 dark:text-white/80 text-sm">
+                            Discover how mechanical engineering principles govern every pedal stroke in Watopia
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </AnimatedCard>
         </div>
       </section>
 

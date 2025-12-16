@@ -21,6 +21,42 @@ const Blog = () => {
     slug: string;
   }> = [
     {
+      id: "14",
+      title: "The Calculus of the Pain Cave: A Mechanical Autopsy of Speed",
+      excerpt: "Explore the physics and mechanics behind cycling performance in Zwift. Understand aerodynamic drag, drivetrain efficiency, flywheel inertia, and the thermodynamics of the human engine from an engineering perspective.",
+      date: "16-12-2025",
+      readTime: "15 min",
+      category: "Physics",
+      slug: "/blog/the-calculus-of-the-pain-cave-a-mechanical-autopsy-of-speed"
+    },
+    {
+      id: "13",
+      title: "The Glucose Alchemist: How to Fuel a World Tour Effort on a Ramen Budget",
+      excerpt: "Learn how to fuel your Zwift rides and races for pennies using table sugar, maltodextrin, and kitchen ingredients. Stop paying premium prices for sports nutrition and start thinking like a chemist.",
+      date: "16-12-2025",
+      readTime: "11 min",
+      category: "Nutrition",
+      slug: "/blog/the-glucose-alchemist-how-to-fuel-a-world-tour-effort-on-a-ramen-budget"
+    },
+    {
+      id: "12",
+      title: "The Architecture of Sweat: A Field Guide to the Invisible Nation of Watopia",
+      excerpt: "Explore Watopia as a parallel geography where physics are negotiated, gravity is variable, and the social contract is written in watts per kilogram. A philosophical journey through virtual cycling's digital nation.",
+      date: "16-12-2025",
+      readTime: "14 min",
+      category: "Philosophy",
+      slug: "/blog/the-architecture-of-sweat-a-field-guide-to-the-invisible-nation-of-watopia"
+    },
+    {
+      id: "11",
+      title: "The Ghost in the Machine: Why Your Brain Allows You to Suffer More in Watopia",
+      excerpt: "Discover how Zwift hacks your brain's Central Governor, uses the Proteus Effect, and leverages gamification to help you push harder than ever. Understand the psychology behind virtual cycling performance.",
+      date: "16-12-2025",
+      readTime: "12 min",
+      category: "Psychology",
+      slug: "/blog/ghost-in-the-machine-why-your-brain-allows-you-to-suffer-more-in-watopia"
+    },
+    {
       id: "1",
       title: "Conquer the Alpe du Zwift: Tips for a Faster Climb",
       excerpt: "Master Alpe du Zwift with expert pacing strategies, training tips, and in-game tactics. Learn how to break the one-hour barrier and improve your climbing performance on Zwift's most iconic ascent.",
