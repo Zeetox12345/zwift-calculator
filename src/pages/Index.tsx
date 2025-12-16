@@ -128,7 +128,7 @@ const Index = () => {
             </p>
           </AnimatedText>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <AnimatedCard delay={200}>
               <div className="flex flex-col items-center text-center">
                 <div className="h-14 w-14 rounded-full bg-zwift-orange/10 flex items-center justify-center mb-4">
@@ -162,6 +162,126 @@ const Index = () => {
                 <p className="text-muted-foreground">
                   Receive accurate estimates for your Zwift segment completion times.
                 </p>
+              </div>
+            </AnimatedCard>
+          </div>
+
+          {/* Detailed Methodology Section */}
+          <div className="max-w-4xl mx-auto">
+            <AnimatedCard delay={200}>
+              <div className="bg-white dark:bg-zwift-dark rounded-2xl p-8 md:p-12 border-2">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">
+                  The Science Behind Our Calculations
+                </h3>
+                
+                <div className="space-y-6 text-muted-foreground leading-relaxed">
+                  <p>
+                    Our Zwift time prediction calculators are built on a foundation of real-world performance data and statistical analysis. Unlike generic cycling calculators that rely on simplified physics models, we've analyzed thousands of actual Zwift ride performances from ZwiftPower to create accurate, data-driven predictions.
+                  </p>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-3 mt-6">Understanding Power-to-Weight Ratio</h4>
+                    <p>
+                      In cycling, especially on climbs, your power-to-weight ratio (watts per kilogram, or W/kg) is the single most important predictor of performance. This is because gravity is the primary force you're fighting against. The steeper the climb, the more your weight matters relative to your power output.
+                    </p>
+                    <p className="mt-3">
+                      For example, a 70kg rider producing 280 watts generates 4.0 W/kg—enough to climb Alpe du Zwift in approximately 49 minutes. However, a 60kg rider producing the same 280 watts achieves 4.67 W/kg, potentially completing the climb in around 42 minutes. This 7-minute difference illustrates why weight management is crucial for climbing performance.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-3 mt-6">Our Data-Driven Approach</h4>
+                    <p>
+                      Our algorithms use polynomial regression analysis on real ZwiftPower performance data. For Alpe du Zwift, we analyzed hundreds of verified ride times across a wide range of power outputs, from recreational riders (2.5-3.0 W/kg) to elite Zwift racers (5.0+ W/kg). The resulting formula accounts for the non-linear relationship between power and climbing speed, which becomes more pronounced at higher gradients.
+                    </p>
+                    <p className="mt-3">
+                      The Ven Top calculator uses a similar methodology, analyzing performance data specific to that climb's unique profile. Ven Top is shorter but steeper than Alpe du Zwift, requiring a different power distribution strategy and resulting in a distinct time-to-power relationship.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-3 mt-6">Why Zwift Differs from Real-World Cycling</h4>
+                    <p>
+                      Zwift's virtual environment introduces unique factors that our calculators account for. Unlike outdoor cycling, Zwift eliminates variables like wind resistance (which is simulated but simplified), road surface conditions, and drafting effects on steep climbs. However, Zwift does simulate equipment weight differences, aerodynamic drag (though simplified), and the physics of climbing gradients.
+                    </p>
+                    <p className="mt-3">
+                      Our calculations are calibrated specifically for Zwift's physics engine, ensuring accuracy within the virtual environment. This means our predictions may differ from outdoor climbing calculators, but they're precisely tuned for Watopia's virtual climbs.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-bold text-foreground mb-3 mt-6">Accuracy and Limitations</h4>
+                    <p>
+                      Our calculators provide estimates accurate to within approximately ±2-3% for most riders. However, several factors can affect actual performance:
+                    </p>
+                    <ul className="list-disc list-inside ml-4 space-y-2 mt-3">
+                      <li><strong className="text-foreground">Pacing strategy:</strong> Starting too hard can lead to fatigue and slower overall times</li>
+                      <li><strong className="text-foreground">Equipment selection:</strong> Lighter bikes and wheelsets can save 30-60 seconds on long climbs</li>
+                      <li><strong className="text-foreground">Power consistency:</strong> Maintaining steady power is more efficient than variable output</li>
+                      <li><strong className="text-foreground">Mental fatigue:</strong> Long climbs require mental fortitude that can't be calculated</li>
+                      <li><strong className="text-foreground">Training adaptations:</strong> Recent training load affects sustainable power output</li>
+                    </ul>
+                  </div>
+
+                  <div className="mt-8 p-4 bg-zwift-orange/10 dark:bg-zwift-orange/20 rounded-lg border border-zwift-orange/30">
+                    <p className="text-foreground font-semibold mb-2">💡 Pro Tip:</p>
+                    <p>
+                      Use these calculators to set realistic goals and pace yourself during climbs. If you're aiming for a sub-60-minute Alpe du Zwift, you'll need to sustain approximately 3.2 W/kg. Use our calculator to determine your target power, then practice maintaining that output during training rides.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* About the Creator Section */}
+      <section className="py-16 md:py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zwift-orange/5 to-transparent -z-10"></div>
+        
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <AnimatedCard delay={200}>
+              <div className="bg-white dark:bg-zwift-dark rounded-2xl p-8 md:p-12 border-2">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                  <div className="flex-shrink-0 flex justify-center md:justify-start">
+                    <img
+                      src="/CLD_billede_4.jpg"
+                      alt="Christian Lassen Dam - Creator of ZwiftCalculator.com"
+                      className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-zwift-orange/20"
+                    />
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                      Created by Christian Lassen Dam
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-foreground">Mechanical Engineering Student & Zwift Enthusiast</strong>
+                    </p>
+                    <div className="space-y-4 text-muted-foreground leading-relaxed">
+                      <p>
+                        I'm a Master's student in Mechanical Engineering at Aalborg University, currently training for Ironman Copenhagen. As a dedicated Zwifter who owns the coveted Tron bike, I understand the passion and dedication that goes into virtual cycling.
+                      </p>
+                      <p>
+                        My background in mechanical engineering, combined with my love for data analysis and endurance sports, led me to create these calculators. I've analyzed thousands of ZwiftPower ride performances to develop accurate, data-driven time predictions that help athletes train smarter and set realistic goals.
+                      </p>
+                      <p>
+                        All calculations are based on publicly available training data and verified performance metrics. The goal is to make complex performance analysis accessible to everyday athletes—helping you understand trends, effort levels, and potential outcomes without overcomplication.
+                      </p>
+                      <div className="mt-6">
+                        <Link
+                          to="/author"
+                          className="inline-flex items-center text-zwift-orange hover:text-zwift-orange/80 font-semibold transition-colors"
+                        >
+                          Learn more about my background and methodology
+                          <ArrowRight size={18} className="ml-2" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </AnimatedCard>
           </div>

@@ -164,7 +164,11 @@ const Calculator = () => {
       {/* CTA Section */}
       <section className="py-12 bg-gradient-to-t from-zwift-dark/10 to-transparent">
         <div className="container mx-auto px-4">
-          <CallToAction />
+          <CallToAction 
+            climbName="Alpe du Zwift"
+            blogPostPath="/blog/conquer-alpe-du-zwift"
+            blogPostTitle="Conquer the Alpe du Zwift: Tips for a Faster Climb"
+          />
         </div>
       </section>
     </div>

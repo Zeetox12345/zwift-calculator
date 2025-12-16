@@ -31,6 +31,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Alpe du Zwift", path: "/alpeduzwiftcalculator" },
     { name: "Blog", path: "/blog" },
+    { name: "About Us", path: "/about-us" },
     { name: "Author", path: "/author" },
     { name: "Privacy Policy", path: "/privacy-policy" },
   ];

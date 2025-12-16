@@ -166,7 +166,11 @@ const VentopCalculator = () => {
       {/* CTA Section */}
       <section className="py-12 bg-gradient-to-t from-zwift-dark/10 to-transparent">
         <div className="container mx-auto px-4">
-          <CallToAction />
+          <CallToAction 
+            climbName="Ven Top"
+            blogPostPath="/blog/mastering-ven-top"
+            blogPostTitle="Mastering Ven-Top: Surviving Zwift's Toughest Ascent"
+          />
         </div>
       </section>
     </div>

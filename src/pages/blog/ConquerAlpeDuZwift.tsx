@@ -147,6 +147,18 @@ const ConquerAlpeDuZwift = () => {
     <BlogPost
       title="Conquer the Alpe du Zwift: Tips for a Faster Climb"
       date="12-11-2025"
+      relatedCalculators={[
+        {
+          name: "Alpe du Zwift Calculator",
+          path: "/alpeduzwiftcalculator",
+          description: "Predict your Alpe du Zwift climbing time based on your weight and power"
+        },
+        {
+          name: "Ven Top Calculator",
+          path: "/ventop-calculator",
+          description: "Calculate your Ven Top climb time and compare with Alpe du Zwift"
+        }
+      ]}
       content={content}
       metaTitle="Conquer the Alpe du Zwift: Tips for a Faster Climb | Zwift Calculator"
       metaDescription="Master Alpe du Zwift with expert pacing strategies, training tips, and in-game tactics. Learn how to break the one-hour barrier and improve your climbing performance on Zwift's most iconic ascent."

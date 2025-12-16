@@ -9,6 +9,7 @@ import Calculator from "./pages/Calculator";
 import VentopCalculator from "./pages/VentopCalculator";
 import AlpeVsVentop from "./pages/AlpeVsVentop";
 import Author from "./pages/Author";
+import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
@@ -76,6 +77,7 @@ const App = () => {
                 <Route path="/ventop-calculator" element={<VentopCalculator />} />
                 <Route path="/alpe-vs-ventop" element={<AlpeVsVentop />} />
                 <Route path="/author" element={<Author />} />
+                <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />

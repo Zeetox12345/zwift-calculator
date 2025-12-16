@@ -122,6 +122,18 @@ const MasteringVenTop = () => {
       content={content}
       metaTitle="Mastering Ven-Top: Surviving Zwift's Toughest Ascent | Zwift Calculator"
       metaDescription="Conquer Zwift's longest climb - Ven-Top (Mont Ventoux). Learn pacing strategies, fueling tips, and mental tactics to survive this 20.9km, 1,534m ascent. Complete guide for mastering Zwift's toughest climb."
+      relatedCalculators={[
+        {
+          name: "Ven Top Calculator",
+          path: "/ventop-calculator",
+          description: "Predict your Ven Top climbing time based on your weight and power"
+        },
+        {
+          name: "Alpe du Zwift Calculator",
+          path: "/alpeduzwiftcalculator",
+          description: "Compare your Alpe du Zwift time with Ven Top performance"
+        }
+      ]}
     />
   );
 };
