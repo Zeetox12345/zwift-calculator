@@ -63,7 +63,7 @@ const Author = () => {
               </p>
 
               <p>
-                To develop the calculators and content on this site, I use the latest version of ChatGPT (GPT-5) in Research Mode, combined with Anthropic's Claude Sonnet 4.5. This lets me combine deep technical accuracy with broad research across trusted sources such as scientific training studies, power data analyses, and official triathlon resources.
+                To develop the calculators and content on this site, I conduct deep research across trusted sources such as scientific training studies, power data analyses, official triathlon resources, and verified cycling performance data. This research-based approach ensures technical accuracy and reliability in everything I create.
               </p>
 
               <p>

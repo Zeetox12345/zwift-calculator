@@ -31,6 +31,12 @@ import GhostInTheMachine from "./pages/blog/GhostInTheMachine";
 import ArchitectureOfSweat from "./pages/blog/ArchitectureOfSweat";
 import GlucoseAlchemist from "./pages/blog/GlucoseAlchemist";
 import CalculusOfPainCave from "./pages/blog/CalculusOfPainCave";
+import GreatOceanRoad from "./pages/blog/GreatOceanRoad";
+import SydneyToWollongong from "./pages/blog/SydneyToWollongong";
+import NewYorkCity from "./pages/blog/NewYorkCity";
+import ColoradoMountainRiding from "./pages/blog/ColoradoMountainRiding";
+import VermontUpstateGravelVsRoad from "./pages/blog/VermontUpstateGravelVsRoad";
+import ShimanamiKaido from "./pages/blog/ShimanamiKaido";
 
 const queryClient = new QueryClient();
 
@@ -95,6 +101,12 @@ const App = () => {
                 <Route path="/blog/the-architecture-of-sweat-a-field-guide-to-the-invisible-nation-of-watopia" element={<ArchitectureOfSweat />} />
                 <Route path="/blog/the-glucose-alchemist-how-to-fuel-a-world-tour-effort-on-a-ramen-budget" element={<GlucoseAlchemist />} />
                 <Route path="/blog/the-calculus-of-the-pain-cave-a-mechanical-autopsy-of-speed" element={<CalculusOfPainCave />} />
+                <Route path="/blog/great-ocean-road-by-bike" element={<GreatOceanRoad />} />
+                <Route path="/blog/sydney-to-wollongong" element={<SydneyToWollongong />} />
+                <Route path="/blog/new-york-city-by-bike" element={<NewYorkCity />} />
+                <Route path="/blog/colorado-mountain-riding" element={<ColoradoMountainRiding />} />
+                <Route path="/blog/vermont-upstate-gravel-vs-road" element={<VermontUpstateGravelVsRoad />} />
+                <Route path="/blog/shimanami-kaido" element={<ShimanamiKaido />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

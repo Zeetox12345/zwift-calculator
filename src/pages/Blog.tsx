@@ -21,6 +21,60 @@ const Blog = () => {
     slug: string;
   }> = [
     {
+      id: "20",
+      title: "Japan's Shimanami Kaido: The Most Beautiful \"One-Day Tour\" Ride (Then Do a Zwift Recovery Week Like a Pro)",
+      excerpt: "Complete guide to cycling Japan's Shimanami Kaido route. Learn pacing strategies, what makes this ride special, and how to use Zwift for recovery weeks after travel. Cycling as travel, not performance.",
+      date: "18-12-2025",
+      readTime: "17 min",
+      category: "Training",
+      slug: "/blog/shimanami-kaido"
+    },
+    {
+      id: "19",
+      title: "Vermont / Upstate Gravel vs Road: Pick Your Adventure (and Match It to Zwift Worlds)",
+      excerpt: "Complete guide to choosing between gravel and road cycling in Vermont and Upstate New York. Learn which adventure fits you, pacing strategies, Zwift training plans, and how to match Zwift worlds to your terrain choice.",
+      date: "18-12-2025",
+      readTime: "18 min",
+      category: "Training",
+      slug: "/blog/vermont-upstate-gravel-vs-road"
+    },
+    {
+      id: "18",
+      title: "Colorado Mountain Riding for Mortals: How Not to Blow Up at Altitude (Zwift Climb Prep Included)",
+      excerpt: "Complete guide to cycling in Colorado mountains for normal riders. Learn altitude pacing strategies, fueling tips, Zwift training plans, and how to prepare for mountain climbs without blowing up.",
+      date: "18-12-2025",
+      readTime: "19 min",
+      category: "Training",
+      slug: "/blog/colorado-mountain-riding"
+    },
+    {
+      id: "17",
+      title: "New York City by Bike: A First-Timer's Ride Guide (Then Ride Future-New-York on Zwift)",
+      excerpt: "Complete guide to cycling in New York City for first-timers. Learn where to ride, when to ride, pacing strategies, and how to use Zwift's New York world to prepare for urban cycling adventures.",
+      date: "18-12-2025",
+      readTime: "17 min",
+      category: "Training",
+      slug: "/blog/new-york-city-by-bike"
+    },
+    {
+      id: "16",
+      title: "Sydney to Wollongong: The Sea Cliff Bridge Ride That Feels Like a Movie (Plus a Zwift Substitute)",
+      excerpt: "Complete guide to cycling from Sydney to Wollongong via the iconic Sea Cliff Bridge. Learn pacing strategies, stop recommendations, Zwift training plans, and how to prepare for this cinematic coastal ride.",
+      date: "18-12-2025",
+      readTime: "16 min",
+      category: "Training",
+      slug: "/blog/sydney-to-wollongong"
+    },
+    {
+      id: "15",
+      title: "Great Ocean Road by Bike: A 3–5 Day Coastal Ride (and the Zwift Sessions That Prepare You)",
+      excerpt: "Complete guide to cycling the Great Ocean Road from Anglesea to Apollo Bay. Learn the best 3-5 day itinerary, packing tips, wind tactics, photo stops, and how to train for coastal rollers on Zwift.",
+      date: "18-12-2025",
+      readTime: "18 min",
+      category: "Training",
+      slug: "/blog/great-ocean-road-by-bike"
+    },
+    {
       id: "14",
       title: "The Calculus of the Pain Cave: A Mechanical Autopsy of Speed",
       excerpt: "Explore the physics and mechanics behind cycling performance in Zwift. Understand aerodynamic drag, drivetrain efficiency, flywheel inertia, and the thermodynamics of the human engine from an engineering perspective.",
