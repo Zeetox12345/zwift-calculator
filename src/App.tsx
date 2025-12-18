@@ -11,6 +11,7 @@ import AlpeVsVentop from "./pages/AlpeVsVentop";
 import Author from "./pages/Author";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
@@ -85,6 +86,7 @@ const App = () => {
                 <Route path="/author" element={<Author />} />
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/conquer-alpe-du-zwift" element={<ConquerAlpeDuZwift />} />
