@@ -38,6 +38,8 @@ import NewYorkCity from "./pages/blog/NewYorkCity";
 import ColoradoMountainRiding from "./pages/blog/ColoradoMountainRiding";
 import VermontUpstateGravelVsRoad from "./pages/blog/VermontUpstateGravelVsRoad";
 import ShimanamiKaido from "./pages/blog/ShimanamiKaido";
+import VirtualHillsRealWind from "./pages/blog/VirtualHillsRealWind";
+import WhatZwiftCantTeachYou from "./pages/blog/WhatZwiftCantTeachYou";
 
 const queryClient = new QueryClient();
 
@@ -109,6 +111,8 @@ const App = () => {
                 <Route path="/blog/colorado-mountain-riding" element={<ColoradoMountainRiding />} />
                 <Route path="/blog/vermont-upstate-gravel-vs-road" element={<VermontUpstateGravelVsRoad />} />
                 <Route path="/blog/shimanami-kaido" element={<ShimanamiKaido />} />
+                <Route path="/blog/virtual-hills-real-wind-whats-harder" element={<VirtualHillsRealWind />} />
+                <Route path="/blog/what-zwift-cant-teach-you-and-what-it-can" element={<WhatZwiftCantTeachYou />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

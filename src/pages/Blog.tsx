@@ -21,6 +21,24 @@ const Blog = () => {
     slug: string;
   }> = [
     {
+      id: "22",
+      title: "What Zwift Can't Teach You (and What It Can)",
+      excerpt: "Discover what Zwift can and can't teach you. Learn how to combine indoor training with outdoor skills, running, nature, travel, and adventure to become a complete athlete.",
+      date: "19-12-2025",
+      readTime: "18 min",
+      category: "Training",
+      slug: "/blog/what-zwift-cant-teach-you-and-what-it-can"
+    },
+    {
+      id: "21",
+      title: "Virtual Hills, Real Wind: What's Harder?",
+      excerpt: "Compare virtual Zwift climbs vs real outdoor wind. Learn how each challenges you differently, which prepares you better for triathlon, and how to blend indoor and outdoor training effectively.",
+      date: "19-12-2025",
+      readTime: "20 min",
+      category: "Training",
+      slug: "/blog/virtual-hills-real-wind-whats-harder"
+    },
+    {
       id: "20",
       title: "Japan's Shimanami Kaido: The Most Beautiful \"One-Day Tour\" Ride (Then Do a Zwift Recovery Week Like a Pro)",
       excerpt: "Complete guide to cycling Japan's Shimanami Kaido route. Learn pacing strategies, what makes this ride special, and how to use Zwift for recovery weeks after travel. Cycling as travel, not performance.",
