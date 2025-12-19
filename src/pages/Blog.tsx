@@ -21,6 +21,33 @@ const Blog = () => {
     slug: string;
   }> = [
     {
+      id: "28",
+      title: "How I Started Zwifting – And How AverageRob & Arno Inspired My Ironman Journey",
+      excerpt: "Personal story of how Zwift changed my life, inspired by AverageRob and Arno's Ironman journey. From gamer to Zwifter, losing weight, and finding motivation through their YouTube series.",
+      date: "19-12-2025",
+      readTime: "12 min",
+      category: "Personal",
+      slug: "/blog/how-i-started-zwifting-and-how-averagerob-arno-inspired-my-ironman-journey"
+    },
+    {
+      id: "27",
+      title: "How to Keep Your Streak in Zwift While Travelling",
+      excerpt: "Complete guide to maintaining your Zwift streak while travelling. Learn equipment strategies, hotel gym tips, time zone handling, and how to keep your training consistent without stress.",
+      date: "19-12-2025",
+      readTime: "20 min",
+      category: "Training",
+      slug: "/blog/how-to-keep-your-streak-in-zwift-while-travelling"
+    },
+    {
+      id: "26",
+      title: "Having Time to Zwift During University",
+      excerpt: "Practical guide for university students to fit Zwift training into busy schedules. Learn minimum effective dose, exam period strategies, and how to stay consistent without sacrificing grades or social life.",
+      date: "19-12-2025",
+      readTime: "18 min",
+      category: "Training",
+      slug: "/blog/having-time-to-zwift-during-university"
+    },
+    {
       id: "25",
       title: "What Terminology Do Zwifters Use?",
       excerpt: "Complete guide to Zwift terminology. Learn FTP, w/kg, ERG mode, drafting, power-ups, sandbagging, and all the key terms Zwifters use in training, racing, and chatting.",

@@ -43,6 +43,9 @@ import WhatZwiftCantTeachYou from "./pages/blog/WhatZwiftCantTeachYou";
 import TenDayZwiftTrainingWeek from "./pages/blog/TenDayZwiftTrainingWeek";
 import TowelsDuringZwifting from "./pages/blog/TowelsDuringZwifting";
 import WhatTerminologyDoZwiftersUse from "./pages/blog/WhatTerminologyDoZwiftersUse";
+import HavingTimeToZwiftDuringUniversity from "./pages/blog/HavingTimeToZwiftDuringUniversity";
+import HowToKeepYourStreakInZwiftWhileTravelling from "./pages/blog/HowToKeepYourStreakInZwiftWhileTravelling";
+import HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney from "./pages/blog/HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney";
 
 const queryClient = new QueryClient();
 
@@ -119,6 +122,9 @@ const App = () => {
                 <Route path="/blog/10-day-zwift-training-week" element={<TenDayZwiftTrainingWeek />} />
                 <Route path="/blog/towels-during-zwifting-can-it-ruin-your-bike" element={<TowelsDuringZwifting />} />
                 <Route path="/blog/what-terminology-do-zwifters-use" element={<WhatTerminologyDoZwiftersUse />} />
+                <Route path="/blog/having-time-to-zwift-during-university" element={<HavingTimeToZwiftDuringUniversity />} />
+                <Route path="/blog/how-to-keep-your-streak-in-zwift-while-travelling" element={<HowToKeepYourStreakInZwiftWhileTravelling />} />
+                <Route path="/blog/how-i-started-zwifting-and-how-averagerob-arno-inspired-my-ironman-journey" element={<HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

@@ -55,6 +55,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://zwiftcalculator.com/blog/how-i-started-zwifting-and-how-averagerob-arno-inspired-my-ironman-journey</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zwiftcalculator.com/blog/how-to-keep-your-streak-in-zwift-while-travelling</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://zwiftcalculator.com/blog/conquer-alpe-du-zwift</loc>
     <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -200,6 +212,12 @@
   </url>
   <url>
     <loc>https://zwiftcalculator.com/blog/what-terminology-do-zwifters-use</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zwiftcalculator.com/blog/having-time-to-zwift-during-university</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
