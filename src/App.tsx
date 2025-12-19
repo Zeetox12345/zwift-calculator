@@ -40,6 +40,9 @@ import VermontUpstateGravelVsRoad from "./pages/blog/VermontUpstateGravelVsRoad"
 import ShimanamiKaido from "./pages/blog/ShimanamiKaido";
 import VirtualHillsRealWind from "./pages/blog/VirtualHillsRealWind";
 import WhatZwiftCantTeachYou from "./pages/blog/WhatZwiftCantTeachYou";
+import TenDayZwiftTrainingWeek from "./pages/blog/TenDayZwiftTrainingWeek";
+import TowelsDuringZwifting from "./pages/blog/TowelsDuringZwifting";
+import WhatTerminologyDoZwiftersUse from "./pages/blog/WhatTerminologyDoZwiftersUse";
 
 const queryClient = new QueryClient();
 
@@ -113,6 +116,9 @@ const App = () => {
                 <Route path="/blog/shimanami-kaido" element={<ShimanamiKaido />} />
                 <Route path="/blog/virtual-hills-real-wind-whats-harder" element={<VirtualHillsRealWind />} />
                 <Route path="/blog/what-zwift-cant-teach-you-and-what-it-can" element={<WhatZwiftCantTeachYou />} />
+                <Route path="/blog/10-day-zwift-training-week" element={<TenDayZwiftTrainingWeek />} />
+                <Route path="/blog/towels-during-zwifting-can-it-ruin-your-bike" element={<TowelsDuringZwifting />} />
+                <Route path="/blog/what-terminology-do-zwifters-use" element={<WhatTerminologyDoZwiftersUse />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

@@ -21,6 +21,33 @@ const Blog = () => {
     slug: string;
   }> = [
     {
+      id: "25",
+      title: "What Terminology Do Zwifters Use?",
+      excerpt: "Complete guide to Zwift terminology. Learn FTP, w/kg, ERG mode, drafting, power-ups, sandbagging, and all the key terms Zwifters use in training, racing, and chatting.",
+      date: "19-12-2025",
+      readTime: "20 min",
+      category: "Training",
+      slug: "/blog/what-terminology-do-zwifters-use"
+    },
+    {
+      id: "24",
+      title: "Towels During Zwifting? Can It Ruin Your Bike?",
+      excerpt: "Complete guide to using towels during Zwift training. Learn how to protect your bike from sweat damage, proper towel placement, and a 3-minute cleaning routine that prevents corrosion.",
+      date: "19-12-2025",
+      readTime: "16 min",
+      category: "Setup",
+      slug: "/blog/towels-during-zwifting-can-it-ruin-your-bike"
+    },
+    {
+      id: "23",
+      title: "10 Day Zwift Training Week",
+      excerpt: "Complete 10-day Zwift training week plan combining cycling and running. Learn how to structure your training with threshold, VO₂, endurance sessions, and proper recovery for triathlon and cycling fitness.",
+      date: "19-12-2025",
+      readTime: "22 min",
+      category: "Training",
+      slug: "/blog/10-day-zwift-training-week"
+    },
+    {
       id: "22",
       title: "What Zwift Can't Teach You (and What It Can)",
       excerpt: "Discover what Zwift can and can't teach you. Learn how to combine indoor training with outdoor skills, running, nature, travel, and adventure to become a complete athlete.",
