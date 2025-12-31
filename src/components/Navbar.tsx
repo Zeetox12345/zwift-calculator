@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Bike, Calculator, Menu, X, BookOpen } from "lucide-react";
+import { Bike, Menu, X, BookOpen } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navbar = () => {
@@ -32,6 +32,7 @@ const Navbar = () => {
     { name: "Alpe du Zwift", path: "/alpeduzwiftcalculator" },
     { name: "Blog", path: "/blog" },
     { name: "About Us", path: "/about-us" },
+    { name: "Contact", path: "/contact" },
     { name: "Author", path: "/author" },
     { name: "Privacy Policy", path: "/privacy-policy" },
   ];
@@ -70,13 +71,6 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link
-            to="/alpeduzwiftcalculator"
-            className="flex items-center space-x-2 px-4 py-2 rounded-full bg-zwift-orange text-white hover:bg-zwift-orange/90 transition-all shadow-neon-orange hover-scale"
-          >
-            <Calculator size={18} />
-            <span>Try Calculator</span>
-          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -107,14 +101,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/alpeduzwiftcalculator"
-              className="flex items-center justify-center space-x-2 py-3 rounded-full bg-zwift-orange text-white hover:bg-zwift-orange/90 transition-all shadow-neon-orange"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <Calculator size={18} />
-              <span>Try Calculator</span>
-            </Link>
           </nav>
         </div>
       )}

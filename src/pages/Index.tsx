@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Bike, Calculator, Timer, TrendingUp, Trophy, Zap, BookOpen, ArrowRight } from "lucide-react";
+import { Bike, Calculator, Timer, TrendingUp, Trophy, Zap, BookOpen, ArrowRight, Calendar } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
 import AnimatedButton from "@/components/AnimatedButton";
 import AnimatedCard from "@/components/AnimatedCard";
 import BikeAnimation from "@/components/BikeAnimation";
 import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Index = () => {
   const { toast } = useToast();
@@ -52,45 +53,25 @@ const Index = () => {
             
             <AnimatedText delay={300} className="mt-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                Calculate Your <span className="zwift-gradient-text">Zwift</span> Times
+                Expert Zwift Training <span className="zwift-gradient-text">Insights</span> & Performance Analysis
               </h1>
             </AnimatedText>
             
             <AnimatedText delay={500} className="mt-6 max-w-2xl">
               <p className="text-lg md:text-xl text-muted-foreground">
-                Predict how fast you'll conquer the iconic climbs and routes in Zwift
-                based on your weight and power. Fast, accurate, and built for Zwifters.
+                Data-driven guides, training strategies, and performance insights for Zwift athletes. 
+                Learn from our analysis of thousands of ZwiftPower rides and expert mechanical engineering insights.
               </p>
             </AnimatedText>
             
-            <AnimatedText delay={700} className="mt-10 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <AnimatedText delay={700} className="mt-10">
               <AnimatedButton
-                to="/alpeduzwiftcalculator"
+                to="/blog"
                 variant="primary"
                 size="lg"
-                icon={<Calculator size={20} />}
+                icon={<BookOpen size={20} />}
               >
-                Alpe du Zwift
-              </AnimatedButton>
-              
-              <AnimatedButton
-                to="/ventop-calculator"
-                variant="primary"
-                size="lg"
-                icon={<Calculator size={20} />}
-              >
-                Ven Top
-              </AnimatedButton>
-              
-              <AnimatedButton
-                variant="outline"
-                size="lg"
-                onClick={() => window.scrollTo({
-                  top: document.getElementById('how-it-works')?.offsetTop - 100,
-                  behavior: 'smooth'
-                })}
-              >
-                Learn More
+                Explore Articles
               </AnimatedButton>
             </AnimatedText>
           </div>
@@ -111,6 +92,115 @@ const Index = () => {
               </div>
             </div>
           </AnimatedText>
+        </div>
+      </section>
+
+      {/* Latest Blog Articles Section - PRIMARY FOCUS */}
+      <section className="py-16 md:py-24 relative bg-gradient-to-b from-transparent via-zwift-blue/5 to-transparent">
+        <div className="container mx-auto px-4">
+          <AnimatedText className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Latest <span className="zwift-gradient-text">Training Insights</span> & Guides
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Expert advice, data-driven analysis, and practical strategies to improve your Zwift performance
+            </p>
+          </AnimatedText>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {[
+              {
+                title: "How I Started Zwifting – And How AverageRob & Arno Inspired My Ironman Journey",
+                excerpt: "Personal story of how Zwift changed my life, inspired by AverageRob and Arno's Ironman journey. From gamer to Zwifter, losing weight, and finding motivation through their YouTube series.",
+                date: "19-12-2025",
+                readTime: "12 min",
+                category: "Personal",
+                slug: "/blog/how-i-started-zwifting-and-how-averagerob-arno-inspired-my-ironman-journey"
+              },
+              {
+                title: "How to Keep Your Streak in Zwift While Travelling",
+                excerpt: "Complete guide to maintaining your Zwift streak while travelling. Learn equipment strategies, hotel gym tips, time zone handling, and how to keep your training consistent without stress.",
+                date: "19-12-2025",
+                readTime: "20 min",
+                category: "Training",
+                slug: "/blog/how-to-keep-your-streak-in-zwift-while-travelling"
+              },
+              {
+                title: "Having Time to Zwift During University",
+                excerpt: "Practical guide for university students to fit Zwift training into busy schedules. Learn minimum effective dose, exam period strategies, and how to stay consistent without sacrificing grades or social life.",
+                date: "19-12-2025",
+                readTime: "18 min",
+                category: "Training",
+                slug: "/blog/having-time-to-zwift-during-university"
+              },
+              {
+                title: "What Terminology Do Zwifters Use?",
+                excerpt: "Complete guide to Zwift terminology. Learn FTP, w/kg, ERG mode, drafting, power-ups, sandbagging, and all the key terms Zwifters use in training, racing, and chatting.",
+                date: "19-12-2025",
+                readTime: "20 min",
+                category: "Training",
+                slug: "/blog/what-terminology-do-zwifters-use"
+              },
+              {
+                title: "Towels During Zwifting? Can It Ruin Your Bike?",
+                excerpt: "Complete guide to using towels during Zwift training. Learn how to protect your bike from sweat damage, proper towel placement, and a 3-minute cleaning routine that prevents corrosion.",
+                date: "19-12-2025",
+                readTime: "16 min",
+                category: "Setup",
+                slug: "/blog/towels-during-zwifting-can-it-ruin-your-bike"
+              },
+              {
+                title: "10 Day Zwift Training Week",
+                excerpt: "Complete 10-day Zwift training week plan combining cycling and running. Learn how to structure your training with threshold, VO₂, endurance sessions, and proper recovery for triathlon and cycling fitness.",
+                date: "19-12-2025",
+                readTime: "22 min",
+                category: "Training",
+                slug: "/blog/10-day-zwift-training-week"
+              }
+            ].map((post, index) => (
+              <AnimatedCard key={index} delay={index * 100}>
+                <Link to={post.slug} className="block h-full">
+                  <Card className="h-full hover:shadow-lg transition-all border-2 hover:border-zwift-orange/50 cursor-pointer group">
+                    <CardHeader>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-medium px-2 py-1 bg-zwift-orange/10 text-zwift-orange rounded">
+                          {post.category}
+                        </span>
+                        <div className="flex items-center text-xs text-muted-foreground">
+                          <Calendar size={12} className="mr-1" />
+                          {post.date}
+                        </div>
+                      </div>
+                      <CardTitle className="text-xl group-hover:text-zwift-orange transition-colors line-clamp-2">
+                        {post.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="mb-4 line-clamp-3">{post.excerpt}</CardDescription>
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-muted-foreground">{post.readTime} read</span>
+                        <div className="flex items-center text-xs text-zwift-orange group-hover:translate-x-1 transition-transform">
+                          Read More
+                          <ArrowRight size={14} className="ml-2" />
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </AnimatedCard>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <AnimatedButton
+              to="/blog"
+              variant="primary"
+              size="lg"
+              icon={<BookOpen size={20} />}
+            >
+              View All Articles
+            </AnimatedButton>
+          </div>
         </div>
       </section>
 
@@ -341,125 +431,54 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zwift-orange/5 to-transparent -z-10"></div>
-        
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto bg-gradient-to-br from-zwift-orange/10 to-zwift-blue/10 rounded-3xl overflow-hidden border border-white/20 shadow-glass">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
-              <div className="flex flex-col justify-center">
-                <AnimatedText>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Ready to predict your <span className="zwift-gradient-text">Zwift times</span>?
-                  </h2>
-                  <p className="text-muted-foreground mb-8">
-                    Find out how long it will take you to conquer the famous Zwift climbs and routes. Our calculators provide accurate estimates based on your stats.
-                  </p>
-                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <AnimatedButton
-                      to="/alpeduzwiftcalculator"
-                      variant="primary"
-                      size="lg"
-                      icon={<Calculator size={20} />}
-                    >
-                      Alpe du Zwift
-                    </AnimatedButton>
-                    <AnimatedButton
-                      to="/ventop-calculator"
-                      variant="outline"
-                      size="lg"
-                      icon={<Calculator size={20} />}
-                    >
-                      Ven Top
-                    </AnimatedButton>
-                  </div>
-                  <div className="mt-6">
-                    <AnimatedButton
-                      to="/alpe-vs-ventop"
-                      variant="secondary"
-                      size="lg"
-                      icon={<TrendingUp size={20} />}
-                      className="w-full sm:w-auto bg-gradient-to-r from-zwift-orange/20 to-zwift-blue/20 border-gradient"
-                    >
-                      Compare Alpe vs Ven-Top
-                    </AnimatedButton>
-                  </div>
-                </AnimatedText>
-              </div>
-              
-              <div className="relative flex items-center justify-center">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-radial from-zwift-orange/30 to-transparent rounded-xl blur-xl"></div>
-                  <img
-                    src="/lovable-uploads/9742c196-2bd2-472b-a58d-e9bb34062de4.png"
-                    alt="Zwift virtual cycling with bright neon effects"
-                    className="rounded-xl shadow-lg border border-white/10 max-h-80 object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       
       {/* Testimonial/Stats Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-transparent to-zwift-dark/5">
         <div className="container mx-auto px-4">
           <AnimatedText className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Trusted by <span className="zwift-gradient-text">Zwifters</span>
+              Trusted <span className="zwift-gradient-text">Content</span> for Zwift Athletes
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Join thousands of cyclists who use our calculators to prepare for their virtual rides.
+              Join thousands of cyclists who rely on our expert insights, data-driven analysis, and training strategies to improve their Zwift performance.
             </p>
           </AnimatedText>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <AnimatedCard delay={200} className="flex flex-col items-center">
-              <TrendingUp size={32} className="text-zwift-orange mb-4" />
-              <div className="text-3xl font-bold">12,500+</div>
-              <div className="text-muted-foreground">Rides Calculated</div>
+              <BookOpen size={32} className="text-zwift-orange mb-4" />
+              <div className="text-3xl font-bold">28+</div>
+              <div className="text-muted-foreground">Expert Articles</div>
             </AnimatedCard>
             
             <AnimatedCard delay={300} className="flex flex-col items-center">
-              <Trophy size={32} className="text-zwift-orange mb-4" />
-              <div className="text-3xl font-bold">98%</div>
-              <div className="text-muted-foreground">Accuracy Rate</div>
+              <TrendingUp size={32} className="text-zwift-orange mb-4" />
+              <div className="text-3xl font-bold">1,000+</div>
+              <div className="text-muted-foreground">Rides Analyzed</div>
             </AnimatedCard>
             
             <AnimatedCard delay={400} className="flex flex-col items-center">
               <Bike size={32} className="text-zwift-orange mb-4" />
               <div className="text-3xl font-bold">5,000+</div>
-              <div className="text-muted-foreground">Active Users</div>
+              <div className="text-muted-foreground">Active Readers</div>
             </AnimatedCard>
             
             <AnimatedCard delay={500} className="flex flex-col items-center">
               <Zap size={32} className="text-zwift-orange mb-4" />
-              <div className="text-3xl font-bold">2</div>
-              <div className="text-muted-foreground">segments</div>
+              <div className="text-3xl font-bold">Data-Driven</div>
+              <div className="text-muted-foreground">Insights</div>
             </AnimatedCard>
           </div>
           
           <AnimatedText delay={600} className="mt-20 text-center">
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <AnimatedButton
-                to="/alpeduzwiftcalculator"
-                variant="primary"
-                size="lg"
-                icon={<Calculator size={20} />}
-              >
-                Alpe du Zwift Calculator
-              </AnimatedButton>
-              <AnimatedButton
-                to="/ventop-calculator"
-                variant="outline"
-                size="lg"
-                icon={<Calculator size={20} />}
-              >
-                Ven Top Zwift Time Calculator
-              </AnimatedButton>
-            </div>
+            <AnimatedButton
+              to="/blog"
+              variant="primary"
+              size="lg"
+              icon={<BookOpen size={20} />}
+            >
+              Explore All Articles
+            </AnimatedButton>
           </AnimatedText>
         </div>
       </section>

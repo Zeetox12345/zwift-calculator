@@ -1,15 +1,31 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { BookOpen, Calendar, ArrowRight } from "lucide-react";
+import { BookOpen, Calendar, ArrowRight, Activity, Trophy, Settings, BarChart3 } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
 import AnimatedCard from "@/components/AnimatedCard";
+import ArticleListItem from "@/components/ArticleListItem";
+import FeaturedArticlesSidebar from "@/components/FeaturedArticlesSidebar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Blog = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const categories = [
+    { id: "all", name: "All Articles", icon: BookOpen },
+    { id: "Training", name: "Training", icon: Activity },
+    { id: "Racing", name: "Racing", icon: Trophy },
+    { id: "Setup", name: "Setup", icon: Settings },
+    { id: "Data Analysis", name: "Data Analysis", icon: BarChart3 },
+    { id: "Physics", name: "Physics", icon: BookOpen },
+    { id: "Psychology", name: "Psychology", icon: BookOpen },
+    { id: "Personal", name: "Personal", icon: BookOpen },
+  ];
 
   const blogPosts: Array<{
     id: string;
@@ -20,6 +36,132 @@ const Blog = () => {
     category: string;
     slug: string;
   }> = [
+    {
+      id: "38",
+      title: "Zwift Chronobiology: How Time-of-Day Affects Virtual Cycling Performance",
+      excerpt: "Discover how circadian rhythms and chronotype affect Zwift performance. Learn optimal training timing, chronotype analysis, and evidence-based strategies for maximizing performance based on your body's natural rhythms.",
+      date: "31-12-2025",
+      readTime: "21 min",
+      category: "Training",
+      slug: "/blog/zwift-chronobiology"
+    },
+    {
+      id: "39",
+      title: "Zwift Cognitive Load: Mental Fatigue and Decision-Making in Virtual Racing",
+      excerpt: "Explore how cognitive load and mental fatigue affect Zwift performance. Learn about decision-making in racing, attention requirements, and evidence-based strategies for managing cognitive demands in virtual cycling.",
+      date: "31-12-2025",
+      readTime: "22 min",
+      category: "Psychology",
+      slug: "/blog/zwift-cognitive-load"
+    },
+    {
+      id: "40",
+      title: "Zwift Subscription Economics: The Psychology and ROI of Virtual Cycling",
+      excerpt: "Comprehensive economic analysis of Zwift subscription value. Learn cost-benefit analysis, ROI calculations, behavioral economics of subscriptions, and whether Zwift is worth the investment for different user types.",
+      date: "31-12-2025",
+      readTime: "20 min",
+      category: "Data Analysis",
+      slug: "/blog/zwift-subscription-economics"
+    },
+    {
+      id: "41",
+      title: "Zwift Biomechanics: Indoor vs Outdoor Cycling Injury Patterns",
+      excerpt: "Comprehensive biomechanical analysis comparing indoor and outdoor cycling. Learn about Zwift-specific injuries, biomechanical differences, overuse patterns, and evidence-based prevention strategies.",
+      date: "31-12-2025",
+      readTime: "20 min",
+      category: "Training",
+      slug: "/blog/zwift-biomechanics"
+    },
+    {
+      id: "42",
+      title: "Zwift Network Performance: How Internet Latency Affects Race Outcomes",
+      excerpt: "Technical analysis of how network latency and internet performance affect Zwift racing. Learn about latency impact, optimization strategies, and how to minimize network-related performance issues.",
+      date: "31-12-2025",
+      readTime: "19 min",
+      category: "Setup",
+      slug: "/blog/zwift-network-performance"
+    },
+    {
+      id: "33",
+      title: "Zwift Drafting Physics & Aerodynamics: The Science Behind Virtual Pelotons",
+      excerpt: "Deep dive into Zwift's drafting mechanics. Learn how aerodynamics work in virtual cycling, optimal drafting strategies, power savings calculations, and how to maximize efficiency in group rides and races.",
+      date: "31-12-2025",
+      readTime: "22 min",
+      category: "Physics",
+      slug: "/blog/zwift-drafting-physics-aerodynamics"
+    },
+    {
+      id: "34",
+      title: "Zwift Route Selection Psychology: How Your Choices Affect Training Outcomes",
+      excerpt: "Explore the psychology behind Zwift route selection. Learn how route choice affects motivation, training adaptation, performance outcomes, and discover evidence-based strategies for optimal route selection.",
+      date: "31-12-2025",
+      readTime: "19 min",
+      category: "Psychology",
+      slug: "/blog/zwift-route-selection-psychology"
+    },
+    {
+      id: "35",
+      title: "Zwift Group Ride Dynamics: Social Psychology Meets Performance",
+      excerpt: "Explore the social psychology behind Zwift group rides. Learn how group dynamics affect motivation, performance, adherence, and discover evidence-based strategies for maximizing group ride benefits.",
+      date: "31-12-2025",
+      readTime: "21 min",
+      category: "Psychology",
+      slug: "/blog/zwift-group-ride-dynamics"
+    },
+    {
+      id: "36",
+      title: "Zwift Equipment Optimization: Beyond Weight to Aerodynamics",
+      excerpt: "Comprehensive guide to optimizing your Zwift setup beyond weight. Learn about aerodynamics, rolling resistance, power meter accuracy, trainer responsiveness, and equipment choices that maximize virtual cycling performance.",
+      date: "31-12-2025",
+      readTime: "20 min",
+      category: "Setup",
+      slug: "/blog/zwift-equipment-optimization-aerodynamics"
+    },
+    {
+      id: "37",
+      title: "Zwift Training Periodization: Long-Term Performance Planning",
+      excerpt: "Master Zwift training periodization for long-term performance gains. Learn how to structure training phases, plan peak performance, manage recovery, and optimize adaptation through evidence-based periodization strategies.",
+      date: "31-12-2025",
+      readTime: "23 min",
+      category: "Training",
+      slug: "/blog/zwift-training-periodization"
+    },
+    {
+      id: "29",
+      title: "The Data Behind Zwift Climbing: What 1,000+ Rides Tell Us About Performance",
+      excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances. Learn about pacing patterns, power distribution, common mistakes, and training implications for Zwift climbing performance.",
+      date: "20-12-2025",
+      readTime: "18 min",
+      category: "Data Analysis",
+      slug: "/blog/the-data-behind-zwift-climbing"
+    },
+    {
+      id: "30",
+      title: "The Mechanical Engineering of Zwift Performance: Why Physics Matters in Virtual Cycling",
+      excerpt: "Explore Zwift performance through mechanical engineering principles. Learn about power production, polynomial regression, equipment weight physics, and the thermodynamics of virtual cycling performance.",
+      date: "20-12-2025",
+      readTime: "20 min",
+      category: "Physics",
+      slug: "/blog/the-mechanical-engineering-of-zwift-performance"
+    },
+    {
+      id: "31",
+      title: "ZwiftPower Regression Analysis: How We Built Accurate Time Predictors",
+      excerpt: "Behind-the-scenes look at how we built accurate Zwift climbing time predictors using regression analysis, data validation, and statistical modeling. Learn the methodology behind our calculators.",
+      date: "20-12-2025",
+      readTime: "15 min",
+      category: "Data Analysis",
+      slug: "/blog/regression-analysis-methodology"
+    },
+    {
+      id: "32",
+      title: "Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance",
+      excerpt: "Comprehensive guide to power-to-weight ratio in cycling. Learn the physics, training implications, and practical applications of W/kg for improving your Zwift climbing performance.",
+      date: "20-12-2025",
+      readTime: "17 min",
+      category: "Training",
+      slug: "/blog/power-to-weight-ratio-science"
+    },
     {
       id: "28",
       title: "How I Started Zwifting – And How AverageRob & Arno Inspired My Ironman Journey",
@@ -274,29 +416,33 @@ const Blog = () => {
     }
   ];
 
+  const filteredPosts = selectedCategory === "all" 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       {/* Header Section */}
-      <section className="relative pt-24 md:pt-32 pb-8 md:pb-12 overflow-hidden">
+      <section className="relative pt-20 sm:pt-24 md:pt-32 pb-6 sm:pb-8 md:pb-12 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-zwift-orange/10 to-transparent -z-10"></div>
         
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center text-center">
             <AnimatedText delay={100}>
-              <div className="inline-flex items-center space-x-2 bg-white/80 dark:bg-zwift-dark/80 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium text-zwift-orange shadow-sm border border-orange-100 dark:border-orange-900/20 mb-6">
-                <BookOpen size={16} className="text-zwift-orange" />
+              <div className="inline-flex items-center space-x-2 bg-white/80 dark:bg-zwift-dark/80 backdrop-blur-sm px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium text-zwift-orange shadow-sm border border-orange-100 dark:border-orange-900/20 mb-4 sm:mb-6">
+                <BookOpen size={14} className="sm:w-4 sm:h-4 text-zwift-orange" />
                 <span>Zwift Training Blog</span>
               </div>
             </AnimatedText>
             
-            <AnimatedText delay={200} className="mt-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <AnimatedText delay={200} className="mt-2 sm:mt-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight px-2">
                 Training <span className="zwift-gradient-text">Insights</span> & Tips
               </h1>
             </AnimatedText>
             
-            <AnimatedText delay={300} className="mt-6 max-w-2xl">
-              <p className="text-lg md:text-xl text-muted-foreground">
+            <AnimatedText delay={300} className="mt-4 sm:mt-6 max-w-2xl px-2">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
                 Expert advice, training strategies, and performance analysis for Zwift athletes and triathlon enthusiasts.
               </p>
             </AnimatedText>
@@ -304,44 +450,129 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Blog Posts Section */}
-      <section className="py-8 md:py-12 relative">
+      {/* Browse by Category Section */}
+      <section className="py-6 sm:py-8 md:py-12 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zwift-blue/5 to-transparent -z-10"></div>
+        
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {blogPosts.map((post, index) => (
-                <AnimatedCard key={post.id} delay={index * 100}>
-                  <Link to={post.slug} className="block h-full">
-                    <Card className="h-full hover:shadow-lg transition-all border-2 hover:border-zwift-orange/50 cursor-pointer group">
-                      <CardHeader>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs font-medium px-2 py-1 bg-zwift-orange/10 text-zwift-orange rounded">
-                            {post.category}
-                          </span>
-                          <div className="flex items-center text-xs text-muted-foreground">
-                            <Calendar size={12} className="mr-1" />
-                            {post.date}
-                          </div>
-                        </div>
-                        <CardTitle className="text-xl group-hover:text-zwift-orange transition-colors">
-                          {post.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="mb-4">{post.excerpt}</CardDescription>
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs text-muted-foreground">{post.readTime} read</span>
-                          <div className="flex items-center text-xs text-zwift-orange group-hover:translate-x-1 transition-transform">
-                            Read More
-                            <ArrowRight size={14} className="ml-2" />
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+          <div className="max-w-4xl mx-auto mb-8 sm:mb-12">
+            <AnimatedCard delay={200}>
+              <div className="bg-white dark:bg-zwift-dark rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 border-2">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-foreground">
+                  Browse by Category
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
+                  Explore our content organized by topic. Each category contains comprehensive guides and insights tailored to specific aspects of Zwift training and performance.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+                  <Link
+                    to="/blog/category/training"
+                    className="group p-3 sm:p-4 bg-gradient-to-br from-zwift-orange/10 to-zwift-orange/5 rounded-lg border-2 border-transparent hover:border-zwift-orange/50 transition-all text-center"
+                  >
+                    <Activity size={20} className="sm:w-6 sm:h-6 mx-auto mb-2 text-zwift-orange" />
+                    <div className="font-semibold text-xs sm:text-sm group-hover:text-zwift-orange transition-colors">Training</div>
                   </Link>
-                </AnimatedCard>
-              ))}
+                  <Link
+                    to="/blog/category/racing"
+                    className="group p-3 sm:p-4 bg-gradient-to-br from-zwift-blue/10 to-zwift-blue/5 rounded-lg border-2 border-transparent hover:border-zwift-blue/50 transition-all text-center"
+                  >
+                    <Trophy size={20} className="sm:w-6 sm:h-6 mx-auto mb-2 text-zwift-blue" />
+                    <div className="font-semibold text-xs sm:text-sm group-hover:text-zwift-blue transition-colors">Racing</div>
+                  </Link>
+                  <Link
+                    to="/blog/category/setup"
+                    className="group p-3 sm:p-4 bg-gradient-to-br from-zwift-green/10 to-zwift-green/5 rounded-lg border-2 border-transparent hover:border-zwift-green/50 transition-all text-center"
+                  >
+                    <Settings size={20} className="sm:w-6 sm:h-6 mx-auto mb-2 text-zwift-green" />
+                    <div className="font-semibold text-xs sm:text-sm group-hover:text-zwift-green transition-colors">Setup</div>
+                  </Link>
+                  <Link
+                    to="/blog/category/data-analysis"
+                    className="group p-3 sm:p-4 bg-gradient-to-br from-purple-500/10 to-purple-500/5 rounded-lg border-2 border-transparent hover:border-purple-500/50 transition-all text-center"
+                  >
+                    <BarChart3 size={20} className="sm:w-6 sm:h-6 mx-auto mb-2 text-purple-500" />
+                    <div className="font-semibold text-xs sm:text-sm group-hover:text-purple-500 transition-colors">Data Analysis</div>
+                  </Link>
+                </div>
+              </div>
+            </AnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Posts Section */}
+      <section className="py-6 sm:py-8 md:py-12 relative">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-8">
+            {/* Main Content - 70% (7 columns) */}
+            <div className="lg:col-span-7 order-1">
+              {/* Category Filter Tabs */}
+              <div className="mb-6 sm:mb-8">
+                <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
+                  {/* Mobile: Horizontal scrollable tabs with hidden scrollbar */}
+                  <div className="sm:hidden overflow-x-auto -mx-4 px-4 mb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    <TabsList className="inline-flex w-auto h-auto p-1 gap-1.5">
+                      {categories.map((cat) => (
+                        <TabsTrigger 
+                          key={cat.id} 
+                          value={cat.id} 
+                          className="text-xs whitespace-nowrap px-4 py-2.5 flex-shrink-0"
+                        >
+                          {cat.id === "all" ? "All" : cat.name}
+                        </TabsTrigger>
+                      ))}
+                    </TabsList>
+                  </div>
+                  
+                  {/* Desktop: Grid layout */}
+                  <div className="hidden sm:block">
+                    <TabsList className="grid w-full grid-cols-4 md:grid-cols-7 mb-6">
+                      {categories.map((cat) => (
+                        <TabsTrigger 
+                          key={cat.id} 
+                          value={cat.id} 
+                          className="text-sm px-3"
+                        >
+                          {cat.id === "all" ? "All" : cat.name}
+                        </TabsTrigger>
+                      ))}
+                    </TabsList>
+                  </div>
+                </Tabs>
+              </div>
+
+              {/* Traditional Article List */}
+              <div className="space-y-0">
+                {filteredPosts.map((post, index) => (
+                  <ArticleListItem
+                    key={post.id}
+                    title={post.title}
+                    excerpt={post.excerpt}
+                    date={post.date}
+                    readTime={post.readTime}
+                    category={post.category}
+                    slug={post.slug}
+                  />
+                ))}
+              </div>
             </div>
+
+            {/* Sidebar - 30% (3 columns) - Below content on mobile */}
+            <aside className="lg:col-span-3 order-2 lg:order-2">
+              <div className="lg:sticky lg:top-24">
+                <FeaturedArticlesSidebar
+                  articles={blogPosts.slice(0, 4).map(post => ({
+                    title: post.title,
+                    excerpt: post.excerpt,
+                    date: post.date,
+                    readTime: post.readTime,
+                    slug: post.slug,
+                    category: post.category
+                  }))}
+                  title="Featured Articles"
+                />
+              </div>
+            </aside>
           </div>
         </div>
       </section>

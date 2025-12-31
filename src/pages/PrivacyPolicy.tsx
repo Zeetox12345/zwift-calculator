@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
               </h1>
             </AnimatedText>
             <AnimatedText delay={200} className="mt-4">
-              <p className="text-muted-foreground">Effective Date: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
+              <p className="text-muted-foreground">Effective Date: 01-12-2025</p>
             </AnimatedText>
           </div>
         </div>

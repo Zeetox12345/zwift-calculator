@@ -46,6 +46,24 @@ import WhatTerminologyDoZwiftersUse from "./pages/blog/WhatTerminologyDoZwifters
 import HavingTimeToZwiftDuringUniversity from "./pages/blog/HavingTimeToZwiftDuringUniversity";
 import HowToKeepYourStreakInZwiftWhileTravelling from "./pages/blog/HowToKeepYourStreakInZwiftWhileTravelling";
 import HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney from "./pages/blog/HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney";
+import ZwiftClimbingDataAnalysis from "./pages/blog/ZwiftClimbingDataAnalysis";
+import MechanicalEngineeringZwift from "./pages/blog/MechanicalEngineeringZwift";
+import RegressionAnalysisMethodology from "./pages/blog/RegressionAnalysisMethodology";
+import PowerToWeightScience from "./pages/blog/PowerToWeightScience";
+import CategoryTraining from "./pages/blog/CategoryTraining";
+import CategoryRacing from "./pages/blog/CategoryRacing";
+import CategorySetup from "./pages/blog/CategorySetup";
+import CategoryDataAnalysis from "./pages/blog/CategoryDataAnalysis";
+import ZwiftDraftingPhysicsAerodynamics from "./pages/blog/ZwiftDraftingPhysicsAerodynamics";
+import ZwiftRouteSelectionPsychology from "./pages/blog/ZwiftRouteSelectionPsychology";
+import ZwiftGroupRideDynamics from "./pages/blog/ZwiftGroupRideDynamics";
+import ZwiftEquipmentOptimizationAerodynamics from "./pages/blog/ZwiftEquipmentOptimizationAerodynamics";
+import ZwiftTrainingPeriodization from "./pages/blog/ZwiftTrainingPeriodization";
+import ZwiftChronobiology from "./pages/blog/ZwiftChronobiology";
+import ZwiftCognitiveLoad from "./pages/blog/ZwiftCognitiveLoad";
+import ZwiftSubscriptionEconomics from "./pages/blog/ZwiftSubscriptionEconomics";
+import ZwiftBiomechanics from "./pages/blog/ZwiftBiomechanics";
+import ZwiftNetworkPerformance from "./pages/blog/ZwiftNetworkPerformance";
 
 const queryClient = new QueryClient();
 
@@ -125,6 +143,24 @@ const App = () => {
                 <Route path="/blog/having-time-to-zwift-during-university" element={<HavingTimeToZwiftDuringUniversity />} />
                 <Route path="/blog/how-to-keep-your-streak-in-zwift-while-travelling" element={<HowToKeepYourStreakInZwiftWhileTravelling />} />
                 <Route path="/blog/how-i-started-zwifting-and-how-averagerob-arno-inspired-my-ironman-journey" element={<HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney />} />
+                <Route path="/blog/the-data-behind-zwift-climbing" element={<ZwiftClimbingDataAnalysis />} />
+                <Route path="/blog/the-mechanical-engineering-of-zwift-performance" element={<MechanicalEngineeringZwift />} />
+                <Route path="/blog/regression-analysis-methodology" element={<RegressionAnalysisMethodology />} />
+                <Route path="/blog/power-to-weight-ratio-science" element={<PowerToWeightScience />} />
+                <Route path="/blog/category/training" element={<CategoryTraining />} />
+                <Route path="/blog/category/racing" element={<CategoryRacing />} />
+                <Route path="/blog/category/setup" element={<CategorySetup />} />
+                <Route path="/blog/category/data-analysis" element={<CategoryDataAnalysis />} />
+                <Route path="/blog/zwift-drafting-physics-aerodynamics" element={<ZwiftDraftingPhysicsAerodynamics />} />
+                <Route path="/blog/zwift-route-selection-psychology" element={<ZwiftRouteSelectionPsychology />} />
+                <Route path="/blog/zwift-group-ride-dynamics" element={<ZwiftGroupRideDynamics />} />
+                <Route path="/blog/zwift-equipment-optimization-aerodynamics" element={<ZwiftEquipmentOptimizationAerodynamics />} />
+                <Route path="/blog/zwift-training-periodization" element={<ZwiftTrainingPeriodization />} />
+                <Route path="/blog/zwift-chronobiology" element={<ZwiftChronobiology />} />
+                <Route path="/blog/zwift-cognitive-load" element={<ZwiftCognitiveLoad />} />
+                <Route path="/blog/zwift-subscription-economics" element={<ZwiftSubscriptionEconomics />} />
+                <Route path="/blog/zwift-biomechanics" element={<ZwiftBiomechanics />} />
+                <Route path="/blog/zwift-network-performance" element={<ZwiftNetworkPerformance />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

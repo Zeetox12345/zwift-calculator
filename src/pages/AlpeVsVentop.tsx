@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Calculator as CalcIcon, Mountain, Trophy, Clock, Activity, ArrowRight, TrendingUp } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
 import AnimatedCard from "@/components/AnimatedCard";
+import FeaturedArticlesSidebar from "@/components/FeaturedArticlesSidebar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -159,45 +160,45 @@ const AlpeVsVentop = () => {
       
       <div className="min-h-screen flex flex-col overflow-hidden">
         {/* Hero Section */}
-        <section className="relative pt-16 md:pt-20 pb-8 md:pb-12 overflow-hidden">
+        <section className="relative pt-14 sm:pt-16 md:pt-20 pb-6 sm:pb-8 md:pb-12 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-zwift-blue/20 via-zwift-orange/10 to-transparent -z-10"></div>
           
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
               <AnimatedText delay={100}>
-                <div className="inline-flex items-center space-x-2 bg-white/80 dark:bg-zwift-dark/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-zwift-blue shadow-sm border border-blue-100 dark:border-blue-900/20 mb-6">
-                  <Mountain size={16} className="text-zwift-blue" />
+                <div className="inline-flex items-center space-x-2 bg-white/80 dark:bg-zwift-dark/80 backdrop-blur-sm px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-zwift-blue shadow-sm border border-blue-100 dark:border-blue-900/20 mb-4 sm:mb-6">
+                  <Mountain size={14} className="sm:w-4 sm:h-4 text-zwift-blue" />
                   <span>Ultimate Climbing Comparison</span>
                 </div>
               </AnimatedText>
               
               <AnimatedText delay={200} className="mt-2">
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight px-2">
                   <span className="text-zwift-orange">Alpe du Zwift</span> vs{" "}
                   <span className="text-zwift-blue">Ven-Top</span>
                 </h1>
               </AnimatedText>
               
-              <AnimatedText delay={300} className="mt-6 max-w-3xl">
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <AnimatedText delay={300} className="mt-4 sm:mt-6 max-w-3xl px-2">
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
                   The ultimate guide comparing Zwift's two most iconic climbing challenges. 
                   Discover detailed route analysis, interactive time calculators, and expert insights 
                   to help you conquer both legendary ascents.
                 </p>
               </AnimatedText>
 
-              <AnimatedText delay={400} className="mt-8">
-                <div className="flex flex-wrap gap-4 justify-center">
-                  <Badge variant="secondary" className="px-4 py-2 text-sm">
-                    <Trophy className="w-4 h-4 mr-2" />
+              <AnimatedText delay={400} className="mt-6 sm:mt-8">
+                <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
+                  <Badge variant="secondary" className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm">
+                    <Trophy className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                     Interactive Calculators
                   </Badge>
-                  <Badge variant="secondary" className="px-4 py-2 text-sm">
-                    <Activity className="w-4 h-4 mr-2" />
+                  <Badge variant="secondary" className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm">
+                    <Activity className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                     Real Performance Data
                   </Badge>
-                  <Badge variant="secondary" className="px-4 py-2 text-sm">
-                    <TrendingUp className="w-4 h-4 mr-2" />
+                  <Badge variant="secondary" className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm">
+                    <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                     Training Insights
                   </Badge>
                 </div>
@@ -215,11 +216,154 @@ const AlpeVsVentop = () => {
           </div>
         </section>
 
-        {/* Main Content */}
-        <section className="py-8 md:py-12">
+        {/* Comprehensive Editorial Content Section */}
+        <section className="py-8 sm:py-12 md:py-16 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zwift-blue/5 to-transparent -z-10"></div>
+          
           <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
-              <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-8">
+              {/* Main Content - 70% (7 columns) */}
+              <div className="lg:col-span-7 order-1">
+                <AnimatedCard delay={200}>
+                  <div className="bg-white dark:bg-zwift-dark rounded-2xl p-8 md:p-12 border-2">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                    Alpe du Zwift vs Ven Top: Choosing Your Ultimate Challenge
+                  </h2>
+                  
+                  <div className="space-y-6 text-muted-foreground leading-relaxed">
+                    <p>
+                      In the world of Zwift climbing, two names stand above all others: Alpe du Zwift and Ven Top. These iconic ascents represent different philosophies of suffering, different tests of fitness, and different paths to cycling achievement. Understanding their differences isn't just about choosing which climb to attempt—it's about understanding your own fitness profile, training goals, and what kind of challenge will make you stronger.
+                    </p>
+
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">The Fundamental Difference: Power vs Endurance</h3>
+                      <p>
+                        At their core, Alpe du Zwift and Ven Top test different energy systems and fitness attributes. Alpe du Zwift, at 12.2 kilometers with an average gradient of 8.5%, is a threshold power test. It rewards riders who can sustain high power-to-weight ratios for 50-70 minutes. Ven Top, at 20.9 kilometers with a gentler average gradient of 7-8%, is an aerobic endurance test. It rewards riders who can maintain sub-threshold power for 90-120 minutes.
+                      </p>
+                      <p className="mt-3">
+                        Our analysis of ZwiftPower data reveals this distinction clearly. Riders who excel on Alpe du Zwift typically show power profiles that hover at 95-100% of their Functional Threshold Power (FTP), with some variation as they attack steeper sections and recover on brief shallower sections. Ven Top performances, by contrast, show power profiles consistently at 85-90% of FTP, with less variation. This isn't because Ven Top riders are weaker—it's because Ven Top requires a different kind of fitness.
+                      </p>
+                      <p className="mt-3">
+                        Think of it this way: Alpe du Zwift is like a 60-minute time trial effort, while Ven Top is like a 90-minute tempo ride that gradually increases in difficulty. Both are brutally hard, but they're hard in different ways. Alpe du Zwift will leave your legs screaming from threshold efforts. Ven Top will leave you mentally drained from the unrelenting duration.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">Training Implications: What Each Climb Builds</h3>
+                      <p>
+                        The training required to excel on each climb differs significantly. To improve on Alpe du Zwift, you need to focus on threshold power development. This means workouts like 2x20-minute intervals at FTP, 3x10-minute intervals slightly above FTP, and shorter VO2 max intervals to improve your ability to surge on steep sections. The goal is to raise your FTP and improve your power-to-weight ratio.
+                      </p>
+                      <p className="mt-3">
+                        To improve on Ven Top, you need to focus on aerobic endurance and efficiency. This means long tempo rides (60-90 minutes at 75-85% FTP), sweet spot training (2x20 minutes at 88-93% FTP), and extended endurance rides (2-3 hours at 65-75% FTP). The goal is to improve your body's ability to utilize fat as fuel and maintain steady power for extended periods.
+                      </p>
+                      <p className="mt-3">
+                        Interestingly, improving on one climb can help with the other, but not equally. Improving your FTP will help on both climbs, but it will help more on Alpe du Zwift. Improving your aerobic endurance will help on both climbs, but it will help more on Ven Top. The most well-rounded Zwift athletes can perform well on both climbs, but most riders naturally gravitate toward one based on their physiology and training background.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">Psychological Differences: The Mental Game</h3>
+                      <p>
+                        The psychological challenges of each climb are as different as the physical challenges. Alpe du Zwift's 21 numbered hairpins provide natural mental markers. You can count down from 21, celebrate each hairpin conquered, and use the numbered signs as intermediate goals. This structure helps many riders manage the mental challenge—you're never more than a few minutes from the next milestone.
+                      </p>
+                      <p className="mt-3">
+                        Ven Top, by contrast, offers fewer obvious mental markers. The climb is longer and more consistent, which can make it feel endless. Many riders report that Ven Top's psychological challenge is harder than its physical challenge—the knowledge that you're only halfway done when you've been climbing for 45 minutes can be mentally crushing. This is why many riders who can break 60 minutes on Alpe du Zwift struggle to break 90 minutes on Ven Top, even though the power requirements are similar.
+                      </p>
+                      <p className="mt-3">
+                        Our data analysis supports this. Successful Alpe du Zwift attempts often show power variations that correspond with the hairpin sections—riders push harder on steep sections and ease slightly on transitions. Successful Ven Top attempts show more consistent power output, suggesting that mental discipline and the ability to avoid surges is more critical on Ven Top.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">Which Climb Should You Choose?</h3>
+                      <p>
+                        The answer depends on your goals, fitness profile, and what you want to achieve. Choose Alpe du Zwift if you want to test your threshold power, improve your power-to-weight ratio, and challenge yourself with a shorter but more intense effort. Alpe du Zwift is ideal if you're training for shorter events, want to improve your sprint climbing ability, or enjoy the mental structure of numbered hairpins.
+                      </p>
+                      <p className="mt-3">
+                        Choose Ven Top if you want to test your aerobic endurance, improve your ability to sustain sub-threshold efforts, and challenge yourself with a longer but slightly less intense effort. Ven Top is ideal if you're training for longer events, want to improve your endurance base, or want to challenge your mental fortitude over extended periods.
+                      </p>
+                      <p className="mt-3">
+                        Many Zwift athletes use both climbs strategically. Alpe du Zwift becomes a regular threshold test and power-building tool. Ven Top becomes a monthly or quarterly endurance test and aerobic base builder. This approach provides comprehensive fitness development—the power from Alpe du Zwift training helps on Ven Top, and the endurance from Ven Top training helps on Alpe du Zwift.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">Data-Driven Insights: What the Numbers Tell Us</h3>
+                      <p>
+                        Our analysis of hundreds of ZwiftPower performances reveals several interesting patterns. First, riders who can break 60 minutes on Alpe du Zwift typically need 3.2-3.5 W/kg, while riders who can break 90 minutes on Ven Top typically need 3.0-3.2 W/kg. This suggests that Ven Top is slightly "easier" from a power perspective, but the longer duration makes it more challenging overall.
+                      </p>
+                      <p className="mt-3">
+                        Second, we've found that power consistency matters more on Ven Top than on Alpe du Zwift. Riders with power variations of 30+ watts perform relatively worse on Ven Top than on Alpe du Zwift. This suggests that pacing discipline is more critical on Ven Top—the length of the climb punishes those who can't maintain steady effort.
+                      </p>
+                      <p className="mt-3">
+                        Third, we've observed that many riders show improvement on Ven Top after focusing on Alpe du Zwift training, but the reverse is less common. This suggests that threshold power improvements transfer well to endurance efforts, but endurance improvements don't transfer as well to threshold efforts. This has important implications for training periodization—build your FTP first, then work on endurance.
+                      </p>
+                    </div>
+
+                    <div className="mt-8 p-6 bg-gradient-to-r from-zwift-orange/10 to-zwift-blue/10 dark:from-zwift-orange/20 dark:to-zwift-blue/20 rounded-lg border border-zwift-orange/30">
+                      <p className="text-foreground font-semibold mb-2">💡 Key Insight:</p>
+                      <p>
+                        Alpe du Zwift and Ven Top aren't competitors—they're complementary challenges that test different aspects of your fitness. Use Alpe du Zwift to build power and test your threshold. Use Ven Top to build endurance and test your mental fortitude. Master both, and you'll have the fitness and mental strength to conquer any challenge Zwift throws at you. Use the comparison tools below to see how your power-to-weight ratio translates to each climb, then choose the challenge that matches your current fitness and goals.
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                </AnimatedCard>
+              </div>
+
+              {/* Sidebar - 30% (3 columns) - Below content on mobile */}
+              <aside className="lg:col-span-3 order-2 lg:order-2">
+                <div className="lg:sticky lg:top-24">
+                  <FeaturedArticlesSidebar
+                    articles={[
+                      {
+                        title: "Alpe du Zwift vs Ven Top: Complete Comparison",
+                        excerpt: "Detailed comparison of Zwift's two iconic climbs. Learn which climb matches your fitness profile.",
+                        date: "Recent",
+                        readTime: "15 min",
+                        slug: "/alpe-vs-ventop",
+                        category: "Training"
+                      },
+                      {
+                        title: "Conquer the Alpe du Zwift: Tips for a Faster Climb",
+                        excerpt: "Master Alpe du Zwift with expert pacing strategies, training tips, and in-game tactics.",
+                        date: "12-11-2025",
+                        readTime: "8 min",
+                        slug: "/blog/conquer-alpe-du-zwift",
+                        category: "Training"
+                      },
+                      {
+                        title: "Mastering Ven-Top: Surviving Zwift's Toughest Ascent",
+                        excerpt: "Conquer Zwift's longest climb - Ven-Top (Mont Ventoux). Learn pacing strategies and mental tactics.",
+                        date: "12-11-2025",
+                        readTime: "9 min",
+                        slug: "/blog/mastering-ven-top",
+                        category: "Training"
+                      },
+                      {
+                        title: "Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance",
+                        excerpt: "Comprehensive guide to power-to-weight ratio in cycling. Learn the physics and training implications.",
+                        date: "20-12-2025",
+                        readTime: "17 min",
+                        slug: "/blog/power-to-weight-ratio-science",
+                        category: "Training"
+                      }
+                    ]}
+                    title="Related Articles"
+                  />
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        {/* Main Content */}
+        <section className="py-6 sm:py-8 md:py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 lg:gap-8">
+              {/* Main Content - 70% (7 columns) */}
+              <div className="lg:col-span-7 order-1">
+                <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-4 mb-8">
                   <TabsTrigger value="overview">Overview</TabsTrigger>
                   <TabsTrigger value="calculators">Calculators</TabsTrigger>
@@ -831,6 +975,48 @@ const AlpeVsVentop = () => {
                   </AnimatedCard>
                 </TabsContent>
               </Tabs>
+              </div>
+
+              {/* Sidebar - 30% (3 columns) - Below content on mobile */}
+              <aside className="lg:col-span-3 order-2 lg:order-2">
+                <div className="lg:sticky lg:top-24">
+                  <FeaturedArticlesSidebar
+                    articles={[
+                      {
+                        title: "Alpe du Zwift Calculator",
+                        excerpt: "Calculate your Alpe du Zwift climbing time based on your weight and power.",
+                        date: "Tool",
+                        slug: "/alpeduzwiftcalculator",
+                        category: "Calculator"
+                      },
+                      {
+                        title: "Ven Top Calculator",
+                        excerpt: "Calculate your Ven Top climb time and compare with Alpe du Zwift.",
+                        date: "Tool",
+                        slug: "/ventop-calculator",
+                        category: "Calculator"
+                      },
+                      {
+                        title: "The Data Behind Zwift Climbing",
+                        excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances.",
+                        date: "20-12-2025",
+                        readTime: "18 min",
+                        slug: "/blog/the-data-behind-zwift-climbing",
+                        category: "Data Analysis"
+                      },
+                      {
+                        title: "ZwiftPower Regression Analysis",
+                        excerpt: "Behind-the-scenes look at how we built accurate Zwift climbing time predictors.",
+                        date: "20-12-2025",
+                        readTime: "15 min",
+                        slug: "/blog/regression-analysis-methodology",
+                        category: "Data Analysis"
+                      }
+                    ]}
+                    title="Related Tools & Articles"
+                  />
+                </div>
+              </aside>
             </div>
           </div>
         </section>
