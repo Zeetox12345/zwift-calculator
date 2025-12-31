@@ -152,27 +152,6 @@ const Footer = () => {
               Made with <Heart size={14} className="mx-1 text-zwift-orange" /> for Zwifters
             </p>
           </div>
-
-          {/* Privacy Notice */}
-          <div className="text-xs text-muted-foreground pt-2">
-            <p>
-              <strong className="text-foreground">Privacy Notice:</strong> At ZwiftCalculator.com, we respect your privacy. We use cookies and similar technologies to operate and improve our site, analyze traffic, and serve personalized ads via our partners. By using our website, you agree to our use of cookies. You can manage cookie preferences in your browser settings. For more details about how we collect, use, and protect your information, please see our{" "}
-              <Link
-                to="/privacy-policy"
-                className="text-zwift-orange hover:text-zwift-orange/80 underline"
-              >
-                Privacy Policy
-              </Link>
-              . If you have questions or wish to exercise your privacy rights (including GDPR/EEA or CCPA/CPRA rights), contact us at{" "}
-              <a
-                href="mailto:zwiftcalculator@gmail.com"
-                className="text-zwift-orange hover:text-zwift-orange/80 underline break-all"
-              >
-                zwiftcalculator@gmail.com
-              </a>
-              .
-            </p>
-          </div>
         </div>
       </div>
     </footer>
