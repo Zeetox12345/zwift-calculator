@@ -390,7 +390,7 @@ const ZwiftCognitiveLoad = () => {
           So pace the Alpe as an attention problem. Fix the target beforehand so there is no arithmetic to do on the
           bike, use the 21 hairpins as chunk boundaries, and check power on a deliberate rhythm, because whenever you
           happen to look becomes less often as you tire. Ven-Top, Zwift's Mont Ventoux in the France world, is
-          roughly 20.9 km and about 1,480 m of gain, so the same vigilance task runs longer. Set that target with
+          roughly 20.9 km and about 1,534 m of gain, so the same vigilance task runs longer. Set that target with
           the{" "}
           <Link to="/ventop-calculator" className="text-zwift-orange hover:underline">Ven-Top calculator</Link> or the general{" "}
           <Link to="/zwift-climb-time-calculator" className="text-zwift-orange hover:underline">climb time calculator</Link>, compare the

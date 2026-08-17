@@ -79,7 +79,7 @@ const ZwiftSubscriptionEconomics = () => {
           gain, roughly 8.5% average, 21 hairpins - takes about an hour at 3.2 W/kg. This site&apos;s fit,
           time_seconds = 148.60·(W/kg)² - 1954.08·(W/kg) + 8329.87, gives 59:58 at 3.2 W/kg, about 1:12:53 at
           2.5 W/kg and about 48:11 at 4.0 W/kg. So "one Alpe a week" is roughly four hours a month, while Ven-Top,
-          Zwift&apos;s Mont Ventoux at about 20.9 km and 1,480 m, is closer to 90 minutes an attempt. Check your
+          Zwift&apos;s Mont Ventoux at about 20.9 km and 1,534 m, is closer to 90 minutes an attempt. Check your
           own with the{" "}
           <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">Alpe du Zwift calculator</Link>{" "}
           or the{" "}

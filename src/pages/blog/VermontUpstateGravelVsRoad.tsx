@@ -34,7 +34,7 @@ const VermontUpstateGravelVsRoad = () => {
         </p>
         
         <div className="my-8">
-          <h3 className="text-xl font-semibold mb-4">Vermont and Upstate New York Cycling</h3>
+          <p className="text-xl font-semibold mb-4 text-foreground">Vermont and Upstate New York Cycling</p>
           <p className="mb-4 text-sm text-muted-foreground">
             See the difference between gravel and road riding in Vermont and Upstate New York in this video comparison.
           </p>

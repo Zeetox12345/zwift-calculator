@@ -251,7 +251,7 @@ const UnlockingZwiftAchievements = () => {
           <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">Alpe du Zwift calculator</Link>{" "}
           and the{" "}
           <Link to="/ventop-calculator" className="text-zwift-orange hover:underline">Ven-Top calculator</Link>{" "}
-          - Ven-Top is roughly 20.9 km and about 1,480 m of gain, so a single ascent is worth close to one and a half Alpes in the counter. For anything else, the{" "}
+          - Ven-Top is roughly 20.9 km and about 1,534 m of gain, so a single ascent is worth close to one and a half Alpes in the counter. For anything else, the{" "}
           <Link to="/zwift-climb-time-calculator" className="text-zwift-orange hover:underline">general climb time calculator</Link>{" "}
           will estimate it from distance and gradient. Pacing advice for both of the big ones lives in{" "}
           <Link to="/blog/conquer-alpe-du-zwift" className="text-zwift-orange hover:underline">Conquer the Alpe du Zwift</Link>{" "}

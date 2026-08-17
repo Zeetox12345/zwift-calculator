@@ -284,7 +284,7 @@ const CategorySetup = () => {
                   <p>
                     In simulation mode the game sends the gradient, the trainer turns it into resistance, and you shift
                     like a cyclist. Alpe du Zwift, 12.2 km and 1,036 m of gain at roughly 8.5% across 21 hairpins,
-                    should be ridden that way, and so should Ven-Top at about 20.9 km and 1,480 m. There is a pacing
+                    should be ridden that way, and so should Ven-Top at about 20.9 km and 1,534 m. There is a pacing
                     walkthrough in{" "}
                     <Link to="/blog/mastering-ven-top" className="text-zwift-orange hover:underline font-medium">
                       mastering Ven-Top

@@ -116,15 +116,24 @@
    * scrolls into view. That observer does not always run - a background tab
    * throttles it, and a JavaScript failure stops it entirely - and without a
    * fallback the whole page would sit at opacity 0 with the text technically
-   * present but invisible. The CSS animation below reveals everything after a
-   * short delay no matter what, so the reveal is decoration rather than a
-   * precondition for reading the page.
+   * present but invisible. The CSS animation below reveals everything no
+   * matter what, so the reveal is decoration rather than a precondition for
+   * reading the page.
+   *
+   * The animation must not be delayed. Every page is pre-rendered, so the h1
+   * and the hero paragraph are in the first HTML response, and they sit inside
+   * `.animate-on-scroll`. Chrome does not count a fully transparent element as
+   * a contentful paint, so any delay here is added directly to First
+   * Contentful Paint and Largest Contentful Paint: with a delay the pre-render
+   * only helps crawlers, and a real visitor stares at an empty hero until the
+   * timer expires. Starting at 0s means the text is painted on the first
+   * frame and merely fades up from there.
    */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
-    animation: reveal-failsafe 0.6s ease 1.2s forwards;
+    animation: reveal-failsafe 0.6s ease forwards;
   }
 
   .animate-on-scroll.visible {

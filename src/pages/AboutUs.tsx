@@ -197,10 +197,10 @@ const AboutUs = () => {
                       A quadratic is not a law of nature. It is a shape that fits the range riders actually ride in,
                       roughly 2 to 6 W/kg, and it is honest about being a fit rather than a simulation. Push it far
                       outside that range and it stops behaving: the parabola turns around at 1,954.08 divided by twice
-                      148.60, which is about 6.58 W/kg, and beyond that point it starts claiming that more power makes
+                      148.60, which is about 6.57 W/kg, and beyond that point it starts claiming that more power makes
                       you slower. That is exactly why the coefficients sit in the open instead of behind a button, so
                       you can see where the model stops being useful. Ven-Top gets its own fit for the same reason: at
-                      about 20.9 km and 1,480 m of gain it is a different climb rather than a scaled Alpe, and it fits
+                      about 20.9 km and 1,534 m of gain it is a different climb rather than a scaled Alpe, and it fits
                       an inverse instead of a parabola, time_minutes = 3.21 + 253.38 ÷ (W/kg). The{" "}
                       <Link to="/alpe-vs-ventop" className="text-zwift-orange hover:underline">
                         side-by-side comparison

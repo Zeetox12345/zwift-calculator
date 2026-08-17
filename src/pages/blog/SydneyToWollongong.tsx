@@ -28,7 +28,7 @@ const SydneyToWollongong = () => {
         </p>
         
         <div className="my-8">
-          <h3 className="text-xl font-semibold mb-4">Riding the Sea Cliff Bridge</h3>
+          <p className="text-xl font-semibold mb-4 text-foreground">Riding the Sea Cliff Bridge</p>
           <p className="mb-4 text-sm text-muted-foreground">
             See what makes the Sea Cliff Bridge such a cinematic cycling experience in this video showcasing the iconic Sydney to Wollongong route.
           </p>

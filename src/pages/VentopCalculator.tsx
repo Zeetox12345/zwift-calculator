@@ -76,7 +76,9 @@ const VentopCalculator = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       {/* Header Section */}
-      <section className="relative pt-14 sm:pt-16 md:pt-20 pb-3 sm:pb-4 md:pb-6 overflow-hidden">
+      {/* Top padding has to clear the fixed navbar (52px mobile / 60px desktop)
+          plus a gap, because the breadcrumb trail is the first thing in here. */}
+      <section className="relative pt-20 sm:pt-24 md:pt-28 pb-3 sm:pb-4 md:pb-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-zwift-blue/10 to-transparent -z-10"></div>
         
         <div className="container mx-auto px-4">
@@ -230,7 +232,7 @@ const VentopCalculator = () => {
                       Second, we've found that riders who break Ven Top into mental segments tend to perform better than those who try to maintain constant power throughout. This suggests that the mental aspect of Ven Top is just as important as the physical. The climb's length means that mental fatigue can be as limiting as physical fatigue.
                     </p>
                     <p className="mt-3">
-                      Third, our data shows that the relationship between power-to-weight ratio and time is more predictable on Ven Top than on Alpe du Zwift. This is likely because the longer duration reduces the impact of pacing variations and power surges. A rider who maintains 3.5 W/kg consistently will finish within a narrower time range on Ven Top than on Alpe du Zwift, where pacing variations have more impact.
+                      Third, the relationship between power-to-weight ratio and time should be more predictable on Ven Top than on Alpe du Zwift. That is reasoning rather than a measured result: a longer effort averages out pacing variation and power surges, so a single average number describes the ride better. A rider who maintains 3.5 W/kg consistently will finish within a narrower time range on Ven Top than on Alpe du Zwift, where pacing variations have more impact.
                     </p>
                     <p className="mt-3">
                       Finally, we've observed that successful Ven Top attempts often come after riders have completed multiple attempts. The first attempt is often a learning experience, where riders discover their optimal pacing strategy. Subsequent attempts show more consistent power output and better times, suggesting that Ven Top rewards experience and pacing discipline.
@@ -377,7 +379,7 @@ const VentopCalculator = () => {
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-3">What power-to-weight ratio do I need for Ven Top?</h3>
                     <p>
-                      To break 90 minutes on Ven Top, you'll need to sustain approximately 3.0-3.2 W/kg. For a sub-75-minute time, aim for 3.8-4.0 W/kg. Elite riders breaking 60 minutes typically sustain 4.8-5.2 W/kg. These are sustained averages - you'll need to maintain this power for 60-90+ minutes, which requires exceptional aerobic fitness. Our calculator provides precise time estimates based on your specific power-to-weight ratio.
+                      Solving the formula above for a target time gives you the power you need. To break 90 minutes on Ven Top you need to sustain about 2.9 W/kg. A sub-75-minute time needs about 3.5 W/kg, and breaking 60 minutes needs about 4.5 W/kg. These are sustained averages - you'll need to maintain this power for 60-90+ minutes, which requires exceptional aerobic fitness. Our calculator provides precise time estimates based on your specific power-to-weight ratio.
                     </p>
                   </div>
 

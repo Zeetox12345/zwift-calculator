@@ -14,11 +14,11 @@ const ZwiftRouteSelectionPsychology = () => {
       category: "Training"
     },
     {
-      title: "The Data Behind Zwift Climbing: What 1,000+ Rides Tell Us About Performance",
-      excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances.",
+      title: "ZwiftPower Regression Analysis: How We Built Accurate Time Predictors",
+      excerpt: "The data and the model behind the climb time predictions on this site.",
       date: "20-12-2025",
-      readTime: "18 min",
-      slug: "/blog/the-data-behind-zwift-climbing",
+      readTime: "15 min",
+      slug: "/blog/regression-analysis-methodology",
       category: "Data Analysis"
     },
     {
@@ -40,327 +40,421 @@ const ZwiftRouteSelectionPsychology = () => {
   ];
 
   const content = (
-    <div className="prose prose-lg dark:prose-invert max-w-none">
-        <p className="lead text-xl text-muted-foreground mb-8">
-          Route selection in Zwift isn't just about distance or elevation - it's a complex psychological decision that influences motivation, training adaptation, and long-term performance. This groundbreaking analysis reveals how your route choices shape your training outcomes and provides evidence-based strategies for optimal selection.
+    <div className="space-y-6">
+      <div>
+        <p className="mb-0">
+          Every Zwift ride begins with a decision you make in about four seconds: which route. I ride Zwift several
+          times a week and I am training for Ironman Copenhagen, so a large part of my week is decided in those four
+          seconds, and for a long time I got it wrong without noticing. The session I had written down and the session
+          the route actually gave me were different things. I am a mechanical engineering student in Aalborg, not a
+          coach and not a sports scientist, so nothing below rests on research I cannot show you. It is mechanism,
+          arithmetic from this site's own climb model, and my own riding, each labelled as such.
         </p>
-
-        <div className="bg-zwift-orange/10 dark:bg-zwift-orange/20 border-l-4 border-zwift-orange p-6 rounded-r-lg mb-8">
-          <h3 className="text-xl font-bold mb-3 flex items-center">
-            <Brain className="mr-2 text-zwift-orange" size={24} />
-            Key Insight
-          </h3>
-          <p className="mb-0">
-            Our analysis of 2,000+ Zwift training sessions reveals that route selection accounts for 35% of training adherence and 28% of performance improvement variance. Riders who strategically select routes based on psychological factors show 40% better long-term consistency than those who choose randomly.
-          </p>
-        </div>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">The Psychology of Route Selection: What Drives Our Choices</h2>
-        
-        <p>
-          When you open Zwift's route selection screen, multiple psychological factors influence your decision - often subconsciously. Understanding these factors is the first step toward making optimal choices.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Familiarity Bias: The Comfort Zone Trap</h3>
-
-        <p>
-          Research in exercise psychology shows that humans have a strong preference for familiar routes. In Zwift, this manifests as riders repeatedly selecting the same 3-5 routes, even when other options might better serve their training goals.
-        </p>
-
-        <p>
-          <strong>Why this happens:</strong> Familiar routes reduce cognitive load. You know what to expect, how long it takes, and where the challenging sections are. This predictability feels safe and comfortable.
-        </p>
-
-        <p>
-          <strong>The problem:</strong> Familiarity bias limits training variety, which is crucial for comprehensive fitness development. Our data shows that riders who rotate through 8+ different routes show 25% better overall performance improvements than those who stick to 3-4 favorites.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Achievement Motivation: The Badge Effect</h3>
-
-        <p>
-          Zwift's achievement system creates powerful psychological incentives. Riders are 3.2x more likely to select routes with unearned badges, even when those routes don't align with their training goals.
-        </p>
-
-        <p>
-          This "badge effect" demonstrates <strong>extrinsic motivation</strong> - external rewards driving behavior. While badges can provide motivation, over-reliance on them can lead to:
-        </p>
-
-        <ul className="list-disc pl-6 space-y-2 mb-6">
-          <li>Neglecting structured training in favor of badge collection</li>
-          <li>Selecting routes that are too easy or too hard for current fitness</li>
-          <li>Reduced intrinsic motivation over time</li>
-        </ul>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Social Influence: Group Ride Dynamics</h3>
-
-        <p>
-          Social psychology research shows that group membership significantly influences individual choices. In Zwift, riders often select routes based on:
-        </p>
-
-        <ul className="list-disc pl-6 space-y-2 mb-6">
-          <li>What their training partners are doing</li>
-          <li>Popular routes in group rides</li>
-          <li>Routes featured in Zwift's social media</li>
-          <li>Routes used by professional riders they follow</li>
-        </ul>
-
-        <p>
-          This social influence can be positive (motivation through community) or negative (selecting routes that don't match your goals).
-        </p>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">Route Characteristics and Psychological Impact</h2>
-
-        <p>
-          Different route characteristics trigger different psychological responses. Understanding these connections helps you select routes that align with your training goals and mental state.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Elevation Profile: The Challenge Perception</h3>
-
-        <p>
-          Routes with significant elevation gain trigger <strong>achievement-oriented motivation</strong>. Riders perceive climbs as challenges to conquer, which can increase motivation and effort. However, this effect has limits:
-        </p>
-
-        <div className="bg-muted/50 p-6 rounded-lg mb-8">
-          <h4 className="font-bold text-lg mb-4">Elevation and Motivation Correlation</h4>
-          <ul className="space-y-2">
-            <li><strong>0-200m elevation:</strong> Low challenge perception, may feel "too easy"</li>
-            <li><strong>200-500m elevation:</strong> Optimal challenge, high motivation</li>
-            <li><strong>500-800m elevation:</strong> High challenge, peak motivation for experienced riders</li>
-            <li><strong>800m+ elevation:</strong> Extreme challenge, motivation may decrease due to perceived difficulty</li>
-          </ul>
-        </div>
-
-        <p>
-          This explains why routes like <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">Alpe du Zwift</Link> (1,035m elevation) are simultaneously motivating and intimidating. The key is matching route difficulty to your current fitness and mental readiness.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Route Length: Time Perception and Commitment</h3>
-
-        <p>
-          Route length affects psychological commitment. Shorter routes (under 20km) feel "doable" even when motivation is low, while longer routes (40km+) require significant mental commitment.
-        </p>
-
-        <p>
-          Our analysis reveals an interesting pattern: riders who select routes slightly longer than their comfort zone (10-15% increase) show the highest completion rates and satisfaction. This aligns with the <strong>optimal challenge theory</strong> - challenges that are achievable but require effort provide the greatest psychological reward.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Visual Variety: The Novelty Factor</h3>
-
-        <p>
-          Zwift's different worlds (Watopia, London, New York, etc.) provide visual variety that affects motivation. Research in environmental psychology shows that novel environments increase attention and reduce perceived effort.
-        </p>
-
-        <p>
-          Riders report 15-20% lower perceived exertion when riding in visually novel environments, even at the same power output. This "novelty effect" suggests that rotating through different Zwift worlds can improve training adherence and enjoyment.
-        </p>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">Training Adaptation: How Route Selection Affects Performance</h2>
-
-        <p>
-          Beyond psychology, route selection directly impacts training adaptation. Different routes create different physiological stimuli, which determine your fitness improvements.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Power Distribution Patterns</h3>
-
-        <p>
-          Routes with varied terrain create <strong>stochastic training</strong> - irregular power distribution that mimics real-world cycling. Our analysis of power files shows:
-        </p>
-
-        <ul className="list-disc pl-6 space-y-2 mb-6">
-          <li><strong>Flat routes:</strong> 85-95% of time at steady power (limited adaptation stimulus)</li>
-          <li><strong>Rolling routes:</strong> 60-70% steady, 30-40% variable (optimal for general fitness)</li>
-          <li><strong>Hilly routes:</strong> 40-50% steady, 50-60% variable (excellent for climbing fitness)</li>
-          <li><strong>Mountain routes:</strong> 20-30% steady, 70-80% variable (specialized adaptation)</li>
-        </ul>
-
-        <p>
-          This power distribution directly affects which energy systems you're training. Understanding this helps you select routes that match your training phase and goals.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Training Zone Distribution</h3>
-
-        <p>
-          Different routes naturally encourage different training zones. Analyzing your route selection through this lens reveals whether you're achieving balanced training:
-        </p>
-
-        <div className="bg-zwift-blue/10 dark:bg-zwift-blue/20 p-6 rounded-lg mb-8">
-          <h4 className="font-bold text-lg mb-4">Route Type and Training Zone Distribution</h4>
-          <ul className="space-y-2">
-            <li><strong>Flat routes:</strong> Zone 2-3 dominant (aerobic base building)</li>
-            <li><strong>Rolling routes:</strong> Zone 2-4 mix (comprehensive fitness)</li>
-            <li><strong>Hilly routes:</strong> Zone 3-5 mix (threshold and VO2 max)</li>
-            <li><strong>Mountain routes:</strong> Zone 4-5 dominant (high-intensity adaptation)</li>
-          </ul>
-        </div>
-
-        <p>
-          Most riders over-select flat routes (comfort zone) and under-select hilly/mountain routes (challenge zone). This creates imbalanced training that limits climbing performance.
-        </p>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">Strategic Route Selection: Evidence-Based Framework</h2>
-
-        <p>
-          Based on psychological research and training science, here's a framework for optimal route selection:
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">The 70/20/10 Rule</h3>
-
-        <p>
-          Allocate your route selection as follows:
-        </p>
-
-        <ul className="list-disc pl-6 space-y-2 mb-6">
-          <li><strong>70% structured training routes:</strong> Routes that match your training plan's goals</li>
-          <li><strong>20% challenge routes:</strong> Routes slightly harder than your comfort zone</li>
-          <li><strong>10% exploration routes:</strong> New routes for novelty and variety</li>
-        </ul>
-
-        <p>
-          This balance ensures you're meeting training goals while maintaining motivation through challenge and novelty.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Matching Routes to Training Phases</h3>
-
-        <p>
-          Different training phases require different route characteristics:
-        </p>
-
-        <div className="bg-muted/50 p-6 rounded-lg mb-8">
-          <h4 className="font-bold text-lg mb-4">Training Phase Route Selection</h4>
-          <ul className="space-y-3">
-            <li><strong>Base Building:</strong> Longer, flatter routes (Zone 2 focus)</li>
-            <li><strong>Build Phase:</strong> Rolling routes with sustained climbs (Zone 3-4 focus)</li>
-            <li><strong>Peak Phase:</strong> Hilly/mountain routes with intervals (Zone 4-5 focus)</li>
-            <li><strong>Recovery:</strong> Short, flat routes at low intensity</li>
-          </ul>
-        </div>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">The Weekly Route Rotation Strategy</h3>
-
-        <p>
-          Instead of selecting routes randomly, use a structured weekly rotation:
-        </p>
-
-        <ul className="list-disc pl-6 space-y-2 mb-6">
-          <li><strong>Monday:</strong> Recovery route (short, flat)</li>
-          <li><strong>Tuesday:</strong> Structured workout route (matches training plan)</li>
-          <li><strong>Wednesday:</strong> Challenge route (hilly/mountain)</li>
-          <li><strong>Thursday:</strong> Structured workout route</li>
-          <li><strong>Friday:</strong> Exploration route (new route)</li>
-          <li><strong>Saturday:</strong> Long route (endurance focus)</li>
-          <li><strong>Sunday:</strong> Social route (group ride, favorite route)</li>
-        </ul>
-
-        <p>
-          This rotation ensures variety while maintaining structure, addressing both psychological needs (novelty, achievement) and training needs (comprehensive adaptation).
-        </p>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">Psychological Barriers to Optimal Route Selection</h2>
-
-        <p>
-          Understanding common psychological barriers helps you overcome them:
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Barrier #1: Fear of Failure</h3>
-
-        <p>
-          Many riders avoid challenging routes because they fear not completing them or performing poorly. This fear limits growth. Solution: Start with routes 10-15% more challenging than your comfort zone, not 50% more challenging.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Barrier #2: Time Constraints</h3>
-
-        <p>
-          Perceived time constraints lead riders to select shorter routes, even when longer routes might better serve their goals. Solution: Use Zwift's "Free Ride" mode to complete routes in multiple sessions, or select routes that match your available time while maximizing training value.
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Barrier #3: Performance Comparison Anxiety</h3>
-
-        <p>
-          Riders avoid routes where they've performed poorly in the past, fearing comparison to previous efforts. Solution: Reframe "poor" performances as baseline measurements. Every ride provides data for improvement, regardless of comparison to past efforts.
-        </p>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">Data-Driven Route Selection: Using Analytics</h2>
-
-        <p>
-          Modern training analytics platforms provide insights into route selection effectiveness:
-        </p>
-
-        <h3 className="text-2xl font-bold mt-10 mb-4">Key Metrics to Track</h3>
-
-        <ul className="list-disc pl-6 space-y-2 mb-6">
-          <li><strong>Route completion rate:</strong> Percentage of started routes completed</li>
-          <li><strong>Power distribution:</strong> Time in each training zone per route</li>
-          <li><strong>Motivation correlation:</strong> Routes you're most likely to start vs. skip</li>
-          <li><strong>Performance trends:</strong> Improvement patterns on repeated routes</li>
-        </ul>
-
-        <p>
-          Analyzing these metrics reveals patterns in your route selection behavior and helps you make more informed choices. Our <Link to="/blog/the-data-behind-zwift-climbing" className="text-zwift-orange hover:underline">comprehensive data analysis</Link> shows that riders who track and analyze route selection patterns show 30% better training consistency.
-        </p>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">The Future of Route Selection: AI and Personalization</h2>
-
-        <p>
-          Emerging technologies are revolutionizing route selection. AI-powered platforms can now:
-        </p>
-
-        <ul className="list-disc pl-6 space-y-2 mb-6">
-          <li>Analyze your training history to recommend optimal routes</li>
-          <li>Predict which routes will maximize motivation based on your patterns</li>
-          <li>Suggest route sequences that optimize training adaptation</li>
-          <li>Adapt recommendations based on your current fitness and goals</li>
-        </ul>
-
-        <p>
-          While these technologies are still developing, understanding the principles behind them helps you make better manual selections today.
-        </p>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">Practical Application: Your Route Selection Action Plan</h2>
-
-        <p>
-          Here's a practical action plan to optimize your route selection:
-        </p>
-
-        <div className="bg-zwift-orange/10 dark:bg-zwift-orange/20 p-6 rounded-lg mb-8">
-          <h4 className="font-bold text-lg mb-4">30-Day Route Selection Challenge</h4>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li><strong>Week 1:</strong> Track your current route selection patterns</li>
-            <li><strong>Week 2:</strong> Identify your comfort zone routes and challenge routes</li>
-            <li><strong>Week 3:</strong> Implement the 70/20/10 rule</li>
-            <li><strong>Week 4:</strong> Add 2-3 new routes to your rotation</li>
-          </ol>
-          <p className="mt-4 mb-0">
-            After 30 days, analyze your training data to see how route variety affected your performance and motivation.
-          </p>
-        </div>
-
-        <h2 className="text-3xl font-bold mt-12 mb-6">Conclusion: Route Selection as a Training Tool</h2>
-
-        <p>
-          Route selection in Zwift is far more than choosing a distance or elevation profile - it's a strategic decision that influences motivation, training adaptation, and long-term performance. By understanding the psychology behind route selection and applying evidence-based strategies, you can:
-        </p>
-
-        <ul className="list-disc pl-6 space-y-2 mb-6">
-          <li>Increase training adherence through optimal motivation</li>
-          <li>Improve training adaptation through strategic variety</li>
-          <li>Enhance performance through balanced route selection</li>
-          <li>Maintain long-term consistency through psychological sustainability</li>
-        </ul>
-
-        <p>
-          The routes you choose shape not just your individual rides, but your entire training journey. Make those choices count.
-        </p>
-
-        <div className="bg-zwift-blue/10 dark:bg-zwift-blue/20 border-l-4 border-zwift-blue p-6 rounded-r-lg mt-8">
-          <h3 className="text-xl font-bold mb-3">Ready to Optimize Your Route Selection?</h3>
-          <p className="mb-4">
-            Use our <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline font-semibold">Alpe du Zwift Calculator</Link> and <Link to="/ventop-calculator" className="text-zwift-orange hover:underline font-semibold">Ven-Top Calculator</Link> to understand how different routes affect your performance. Combine route selection psychology with performance data for a complete training strategy.
-          </p>
-          <p className="mb-0">
-            For more training insights, explore our <Link to="/blog/zwift-training-plans-101" className="text-zwift-orange hover:underline font-semibold">Zwift Training Plans guide</Link> and <Link to="/blog/power-to-weight-ratio-science" className="text-zwift-orange hover:underline font-semibold">Power-to-Weight Ratio deep dive</Link>.
-          </p>
-        </div>
       </div>
+
+      <div className="p-4 bg-zwift-orange/10 rounded-lg border border-zwift-orange/30">
+        <h2 className="text-2xl font-bold mb-4 flex items-center">
+          <Brain className="mr-2 text-zwift-orange" size={24} />
+          The core idea
+        </h2>
+        <p className="mb-0">
+          A route is two numbers wearing scenery: how long it will take you, and how steep it is while it takes it.
+          Those two numbers decide which effort you can actually hold and for how long. The world, the weather and
+          the badge change how much you enjoy the ride, not what it does to your fitness. So decide the session
+          first, work out the duration and the gradient it needs, and pick the route that supplies them. That is the
+          whole method. The rest of this article is why it is hard to follow and how to do the arithmetic.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Gradient decides whether your power turns into speed</h2>
+        <p className="mb-4">
+          On a climb you are lifting mass against gravity, and gravity does not care about the pack. On a flat road
+          you are pushing air, and air is something other riders can move for you. That single difference is why the
+          same interval works on one route and falls apart on another.
+        </p>
+        <p className="mb-4">
+          Here is the split for a 75 kg rider at 3.0 W/kg, taken from the physics model behind the{" "}
+          <Link to="/zwift-climb-time-calculator" className="text-zwift-orange hover:underline">climb time calculator</Link>{" "}
+          rather than from anything measured. It is a solo estimate with no draft, which is exactly the point.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-border">
+                <th scope="col" className="py-2 pr-4 text-left font-semibold text-foreground">Segment</th>
+                <th scope="col" className="py-2 pr-4 text-left font-semibold text-foreground">Profile</th>
+                <th scope="col" className="py-2 pr-4 text-left font-semibold text-foreground">Power spent on gravity</th>
+                <th scope="col" className="py-2 pr-4 text-left font-semibold text-foreground">Power spent on air</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Alpe du Zwift KOM</td>
+                <td className="py-2 pr-4">12.2 km, 1,036 m, 8.5%</td>
+                <td className="py-2 pr-4">93%</td>
+                <td className="py-2 pr-4">2%</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Innsbruck KOM</td>
+                <td className="py-2 pr-4">7.4 km, 400 m, 5.4%</td>
+                <td className="py-2 pr-4">87%</td>
+                <td className="py-2 pr-4">7%</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Volcano KOM</td>
+                <td className="py-2 pr-4">3.8 km, 129 m, 3.2%</td>
+                <td className="py-2 pr-4">74%</td>
+                <td className="py-2 pr-4">18%</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Titans Grove KOM</td>
+                <td className="py-2 pr-4">2.6 km, 59 m, 2.2%</td>
+                <td className="py-2 pr-4">59%</td>
+                <td className="py-2 pr-4">30%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 mb-4">
+          Read the last column as a measure of how much the route hands your result to other people. At 8.5% almost
+          nothing you do is aerodynamic, so your time is your sustained power and your weight, and a soft thirty
+          seconds shows up immediately as lost speed. At 2.2% roughly a third of your effort is fighting air that a
+          wheel in front would clear for you, so the pack, the surges and your timing decide the outcome.
+        </p>
+        <p className="mb-0">
+          The practical rule falls straight out of that. If the session is about holding a specific power, choose
+          gradient, because gradient forces honesty. If the session is about racing, choose the shallow rolling route,
+          because that is where positioning and the draft are the skills being tested. Length, gain and published
+          average gradient for every timed segment in the game are listed on the{" "}
+          <Link to="/zwift-climbs" className="text-zwift-orange hover:underline">Zwift climbs page</Link>, which is the
+          quickest way to find the profile you need.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4 flex items-center">
+          <Route className="mr-2 text-zwift-orange" size={24} />
+          Duration decides which session the route can be
+        </h2>
+        <p className="mb-4">
+          A climb is not long or short in kilometres. It is long or short in minutes, and the minutes depend on you.
+          A 4 km segment is a five-minute effort for one rider and a twenty-minute one for another, and those are
+          different training sessions with different physiology behind them. So before you commit, convert the route
+          into time at the power you plan to hold.
+        </p>
+        <p className="mb-4">
+          The times below are model estimates for a 75 kg rider at 3.0 W/kg, produced by the same equation the
+          calculator runs. They are arithmetic, not measurements, and your own numbers will differ. Put your weight
+          and your power into the{" "}
+          <Link to="/zwift-climb-time-calculator" className="text-zwift-orange hover:underline">climb time calculator</Link>{" "}
+          and you get your version of this table in a few seconds.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-border">
+                <th scope="col" className="py-2 pr-4 text-left font-semibold text-foreground">Segment</th>
+                <th scope="col" className="py-2 pr-4 text-left font-semibold text-foreground">Length and gain</th>
+                <th scope="col" className="py-2 pr-4 text-left font-semibold text-foreground">Estimated time at 3.0 W/kg</th>
+                <th scope="col" className="py-2 pr-4 text-left font-semibold text-foreground">What that duration suits</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Titans Grove KOM</td>
+                <td className="py-2 pr-4">2.6 km, 59 m</td>
+                <td className="py-2 pr-4">5:48</td>
+                <td className="py-2 pr-4">A surge inside a longer ride, not an interval</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Leith Hill KOM</td>
+                <td className="py-2 pr-4">1.9 km, 133 m</td>
+                <td className="py-2 pr-4">8:27</td>
+                <td className="py-2 pr-4">Short hard efforts, repeatable</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Box Hill KOM</td>
+                <td className="py-2 pr-4">3.0 km, 135 m</td>
+                <td className="py-2 pr-4">9:31</td>
+                <td className="py-2 pr-4">Tempo blocks, and racing practice in a group</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Keith Hill KOM</td>
+                <td className="py-2 pr-4">4.3 km, 225 m</td>
+                <td className="py-2 pr-4">15:13</td>
+                <td className="py-2 pr-4">A single sustained threshold effort</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">The Grade KOM</td>
+                <td className="py-2 pr-4">3.5 km, 305 m</td>
+                <td className="py-2 pr-4">18:53</td>
+                <td className="py-2 pr-4">A steep 20-minute effort with nowhere to hide</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Epic KOM Reverse</td>
+                <td className="py-2 pr-4">6.3 km, 403 m</td>
+                <td className="py-2 pr-4">26:03</td>
+                <td className="py-2 pr-4">Long threshold, one rep</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Alpe du Zwift KOM</td>
+                <td className="py-2 pr-4">12.2 km, 1,036 m</td>
+                <td className="py-2 pr-4">1:04:17</td>
+                <td className="py-2 pr-4">A benchmark, or a long sub-threshold day</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Ventoux KOM</td>
+                <td className="py-2 pr-4">19 km, 1,481 m</td>
+                <td className="py-2 pr-4">1:32:52</td>
+                <td className="py-2 pr-4">Clear the evening for it</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 mb-0">
+          Notice how quickly the same category of thing becomes a different session. Leith Hill and The Grade are both
+          "a climb". One is eight minutes and the other is nineteen, and no amount of good intent turns the first into
+          a threshold session or the second into a set of short intervals.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Matching the route to the session you meant to ride</h2>
+        <p className="mb-4">
+          Once duration and gradient are the two axes, the framework writes itself. Decide what the session has to
+          do, then look for a route that supplies it rather than one that merely permits it.
+        </p>
+        <h3 className="text-xl font-bold mb-3">Endurance rides</h3>
+        <p className="mb-4">
+          What the route must supply is the absence of provocation. Flat or gently rolling, no timed segment long
+          enough to tempt you, and preferably somewhere you have ridden before so there is no reason to push. The
+          classic failure is picking a scenic route with a climb in the middle, riding the climb because it is there,
+          and turning an aerobic ride into a middling tempo one that is too hard to recover from and too easy to
+          adapt to.
+        </p>
+        <h3 className="text-xl font-bold mb-3">Sustained threshold work</h3>
+        <p className="mb-4">
+          The route must supply a continuous climb at least as long as the interval you intend to hold. If the plan
+          says twenty minutes, a segment that ends in twelve leaves you finishing the effort on a descent where you
+          cannot hold the power at all. At 3.0 W/kg the model puts Keith Hill at about 15 minutes, The Grade at about
+          19 and Epic KOM Reverse at about 26, so a rider around that level has a genuine choice of venue. Check your
+          own figure first, because a stronger rider needs a longer climb to get the same session.
+        </p>
+        <h3 className="text-xl font-bold mb-3">Short, hard efforts</h3>
+        <p className="mb-4">
+          Here the route must supply steepness more than length, because you want the effort to end when your legs
+          end it rather than when the gradient runs out. Radio Tower KOM is 1.16 km at 12.8%, which the model puts at
+          about 6:46 for a 75 kg rider at 4 W/kg and about 5:27 at 5 W/kg. That is a real five to seven minute effort
+          in a very small piece of road, and you can be back at the bottom quickly for the next one.
+        </p>
+        <h3 className="text-xl font-bold mb-3">Racing and group riding</h3>
+        <p className="mb-0">
+          Now the shallow rolling route is the right answer, for the reason the first table gives: a large share of
+          the effort is aerodynamic, so the draft, the positioning and the timing of a surge are what decide the
+          result. Practising those on a 9% wall teaches you nothing about them. If that is new ground, the{" "}
+          <Link to="/blog/zwift-racing-for-beginners" className="text-zwift-orange hover:underline">racing for beginners guide</Link>{" "}
+          and the <Link to="/blog/zwift-drafting-physics-aerodynamics" className="text-zwift-orange hover:underline">drafting article</Link>{" "}
+          cover what the shallow routes are actually testing.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4 flex items-center">
+          <TrendingUp className="mr-2 text-zwift-orange" size={24} />
+          A worked example: is the Alpe the session you planned?
+        </h2>
+        <p className="mb-4">
+          This site fitted a curve to roughly 500 verified Alpe du Zwift finishing times from ZwiftPower, each one a
+          power figure paired with a completion time. The fit is{" "}
+          <code>time_seconds = 148.60*(W/kg)^2 - 1954.08*(W/kg) + 8329.87</code>, and the{" "}
+          <Link to="/blog/regression-analysis-methodology" className="text-zwift-orange hover:underline">methodology article</Link>{" "}
+          explains how it was built and where it gets shaky. Put numbers through it and the route becomes a duration:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li><strong>2.8 W/kg:</strong> about 1:07:03</li>
+          <li><strong>3.0 W/kg:</strong> about 1:03:25</li>
+          <li><strong>3.2 W/kg:</strong> about 59:58, which is where the hour falls</li>
+          <li><strong>3.5 W/kg:</strong> about 55:11</li>
+          <li><strong>4.0 W/kg:</strong> about 48:11</li>
+        </ul>
+        <p className="mb-4">
+          Now hold that against a plan that says "45 minutes at threshold". At 3.0 W/kg the Alpe is an hour and three
+          minutes of continuous climbing, so it is not that session and cannot be made into it. You have two honest
+          options. Ride it deliberately below threshold and accept a long steady day, which is a good session in its
+          own right. Or treat it as a benchmark, ride it as hard as you can, and plan the day after around the fact
+          that you will be tired. What you should not do is start at threshold pace and discover the mismatch at
+          hairpin fourteen, which is the version I have ridden more than once.
+        </p>
+        <p className="mb-0">
+          The same arithmetic applies to Ven-Top. The timed Ventoux KOM segment is about 19 km and 1,481 m of gain,
+          and the full Ven-Top route is about 20.9 km and 1,534 m, so be clear which one you are planning. At 3.0 W/kg
+          the model puts the KOM segment at roughly an hour and thirty-three minutes. Set the target with the{" "}
+          <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">Alpe du Zwift calculator</Link>{" "}
+          or the <Link to="/ventop-calculator" className="text-zwift-orange hover:underline">Ven-Top calculator</Link>, and
+          compare the two efforts side by side on{" "}
+          <Link to="/alpe-vs-ventop" className="text-zwift-orange hover:underline">Alpe versus Ven-Top</Link>.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Why we choose badly anyway</h2>
+        <p className="mb-4">
+          The arithmetic is easy. Following it is not, because three pulls act on the route screen and none of them
+          care what your plan says.
+        </p>
+        <h3 className="text-xl font-bold mb-3">Familiarity is cheap, and that is the problem</h3>
+        <p className="mb-4">
+          A route you know well costs you nothing to plan. You know where it gets hard, roughly how long it takes,
+          and where you can ease off, so you can set a pacing plan before you clip in. That is a genuine advantage,
+          and it is why benchmark efforts should be ridden on routes you know. The cost is that you only ever train
+          what those routes ask for. I have three defaults I fall back to when I am tired, and all three are
+          rolling. Left alone, my week would contain no sustained climbing at all, which for someone with an Ironman
+          in the calendar is the wrong hole to have.
+        </p>
+        <p className="mb-4">
+          The fix is not novelty for its own sake. It is to notice what your defaults have in common and pick
+          deliberately against that. If everything you ride is under twenty minutes of climbing, the missing session
+          is a long one.
+        </p>
+        <h3 className="text-xl font-bold mb-3">The badge and the unlock</h3>
+        <p className="mb-4">
+          Zwift's route badges, level unlocks and drops are designed to make you keep riding, and they work. I own
+          the Tron bike, which means I spent a long stretch of my Zwift life choosing routes purely by how much
+          elevation they contained, with no reference to any training plan whatsoever. I do not regret it and I would
+          not call it training either.
+        </p>
+        <p className="mb-4">
+          The honest position is that a reward you enjoy chasing is a reason to ride at all, which beats a perfectly
+          structured session you skip. The problem starts when badge chasing quietly replaces the plan rather than
+          sitting beside it. Give it a slot, ride the unlock session on a day where the effort roughly fits, and
+          check the route's duration first so you know what you are signing up for. The{" "}
+          <Link to="/blog/unlocking-zwift-achievements" className="text-zwift-orange hover:underline">achievements guide</Link>{" "}
+          lists what is worth chasing.
+        </p>
+        <h3 className="text-xl font-bold mb-3">The event calendar chooses for you</h3>
+        <p className="mb-0">
+          Group rides and races are the easiest way to end up on a route you did not select. That is not automatically
+          bad, since other riders make an easy ride easier to finish and a hard ride harder to quit. It is bad when
+          the event's route contradicts the session. A rolling race on a day scheduled for endurance is a hard day
+          with an endurance label on it. Check the route before you sign up, not after the pen closes, and read the
+          <Link to="/blog/zwift-group-ride-dynamics" className="text-zwift-orange hover:underline"> group ride dynamics</Link>{" "}
+          piece for how the pack changes your effort whether you intended it or not.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Three ways this goes wrong mid-block, and the fix for each</h2>
+        <h3 className="text-xl font-bold mb-3">Picking something you cannot finish</h3>
+        <p className="mb-4">
+          Abandoning a route halfway is discouraging out of proportion to the training lost, so riders avoid anything
+          that might do it to them and stay too easy for months. The fix is arithmetic instead of courage. Take your
+          longest recent sustained effort, add a few minutes, and find a climb whose estimated time at a power you
+          can genuinely hold lands there. You then start knowing the number is achievable, which is a completely
+          different mental state from hoping.
+        </p>
+        <h3 className="text-xl font-bold mb-3">Letting the clock pick the route</h3>
+        <p className="mb-4">
+          Forty minutes free and a route that takes an hour is a real constraint, not an excuse. But the usual
+          response, picking a short flat route and pedalling gently, wastes the slot. A short window is the right
+          time for the steep short segments: Radio Tower or Leith Hill repeats give you a genuinely hard session
+          inside half an hour of riding. Save the long routes for the days that can hold them, and check the estimate
+          rather than guessing, because guessing is how a session gets abandoned at the 40-minute mark.
+        </p>
+        <h3 className="text-xl font-bold mb-3">Avoiding the route where you had a bad day</h3>
+        <p className="mb-0">
+          There is a route most riders quietly stopped selecting because of one grim time on it. That is the route
+          worth going back to, because a repeated effort on known terrain is the cleanest fitness comparison you have:
+          same gradient, same length, same model prediction, only your power changed. A single slow attempt is a
+          baseline, and a baseline is only useless if you never repeat it.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4">How I lay out a week of routes</h2>
+        <p className="mb-4">
+          This is my own template rather than a prescription, and it is not the output of any study. It exists to make
+          sure that the sessions I would otherwise skip get a slot before the week fills up with whatever looks good
+          on the day.
+        </p>
+        <p className="mb-4">
+          Most of the week goes to routes chosen to serve the plan, a smaller share to something harder than I am
+          comfortable with, and a little to something I have never ridden. I do not defend those proportions with
+          data, and there is none to defend them with. They exist because a week with no hard route stops producing
+          progress and a week with nothing new stops being enjoyable, and both of those failures end training blocks.
+        </p>
+        <div className="p-4 bg-zwift-blue/10 rounded-lg border border-zwift-blue/30 mb-4">
+          <h3 className="text-xl font-bold mb-3">A week of route slots</h3>
+          <ul className="list-disc pl-6 space-y-2 mb-0">
+            <li><strong>Recovery day:</strong> short and flat, nothing timed, no reason to push.</li>
+            <li><strong>Structured day:</strong> whatever route lets the workout run undisturbed, usually flat.</li>
+            <li><strong>Climb day:</strong> one sustained climb long enough to cover the interval, chosen from its estimated time.</li>
+            <li><strong>Endurance day:</strong> long and unprovocative, ridden entirely below the plan's ceiling.</li>
+            <li><strong>Something new:</strong> a route or world I have not ridden, at whatever intensity it turns out to be.</li>
+            <li><strong>Social or race day:</strong> the event picks the route, and I accept the session that comes with it.</li>
+          </ul>
+        </div>
+        <p className="mb-0">
+          Fitting that into an actual training block is a separate problem, and I wrote about it in{" "}
+          <Link to="/blog/zwift-training-plans-101" className="text-zwift-orange hover:underline">training plans 101</Link>{" "}
+          and the <Link to="/blog/10-day-zwift-training-week" className="text-zwift-orange hover:underline">10-day training week</Link>.
+          The rest of the <Link to="/blog/category/training" className="text-zwift-orange hover:underline">training section</Link>{" "}
+          covers periodisation.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4 flex items-center">
+          <BarChart3 className="mr-2 text-zwift-orange" size={24} />
+          What is worth tracking, and what this site's data cannot tell you
+        </h2>
+        <p className="mb-4">
+          Four things about your own riding are cheap to check and actually inform the next choice:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li><strong>Segment time against the model.</strong> Ride a climb, compare your time to the estimate at the power you held. A large gap in either direction usually means your pacing or your power estimate is off, not the route.</li>
+          <li><strong>Repeat times on one climb.</strong> The same segment ridden three months apart is the least noisy fitness signal you can get without a lab.</li>
+          <li><strong>Time in zone per route.</strong> If a route you call endurance keeps producing threshold time, the route is choosing the session, not you.</li>
+          <li><strong>Rides you abandoned or changed halfway.</strong> The pattern in those tells you which routes you consistently overestimate yourself on.</li>
+        </ul>
+        <p className="mb-4">
+          What I cannot give you is a number for how much any of this improves adherence, and I want to be direct
+          about why. The dataset behind this site is roughly 500 Alpe du Zwift and 300 Ven-Top verified ZwiftPower
+          finishing times. Each record is a power figure paired with a completion time, and that is all. There are no
+          timestamps, no training histories, no route-selection logs and no record of who kept riding and who stopped.
+          Any claim on this page about motivation or consistency is therefore reasoning, offered as reasoning, and
+          the{" "}
+          <Link to="/blog/regression-analysis-methodology" className="text-zwift-orange hover:underline">methodology article</Link>{" "}
+          shows exactly what the data does cover.
+        </p>
+        <p className="mb-0">
+          If you want the measurable part of route choice, it is all in the first two tables: duration and gradient.
+          Those are published for every timed segment, they are the inputs the model uses, and they are enough to make
+          the decision well.
+        </p>
+      </div>
+
+      <div className="p-4 bg-zwift-orange/10 rounded-lg border border-zwift-orange/30">
+        <h2 className="text-2xl font-bold mb-4">The short version</h2>
+        <p className="mb-4">
+          Decide the session, convert it into a duration and a gradient, then pick the route that supplies both.
+          Steep routes force honest power and give you a clean comparison over time. Shallow routes hand a third of
+          the work to the pack, which makes them the place to practise racing and a poor place to hold an interval.
+          Familiarity, badges and the event calendar will all choose for you if you let them, and the cost is a week
+          of sessions that are not quite anything.
+        </p>
+        <p className="mb-0">
+          Get the numbers for a specific route on the{" "}
+          <Link to="/zwift-climbs" className="text-zwift-orange hover:underline font-semibold">climbs page</Link> and the{" "}
+          <Link to="/zwift-climb-time-calculator" className="text-zwift-orange hover:underline font-semibold">climb time calculator</Link>,
+          set a target for the big two with the{" "}
+          <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline font-semibold">Alpe du Zwift calculator</Link>{" "}
+          and the <Link to="/ventop-calculator" className="text-zwift-orange hover:underline font-semibold">Ven-Top calculator</Link>,
+          and if anything here is wrong,{" "}
+          <Link to="/contact" className="text-zwift-orange hover:underline font-semibold">tell me</Link> and I will fix it.
+        </p>
+      </div>
+    </div>
   );
 
   return (
@@ -373,4 +467,3 @@ const ZwiftRouteSelectionPsychology = () => {
 };
 
 export default ZwiftRouteSelectionPsychology;
-

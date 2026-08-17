@@ -22,7 +22,7 @@ const MasteringVenTop = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Why Ven-Top Is a Different Problem, Not a Longer Alpe</h2>
         <p className="mb-4">
-          Alpe du Zwift is 12.2 km with 1,036 m of gain, about 8.5% average across 21 hairpins. Ven-Top is roughly 20.9 km for about 1,480 m of climbing, about 7.1% average. So Ven-Top is around 71% longer with 43% more climbing, but its average gradient is 1.4 percentage points <em>shallower</em>. Those three facts generate everything else: a longer effort, a higher road speed at any given power, and a lower sustainable percentage of FTP.
+          Alpe du Zwift is 12.2 km with 1,036 m of gain, about 8.5% average across 21 hairpins. Ven-Top is roughly 20.9 km for about 1,534 m of climbing, about 7.3% average. So Ven-Top is around 71% longer with 48% more climbing, but its average gradient is 1.2 percentage points <em>shallower</em>. Those three facts generate everything else: a longer effort, a higher road speed at any given power, and a lower sustainable percentage of FTP.
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
@@ -42,12 +42,12 @@ const MasteringVenTop = () => {
               <tr className="border-b border-border">
                 <td className="py-2 pr-4">Elevation gain</td>
                 <td className="py-2 pr-4">1,036 m</td>
-                <td className="py-2 pr-4">~1,480 m</td>
+                <td className="py-2 pr-4">~1,534 m</td>
               </tr>
               <tr className="border-b border-border">
                 <td className="py-2 pr-4">Average gradient</td>
                 <td className="py-2 pr-4">~8.5%</td>
-                <td className="py-2 pr-4">~7.1%</td>
+                <td className="py-2 pr-4">~7.3%</td>
               </tr>
               <tr className="border-b border-border">
                 <td className="py-2 pr-4">Predicted time at 3.0 W/kg</td>
@@ -80,7 +80,7 @@ const MasteringVenTop = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">The Route and Stats</h2>
         <p className="mb-4">
-          Ven-Top sits in Zwift's France map and climbs to the observatory at Mont Ventoux's peak. Depending on where you start counting you will see anywhere from <strong>1,480 m</strong> to 1,534 m quoted, the difference being the timed KOM segment versus the full route{" "}
+          Ven-Top sits in Zwift's France map and climbs to the observatory at Mont Ventoux's peak. Depending on where you start counting you will see anywhere from <strong>1,480 m</strong> to 1,534 m quoted. The timed KOM segment is 19 km and 1,480 m, an average of about 7.8%, while the full route is 20.9 km and 1,534 m, about 7.3%. Every Ven-Top figure in this guide is the full route{" "}
           <a href="https://zwiftinsider.com/route/ven-top/#:~:text=in%20game%2C%20climbing%201480%20meters,of%20the%20timed%20KOM%20segment" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[3]</em>
           </a>
@@ -99,7 +99,7 @@ const MasteringVenTop = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Forest, Chalet Reynard, Moonscape: How the Gradient Really Changes</h2>
         <p className="mb-4">
-          That 7.1% average is one of the more misleading numbers in Zwift. Ven-Top follows the Bedoin ascent of Mont Ventoux, and that road has three distinct acts rather than one steady grade. Pace to the average and you pace all three of them wrong.
+          That 7.3% average is one of the more misleading numbers in Zwift. Ven-Top follows the Bedoin ascent of Mont Ventoux, and that road has three distinct acts rather than one steady grade. Pace to the average and you pace all three of them wrong.
         </p>
         <p className="mb-4">
           <strong>The opening (first 5-6 km)</strong> is the shallowest part of the whole climb, roughly 4-5%. The road is open, you are moving quickly, and holding a good speed does not feel like much work. This is the trap. Alpe du Zwift punches you with a steep ramp inside the first minute, which is a built-in brake on enthusiasm. Ven-Top opens by flattering you.

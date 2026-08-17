@@ -124,6 +124,7 @@ const ZwiftClimbs = () => {
                   <button
                     type="button"
                     onClick={() => setWorld("all")}
+                    aria-pressed={world === "all"}
                     className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
                       world === "all"
                         ? "bg-zwift-orange text-white"
@@ -137,6 +138,7 @@ const ZwiftClimbs = () => {
                       key={name}
                       type="button"
                       onClick={() => setWorld(name)}
+                      aria-pressed={world === name}
                       className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
                         world === name
                           ? "bg-zwift-orange text-white"

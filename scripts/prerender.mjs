@@ -97,9 +97,21 @@ for (const route of seoRoutes) {
 
 // A real 404 document. Vercel and Netlify both serve dist/404.html with a 404
 // status, which stops unknown URLs from being reported as soft 404s.
+//
+// Google's publisher policies do not allow ads on an error screen, so the
+// AdSense tag is stripped from this one document. Everything else keeps it.
 try {
   const notFoundHtml = render("/this-route-does-not-exist");
-  await writeFile(path.join(distDir, "404.html"), buildDocument(renderNotFoundHead(), notFoundHtml), "utf8");
+  const notFoundDoc = buildDocument(renderNotFoundHead(), notFoundHtml).replace(
+    /\s*<script async src="https:\/\/pagead2\.googlesyndication\.com[^"]*"[^>]*><\/script>/,
+    ""
+  );
+
+  if (notFoundDoc.includes("googlesyndication")) {
+    failures.push("404.html still references the AdSense tag - the strip pattern no longer matches index.html.");
+  }
+
+  await writeFile(path.join(distDir, "404.html"), notFoundDoc, "utf8");
 } catch (error) {
   failures.push(`404.html: ${error instanceof Error ? error.message : String(error)}`);
 }
@@ -108,22 +120,26 @@ try {
 /* sitemap.xml + robots.txt                                          */
 /* ---------------------------------------------------------------- */
 
-const today = new Date().toISOString().slice(0, 10);
-
+// `lastmod` is only emitted when the registry actually knows when the page last
+// changed. Defaulting it to the build date would restamp every URL on every
+// deploy, which trains crawlers to ignore the field.
 const sitemapEntries = seoRoutes
   .filter((route) => !route.noindex)
   .map((route) => {
     const loc = route.path === "/" ? `${siteUrl}/` : `${siteUrl}${route.path}`;
-    const lastmod = route.dateModified ?? route.datePublished ?? today;
+    const lastmod = route.dateModified ?? route.datePublished;
+
     return [
       "  <url>",
       `    <loc>${loc}</loc>`,
-      `    <lastmod>${lastmod}</lastmod>`,
+      ...(lastmod ? [`    <lastmod>${lastmod}</lastmod>`] : []),
       `    <changefreq>${route.changefreq}</changefreq>`,
       `    <priority>${route.sitemapPriority.toFixed(1)}</priority>`,
       "  </url>",
     ].join("\n");
   });
+
+const missingLastmod = seoRoutes.filter((r) => !r.noindex && !r.dateModified && !r.datePublished).length;
 
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',

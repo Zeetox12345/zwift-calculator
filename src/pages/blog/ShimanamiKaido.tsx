@@ -40,7 +40,7 @@ const ShimanamiKaido = () => {
         </p>
         
         <div className="my-8">
-          <h3 className="text-xl font-semibold mb-4">Experience the Shimanami Kaido</h3>
+          <p className="text-xl font-semibold mb-4 text-foreground">Experience the Shimanami Kaido</p>
           <p className="mb-4 text-sm text-muted-foreground">
             Watch this video to see the stunning beauty of Japan's Shimanami Kaido cycling route across the Seto Inland Sea.
           </p>

@@ -441,7 +441,7 @@ const Author = () => {
                         Ven-Top calculator
                       </Link>{" "}
                       covers Zwift's version of Mont Ventoux in the France world, roughly 20.9 km
-                      and about 1,480 m of gain, which is a different problem entirely. At the same
+                      and about 1,534 m of gain, which is a different problem entirely. At the same
                       W/kg the two models here put Ven-Top roughly 35 to 40% slower than the Alpe,
                       and once you are over the hour mark pacing and fuelling start to matter more
                       than raw W/kg. If you are choosing between them, the{" "}

@@ -122,7 +122,7 @@ const MechanicalEngineeringZwift = () => {
           In Zwift, these efficiency losses are simulated but simplified. The game accounts for drivetrain losses and rolling resistance but uses simplified models. This is why Zwift power might feel different from outdoor power - the efficiency models are different.
         </p>
         <p className="mb-4">
-          The engineering insight is that small improvements in efficiency can have significant impacts on performance. Improving drivetrain efficiency from 97% to 98% might seem small, but it means 1% more of your power reaches the road. On a 60-minute climb at 250 watts, that's 15 watts of "free" power. This is why equipment maintenance matters - a clean, well-lubricated drivetrain is more efficient than a dirty, dry one.
+          The engineering insight is that small improvements in efficiency are worth having because they cost nothing to keep. Improving drivetrain efficiency from 97% to 98% means 1% more of your power reaches the road: at 250 watts that is 2.5 watts, held for every second of the climb, for the price of cleaning and lubricating a chain. It is not a transformation, but it is free, and a neglected drivetrain can give away several times that.
         </p>
       </div>
 

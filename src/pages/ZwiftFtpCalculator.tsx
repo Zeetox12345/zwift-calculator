@@ -287,11 +287,28 @@ function zoneWatts(n: number, ftp: number): string {
 
 const linkClass = "text-zwift-orange hover:underline";
 
+/** The range the raw-power box advertises with `min`/`max`, enforced in code too. */
+const RAW_WATTS = { min: 50, max: 900 };
+
+/**
+ * The box holds a string so it can be cleared and retyped, and the number the
+ * calculator uses is clamped to the advertised range. Without the clamp an
+ * empty box reads as 0 W and a typed minus sign produces a negative FTP and a
+ * whole zone table of negative watts.
+ */
+function clampWatts(raw: string): number {
+  const parsed = Number(raw);
+  if (!Number.isFinite(parsed) || raw.trim() === "") return RAW_WATTS.min;
+  return Math.min(RAW_WATTS.max, Math.max(RAW_WATTS.min, parsed));
+}
+
 const ZwiftFtpCalculator = () => {
   const [protocolId, setProtocolId] = useState(PROTOCOLS[0].id);
-  const [rawWatts, setRawWatts] = useState(PROTOCOLS[0].defaultRaw);
+  const [rawWattsInput, setRawWattsInput] = useState(String(PROTOCOLS[0].defaultRaw));
   const [weightKg, setWeightKg] = useState(75);
   const [scale, setScale] = useState<Scale>("men");
+
+  const rawWatts = clampWatts(rawWattsInput);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -330,7 +347,7 @@ const ZwiftFtpCalculator = () => {
   const handleProtocolChange = (id: string) => {
     setProtocolId(id);
     const next = PROTOCOLS.find((p) => p.id === id);
-    if (next) setRawWatts(next.defaultRaw);
+    if (next) setRawWattsInput(String(next.defaultRaw));
   };
 
   return (
@@ -408,11 +425,13 @@ const ZwiftFtpCalculator = () => {
                       <Input
                         id="raw"
                         type="number"
-                        min={50}
-                        max={900}
+                        inputMode="numeric"
+                        min={RAW_WATTS.min}
+                        max={RAW_WATTS.max}
                         step={1}
-                        value={rawWatts}
-                        onChange={(event) => setRawWatts(Number(event.target.value) || 0)}
+                        value={rawWattsInput}
+                        onChange={(event) => setRawWattsInput(event.target.value)}
+                        onBlur={() => setRawWattsInput(String(rawWatts))}
                         className="mt-2"
                       />
                       <p className="mt-2 text-xs text-muted-foreground">

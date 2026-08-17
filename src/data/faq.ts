@@ -110,7 +110,7 @@ export const faqSections: FaqSection[] = [
         id: "ventop",
         question: "How does Ven-Top compare with Alpe du Zwift?",
         answer:
-          "Ven-Top is Zwift's version of Mont Ventoux in the France world, roughly 20.9 km with about 1,480 m of gain, so it averages a little over 7%. It is longer than the Alpe and slightly less steep. Across the 3 to 4.5 W/kg band the two models here put Ven-Top about 37 to 40% slower, and the gap widens below that, so an hour on the Alpe means somewhere near 1h22 on Ven-Top. The longer duration makes a pacing mistake more expensive.",
+          "Ven-Top is Zwift's version of Mont Ventoux in the France world, roughly 20.9 km with about 1,534 m of gain over the full route, so it averages about 7.3%. It is longer than the Alpe and slightly less steep. Across the 3 to 4.5 W/kg band the two models here put Ven-Top about 37 to 40% slower, and the gap widens below that, so an hour on the Alpe means somewhere near 1h22 on Ven-Top. The longer duration makes a pacing mistake more expensive.",
         links: [
           { to: "/ventop-calculator", label: "Ven-Top calculator" },
           { to: "/alpe-vs-ventop", label: "Alpe vs Ven-Top compared" },

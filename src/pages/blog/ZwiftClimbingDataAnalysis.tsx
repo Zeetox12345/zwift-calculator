@@ -20,10 +20,10 @@ const ZwiftClimbingDataAnalysis = () => {
           One of the most striking findings from our analysis is the non-linear relationship between power-to-weight ratio and climbing time. Most riders assume that if 3.0 W/kg gets you up Alpe du Zwift in 60 minutes, then 4.0 W/kg should get you up in 45 minutes. But that's not how it works.
         </p>
         <p className="mb-4">
-          Our data shows that improving from 2.5 W/kg to 3.0 W/kg saves approximately 12 minutes on Alpe du Zwift. But improving from 4.0 W/kg to 4.5 W/kg saves only about 5 minutes. This diminishing returns effect becomes more pronounced at higher power outputs. Why? Because as speed increases, aerodynamic drag and rolling resistance become relatively more significant, even on climbs. The relationship isn't linear - it's polynomial.
+          Our data shows that improving from 2.5 W/kg to 3.0 W/kg saves approximately 9 and a half minutes on Alpe du Zwift. But improving from 4.0 W/kg to 4.5 W/kg saves only about 5 and a half minutes. This diminishing returns effect becomes more pronounced at higher power outputs. Why? Because as speed increases, aerodynamic drag and rolling resistance become relatively more significant, even on climbs. The relationship isn't linear - it's polynomial.
         </p>
         <p className="mb-4">
-          This has important implications for training. If you're currently at 3.0 W/kg and want to break 60 minutes, you need to reach 3.2 W/kg - a 6.7% improvement. But if you're at 4.0 W/kg and want to break 50 minutes, you need to reach 4.3 W/kg - a 7.5% improvement. The better you get, the harder improvements become, and the more important it becomes to optimize other factors like pacing, equipment, and mental strategy.
+          This has important implications for training. If you're currently at 3.0 W/kg and want to break 60 minutes, you need to reach 3.2 W/kg - a 6.7% improvement. But if you're at 4.0 W/kg and want to break 45 minutes, you need to reach 4.3 W/kg - a 7.5% improvement. The better you get, the harder improvements become, and the more important it becomes to optimize other factors like pacing, equipment, and mental strategy.
         </p>
       </div>
 

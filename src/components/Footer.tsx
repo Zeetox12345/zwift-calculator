@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Bike, Heart, Mail } from "lucide-react";
 
@@ -31,8 +32,19 @@ const siteLinks = [
   { name: "Terms of Service", path: "/terms-of-service" },
 ];
 
+/** The year baked into the pre-rendered HTML. */
+const BUILD_YEAR = new Date().getFullYear();
+
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  // The server render has to match the first client render exactly, so the
+  // build year is used for both and only corrected afterwards. Without this the
+  // footer would mismatch on every visit from New Year until the next deploy.
+  const [currentYear, setCurrentYear] = useState(BUILD_YEAR);
+
+  useEffect(() => {
+    const actualYear = new Date().getFullYear();
+    if (actualYear !== BUILD_YEAR) setCurrentYear(actualYear);
+  }, []);
 
   return (
     <footer className="bg-gradient-to-t from-zwift-dark/10 to-transparent pt-12 pb-8">

@@ -32,6 +32,14 @@ function alpeSeconds(wkg: number): number {
   return ALPE_FIT.a * wkg * wkg + ALPE_FIT.b * wkg + ALPE_FIT.c;
 }
 
+/**
+ * The worked example below is done by hand at two decimal places, which is also
+ * what the Alpe du Zwift calculator itself uses (250 / 75 is rounded to 3.33
+ * before the fit is applied). Feeding the unrounded ratio in here would print a
+ * time four seconds away from the one a reader gets doing the sum themselves.
+ */
+const WORKED_EXAMPLE_WKG = 3.33;
+
 function formatMinutes(seconds: number): string {
   const total = Math.round(seconds);
   const minutes = Math.floor(total / 60);
@@ -314,7 +322,7 @@ const Index = () => {
                     <p className="mt-4">
                       That is the whole model. A 75 kg rider holding 250 W is at 3.33 W/kg. Put that in: 148.60 &times;
                       11.09 is about 1,648; 1954.08 &times; 3.33 is about 6,507; so the estimate is 1,648 &minus; 6,507
-                      + 8,330, which is about 3,471 seconds, or {formatMinutes(alpeSeconds(250 / 75))}. You can do that
+                      + 8,330, which is about 3,471 seconds, or {formatMinutes(alpeSeconds(WORKED_EXAMPLE_WKG))}. You can do that
                       on a phone calculator, which is the point - a model you cannot check is a model you should not
                       trust.
                     </p>

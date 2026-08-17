@@ -279,6 +279,9 @@ const ZwiftRacingCategoryCalculator = () => {
   );
 
   const score = useMemo(() => {
+    // An empty box is not a score of zero. `Number("")` is 0, so without this
+    // guard clearing the field silently claims you are in the lowest pen.
+    if (scoreInput.trim() === "") return null;
     const parsed = Number(scoreInput);
     if (!Number.isFinite(parsed)) return null;
     return Math.min(1000, Math.max(0, parsed));

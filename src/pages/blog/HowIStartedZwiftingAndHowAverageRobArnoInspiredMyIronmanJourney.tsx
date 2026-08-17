@@ -296,7 +296,7 @@ const HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney = () => {
         <p className="mb-4">
           The spreadsheet worked, but only on my laptop. Turning it into a page anyone could open is how this site started, and that page is still the{" "}
           <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">Alpe du Zwift calculator</Link>. The rest grew from asking the same question about other climbs: the{" "}
-          <Link to="/ventop-calculator" className="text-zwift-orange hover:underline">Ven-Top calculator</Link> for Zwift's Mont Ventoux, roughly 20.9 km and about 1,480 m of gain, and the{" "}
+          <Link to="/ventop-calculator" className="text-zwift-orange hover:underline">Ven-Top calculator</Link> for Zwift's Mont Ventoux, roughly 20.9 km and about 1,534 m of gain, and the{" "}
           <Link to="/alpe-vs-ventop" className="text-zwift-orange hover:underline">side-by-side comparison</Link>. Who is behind the numbers is on{" "}
           <Link to="/about-us" className="text-zwift-orange hover:underline">the about page</Link> and{" "}
           <Link to="/author" className="text-zwift-orange hover:underline">my author page</Link>.

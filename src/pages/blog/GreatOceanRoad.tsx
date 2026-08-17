@@ -28,7 +28,7 @@ const GreatOceanRoad = () => {
         </p>
         
         <div className="my-8">
-          <h3 className="text-xl font-semibold mb-4">Experience the Great Ocean Road</h3>
+          <p className="text-xl font-semibold mb-4 text-foreground">Experience the Great Ocean Road</p>
           <p className="mb-4 text-sm text-muted-foreground">
             Watch this video to see the stunning coastal views and rolling terrain that make the Great Ocean Road one of Australia's most iconic cycling routes.
           </p>

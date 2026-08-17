@@ -27,6 +27,10 @@ interface BlogPostProps {
   relatedArticles?: RelatedArticle[];
 }
 
+function toRelated(post: BlogPostMeta): RelatedArticle {
+  return { title: post.title, excerpt: post.excerpt, slug: post.slug, readTime: post.readTime };
+}
+
 /**
  * Pick four related articles: same category first, then the most recent
  * articles from elsewhere on the site. Every article therefore links out to
@@ -41,12 +45,21 @@ function autoRelated(current: BlogPostMeta | undefined): RelatedArticle[] {
     .filter((post) => post.category !== current?.category)
     .sort((a, b) => b.date.localeCompare(a.date));
 
-  return [...sameCategory, ...rest].slice(0, 4).map((post) => ({
-    title: post.title,
-    excerpt: post.excerpt,
-    slug: post.slug,
-    readTime: post.readTime,
-  }));
+  return [...sameCategory, ...rest].slice(0, 4).map(toRelated);
+}
+
+/**
+ * The sidebar deliberately shows different articles from the in-article
+ * "Related" block. Showing the same four twice on one page wastes the slot and
+ * gives the reader nothing new to click.
+ */
+function sidebarPicks(current: BlogPostMeta | undefined, exclude: RelatedArticle[]): RelatedArticle[] {
+  const used = new Set([current?.slug, ...exclude.map((a) => a.slug)]);
+  return blogPosts
+    .filter((post) => !used.has(post.slug))
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 4)
+    .map(toRelated);
 }
 
 const DEFAULT_CALCULATORS = [
@@ -137,8 +150,9 @@ const BlogPost = ({ title, date, content, relatedCalculators, relatedArticles }:
                       <Link to={AUTHOR.path} className="text-zwift-orange hover:underline font-medium">
                         {AUTHOR.name}
                       </Link>
-                      , who rides Zwift himself and builds every calculator on this site. Where an article makes a
-                      numerical claim it links to the source it came from. Spotted something wrong?{" "}
+                      , who rides Zwift himself and builds every calculator on this site. Numbers here are either
+                      measured, and then linked to where they were measured, or modelled and estimated, and then
+                      labelled as such in the text. Spotted something wrong?{" "}
                       <Link to="/contact" className="text-zwift-orange hover:underline font-medium">
                         Tell us
                       </Link>{" "}
@@ -191,7 +205,7 @@ const BlogPost = ({ title, date, content, relatedCalculators, relatedArticles }:
             {/* Sidebar - 30% (3 columns) - Below content on mobile */}
             <aside className="lg:col-span-3 order-2 lg:order-2">
               <div className="lg:sticky lg:top-24">
-                <FeaturedArticlesSidebar articles={related.slice(0, 4)} title="Related Articles" />
+                <FeaturedArticlesSidebar articles={sidebarPicks(post, related)} title="More from the library" />
               </div>
             </aside>
           </div>

@@ -12,7 +12,7 @@ const ConquerAlpeDuZwift = () => {
             <em>[1]</em>
           </a>
           . Many riders set a goal of cracking the one-hour mark on this climb - a feat requiring roughly ~3.2 watts/kg sustained{" "}
-          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift?srsltid=AfmBOoqDeHhFdGIBcJlLJQBWvPNkM_H5j-XBuaAwc8azhAKTYbx8pTIH#:~:text=minute%20or%20two%20minutes%20of,%E2%80%9D" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
+          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift#:~:text=minute%20or%20two%20minutes%20of,%E2%80%9D" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[2]</em>
           </a>
           . Whether you're aiming for that 60-minute badge or just want to reach the summit without cracking, this guide will help you conquer the Alpe faster and more confidently.
@@ -214,11 +214,11 @@ const ConquerAlpeDuZwift = () => {
         <h2 className="text-2xl font-bold mb-4">Pacing Strategy</h2>
         <p className="mb-4">
           <strong>Don't start out too hard.</strong> It's a long climb, and a common mistake is blasting the first few turns only to <em>blow up</em> halfway. As one coach advises, approach it like a time trial - start slightly easier than your target power, then ramp up later (a "negative split"){" "}
-          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift?srsltid=AfmBOoqDeHhFdGIBcJlLJQBWvPNkM_H5j-XBuaAwc8azhAKTYbx8pTIH#:~:text=Ian%20Jenner%2C%20an%20Italian,speed%2C%20and%20then%20finish%20faster" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
+          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift#:~:text=Ian%20Jenner%2C%20an%20Italian,speed%2C%20and%20then%20finish%20faster" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[6]</em>
           </a>
           {" "}
-          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift?srsltid=AfmBOoqDeHhFdGIBcJlLJQBWvPNkM_H5j-XBuaAwc8azhAKTYbx8pTIH#:~:text=minute%20or%20two%20minutes%20of,%E2%80%9D" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
+          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift#:~:text=minute%20or%20two%20minutes%20of,%E2%80%9D" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[2]</em>
           </a>
           . For example, you might ride ~5-10 watts below your FTP for the first 5-10 minutes{" "}
@@ -332,7 +332,7 @@ const ConquerAlpeDuZwift = () => {
             <em>[9]</em>
           </a>
           . Structured training plans on Zwift (like <em>Build Me Up</em> or climbing workouts) can help raise your FTP. Also, practice sustained climbs on other Zwift routes (try Volcano or Epic KOM) to build endurance. Don't neglect weight if you have room to safely lose a few kilograms - <em>every</em> kilo matters on an 8.5% grade. For example, going under 1 hour at ~3.2 W/kg is a common benchmark{" "}
-          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift?srsltid=AfmBOoqDeHhFdGIBcJlLJQBWvPNkM_H5j-XBuaAwc8azhAKTYbx8pTIH#:~:text=minute%20or%20two%20minutes%20of,%E2%80%9D" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
+          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift#:~:text=minute%20or%20two%20minutes%20of,%E2%80%9D" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[2]</em>
           </a>
           , but that exact wattage output will net a faster time if you're lighter.
@@ -340,7 +340,7 @@ const ConquerAlpeDuZwift = () => {
         <p className="mb-4">
           The quality the Alpe rewards is holding a near-threshold power for 45 to 70 minutes without decoupling, which is not the same as a high 20-minute number. If your FTP test looks strong but your Alpe times keep landing behind the prediction, the gap is durability, and the fix is longer intervals at slightly lower intensity rather than shorter ones at higher. Two by 20 minutes at your target Alpe power is a good rehearsal, because it also tells you whether that power is really yours. For a longer version of the same test, the{" "}
           <Link to="/blog/mastering-ven-top" className="text-zwift-orange hover:underline">Ven-Top guide</Link>{" "}
-          covers a climb roughly 20.9 km long with about 1,480 m of gain, the{" "}
+          covers a climb roughly 20.9 km long with about 1,534 m of gain, the{" "}
           <Link to="/alpe-vs-ventop" className="text-zwift-orange hover:underline">Alpe vs Ven-Top comparison</Link>{" "}
           explains why the two reward different things, and the{" "}
           <Link to="/ventop-calculator" className="text-zwift-orange hover:underline">Ven-Top calculator</Link>{" "}
@@ -377,7 +377,7 @@ const ConquerAlpeDuZwift = () => {
         <h2 className="text-2xl font-bold mb-4">Stay Motivated to the Top</h2>
         <p className="mb-4">
           Let's face it - climbing the Alpe is as much a mental challenge as a physical one. Set small targets: "I'll get to turn 10, then reassess." Celebrate each hairpin conquered. The game helps by counting them down and even showing fun tidbits on some turn signs. Some riders play motivating music or even watch a show to distract from the pain cave. You could also <strong>use the climb's landmarks</strong>: for example, know that turn 7 is the famous <em>Dutch Corner</em> (in real Alpe d'Huez, a lively spot) - when you reach it, you're in the home stretch. And remember, every climb up Alpe du Zwift makes you stronger. As one coach notes, the more you ride it, the better you understand where you can push harder or where you might need to back off{" "}
-          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift?srsltid=AfmBOoqDeHhFdGIBcJlLJQBWvPNkM_H5j-XBuaAwc8azhAKTYbx8pTIH#:~:text=effort%20like%20that" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
+          <a href="https://www.rouleur.cc/blogs/rouleur-performance/how-to-conquer-the-alpe-du-zwift#:~:text=effort%20like%20that" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[11]</em>
           </a>
           . Experience pays off; your first ascent might be a learning experience, but you'll gain knowledge to beat your time on the next attempt.

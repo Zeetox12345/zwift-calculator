@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Bike, Menu, X, ChevronDown } from "lucide-react";
 
-import { useIsMobile } from "@/hooks/use-mobile";
-
 interface NavLink {
   name: string;
   path: string;
@@ -56,7 +54,6 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [calculatorsOpen, setCalculatorsOpen] = useState(false);
   const location = useLocation();
-  const isMobile = useIsMobile();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -96,12 +93,18 @@ const Navbar = () => {
   const calculatorSectionActive = calculatorLinks.some((link) => isActive(link.path));
 
   const linkClass = (active: boolean) =>
-    `font-medium hover:text-zwift-orange transition-colors ${active ? "text-zwift-orange" : "text-foreground"}`;
+    `font-medium whitespace-nowrap hover:text-zwift-orange transition-colors ${
+      active ? "text-zwift-orange" : "text-foreground"
+    }`;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 dark:bg-zwift-dark/95 backdrop-blur-md shadow-md" : "bg-transparent"
+        // The open mobile panel is opaque, so the bar above it has to be too -
+        // otherwise the logo row floats over the page while the menu is down.
+        scrolled || mobileMenuOpen
+          ? "bg-white/95 dark:bg-zwift-dark/95 backdrop-blur-md shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
@@ -116,7 +119,9 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Main" className="hidden md:flex items-center space-x-6 lg:space-x-8">
+        {/* The full bar needs ~810px of room, so it only switches on at lg - at md it
+            collided with the logo and wrapped "Climb Data" onto two lines. */}
+        <nav aria-label="Main" className="hidden lg:flex items-center space-x-8">
           <Link to="/" className={linkClass(isActive("/"))} aria-current={isActive("/") ? "page" : undefined}>
             Home
           </Link>
@@ -174,7 +179,7 @@ const Navbar = () => {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-foreground hover:text-zwift-orange transition-colors"
+          className="lg:hidden text-foreground hover:text-zwift-orange transition-colors"
           onClick={() => setMobileMenuOpen((open) => !open)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
@@ -184,10 +189,14 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      {isMobile && mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 max-h-[80vh] overflow-y-auto bg-background dark:bg-zwift-dark shadow-lg animate-fade-in">
+      {mobileMenuOpen && (
+        <div className="lg:hidden absolute top-full left-0 right-0 max-h-[80vh] overflow-y-auto bg-background dark:bg-zwift-dark shadow-lg animate-fade-in">
           <nav aria-label="Main" className="container mx-auto px-4 py-4 flex flex-col space-y-1">
-            <Link to="/" className={`${linkClass(isActive("/"))} py-2`}>
+            <Link
+              to="/"
+              className={`${linkClass(isActive("/"))} py-2`}
+              aria-current={isActive("/") ? "page" : undefined}
+            >
               Home
             </Link>
 
@@ -195,7 +204,12 @@ const Navbar = () => {
               Calculators
             </p>
             {calculatorLinks.map((link) => (
-              <Link key={link.path} to={link.path} className={`${linkClass(isActive(link.path))} py-2 pl-3`}>
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`${linkClass(isActive(link.path))} py-2 pl-3`}
+                aria-current={isActive(link.path) ? "page" : undefined}
+              >
                 {link.name}
               </Link>
             ))}
@@ -204,7 +218,12 @@ const Navbar = () => {
               Read
             </p>
             {mainLinks.map((link) => (
-              <Link key={link.path} to={link.path} className={`${linkClass(isActive(link.path))} py-2 pl-3`}>
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`${linkClass(isActive(link.path))} py-2 pl-3`}
+                aria-current={isActive(link.path) ? "page" : undefined}
+              >
                 {link.name}
               </Link>
             ))}

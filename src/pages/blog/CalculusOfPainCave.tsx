@@ -24,7 +24,7 @@ const CalculusOfPainCave = () => {
           In the vacuum of space, you could pedal a bicycle to the speed of light with very little effort. On Earth, you are swimming through a fluid. Air is heavy. At sea level, it creates a soup that resists your movement. The force required to push through this soup does not scale linearly. It scales with the square of your speed, and the power required scales with the cube of your speed.
         </p>
         <p className="mb-4">
-          This is the "Cubic Curse." To ride at 20 km/h requires a trivial amount of power, perhaps 80 watts. But to ride at 40 km/h - merely double the speed - does not require double the power (160 watts). It requires roughly eight times the power (640 watts).
+          This is the "Cubic Curse", and it is worth being precise about what the cube applies to. It applies to the aerodynamic term, not to the whole number on your screen. Take a 75 kg rider on a 9 kg bike, on the flat, in still air. At 20 km/h the model on this site puts roughly 18 W into rolling resistance and 32 W into pushing air, about 50 W in total. Double the speed to 40 km/h and the aerodynamic part goes up exactly eightfold, from 32 W to about 254 W, while rolling resistance merely doubles to 37 W. Total: about 290 W. So doubling your speed did not double your power and it did not multiply it by eight either - it multiplied it by about six, and the faster you go the closer that multiplier creeps toward the full cube, because air is taking over.
         </p>
         <p className="mb-4">
           In Zwift, this physics engine is running constantly in the background. The game assigns you a <em>C<sub>d</sub>A</em> (Coefficient of Drag × Frontal Area). This number represents how "slippery" you are. When you unlock a time trial bike or an aero helmet, you are essentially asking the server to lower your <em>C<sub>d</sub>A</em> value by 0.002.
@@ -196,7 +196,7 @@ const CalculusOfPainCave = () => {
           On a smooth surface (asphalt), this number is small. But on the Jungle Circuit (dirt), the C<sub>rr</sub> spikes. The <a href="https://zwiftinsider.com/crr/" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:text-zwift-orange/80 underline">rolling resistance coefficient</a> might triple.
         </p>
         <p className="mb-4">
-          The physics here is cruel: Rolling resistance scales linearly with speed (F = C<sub>rr</sub> × m × g). But because the dirt is slower, air resistance matters less, and rolling resistance matters more. The engineer knows that on dirt, weight matters more than aero. On the road, aero matters more than weight. Equipment choice is an optimization problem of these crossing curves.
+          The physics here is cruel: the rolling resistance force does not care how fast you are going (F = C<sub>rr</sub> × m × g), so the power it costs you rises in direct proportion to speed rather than with the cube of it. But because the dirt is slower, air resistance matters less, and rolling resistance matters more. The engineer knows that on dirt, weight matters more than aero. On the road, aero matters more than weight. Equipment choice is an optimization problem of these crossing curves.
         </p>
       </div>
 

@@ -25,12 +25,30 @@ import {
 const CLIMBS = sustainedClimbs();
 const REFERENCE_WKG = [2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5];
 
+const HEIGHT_CM = { min: 140, max: 210, fallback: 178 };
+const EQUIPMENT_KG = { min: 5, max: 15, fallback: DEFAULT_EQUIPMENT_KG };
+
+/**
+ * Free-text number fields are kept as strings so the box can be cleared and
+ * retyped, and the value the physics model sees is clamped to the same range
+ * the `min`/`max` attributes advertise. Without the clamp a negative height
+ * feeds `Math.pow(negative, 0.725)` and puts NaN on the screen.
+ */
+function clampNumber(raw: string, { min, max, fallback }: { min: number; max: number; fallback: number }): number {
+  const parsed = Number(raw);
+  if (!Number.isFinite(parsed) || raw.trim() === "") return fallback;
+  return Math.min(max, Math.max(min, parsed));
+}
+
 const ZwiftClimbTimeCalculator = () => {
   const [climbName, setClimbName] = useState(CLIMBS[0].name);
   const [riderKg, setRiderKg] = useState(75);
-  const [riderCm, setRiderCm] = useState(178);
+  const [riderCmInput, setRiderCmInput] = useState(String(HEIGHT_CM.fallback));
   const [watts, setWatts] = useState(250);
-  const [equipmentKg, setEquipmentKg] = useState(DEFAULT_EQUIPMENT_KG);
+  const [equipmentKgInput, setEquipmentKgInput] = useState(String(EQUIPMENT_KG.fallback));
+
+  const riderCm = clampNumber(riderCmInput, HEIGHT_CM);
+  const equipmentKg = clampNumber(equipmentKgInput, EQUIPMENT_KG);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -188,10 +206,12 @@ const ZwiftClimbTimeCalculator = () => {
                         <Input
                           id="height"
                           type="number"
-                          min={140}
-                          max={210}
-                          value={riderCm}
-                          onChange={(event) => setRiderCm(Number(event.target.value) || 178)}
+                          inputMode="numeric"
+                          min={HEIGHT_CM.min}
+                          max={HEIGHT_CM.max}
+                          value={riderCmInput}
+                          onChange={(event) => setRiderCmInput(event.target.value)}
+                          onBlur={() => setRiderCmInput(String(riderCm))}
                           className="mt-1.5"
                         />
                       </div>
@@ -202,11 +222,13 @@ const ZwiftClimbTimeCalculator = () => {
                         <Input
                           id="equipment"
                           type="number"
-                          min={5}
-                          max={15}
+                          inputMode="decimal"
+                          min={EQUIPMENT_KG.min}
+                          max={EQUIPMENT_KG.max}
                           step={0.5}
-                          value={equipmentKg}
-                          onChange={(event) => setEquipmentKg(Number(event.target.value) || DEFAULT_EQUIPMENT_KG)}
+                          value={equipmentKgInput}
+                          onChange={(event) => setEquipmentKgInput(event.target.value)}
+                          onBlur={() => setEquipmentKgInput(String(equipmentKg))}
                           className="mt-1.5"
                         />
                       </div>

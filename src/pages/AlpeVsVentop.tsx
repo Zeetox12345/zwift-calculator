@@ -159,7 +159,9 @@ const AlpeVsVentop = () => {
       
       <div className="min-h-screen flex flex-col overflow-hidden">
         {/* Hero Section */}
-        <section className="relative pt-14 sm:pt-16 md:pt-20 pb-6 sm:pb-8 md:pb-12 overflow-hidden">
+        {/* Top padding has to clear the fixed navbar (52px mobile / 60px desktop)
+            plus a gap, because the breadcrumb trail is the first thing in here. */}
+        <section className="relative pt-20 sm:pt-24 md:pt-28 pb-6 sm:pb-8 md:pb-12 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-zwift-blue/20 via-zwift-orange/10 to-transparent -z-10"></div>
           
           <div className="container mx-auto px-4">

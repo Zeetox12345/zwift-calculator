@@ -31,7 +31,7 @@ const NewYorkCity = () => {
         </p>
         
         <div className="my-8">
-          <h3 className="text-xl font-semibold mb-4">Cycling New York City</h3>
+          <p className="text-xl font-semibold mb-4 text-foreground">Cycling New York City</p>
           <p className="mb-4 text-sm text-muted-foreground">
             Get a first-hand look at cycling in NYC, including the Hudson River Greenway and Central Park, in this video guide.
           </p>

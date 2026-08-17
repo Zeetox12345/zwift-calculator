@@ -37,7 +37,7 @@ const ColoradoMountainRiding = () => {
         </p>
         
         <div className="my-8">
-          <h3 className="text-xl font-semibold mb-4">Colorado Mountain Cycling</h3>
+          <p className="text-xl font-semibold mb-4 text-foreground">Colorado Mountain Cycling</p>
           <p className="mb-4 text-sm text-muted-foreground">
             Watch this video to see what Colorado mountain riding looks like and understand the challenges of cycling at altitude.
           </p>

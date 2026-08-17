@@ -229,7 +229,7 @@ const CategoryTraining = () => {
                       <p>
                         Alpe du Zwift is 12.2 km and 1,036 m at roughly 8.5%, a 50 to 70 minute
                         effort for most riders, so you train to hold high steady power for the
-                        better part of an hour. Ven-Top is about 20.9 km and 1,480 m, long enough to
+                        better part of an hour. Ven-Top is about 20.9 km and 1,534 m, long enough to
                         push the emphasis toward endurance and fueling. Racing is different again:
                         average power rarely breaks you, the surges do. The{" "}
                         <Link to="/alpe-vs-ventop" className="text-zwift-orange hover:underline">

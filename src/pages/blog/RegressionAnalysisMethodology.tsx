@@ -58,7 +58,7 @@ const RegressionAnalysisMethodology = () => {
           Second, we tested the model on a holdout set - data we set aside and didn't use for training. This final test showed how the model would perform on completely new data. Our models showed mean absolute errors of less than 3% on the holdout set, meaning predictions were within 3% of actual times on average.
         </p>
         <p className="mb-4">
-          Third, we compared our predictions to known performance benchmarks. For example, we know that approximately 3.2 W/kg typically yields a sub-60-minute Alpe du Zwift time. Our model predicted 59.2 minutes for 3.2 W/kg, which matches real-world observations. This external validation gave us confidence that our model captured real patterns, not just noise in our dataset.
+          Third, we compared our predictions to known performance benchmarks. For example, we know that approximately 3.2 W/kg typically yields a sub-60-minute Alpe du Zwift time. Our model predicts 59:58 for 3.2 W/kg, which matches real-world observations. This external validation gave us confidence that our model captured real patterns, not just noise in our dataset.
         </p>
       </div>
 

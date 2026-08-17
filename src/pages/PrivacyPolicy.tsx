@@ -134,6 +134,13 @@ const PrivacyPolicy = () => {
                     </li>
                   </ul>
 
+                  <h3 className="text-xl font-bold text-foreground mt-5 mb-2">Other third-party scripts</h3>
+                  <p>
+                    Pages on this site also load a small script from cdn.gpteng.co, which belongs to the platform the
+                    site was originally built with. It is a development and editing tool rather than an advertising or
+                    tracking product, but it is a third-party request, so it is listed here for completeness.
+                  </p>
+
                   <h3 className="text-xl font-bold text-foreground mt-5 mb-2">Analytics</h3>
                   <p>
                     This site uses Google Analytics to understand which pages people read and how the site performs.
@@ -178,7 +185,7 @@ const PrivacyPolicy = () => {
                     <a href="mailto:zwiftcalculator@gmail.com" className="text-zwift-orange hover:text-zwift-orange/80 underline">
                       zwiftcalculator@gmail.com
                     </a>
-                    . You can also adjust consent preferences via our cookie banner (where available).
+                    . Where a consent message is shown to you before ads load, your choice there can be changed at any time from the same message. If you do not see one, use the opt-out links in section 4, which work regardless.
                   </p>
                 </div>
 
@@ -203,7 +210,7 @@ const PrivacyPolicy = () => {
                   <h2 className="text-2xl font-bold text-foreground mb-3">7) Legal Bases for Processing (EEA Users)</h2>
                   <p>We rely on one or more of the following:</p>
                   <ul className="list-disc list-inside ml-4 space-y-1 mt-2">
-                    <li>Consent (e.g., analytics, personalized ads via the consent banner).</li>
+                    <li>Consent, where a consent message is presented before advertising and analytics cookies are set.</li>
                     <li>Legitimate interests (e.g., site security, basic analytics).</li>
                     <li>Performance of a contract (providing requested services).</li>
                     <li>Compliance with legal obligations.</li>

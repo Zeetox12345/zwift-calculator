@@ -387,7 +387,7 @@ export const blogPosts: BlogPostMeta[] = [
     readTime: "9 min",
     category: "Training",
     metaTitle: "Ven-Top: Pacing Zwift's Longest Climb | ZwiftCalculator",
-    metaDescription: "Ven-Top runs 20.9 km and about 1,480 m of climbing. Negative-split pacing, the fuelling maths for a 90-minute effort, and how to pick a first target.",
+    metaDescription: "Ven-Top runs 20.9 km and about 1,534 m of climbing. Negative-split pacing, the fuelling maths for a 90-minute effort, and how to pick a first target.",
     dateModified: "2026-08-18",
   },
   {
