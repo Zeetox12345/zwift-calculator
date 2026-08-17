@@ -22,7 +22,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
           Zwift is one of the few tools that can actually fit inside student life. It's time-efficient. It doesn't require perfect weather. You can do it at night without worrying about traffic. You can get a quality session done in 45 minutes and still be a functioning human.
         </p>
         <p className="mb-4">
-          But if you're not careful, Zwift can also become the thing you want to do… that you never do. Or you do it for a week, then disappear for a month and feel guilty.
+          But if you're not careful, Zwift can also become the thing you want to do... that you never do. Or you do it for a week, then disappear for a month and feel guilty.
         </p>
         <p className="mb-4">
           This article is built to solve that.
@@ -62,7 +62,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
         </p>
         <p className="mb-4">With Zwift, you can:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>train in short windows (30–60 minutes)</li>
+          <li>train in short windows (30-60 minutes)</li>
           <li>avoid weather and daylight problems</li>
           <li>skip travel time</li>
           <li>do structured workouts without needing roads</li>
@@ -134,7 +134,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
         </p>
         <p className="mb-4">Ask:</p>
         <p className="mb-4">
-          "How do I guarantee 2–3 sessions no matter what?"
+          "How do I guarantee 2-3 sessions no matter what?"
         </p>
         <p className="mb-4">
           This changes everything.
@@ -145,8 +145,8 @@ const HavingTimeToZwiftDuringUniversity = () => {
           This is your exam-period plan, your deadline plan, your "life is too much" plan.
         </p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>one shorter hard session (30–50 min)</li>
-          <li>one easy endurance session (45–75 min)</li>
+          <li>one shorter hard session (30-50 min)</li>
+          <li>one easy endurance session (45-75 min)</li>
         </ul>
         <p className="mb-4">
           That's it.
@@ -295,9 +295,9 @@ const HavingTimeToZwiftDuringUniversity = () => {
           This is powerful:
         </p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>Study block (60–120 min)</li>
-          <li>Zwift session (30–60 min)</li>
-          <li>Study block (60–120 min)</li>
+          <li>Study block (60-120 min)</li>
+          <li>Zwift session (30-60 min)</li>
+          <li>Study block (60-120 min)</li>
         </ul>
         <p className="mb-4">
           Zwift becomes the reset in the middle. You stop doom-scrolling because you have a clear "break task." Then you come back sharper.
@@ -324,7 +324,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
         <p className="mb-4">A good exam-week pattern:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>2 Zwift rides</li>
-          <li>1–2 short runs or walks</li>
+          <li>1-2 short runs or walks</li>
           <li>all sessions mostly under 60 minutes</li>
           <li>keep intensity controlled</li>
         </ul>
@@ -335,8 +335,8 @@ const HavingTimeToZwiftDuringUniversity = () => {
         <h3 className="text-xl font-semibold mb-2 mt-6">The "brain-friendly" exam Zwift sessions</h3>
         <p className="mb-4">Best types:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>30–45 min sweet spot (hard but not chaotic)</li>
-          <li>40–60 min endurance Z2</li>
+          <li>30-45 min sweet spot (hard but not chaotic)</li>
+          <li>40-60 min endurance Z2</li>
           <li>short structured intervals (like 6×2 min) if you enjoy them</li>
         </ul>
         <p className="mb-4">Avoid:</p>
@@ -359,7 +359,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
 
         <h3 className="text-xl font-semibold mb-2 mt-6">The "3-ride student template"</h3>
         <p className="mb-4">
-          Across any 7–10 days, aim for:
+          Across any 7-10 days, aim for:
         </p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>one hard Zwift session</li>
@@ -391,19 +391,19 @@ const HavingTimeToZwiftDuringUniversity = () => {
         </p>
         <p className="mb-4">If you're cycling-focused and just want general fitness:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>run 1–2 times per week, easy</li>
-          <li>keep it short (20–40 min)</li>
+          <li>run 1-2 times per week, easy</li>
+          <li>keep it short (20-40 min)</li>
         </ul>
         <p className="mb-4">If you're training for triathlon:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>2–4 runs per week, with one being long</li>
+          <li>2-4 runs per week, with one being long</li>
           <li>keep most runs easy</li>
           <li>use one short brick run after Zwift once per week</li>
         </ul>
 
         <h3 className="text-xl font-semibold mb-2 mt-6">The safest student combo</h3>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>2–3 Zwift rides per week</li>
+          <li>2-3 Zwift rides per week</li>
           <li>2 runs per week</li>
           <li>1 of those runs can be a brick (very short)</li>
         </ul>
@@ -421,7 +421,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
         <p className="mb-4">
           You don't need 2 hours. You need a session that gives you value fast.
         </p>
-        <p className="mb-4">Good 30–45 minute session types:</p>
+        <p className="mb-4">Good 30-45 minute session types:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>short sweet spot blocks (like 2×10 min)</li>
           <li>VO₂ sets like 5×2 min (hard but short)</li>
@@ -430,7 +430,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
         </ul>
         <p className="mb-4">Good "I'm exhausted but need movement" sessions:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>20–30 min easy spin</li>
+          <li>20-30 min easy spin</li>
           <li>cadence drills</li>
           <li>recovery ride + stretching</li>
         </ul>
@@ -463,11 +463,11 @@ const HavingTimeToZwiftDuringUniversity = () => {
           A 10-day training cycle is a student hack.
         </p>
         <p className="mb-4">
-          Instead of forcing everything into Monday–Sunday, you spread:
+          Instead of forcing everything into Monday - Sunday, you spread:
         </p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>2–3 key rides</li>
-          <li>2–4 runs</li>
+          <li>2-3 key rides</li>
+          <li>2-4 runs</li>
           <li>recovery days</li>
         </ul>
         <p className="mb-4">
@@ -575,9 +575,9 @@ const HavingTimeToZwiftDuringUniversity = () => {
         </p>
         <p className="mb-4">If the answer is:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>0–1: you're drifting</li>
-          <li>2–3: you're maintaining</li>
-          <li>4–6: you're building</li>
+          <li>0-1: you're drifting</li>
+          <li>2-3: you're maintaining</li>
+          <li>4-6: you're building</li>
         </ul>
         <p className="mb-4">
           This keeps you honest without being obsessive.
@@ -593,7 +593,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
         <p className="mb-4">Over 10 days, you could aim for:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>3 Zwift rides (1 hard, 1 medium, 1 endurance)</li>
-          <li>2–3 runs (mostly easy)</li>
+          <li>2-3 runs (mostly easy)</li>
           <li>1 rest day that is truly rest</li>
           <li>optional extra easy spins when you have spare time</li>
         </ul>
@@ -636,7 +636,7 @@ const HavingTimeToZwiftDuringUniversity = () => {
           Zwift is not just "a way to train indoors." For students, it's a way to keep fitness alive through the hardest scheduling environment most people ever experience.
         </p>
         <p className="mb-4">
-          If you reduce friction, use minimum effective dose, and stop forcing your training into a perfect weekly calendar, you can train consistently through university—without sacrificing grades, social life, or mental health.
+          If you reduce friction, use minimum effective dose, and stop forcing your training into a perfect weekly calendar, you can train consistently through university - without sacrificing grades, social life, or mental health.
         </p>
         <p className="mb-4 text-lg font-medium">
           You don't need more time.
@@ -665,8 +665,6 @@ const HavingTimeToZwiftDuringUniversity = () => {
         }
       ]}
       content={content}
-      metaTitle="Having Time to Zwift During University: Student Training Guide | Zwift Calculator"
-      metaDescription="Practical guide for university students to fit Zwift training into busy schedules. Learn minimum effective dose, exam period strategies, and how to stay consistent without sacrificing grades or social life."
     />
   );
 };

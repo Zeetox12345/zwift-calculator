@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import AnimatedText from "@/components/AnimatedText";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Card, CardContent } from "@/components/ui/card";
 
 const PrivacyPolicy = () => {
@@ -14,6 +15,9 @@ const PrivacyPolicy = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-zwift-orange/10 to-transparent -z-10"></div>
         
         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Breadcrumbs className="mb-6" />
+          </div>
           <div className="flex flex-col items-center text-center">
             <AnimatedText delay={100}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -72,6 +76,91 @@ const PrivacyPolicy = () => {
                   <p>
                     We partner with third-party advertising partners to display ads. These partners may use cookies, web beacons, device identifiers, and similar technologies to deliver and measure ads and to personalize content. Some partners may receive limited data to provide analytics, ad measurement, fraud prevention, and similar services.
                   </p>
+
+                  <h3 className="text-xl font-bold text-foreground mt-5 mb-2">Google and the DoubleClick cookie</h3>
+                  <ul className="list-disc list-outside ml-5 space-y-2">
+                    <li>
+                      Third-party vendors, including Google, use cookies to serve ads based on your prior visits to
+                      this website or other websites.
+                    </li>
+                    <li>
+                      Google's use of advertising cookies enables it and its partners to serve ads to you based on
+                      your visit to this site and/or other sites on the internet.
+                    </li>
+                    <li>
+                      You may opt out of personalized advertising by visiting{" "}
+                      <a
+                        href="https://www.google.com/settings/ads"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zwift-orange hover:text-zwift-orange/80 underline"
+                      >
+                        Google Ads Settings
+                      </a>
+                      .
+                    </li>
+                    <li>
+                      You can opt out of a third-party vendor's use of cookies for personalized advertising at{" "}
+                      <a
+                        href="https://optout.aboutads.info/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zwift-orange hover:text-zwift-orange/80 underline"
+                      >
+                        aboutads.info
+                      </a>{" "}
+                      or, in Europe,{" "}
+                      <a
+                        href="https://www.youronlinechoices.eu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zwift-orange hover:text-zwift-orange/80 underline"
+                      >
+                        Your Online Choices
+                      </a>
+                      .
+                    </li>
+                    <li>
+                      More detail on how Google uses data from sites that use its services is published at{" "}
+                      <a
+                        href="https://policies.google.com/technologies/partner-sites"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zwift-orange hover:text-zwift-orange/80 underline"
+                      >
+                        policies.google.com/technologies/partner-sites
+                      </a>
+                      .
+                    </li>
+                  </ul>
+
+                  <h3 className="text-xl font-bold text-foreground mt-5 mb-2">Analytics</h3>
+                  <p>
+                    This site uses Google Analytics to understand which pages people read and how the site performs.
+                    Analytics cookies collect information such as pages visited, approximate location, device type and
+                    referring source. You can prevent Google Analytics from collecting data with the{" "}
+                    <a
+                      href="https://tools.google.com/dlpage/gaoptout"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-zwift-orange hover:text-zwift-orange/80 underline"
+                    >
+                      Google Analytics opt-out browser add-on
+                    </a>
+                    .
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-3">
+                    4a) What the calculators do with your numbers
+                  </h2>
+                  <p>
+                    Nothing. Every calculator on this site runs entirely in your browser using JavaScript. The weight,
+                    power, height and test figures you type are never transmitted to our servers, never stored, never
+                    logged and never attached to an identity. There are no user accounts on this site, so there is
+                    nothing to attach them to. Close the tab and the numbers are gone.
+                  </p>
                 </div>
 
                 <div>
@@ -94,7 +183,7 @@ const PrivacyPolicy = () => {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-foreground mb-3">6) Your Privacy Rights (CCPA/CPRA – California)</h2>
+                  <h2 className="text-2xl font-bold text-foreground mb-3">6) Your Privacy Rights (CCPA/CPRA - California)</h2>
                   <p className="mb-2">California residents may:</p>
                   <ul className="list-disc list-inside ml-4 space-y-1">
                     <li>Request disclosure of categories and specific pieces of personal information collected, used, or disclosed.</li>

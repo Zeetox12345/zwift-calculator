@@ -6,16 +6,16 @@ const TowelsDuringZwifting = () => {
       {/* Introduction */}
       <div>
         <p className="mb-4 text-lg leading-relaxed">
-          If you've ever finished a hard Zwift session and looked down at your bike like, "Why does it look like it just survived a tropical storm?"—you're not alone.
+          If you've ever finished a hard Zwift session and looked down at your bike like, "Why does it look like it just survived a tropical storm?" - you're not alone.
         </p>
         <p className="mb-4">
           Indoor riding creates a special kind of sweat problem. Outdoors, sweat evaporates, wind cools you, and the bike is constantly being rinsed by airflow. Indoors, sweat has nowhere to go. It drops straight down, it runs along cables, it pools around bolts, and it finds the exact spot you didn't know could rust.
         </p>
         <p className="mb-4">
-          So yes—Zwifting can absolutely ruin parts of your bike over time if sweat is unmanaged.
+          So yes - Zwifting can absolutely ruin parts of your bike over time if sweat is unmanaged.
         </p>
         <p className="mb-4">
-          And yes—towels can help a lot, but they can also create problems if you use the wrong towel, place it poorly, trap moisture, or ignore what sweat does behind the scenes.
+          And yes - towels can help a lot, but they can also create problems if you use the wrong towel, place it poorly, trap moisture, or ignore what sweat does behind the scenes.
         </p>
         <p className="mb-4">
           This article is a complete guide to using towels during Zwift in a way that protects your bike, your trainer setup, your floor, and your sanity. It's written for real life: messy workouts, limited space, and the kind of fatigue that makes "proper cleanup" feel like an impossible task.
@@ -36,10 +36,12 @@ const TowelsDuringZwifting = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/other/towel_zwift.jpg" 
+            src="/pictures/blog/other/towel_zwift.webp" 
             alt="Proper towel setup for Zwift training to protect bike from sweat damage" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
       </div>
 
@@ -188,7 +190,7 @@ const TowelsDuringZwifting = () => {
 
       {/* Can towels ruin your bike */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">So… can towels ruin your bike?</h2>
+        <h2 className="text-2xl font-bold mb-4">So... can towels ruin your bike?</h2>
         <p className="mb-4">
           A towel can't chemically "ruin" your bike on its own the way sweat can.
         </p>
@@ -214,7 +216,7 @@ const TowelsDuringZwifting = () => {
           A lot of people do this:
         </p>
         <p className="mb-4">
-          They throw a towel over the top tube and handlebars, do the ride, then leave it there—wet—for hours or overnight.
+          They throw a towel over the top tube and handlebars, do the ride, then leave it there - wet - for hours or overnight.
         </p>
         <p className="mb-4">
           That feels like "I protected the bike."
@@ -485,7 +487,7 @@ const TowelsDuringZwifting = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Warning signs your Zwift sweat is already damaging things</h2>
         <p className="mb-4">
-          If you see these, don't panic—but don't ignore them.
+          If you see these, don't panic - but don't ignore them.
         </p>
 
         <h3 className="text-xl font-semibold mb-2 mt-6">White crusty deposits</h3>
@@ -565,7 +567,7 @@ const TowelsDuringZwifting = () => {
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>wipe bolts after sessions</li>
           <li>occasionally remove and grease bolts that repeatedly corrode (especially stem bolts and bottle cage bolts)</li>
-          <li>do not overtighten corroded bolts—replace them</li>
+          <li>do not overtighten corroded bolts - replace them</li>
         </ul>
       </div>
 
@@ -698,8 +700,6 @@ const TowelsDuringZwifting = () => {
         }
       ]}
       content={content}
-      metaTitle="Towels During Zwifting? Can It Ruin Your Bike? | Zwift Calculator"
-      metaDescription="Complete guide to using towels during Zwift training. Learn how to protect your bike from sweat damage, proper towel placement, and a 3-minute cleaning routine that prevents corrosion."
     />
   );
 };

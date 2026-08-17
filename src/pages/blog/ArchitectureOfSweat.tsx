@@ -11,7 +11,7 @@ const ArchitectureOfSweat = () => {
           But look at the screen, and the reality fractures. The human is not in a garage. They are in a neon metropolis built inside a volcano. They are doing 45 kilometers per hour in a tight paceline with a dentist from Belgium and a semi-pro racer from Osaka. They are part of a digital murmuration, a flock of birds held together not by wind or instinct, but by an algorithm that simulates the draft of air that doesn't exist.
         </p>
         <p className="mb-4">
-          We need to stop treating Zwift as a video game. It has ceased to be a game. It has become a parallel geography—a sovereign state of the mind where the laws of physics are negotiated, gravity is a variable, and the social contract is written in watts per kilogram.
+          We need to stop treating Zwift as a video game. It has ceased to be a game. It has become a parallel geography - a sovereign state of the mind where the laws of physics are negotiated, gravity is a variable, and the social contract is written in watts per kilogram.
         </p>
       </div>
 
@@ -21,13 +21,13 @@ const ArchitectureOfSweat = () => {
           In the physical world, gravity is a tyrant. It is constant, unyielding, and totally indifferent to your feelings. If you stop pedaling on a 10% gradient on the real Alpe d'Huez, you fall over. Gravity demands momentum.
         </p>
         <p className="mb-4">
-          In Watopia, gravity is a suggestion. It is a polite agreement between the server and your smart trainer. When you hit the base of the Epic KOM, the resistance clamps down, but the danger is removed. You cannot fall. You cannot crash. The visceral fear of the descent—the sheer terror of glazing a guardrail at 80kph—is replaced by a pure, distilled mathematical equation.
+          In Watopia, gravity is a suggestion. It is a polite agreement between the server and your smart trainer. When you hit the base of the Epic KOM, the resistance clamps down, but the danger is removed. You cannot fall. You cannot crash. The visceral fear of the descent - the sheer terror of glazing a guardrail at 80kph - is replaced by a pure, distilled mathematical equation.
         </p>
         <p className="mb-4">
           This changes the nature of suffering. On the road, suffering is often fear-based (can I make this corner? Is that car too close?). On the trainer, suffering is pure choice. It is existential. You can stop at any moment. You can unclip, walk to the fridge, and grab a beer. The simulation will pause. The avatar will wait, foot down, eternally patient.
         </p>
         <p className="mb-4">
-          Because the consequence of failure is removed, the glory of success becomes entirely internal. We don't climb the Alpe du Zwift to get to the top—there is nothing at the top but a spinning prize wheel and a descent back to the bottom. We climb it to prove that we can override the comfort of the living room. We are climbing a mountain of data, fighting a resistance unit that is essentially a magnetic lie, solely to prove that our will is stronger than our logic.
+          Because the consequence of failure is removed, the glory of success becomes entirely internal. We don't climb the Alpe du Zwift to get to the top - there is nothing at the top but a spinning prize wheel and a descent back to the bottom. We climb it to prove that we can override the comfort of the living room. We are climbing a mountain of data, fighting a resistance unit that is essentially a magnetic lie, solely to prove that our will is stronger than our logic.
         </p>
       </div>
 
@@ -40,13 +40,13 @@ const ArchitectureOfSweat = () => {
           In the real world, riding in a pack of 100 cyclists is a high-stress environment. Shoulders rub. Brakes screech. The smell of exhaust and ozone and nervous sweat is palpable. You trust the rider in front of you with your collarbone.
         </p>
         <p className="mb-4">
-          In the digital peloton, the trust is different. You are trusting the rider in front of you to hold the pace, not the line. You can ride through them. Ghosting through another avatar is a surreal experience that we have all normalized—a moment where two bodies occupy the same digital space without collision.
+          In the digital peloton, the trust is different. You are trusting the rider in front of you to hold the pace, not the line. You can ride through them. Ghosting through another avatar is a surreal experience that we have all normalized - a moment where two bodies occupy the same digital space without collision.
         </p>
         <p className="mb-4">
           This creates a paradox of intimacy. We spend hours staring at the backside of a stranger's avatar. We learn their cadence. We see their power fluctuations. We know when they are suffering because their avatar stands up, rocking side to side. We form a bond with "User12345" from Ohio. We suffer together for an hour, sharing the draft, sharing the workload, caught in the sticky slipstream of the game's physics engine.
         </p>
         <p className="mb-4">
-          And then, the ride ends. We give a "Ride On"—a disembodied thumb floating in the air—and they vanish. No words spoken. No coffee shared. Just a shared hallucinations of effort. It is the purest form of athletic companionship because it is stripped of all social baggage. It is a relationship based entirely on the shared output of joules.
+          And then, the ride ends. We give a "Ride On" - a disembodied thumb floating in the air - and they vanish. No words spoken. No coffee shared. Just a shared hallucinations of effort. It is the purest form of athletic companionship because it is stripped of all social baggage. It is a relationship based entirely on the shared output of joules.
         </p>
       </div>
 
@@ -59,14 +59,14 @@ const ArchitectureOfSweat = () => {
           The sidebar is the cyclist's Panopticon. It strips us naked. In the real world, if you are having a bad day, you can hide it. You can sit on the back, pull a poker face, and fake it. In Watopia, the numbers do not lie. Your watts per kilogram are broadcast to the world in real-time. If you crack, the numbers drop. If you blow up, you slide down the list instantly.
         </p>
         <p className="mb-4">
-          This radical transparency changes how we ride. It forces a specific kind of honesty (and dishonesty). We become obsessed with the "green numbers"—the personal bests. We are constantly racing our past selves. The sidebar creates a society where status is determined solely by biological output. It is a meritocracy of sweat. It doesn't care how expensive your bike is (because everyone can buy the Tron bike eventually with enough sweat). It doesn't care who your father is. It only asks: How long can you hold 4.0 w/kg?
+          This radical transparency changes how we ride. It forces a specific kind of honesty (and dishonesty). We become obsessed with the "green numbers" - the personal bests. We are constantly racing our past selves. The sidebar creates a society where status is determined solely by biological output. It is a meritocracy of sweat. It doesn't care how expensive your bike is (because everyone can buy the Tron bike eventually with enough sweat). It doesn't care who your father is. It only asks: How long can you hold 4.0 w/kg?
         </p>
       </div>
 
       <div>
         <h2 className="text-2xl font-bold mb-4">The Weather is Always Perfect (Except when it Rains)</h2>
         <p className="mb-4">
-          Have you noticed that when it rains in Watopia, you don't feel colder? The visual cues of misery—gray skies, slick roads, spray from the wheel ahead—are present, but the sensory input is missing. You are still in your temperature-controlled room.
+          Have you noticed that when it rains in Watopia, you don't feel colder? The visual cues of misery - gray skies, slick roads, spray from the wheel ahead - are present, but the sensory input is missing. You are still in your temperature-controlled room.
         </p>
         <p className="mb-4">
           This disconnect creates a form of "phantom limb" sensation for the veteran cyclist. We see the rain, so we instinctively tense up for the corners. We see the snow on the Radio Tower climb, and we feel a phantom chill. But the body remains hot. The sweat is real, but the environment is fake.
@@ -82,7 +82,7 @@ const ArchitectureOfSweat = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">The Ethics of the Weight Doper</h2>
         <p className="mb-4">
-          In this digital nation, the greatest crime is not violence, but mathematics. "Weight Doping"—lowering your entered weight to increase your watts-per-kilogram ratio—is the cardinal sin.
+          In this digital nation, the greatest crime is not violence, but mathematics. "Weight Doping" - lowering your entered weight to increase your watts-per-kilogram ratio - is the cardinal sin.
         </p>
         <p className="mb-4">
           It is a fascinating psychological crime because it is a crime against the self. When someone weight dopes, they are trying to trick the algorithm, but the algorithm doesn't care. The algorithm is just code. The only person being tricked is the rider. They are buying speed with integrity.
@@ -121,8 +121,6 @@ const ArchitectureOfSweat = () => {
       title="The Architecture of Sweat: A Field Guide to the Invisible Nation of Watopia"
       date="16-12-2025"
       content={content}
-      metaTitle="The Architecture of Sweat: A Field Guide to the Invisible Nation of Watopia | Zwift Calculator"
-      metaDescription="Explore Watopia as a parallel geography where physics are negotiated, gravity is variable, and the social contract is written in watts per kilogram. A philosophical journey through virtual cycling's digital nation."
     />
   );
 };

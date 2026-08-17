@@ -12,7 +12,7 @@ const WhatTerminologyDoZwiftersUse = () => {
           People throw around words like FTP, w/kg, draft, drop, ERG, TTT, sandbagging, Clydesdale, KOM, sticky draft, burrito, feather, A+, DIRT, ZRL, and ride-ons like it's normal conversation.
         </p>
         <p className="mb-4">
-          And it is—once you know what it all means.
+          And it is - once you know what it all means.
         </p>
         <p className="mb-4">
           Zwift has its own culture because it sits between three worlds:
@@ -26,17 +26,19 @@ const WhatTerminologyDoZwiftersUse = () => {
           That combination creates terminology you won't fully learn from a normal cycling book. Some terms come from outdoor riding, some come from training science, and some are pure Zwift slang.
         </p>
         <p className="mb-4">
-          This guide is built to be genuinely useful. Not a dry dictionary. You'll learn what each term means, why it matters, and how to use it in real Zwift situations—training, group rides, racing, and even chatting.
+          This guide is built to be genuinely useful. Not a dry dictionary. You'll learn what each term means, why it matters, and how to use it in real Zwift situations - training, group rides, racing, and even chatting.
         </p>
         <p className="mb-4">
           You'll finish with a "translator brain" so you can read Zwift forums, Discord race chats, and in-game messages without feeling lost.
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/other/Zwift_terms.png" 
+            src="/pictures/blog/other/Zwift_terms.webp" 
             alt="Zwift terminology guide showing key terms and definitions" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
       </div>
 
@@ -107,7 +109,7 @@ const WhatTerminologyDoZwiftersUse = () => {
           If your weight in Zwift is inaccurate, your w/kg is misleading and your racing category will be wrong. That's one reason Zwift racing has a lot of discussion around fairness.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Power zones (Z1–Z7)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Power zones (Z1 - Z7)</h3>
         <p className="mb-4">
           Most Zwifters use cycling zones based on FTP.
         </p>
@@ -139,7 +141,7 @@ const WhatTerminologyDoZwiftersUse = () => {
         </p>
         <p className="mb-4">In Zwift terms:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>"Sweet spot session" often means long blocks around 85–95% of FTP.</li>
+          <li>"Sweet spot session" often means long blocks around 85-95% of FTP.</li>
         </ul>
         <p className="mb-4">Why Zwifters love it:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
@@ -227,7 +229,7 @@ const WhatTerminologyDoZwiftersUse = () => {
           ERG is one of the most important Zwift training features.
         </p>
         <p className="mb-4">
-          ERG mode sets a target wattage and adjusts resistance so you hit that power regardless of gear—within reason.
+          ERG mode sets a target wattage and adjusts resistance so you hit that power regardless of gear - within reason.
         </p>
         <p className="mb-4">Benefits:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
@@ -327,7 +329,7 @@ const WhatTerminologyDoZwiftersUse = () => {
         </p>
         <p className="mb-4">You'll hear:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>"Zwift has sticky draft—use it."</li>
+          <li>"Zwift has sticky draft - use it."</li>
           <li>"If you lose the wheel, it's hard to get back."</li>
         </ul>
 
@@ -477,7 +479,7 @@ const WhatTerminologyDoZwiftersUse = () => {
 
         <h3 className="text-xl font-semibold mb-2 mt-6">Burrito</h3>
         <p className="mb-4">
-          Disables drafting for a short time—both for you and behind you—often used strategically.
+          Disables drafting for a short time - both for you and behind you - often used strategically.
         </p>
         <p className="mb-4">Examples:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
@@ -518,7 +520,7 @@ const WhatTerminologyDoZwiftersUse = () => {
 
       {/* Race category terminology */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Race category terminology (A, B, C, D… and the drama)</h2>
+        <h2 className="text-2xl font-bold mb-4">Race category terminology (A, B, C, D... and the drama)</h2>
         
         <h3 className="text-xl font-semibold mb-2 mt-6">Categories: A, B, C, D (and sometimes A+)</h3>
         <p className="mb-4">
@@ -837,7 +839,7 @@ const WhatTerminologyDoZwiftersUse = () => {
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>"I'm holding the wheel, don't want to get gapped before the climb."</li>
           <li>"Saving aero for the sprint, feather for the KOM."</li>
-          <li>"ERG felt brutal—cadence dipped and I nearly spiral'd."</li>
+          <li>"ERG felt brutal - cadence dipped and I nearly spiral'd."</li>
           <li>"I'm doing sweet spot today, mostly Z3/Z4."</li>
           <li>"Got dropped on the kick, couldn't close the gap."</li>
           <li>"TTT rotation was messy, too many surges."</li>
@@ -961,8 +963,6 @@ const WhatTerminologyDoZwiftersUse = () => {
         }
       ]}
       content={content}
-      metaTitle="What Terminology Do Zwifters Use? Complete Zwift Glossary | Zwift Calculator"
-      metaDescription="Complete guide to Zwift terminology. Learn FTP, w/kg, ERG mode, drafting, power-ups, sandbagging, and all the key terms Zwifters use in training, racing, and chatting."
     />
   );
 };

@@ -22,10 +22,12 @@ const ShimanamiKaido = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/japan_1_1.jpg" 
+            src="/pictures/blog/australia/japan_1_1.webp" 
             alt="Shimanami Kaido cycling route across Seto Inland Sea" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           At roughly seventy kilometers end to end, the Shimanami Kaido is often described as a "one-day ride." That description is technically correct and emotionally misleading. Yes, you can ride it in a day. But if you treat it like a workout, you miss what makes it special.
@@ -131,10 +133,12 @@ const ShimanamiKaido = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/japan_1_2.jpg" 
+            src="/pictures/blog/australia/japan_1_2.webp" 
             alt="Shimanami Kaido bridge crossing" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           Between bridges, the route dips into towns, climbs gently through greenery, and hugs coastlines where fishing boats drift slowly below.
@@ -331,7 +335,7 @@ const ShimanamiKaido = () => {
           The best preparation is consistency, not intensity.
         </p>
         <p className="mb-4">
-          This is where Zwift becomes useful—not as a way to smash workouts, but as a way to stay gently sharp.
+          This is where Zwift becomes useful - not as a way to smash workouts, but as a way to stay gently sharp.
         </p>
 
         <div className="my-6">
@@ -453,10 +457,12 @@ const ShimanamiKaido = () => {
           </p>
           <div className="my-6">
             <img 
-              src="/pictures/blog/australia/japan_1_3.jpg" 
+              src="/pictures/blog/australia/japan_1_3.webp" 
               alt="Zwift recovery week training" 
               className="w-full rounded-lg shadow-lg"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           </div>
           <p className="mb-4">
             Choose Zwift routes that feel calm. Rolling rather than aggressive. Visually open. Avoid constant surges.
@@ -499,10 +505,12 @@ const ShimanamiKaido = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/Japan_1_4.jpg" 
+            src="/pictures/blog/australia/Japan_1_4.webp" 
             alt="Shimanami Kaido finish and reflection" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           It invites you to slow down without feeling lazy.
@@ -517,7 +525,7 @@ const ShimanamiKaido = () => {
           If you approach it with patience, it rewards you with clarity.
         </p>
         <p className="mb-4">
-          And if you support that experience with smart Zwift consistency—before and after—you don't just have a great trip. You integrate it into how you ride going forward.
+          And if you support that experience with smart Zwift consistency - before and after - you don't just have a great trip. You integrate it into how you ride going forward.
         </p>
         <p className="mb-4 text-lg font-medium">
           That's rare.
@@ -546,8 +554,6 @@ const ShimanamiKaido = () => {
         }
       ]}
       content={content}
-      metaTitle="Japan's Shimanami Kaido: The Most Beautiful One-Day Tour Ride | Zwift Calculator"
-      metaDescription="Complete guide to cycling Japan's Shimanami Kaido route. Learn pacing strategies, what makes this ride special, and how to use Zwift for recovery weeks after travel. Cycling as travel, not performance."
     />
   );
 };

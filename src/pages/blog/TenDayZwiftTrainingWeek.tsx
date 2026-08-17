@@ -30,10 +30,12 @@ const TenDayZwiftTrainingWeek = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/other/10_day_grind.png" 
+            src="/pictures/blog/other/10_day_grind.webp" 
             alt="10 day Zwift training week structure showing balanced cycling and running schedule" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
       </div>
 
@@ -150,15 +152,15 @@ const TenDayZwiftTrainingWeek = () => {
           You'll see "Zwift" and "Run" most days. Running volume can be adjusted down if you're primarily a cyclist. If you're more runner-heavy, you'll tweak the bike volume slightly.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 1 — Zwift Threshold Builder + short easy run (optional)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 1 - Zwift Threshold Builder + short easy run (optional)</h3>
         <p className="mb-4">
-          <strong>Zwift: threshold intervals (45–70 min total)</strong><br />
+          <strong>Zwift: threshold intervals (45-70 min total)</strong><br />
           This is your first key session. Controlled. Repeatable. Not a death match.
         </p>
         <p className="mb-4">Good structure:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>warm-up 10–15 min</li>
-          <li>3 × 10 min at "hard but controlled" with 4–5 min easy between</li>
+          <li>warm-up 10-15 min</li>
+          <li>3 × 10 min at "hard but controlled" with 4-5 min easy between</li>
           <li>cool-down 10 min</li>
         </ul>
         <p className="mb-4">If you're more advanced:</p>
@@ -167,53 +169,53 @@ const TenDayZwiftTrainingWeek = () => {
           <li>or 4 × 8 min slightly above threshold</li>
         </ul>
         <p className="mb-4">
-          <strong>Run (optional): 20–30 min easy</strong><br />
+          <strong>Run (optional): 20-30 min easy</strong><br />
           This is not a workout. It's a "keep the habit" jog. If your legs feel heavy, skip it.
         </p>
         <p className="mb-4">
           <strong>Why this day matters:</strong> threshold work is the backbone of cycling fitness. It teaches you to hold strong effort without cracking.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 2 — Easy Zwift spin + mobility</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 2 - Easy Zwift spin + mobility</h3>
         <p className="mb-4">
-          <strong>Zwift: 30–60 min easy</strong><br />
+          <strong>Zwift: 30-60 min easy</strong><br />
           High cadence, light resistance. This should feel like recovery.
         </p>
         <p className="mb-4">
-          <strong>Mobility: 10–15 min</strong><br />
+          <strong>Mobility: 10-15 min</strong><br />
           Hips, calves, glutes, ankles. If you run, do your calves a favor.
         </p>
         <p className="mb-4">
           <strong>Why this day matters:</strong> Zwift can tempt you to go medium-hard every day. This day prevents that.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 3 — Run quality day + very easy Zwift (optional)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 3 - Run quality day + very easy Zwift (optional)</h3>
         <p className="mb-4">
           <strong>Run: quality session (choose one based on level)</strong>
         </p>
         <p className="mb-4">Beginner/intermediate option:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>warm-up 10–15 min easy</li>
-          <li>4–6 × 3 min "comfortably hard" with 2 min easy jog</li>
+          <li>warm-up 10-15 min easy</li>
+          <li>4-6 × 3 min "comfortably hard" with 2 min easy jog</li>
           <li>cool-down 10 min</li>
         </ul>
         <p className="mb-4">More advanced option:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>warm-up 15 min</li>
-          <li>20–30 min tempo (steady hard)</li>
+          <li>20-30 min tempo (steady hard)</li>
           <li>cool-down 10 min</li>
         </ul>
         <p className="mb-4">
-          <strong>Zwift (optional): 20–40 min very easy</strong><br />
+          <strong>Zwift (optional): 20-40 min very easy</strong><br />
           Only if it helps your legs recover. Keep it gentle.
         </p>
         <p className="mb-4">
           <strong>Why this day matters:</strong> running fitness improves best with one focused session, not constant hard running.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 4 — Zwift VO₂ day (short and sharp)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 4 - Zwift VO₂ day (short and sharp)</h3>
         <p className="mb-4">
-          <strong>Zwift: VO₂ intervals (45–65 min total)</strong>
+          <strong>Zwift: VO₂ intervals (45-65 min total)</strong>
         </p>
         <p className="mb-4">Simple structure:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
@@ -232,22 +234,22 @@ const TenDayZwiftTrainingWeek = () => {
           <strong>Why this day matters:</strong> VO₂ work raises your ceiling. It makes your threshold feel easier and improves your ability to handle surges.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 5 — Easy run + optional outdoor bike (adventure day)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 5 - Easy run + optional outdoor bike (adventure day)</h3>
         <p className="mb-4">
-          <strong>Run: 30–60 min easy</strong><br />
+          <strong>Run: 30-60 min easy</strong><br />
           Keep it relaxed. Soft surface if possible.
         </p>
         <p className="mb-4">
-          <strong>Optional outdoor bike: 60–120 min easy endurance</strong><br />
+          <strong>Optional outdoor bike: 60-120 min easy endurance</strong><br />
           If weather is decent and you have time, go outside. Keep it peaceful. Enjoy nature. Don't chase speed.
         </p>
         <p className="mb-4">
           <strong>Why this day matters:</strong> your body needs aerobic volume without stress. Outdoor riding also keeps handling skills alive.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 6 — Long Zwift endurance ride + fueling practice</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 6 - Long Zwift endurance ride + fueling practice</h3>
         <p className="mb-4">
-          <strong>Zwift: 90–150 min endurance</strong><br />
+          <strong>Zwift: 90-150 min endurance</strong><br />
           This is not meant to feel heroic. It's steady, patient time.
         </p>
         <p className="mb-4">Make this ride "useful" by practicing:</p>
@@ -259,55 +261,57 @@ const TenDayZwiftTrainingWeek = () => {
         <p className="mb-4">Fueling target (simple):</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>drink regularly</li>
-          <li>eat a small carb source every 20–30 minutes</li>
+          <li>eat a small carb source every 20-30 minutes</li>
         </ul>
         <p className="mb-4">
           <strong>Why this day matters:</strong> endurance rides build durability. They also teach your stomach and your mind to stay calm for long sessions.
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/other/10_day_grind_1.png" 
+            src="/pictures/blog/other/10_day_grind_1.webp" 
             alt="Zwift endurance ride showing steady pacing and fueling strategy" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 7 — Full recovery or very easy movement</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 7 - Full recovery or very easy movement</h3>
         <p className="mb-4">Choose one:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>complete rest</li>
           <li>30 min easy walk</li>
-          <li>20–40 min recovery spin</li>
+          <li>20-40 min recovery spin</li>
           <li>gentle swim if you do triathlon</li>
         </ul>
         <p className="mb-4">
           <strong>Why this day matters:</strong> most people don't get fitter because they train too little. They fail because they recover too poorly.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 8 — Brick day (Zwift steady + short run)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 8 - Brick day (Zwift steady + short run)</h3>
         <p className="mb-4">
           This is the "triathlon brain" day, even if you're not racing triathlon. It's also great for anyone who wants strong legs that can switch tasks.
         </p>
         <p className="mb-4">
-          <strong>Zwift: 45–75 min steady endurance with 10–15 min "strong" near the end</strong><br />
+          <strong>Zwift: 45-75 min steady endurance with 10-15 min "strong" near the end</strong><br />
           Not full threshold. Think "firm pressure."
         </p>
         <p className="mb-4">Then immediately:</p>
         <p className="mb-4">
-          <strong>Run: 15–30 min easy, smooth stride</strong><br />
+          <strong>Run: 15-30 min easy, smooth stride</strong><br />
           Keep your first 5 minutes slow. Let the legs adapt.
         </p>
         <p className="mb-4">
           <strong>Why this day matters:</strong> brick runs teach your legs to run with cycling fatigue without turning every run into suffering.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 9 — Zwift tempo / sweet spot + short easy run (optional)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 9 - Zwift tempo / sweet spot + short easy run (optional)</h3>
         <p className="mb-4">
-          <strong>Zwift: tempo or sweet spot (60–90 min)</strong>
+          <strong>Zwift: tempo or sweet spot (60-90 min)</strong>
         </p>
         <p className="mb-4">Structure:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>warm-up 10–15 min</li>
+          <li>warm-up 10-15 min</li>
           <li>2 × 20 min "hard steady" with 5 min easy between</li>
           <li>cool-down 10 min</li>
         </ul>
@@ -323,25 +327,27 @@ const TenDayZwiftTrainingWeek = () => {
           <strong>Why this day matters:</strong> this session adds high-quality volume without the stress of VO₂.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Day 10 — Long easy run (or run + easy spin)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Day 10 - Long easy run (or run + easy spin)</h3>
         <p className="mb-4">
-          <strong>Run: 60–90 min easy</strong><br />
-          If you're newer to running, make it 40–60 min.
+          <strong>Run: 60-90 min easy</strong><br />
+          If you're newer to running, make it 40-60 min.
         </p>
         <p className="mb-4">If you're more cycling-focused and want less running:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>40–60 min easy run</li>
-          <li>plus 30–60 min easy Zwift spin</li>
+          <li>40-60 min easy run</li>
+          <li>plus 30-60 min easy Zwift spin</li>
         </ul>
         <p className="mb-4">
           <strong>Why this day matters:</strong> this run builds aerobic resilience and mental steadiness. It also makes you better at handling fatigue.
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/other/10_day_grind_2.png" 
+            src="/pictures/blog/other/10_day_grind_2.webp" 
             alt="Long easy run showing aerobic resilience and mental steadiness" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
       </div>
 
@@ -359,7 +365,7 @@ const TenDayZwiftTrainingWeek = () => {
         </ul>
         <p className="mb-4">
           If you keep the easy days truly easy, you'll feel strong.
-          If you "spice up" every easy day, you'll blow up by Day 6–8.
+          If you "spice up" every easy day, you'll blow up by Day 6-8.
         </p>
         <p className="mb-4">
           Most athletes don't fail from one too-hard workout. They fail from too many medium-hard days.
@@ -373,31 +379,31 @@ const TenDayZwiftTrainingWeek = () => {
           A 10-day plan is easiest to progress in small, controlled steps.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Block 1 (Days 1–10)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Block 1 (Days 1-10)</h3>
         <p className="mb-4">
           Learn the rhythm. Don't chase big numbers.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Block 2 (Days 11–20)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Block 2 (Days 11-20)</h3>
         <p className="mb-4">Increase one thing:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>add 5–10 min total work to the threshold session</li>
+          <li>add 5-10 min total work to the threshold session</li>
           <li>or add one extra VO₂ interval</li>
-          <li>or add 10–15 min to the long endurance ride</li>
+          <li>or add 10-15 min to the long endurance ride</li>
         </ul>
         <p className="mb-4">
           Only one upgrade at a time.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Block 3 (Days 21–30)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Block 3 (Days 21-30)</h3>
         <p className="mb-4">
           Upgrade another thing, but keep recovery strong.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">Block 4 (Days 31–40)</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">Block 4 (Days 31-40)</h3>
         <p className="mb-4">Make it a lighter block:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>reduce interval volume by 30–40%</li>
+          <li>reduce interval volume by 30-40%</li>
           <li>keep endurance easy</li>
           <li>keep runs comfortable</li>
         </ul>
@@ -418,7 +424,7 @@ const TenDayZwiftTrainingWeek = () => {
 
         <h3 className="text-xl font-semibold mb-2 mt-6">Before harder sessions (threshold, VO₂, tempo, run quality)</h3>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>eat carbs 1–3 hours before (even a simple meal)</li>
+          <li>eat carbs 1-3 hours before (even a simple meal)</li>
           <li>don't start "empty" unless you truly know what you're doing</li>
         </ul>
         <p className="mb-4">Examples:</p>
@@ -431,14 +437,14 @@ const TenDayZwiftTrainingWeek = () => {
 
         <h3 className="text-xl font-semibold mb-2 mt-6">During sessions</h3>
         <p className="mb-4">
-          For rides longer than 75–90 minutes:
+          For rides longer than 75-90 minutes:
         </p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>take in carbs regularly (drink mix, gels, bars, bananas)</li>
         </ul>
         <p className="mb-4">For runs:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>for most people, fueling during runs matters mainly once you're going beyond ~75–90 minutes</li>
+          <li>for most people, fueling during runs matters mainly once you're going beyond ~75-90 minutes</li>
         </ul>
 
         <h3 className="text-xl font-semibold mb-2 mt-6">After sessions</h3>
@@ -489,14 +495,14 @@ const TenDayZwiftTrainingWeek = () => {
         <h3 className="text-xl font-semibold mb-2 mt-6">If you're cycling-first</h3>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>keep all Zwift sessions</li>
-          <li>reduce running to 2–3 runs across 10 days</li>
+          <li>reduce running to 2-3 runs across 10 days</li>
           <li>keep the long run shorter</li>
           <li>keep brick run very short</li>
         </ul>
 
         <h3 className="text-xl font-semibold mb-2 mt-6">If you're triathlon / balanced</h3>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>keep 3–4 runs</li>
+          <li>keep 3-4 runs</li>
           <li>keep brick day</li>
           <li>keep outdoor bike option if possible</li>
           <li>keep long endurance ride steady and fueled</li>
@@ -612,8 +618,6 @@ const TenDayZwiftTrainingWeek = () => {
         }
       ]}
       content={content}
-      metaTitle="10 Day Zwift Training Week: Complete Plan with Running | Zwift Calculator"
-      metaDescription="Complete 10-day Zwift training week plan combining cycling and running. Learn how to structure your training with threshold, VO₂, endurance sessions, and proper recovery for triathlon and cycling fitness."
     />
   );
 };

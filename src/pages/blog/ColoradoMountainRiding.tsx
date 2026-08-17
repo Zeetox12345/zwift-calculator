@@ -9,26 +9,28 @@ const ColoradoMountainRiding = () => {
           Colorado has a reputation problem.
         </p>
         <p className="mb-4">
-          Not because the riding isn't incredible—it is—but because so much of the conversation is dominated by superhumans. Riders who casually drop numbers that sound like typos. Climbs described as "steady" that would qualify as life events anywhere else. Casual mentions of altitude like it's just another weather variable.
+          Not because the riding isn't incredible - it is - but because so much of the conversation is dominated by superhumans. Riders who casually drop numbers that sound like typos. Climbs described as "steady" that would qualify as life events anywhere else. Casual mentions of altitude like it's just another weather variable.
         </p>
         <p className="mb-4">
-          If you're a normal cyclist—a motivated amateur, a fit recreational rider, someone who trains consistently but does not live at 2,000 meters—Colorado riding can feel intimidating before you even arrive.
+          If you're a normal cyclist - a motivated amateur, a fit recreational rider, someone who trains consistently but does not live at 2,000 meters - Colorado riding can feel intimidating before you even arrive.
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/colorado_1_1.jpg" 
+            src="/pictures/blog/australia/colorado_1_1.webp" 
             alt="Colorado mountain cycling route" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           This guide is for mortals.
         </p>
         <p className="mb-4">
-          For riders who want to experience Colorado's mountains without detonating halfway up the first real climb. For people who want to enjoy the scenery, finish rides upright, and still feel like they earned something. For cyclists who understand that altitude changes the rules—and want a plan that respects that reality instead of fighting it.
+          For riders who want to experience Colorado's mountains without detonating halfway up the first real climb. For people who want to enjoy the scenery, finish rides upright, and still feel like they earned something. For cyclists who understand that altitude changes the rules - and want a plan that respects that reality instead of fighting it.
         </p>
         <p className="mb-4">
-          We'll talk about what altitude actually does to your body, why your normal pacing instincts lie to you in Colorado, how to ride long climbs without blowing up, and how to prepare at home using Zwift—even if the tallest thing near you is a freeway overpass.
+          We'll talk about what altitude actually does to your body, why your normal pacing instincts lie to you in Colorado, how to ride long climbs without blowing up, and how to prepare at home using Zwift - even if the tallest thing near you is a freeway overpass.
         </p>
         <p className="mb-4 font-medium">
           This is not about turning you into a mountain goat. It's about helping you ride smart enough to survive and enjoy the mountains.
@@ -67,7 +69,7 @@ const ColoradoMountainRiding = () => {
           At higher elevations, the air contains less oxygen. Your lungs still work. Your heart still beats. But each breath delivers less oxygen to your muscles. The result is simple and brutal: the same effort costs more.
         </p>
         <p className="mb-4">
-          At around 1,500–2,000 meters (roughly where many Colorado towns already sit), most sea-level riders feel a noticeable drop in sustainable power. Above that, the effect becomes impossible to ignore.
+          At around 1,500-2,000 meters (roughly where many Colorado towns already sit), most sea-level riders feel a noticeable drop in sustainable power. Above that, the effect becomes impossible to ignore.
         </p>
         <p className="mb-4">What this means in practice:</p>
         <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
@@ -152,7 +154,7 @@ const ColoradoMountainRiding = () => {
           That instinct is wrong.
         </p>
         <p className="mb-4">
-          The correct approach is almost always conservative to the point of discomfort—for your ego, not your legs.
+          The correct approach is almost always conservative to the point of discomfort - for your ego, not your legs.
         </p>
         <p className="mb-4">
           If you finish the first climb thinking, "I probably could have gone a bit harder," you did it right.
@@ -323,7 +325,7 @@ const ColoradoMountainRiding = () => {
           <li>Mental patience</li>
         </ul>
         <p className="mb-4">
-          Zwift is exceptionally good at building these qualities—if you use it correctly.
+          Zwift is exceptionally good at building these qualities - if you use it correctly.
         </p>
         <p className="mb-4">
           The mistake is trying to simulate altitude with intensity. That backfires.
@@ -393,16 +395,18 @@ const ColoradoMountainRiding = () => {
           </p>
           <div className="my-6">
             <img 
-              src="/pictures/blog/australia/colorado_1_2.jpg" 
+              src="/pictures/blog/australia/colorado_1_2.webp" 
               alt="Long steady climb on Zwift" 
               className="w-full rounded-lg shadow-lg"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           </div>
           <p className="mb-4">
             Routes with extended climbs at moderate gradients are ideal. They teach you how to sit in an effort without distraction.
           </p>
           <p className="mb-4">
-            Long climbs also force you to manage cadence, breathing, and mental focus—all critical skills at altitude.
+            Long climbs also force you to manage cadence, breathing, and mental focus - all critical skills at altitude.
           </p>
           <p className="mb-4">
             Short climbs don't do this. They encourage surging. That's the opposite of what you want.
@@ -452,7 +456,7 @@ const ColoradoMountainRiding = () => {
                 Ride a climb at slightly lower cadence than usual, but at controlled power.
               </p>
               <p className="mb-2">
-                This builds muscular endurance without high cardiovascular stress—useful when oxygen is limited.
+                This builds muscular endurance without high cardiovascular stress - useful when oxygen is limited.
               </p>
             </div>
             <div>
@@ -498,7 +502,7 @@ const ColoradoMountainRiding = () => {
             Expect lower power. Expect higher effort. That's normal.
           </p>
           <p className="mb-4">
-            What transfers is not watts—it's confidence.
+            What transfers is not watts - it's confidence.
           </p>
           <p className="mb-4">
             You'll recognize the feeling of settling into a long effort. You'll know how to back off before things spiral. You'll trust that going easier early pays off later.
@@ -586,7 +590,7 @@ const ColoradoMountainRiding = () => {
           Group rides amplify mistakes.
         </p>
         <p className="mb-4">
-          If you're new to altitude, ride your own pace—even in a group.
+          If you're new to altitude, ride your own pace - even in a group.
         </p>
         <p className="mb-4">
           Let people go. They're not judging you. And if they are, they don't matter.
@@ -624,10 +628,12 @@ const ColoradoMountainRiding = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/colorado_1_3.jpg" 
+            src="/pictures/blog/australia/colorado_1_3.webp" 
             alt="Colorado mountain summit view" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           It's realizing you still have legs when the road keeps going.
@@ -654,10 +660,12 @@ const ColoradoMountainRiding = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/colorado_1_4.jpg" 
+            src="/pictures/blog/australia/colorado_1_4.webp" 
             alt="Colorado mountain cycling finish" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           Train steady. Gear low. Fuel early. Pace conservatively.
@@ -669,7 +677,7 @@ const ColoradoMountainRiding = () => {
           Do that, and Colorado stops being intimidating.
         </p>
         <p className="mb-4 text-lg font-medium">
-          It becomes what it should be: challenging, beautiful, and deeply rewarding—for mortals too.
+          It becomes what it should be: challenging, beautiful, and deeply rewarding - for mortals too.
         </p>
       </div>
     </div>
@@ -692,8 +700,6 @@ const ColoradoMountainRiding = () => {
         }
       ]}
       content={content}
-      metaTitle="Colorado Mountain Riding for Mortals: How Not to Blow Up at Altitude | Zwift Calculator"
-      metaDescription="Complete guide to cycling in Colorado mountains for normal riders. Learn altitude pacing strategies, fueling tips, Zwift training plans, and how to prepare for mountain climbs without blowing up."
     />
   );
 };

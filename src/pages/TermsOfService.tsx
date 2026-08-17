@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import AnimatedText from "@/components/AnimatedText";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
@@ -15,6 +16,9 @@ const TermsOfService = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-zwift-orange/10 to-transparent -z-10"></div>
         
         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Breadcrumbs className="mb-6" />
+          </div>
           <div className="flex flex-col items-center text-center">
             <AnimatedText delay={100}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">

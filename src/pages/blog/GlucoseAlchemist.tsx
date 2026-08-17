@@ -14,7 +14,7 @@ const GlucoseAlchemist = () => {
           This is a lie.
         </p>
         <p className="mb-4">
-          Your mitochondria—the microscopic furnaces inside your cells that turn fuel into wattage—are surprisingly unpretentious. They do not read labels. They do not care if your carbohydrate source came from a neon packet endorsed by a Tour de France winner or a generic paper bag from the bottom shelf of a discount supermarket. They only care about carbon chains.
+          Your mitochondria - the microscopic furnaces inside your cells that turn fuel into wattage - are surprisingly unpretentious. They do not read labels. They do not care if your carbohydrate source came from a neon packet endorsed by a Tour de France winner or a generic paper bag from the bottom shelf of a discount supermarket. They only care about carbon chains.
         </p>
         <p className="mb-4">
           If you are broke, hungry, and trying to get fast, you need to stop shopping like a consumer and start thinking like a chemist.
@@ -78,7 +78,7 @@ const GlucoseAlchemist = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">The Maltodextrin Maneuver</h2>
         <p className="mb-4">
-          If you want to get fancy—if you want to upgrade from "Student Alchemist" to "Budget Scientist"—you can introduce Maltodextrin.
+          If you want to get fancy - if you want to upgrade from "Student Alchemist" to "Budget Scientist" - you can introduce Maltodextrin.
         </p>
         <p className="mb-4">
           Table sugar is great, but it is very sweet (high osmolarity). At very high concentrations (like 90g+ per bottle), it can taste like syrup and might upset a sensitive stomach.
@@ -165,8 +165,6 @@ const GlucoseAlchemist = () => {
       title="The Glucose Alchemist: How to Fuel a World Tour Effort on a Ramen Budget"
       date="16-12-2025"
       content={content}
-      metaTitle="The Glucose Alchemist: How to Fuel a World Tour Effort on a Ramen Budget | Zwift Calculator"
-      metaDescription="Learn how to fuel your Zwift rides and races for pennies using table sugar, maltodextrin, and kitchen ingredients. Stop paying premium prices for sports nutrition and start thinking like a chemist."
     />
   );
 };

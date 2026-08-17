@@ -13,10 +13,12 @@ const GreatOceanRoad = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/australia_1_1.PNG" 
+            src="/pictures/blog/australia/australia_1_1.webp" 
             alt="Great Ocean Road coastal cycling route" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           This guide is built for real riding: a practical mini-itinerary (with options to make it three, four, or five days), what to pack, how to handle wind and traffic, the best photo stops, and how to replicate the "rolling coast + punchy rises" vibe on Zwift when you're home.
@@ -99,10 +101,12 @@ const GreatOceanRoad = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/australia_1_2.PNG" 
+            src="/pictures/blog/australia/australia_1_2.webp" 
             alt="Great Ocean Road route map showing Anglesea to Apollo Bay" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           Most riders touring it for fun split it over multiple days to:
@@ -123,7 +127,7 @@ const GreatOceanRoad = () => {
 
       {/* Itinerary */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">The best 3–5 day mini-itinerary</h2>
+        <h2 className="text-2xl font-bold mb-4">The best 3-5 day mini-itinerary</h2>
         <p className="mb-4">
           This is a flexible template. You can make it a three-day "ride strong, see a lot" trip, or stretch it to five days with more detours and shorter daily distances.
         </p>
@@ -188,10 +192,12 @@ const GreatOceanRoad = () => {
           </p>
           <div className="my-6">
             <img 
-              src="/pictures/blog/australia/australia_1_3.PNG" 
+              src="/pictures/blog/australia/australia_1_3.webp" 
               alt="Otways rainforest cycling route" 
               className="w-full rounded-lg shadow-lg"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           </div>
           <p className="mb-4">What changes when you go inland:</p>
           <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
@@ -313,10 +319,12 @@ const GreatOceanRoad = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/australia_1_4.PNG" 
+            src="/pictures/blog/australia/australia_1_4.webp" 
             alt="Cycling gear and equipment for Great Ocean Road" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <div className="space-y-4">
           <div>
@@ -438,7 +446,7 @@ const GreatOceanRoad = () => {
             <div>
               <h4 className="font-semibold mb-2">Hill Sprints</h4>
               <p className="mb-2">
-                This workout is designed to simulate steep, short hills that feel almost like sprints, blending anaerobic and neuromuscular power. That's exactly the "roll… rise… surge… settle" feeling you get on coastal rollers.
+                This workout is designed to simulate steep, short hills that feel almost like sprints, blending anaerobic and neuromuscular power. That's exactly the "roll... rise... surge... settle" feeling you get on coastal rollers.
               </p>
             </div>
             <div>
@@ -523,11 +531,11 @@ const GreatOceanRoad = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Common mistakes that make the Great Ocean Road harder than it needs to be</h2>
         <ul className="list-disc list-inside space-y-3 ml-4">
-          <li><strong>Going out too hard on Day One</strong> – The coast will tempt you. Don't fall for it. A multi-day ride rewards restraint.</li>
-          <li><strong>Underestimating wind</strong> – A headwind can turn a "nice cruise" into a grind. Plan time buffers and keep your ego light.</li>
-          <li><strong>Skipping real food</strong> – Sugar gets you through an hour. Real meals get you through a trip.</li>
-          <li><strong>Leaving visibility to chance</strong> – Bright kit and daytime lights are easy wins, and they're emphasized by cycling safety guidance in the region.</li>
-          <li><strong>Trying to do too much inland climbing without planning</strong> – The Otways are incredible, but they're not "free." If you go inland, pack enough, start early, and expect slower progress.</li>
+          <li><strong>Going out too hard on Day One</strong> - The coast will tempt you. Don't fall for it. A multi-day ride rewards restraint.</li>
+          <li><strong>Underestimating wind</strong> - A headwind can turn a "nice cruise" into a grind. Plan time buffers and keep your ego light.</li>
+          <li><strong>Skipping real food</strong> - Sugar gets you through an hour. Real meals get you through a trip.</li>
+          <li><strong>Leaving visibility to chance</strong> - Bright kit and daytime lights are easy wins, and they're emphasized by cycling safety guidance in the region.</li>
+          <li><strong>Trying to do too much inland climbing without planning</strong> - The Otways are incredible, but they're not "free." If you go inland, pack enough, start early, and expect slower progress.</li>
         </ul>
       </div>
 
@@ -544,7 +552,7 @@ const GreatOceanRoad = () => {
           Ride it over three days if you want the core experience. Stretch it to five if you want it to feel like a true cycling holiday. Use Zwift to build the rolling strength and punchy resilience ahead of time, and you'll show up ready to enjoy the road instead of just surviving it.
         </p>
         <p className="mb-4 text-lg font-medium">
-          And when you're back home, legs humming, salt still in your kit, you'll hop on Zwift, hit a rolling route, and think: this is close… but the real coast was better.
+          And when you're back home, legs humming, salt still in your kit, you'll hop on Zwift, hit a rolling route, and think: this is close... but the real coast was better.
         </p>
       </div>
     </div>
@@ -552,7 +560,7 @@ const GreatOceanRoad = () => {
 
   return (
     <BlogPost
-      title="Great Ocean Road by Bike: A 3–5 Day Coastal Ride (and the Zwift Sessions That Prepare You)"
+      title="Great Ocean Road by Bike: A 3-5 Day Coastal Ride (and the Zwift Sessions That Prepare You)"
       date="18-12-2025"
       relatedCalculators={[
         {
@@ -567,8 +575,6 @@ const GreatOceanRoad = () => {
         }
       ]}
       content={content}
-      metaTitle="Great Ocean Road by Bike: A 3–5 Day Coastal Ride | Zwift Calculator"
-      metaDescription="Complete guide to cycling the Great Ocean Road from Anglesea to Apollo Bay. Learn the best 3-5 day itinerary, packing tips, wind tactics, photo stops, and how to train for coastal rollers on Zwift."
     />
   );
 };

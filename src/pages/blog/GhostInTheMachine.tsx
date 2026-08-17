@@ -11,7 +11,7 @@ const GhostInTheMachine = () => {
           Then came the orange glow of Watopia, and everything changed.
         </p>
         <p className="mb-4">
-          We often talk about Zwift as a simulator—a tool that mimics the demands of the real world. But this is a fundamental misunderstanding of what is actually happening when you log on. Zwift is not a simulation of cycling. It is a neurological hack. It is a complex psychological override that tricks the human brain into bypassing its own safety mechanisms, allowing us to push harder, longer, and deeper than our biology should technically allow in a static room.
+          We often talk about Zwift as a simulator - a tool that mimics the demands of the real world. But this is a fundamental misunderstanding of what is actually happening when you log on. Zwift is not a simulation of cycling. It is a neurological hack. It is a complex psychological override that tricks the human brain into bypassing its own safety mechanisms, allowing us to push harder, longer, and deeper than our biology should technically allow in a static room.
         </p>
         <p className="mb-4">
           To understand why we can hold 300 watts on a virtual volcano but struggle to hold 200 watts staring at a basement wall, we have to look past the pedals and into the mind. We have to understand the Ghost in the Machine.
@@ -21,13 +21,13 @@ const GhostInTheMachine = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">The Central Governor and the Lie of Fatigue</h2>
         <p className="mb-4">
-          The prevailing theory of endurance performance, popularized by Dr. Tim Noakes, is the "Central Governor Theory." It posits that your muscles don't actually fail; your brain fails them. The brain monitors your physiological state—heat, lactate, fuel reserves—and when it senses you are approaching a danger zone, it induces the sensation of fatigue to force you to slow down. It's a safety switch. Importantly, this switch flips long before you are physically empty. It is a conservative estimate, a lie told by your brain to keep you safe.
+          The prevailing theory of endurance performance, popularized by Dr. Tim Noakes, is the "Central Governor Theory." It posits that your muscles don't actually fail; your brain fails them. The brain monitors your physiological state - heat, lactate, fuel reserves - and when it senses you are approaching a danger zone, it induces the sensation of fatigue to force you to slow down. It's a safety switch. Importantly, this switch flips long before you are physically empty. It is a conservative estimate, a lie told by your brain to keep you safe.
         </p>
         <p className="mb-4">
           In the old days of staring at a blank garage wall, the Central Governor had the microphone. There was no noise to drown it out. Every signal of discomfort was amplified. The feedback loop was short: Legs hurt → Brain panics → Power drops.
         </p>
         <p className="mb-4">
-          Zwift disrupts this feedback loop. By flooding the visual cortex with data—gradients, avatars, leaderboards, drops, gap times—it creates a cognitive load that distracts the Central Governor. The brain is so busy processing the physics of the draft and the gap to the rider behind that it "forgets" to tell your legs to stop. You are not just distracted; you are neurologically occupied. This is why the final kilometer of a Zwift race often sees heart rates that would be impossible to summon in a solo interval session. The Governor is asleep at the wheel, mesmerized by the screen.
+          Zwift disrupts this feedback loop. By flooding the visual cortex with data - gradients, avatars, leaderboards, drops, gap times - it creates a cognitive load that distracts the Central Governor. The brain is so busy processing the physics of the draft and the gap to the rider behind that it "forgets" to tell your legs to stop. You are not just distracted; you are neurologically occupied. This is why the final kilometer of a Zwift race often sees heart rates that would be impossible to summon in a solo interval session. The Governor is asleep at the wheel, mesmerized by the screen.
         </p>
       </div>
 
@@ -53,7 +53,7 @@ const GhostInTheMachine = () => {
           This sensory conflict creates a unique physiological tax. Your brain is constantly working to resolve the dissonance. This is why "trainer fatigue" feels different than "road fatigue." On the road, your tiredness is purely physical. On Zwift, it is physical exhaustion layered with cognitive processing load. You are mentally managing two realities simultaneously.
         </p>
         <p className="mb-4">
-          The best Zwifters are not just those with the highest VO2 max; they are the ones who have trained their brains to accept this dual reality. They have conditioned themselves to ignore the lack of G-force and trust the numbers. They have become experts at dissociation—separating the sensation of the legs from the emotion of the effort.
+          The best Zwifters are not just those with the highest VO2 max; they are the ones who have trained their brains to accept this dual reality. They have conditioned themselves to ignore the lack of G-force and trust the numbers. They have become experts at dissociation - separating the sensation of the legs from the emotion of the effort.
         </p>
       </div>
 
@@ -128,8 +128,6 @@ const GhostInTheMachine = () => {
       title="The Ghost in the Machine: Why Your Brain Allows You to Suffer More in Watopia"
       date="16-12-2025"
       content={content}
-      metaTitle="The Ghost in the Machine: Why Your Brain Allows You to Suffer More in Watopia | Zwift Calculator"
-      metaDescription="Discover how Zwift hacks your brain's Central Governor, uses the Proteus Effect, and leverages gamification to help you push harder than ever. Understand the psychology behind virtual cycling performance."
     />
   );
 };

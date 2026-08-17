@@ -33,7 +33,7 @@ const VirtualHillsRealWind = () => {
           The honest answer is that they're hard in different ways. And if you train for cycling, running, triathlon, or just the life of being outdoors a lot, understanding that difference is incredibly useful. It changes how you pace, how you fuel, how you recover, and how you build real-world confidence.
         </p>
         <p className="mb-4">
-          This article is built to do something specific: help you become the person who can use Zwift to get strong and ride, run, and travel better in real life. We'll dig into the physics, the psychology, the nature side of it, the food and fueling reality, and even the annoying truth about trash—because gels, bottles, and wrappers are part of endurance life whether we like it or not.
+          This article is built to do something specific: help you become the person who can use Zwift to get strong and ride, run, and travel better in real life. We'll dig into the physics, the psychology, the nature side of it, the food and fueling reality, and even the annoying truth about trash - because gels, bottles, and wrappers are part of endurance life whether we like it or not.
         </p>
         <p className="mb-4 font-medium">
           Let's settle the debate properly.
@@ -139,7 +139,7 @@ const VirtualHillsRealWind = () => {
           If you've ever wondered why you can hold a certain power outside but indoors it feels like you're in a sauna, that's often the explanation.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2 mt-6">The climb is predictable, which makes it easier—and harder</h3>
+        <h3 className="text-xl font-semibold mb-2 mt-6">The climb is predictable, which makes it easier - and harder</h3>
         <p className="mb-4">
           Predictable usually feels mentally easier. You know what's coming. You can settle in. But predictability also removes external distractions. There's nothing to look at except your screen and your suffering.
         </p>
@@ -460,7 +460,7 @@ const VirtualHillsRealWind = () => {
           <li>don't rely on "I'll hold it until I find a bin" unless you truly will</li>
         </ul>
         <p className="mb-4">
-          If you travel to ride in beautiful places—coastal roads, forests, mountain routes—trash is not a side topic. It's part of how you show respect.
+          If you travel to ride in beautiful places - coastal roads, forests, mountain routes - trash is not a side topic. It's part of how you show respect.
         </p>
 
         <h3 className="text-xl font-semibold mb-2 mt-6">Food choices that reduce trash without ruining performance</h3>
@@ -544,7 +544,7 @@ const VirtualHillsRealWind = () => {
 
       {/* Conclusion */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">So… what's actually harder?</h2>
+        <h2 className="text-2xl font-bold mb-4">So... what's actually harder?</h2>
         <p className="mb-4">
           Here's the cleanest conclusion I can give without oversimplifying:
         </p>
@@ -695,8 +695,6 @@ const VirtualHillsRealWind = () => {
         }
       ]}
       content={content}
-      metaTitle="Virtual Hills, Real Wind: What's Harder? | Zwift Calculator"
-      metaDescription="Compare virtual Zwift climbs vs real outdoor wind. Learn how each challenges you differently, which prepares you better for triathlon, and how to blend indoor and outdoor training effectively."
     />
   );
 };

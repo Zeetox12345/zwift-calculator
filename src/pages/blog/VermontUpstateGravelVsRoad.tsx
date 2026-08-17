@@ -16,16 +16,18 @@ const VermontUpstateGravelVsRoad = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/vermont_1_1.jpg" 
+            src="/pictures/blog/australia/vermont_1_1.webp" 
             alt="Vermont and Upstate New York cycling routes" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           Both are excellent. Both are demanding in different ways. And both reward different kinds of preparation.
         </p>
         <p className="mb-4">
-          This guide helps you decide which adventure fits you, how to ride it well, and—crucially—how to keep training in the same spirit at home using Zwift. Not as a gimmick. As a practical extension of the experience.
+          This guide helps you decide which adventure fits you, how to ride it well, and - crucially - how to keep training in the same spirit at home using Zwift. Not as a gimmick. As a practical extension of the experience.
         </p>
         <p className="mb-4 font-medium">
           No hype. No "best of" lists. Just real guidance for riders who want a great trip, not a heroic one.
@@ -62,7 +64,7 @@ const VermontUpstateGravelVsRoad = () => {
           <li>Dense networks of low-traffic paved roads</li>
           <li>Hundreds of miles of maintained gravel</li>
           <li>Gentle but constant elevation</li>
-          <li>Long stretches with no services—and no stress</li>
+          <li>Long stretches with no services - and no stress</li>
         </ul>
         <p className="mb-4">
           You can ride for hours without seeing many cars. You can climb without staring at brutal gradients. You can choose solitude or small-town rhythm.
@@ -80,7 +82,7 @@ const VermontUpstateGravelVsRoad = () => {
           <li>How you should train beforehand</li>
         </ul>
         <p className="mb-4">
-          This article breaks those two paths apart—then shows how to prepare for each using Zwift worlds that actually feel right, not just "close enough."
+          This article breaks those two paths apart - then shows how to prepare for each using Zwift worlds that actually feel right, not just "close enough."
         </p>
       </div>
 
@@ -192,9 +194,9 @@ const VermontUpstateGravelVsRoad = () => {
         <div className="my-6">
           <h3 className="text-xl font-semibold mb-3">Road bike setup tips that actually matter</h3>
           <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Wider tires than you think (28–32 mm)</li>
+            <li>Wider tires than you think (28-32 mm)</li>
             <li>Comfortable gearing (don't assume flat = fast)</li>
-            <li>Two bottles minimum—towns can be spaced out</li>
+            <li>Two bottles minimum - towns can be spaced out</li>
             <li>A small saddle bag with real food, not just gels</li>
           </ul>
           <p className="mb-4">
@@ -223,7 +225,7 @@ const VermontUpstateGravelVsRoad = () => {
             <li>Roads that vanish into forest for miles</li>
           </ul>
           <p className="mb-4">
-            Gravel days feel slower—but they're not easier.
+            Gravel days feel slower - but they're not easier.
           </p>
           <p className="mb-4">
             They stretch time. You cover fewer miles, but each mile costs more attention.
@@ -242,7 +244,7 @@ const VermontUpstateGravelVsRoad = () => {
           <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
             <li>Adirondack perimeter roads</li>
             <li>Rural gravel networks near lakes and forests</li>
-            <li>Mixed dirt–pavement loops that feel exploratory</li>
+            <li>Mixed dirt - pavement loops that feel exploratory</li>
           </ul>
           <p className="mb-4">
             Gravel here is about immersion.
@@ -276,7 +278,7 @@ const VermontUpstateGravelVsRoad = () => {
             Gravel rides take longer than they look on a map. Surface resistance adds fatigue. Stops are rarer. Weather matters more.
           </p>
           <p className="mb-4">
-            Many riders feel fine—until they don't.
+            Many riders feel fine - until they don't.
           </p>
           <p className="mb-4">Gravel success comes from:</p>
           <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
@@ -293,7 +295,7 @@ const VermontUpstateGravelVsRoad = () => {
         <div className="my-6">
           <h3 className="text-xl font-semibold mb-3">Gravel bike setup tips that actually matter</h3>
           <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Tires in the 38–45 mm range for comfort</li>
+            <li>Tires in the 38-45 mm range for comfort</li>
             <li>Lower gearing than your road bike</li>
             <li>Tubeless if possible</li>
             <li>A frame bag or larger saddle bag for food</li>
@@ -314,7 +316,7 @@ const VermontUpstateGravelVsRoad = () => {
           <li>Do I enjoy speed or solitude more?</li>
           <li>Do I like covering distance or spending time?</li>
           <li>Do I prefer predictable rhythm or quiet exploration?</li>
-          <li>Do I want cafés… or quiet picnic stops?</li>
+          <li>Do I want cafés... or quiet picnic stops?</li>
         </ul>
         <p className="mb-4">
           There is no wrong answer.
@@ -347,7 +349,7 @@ const VermontUpstateGravelVsRoad = () => {
           <li>Time estimates become unreliable</li>
         </ul>
         <p className="mb-4">
-          Mixed-surface riding is fantastic—but only if you ride conservatively on pavement and accept that gravel will slow you down.
+          Mixed-surface riding is fantastic - but only if you ride conservatively on pavement and accept that gravel will slow you down.
         </p>
         <p className="mb-4">
           If you race the road sections, the gravel will punish you later.
@@ -385,7 +387,7 @@ const VermontUpstateGravelVsRoad = () => {
 
       {/* Zwift part */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Now, the Zwift part — why matching feel matters more than matching terrain</h2>
+        <h2 className="text-2xl font-bold mb-4">Now, the Zwift part - why matching feel matters more than matching terrain</h2>
         <p className="mb-4">
           Zwift cannot replicate Vermont or Upstate New York visually.
         </p>
@@ -424,10 +426,12 @@ const VermontUpstateGravelVsRoad = () => {
           </p>
           <div className="my-6">
             <img 
-              src="/pictures/blog/australia/vermont_1_2.jpg" 
+              src="/pictures/blog/australia/vermont_1_2.webp" 
               alt="Zwift road training routes" 
               className="w-full rounded-lg shadow-lg"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           </div>
           <p className="mb-4 font-semibold">Best Zwift "road-feel" worlds</p>
           <div className="space-y-4">
@@ -493,10 +497,12 @@ const VermontUpstateGravelVsRoad = () => {
           </p>
           <div className="my-6">
             <img 
-              src="/pictures/blog/australia/vermont_1_3.jpg" 
+              src="/pictures/blog/australia/vermont_1_3.webp" 
               alt="Zwift gravel training routes" 
               className="w-full rounded-lg shadow-lg"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           </div>
           <p className="mb-4 font-semibold">Best Zwift "gravel-feel" worlds</p>
           <div className="space-y-4">
@@ -678,7 +684,7 @@ const VermontUpstateGravelVsRoad = () => {
           Gravel trips deepen the relationship.
         </p>
         <p className="mb-4">
-          Zwift lets you maintain the feel of each style long after you're home—if you match the world to the adventure.
+          Zwift lets you maintain the feel of each style long after you're home - if you match the world to the adventure.
         </p>
       </div>
 
@@ -693,10 +699,12 @@ const VermontUpstateGravelVsRoad = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/vermont_1_4.jpg" 
+            src="/pictures/blog/australia/vermont_1_4.webp" 
             alt="Vermont and Upstate New York cycling finish" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           If your bike, training, pacing, and expectations align with the terrain you choose, the riding feels generous.
@@ -708,7 +716,7 @@ const VermontUpstateGravelVsRoad = () => {
           Pick your adventure honestly. Train in the same spirit. Ride with patience.
         </p>
         <p className="mb-4 text-lg font-medium">
-          Do that, and whether you're on quiet pavement or deep gravel, the region gives you exactly what you came for—and usually a little more.
+          Do that, and whether you're on quiet pavement or deep gravel, the region gives you exactly what you came for - and usually a little more.
         </p>
       </div>
     </div>
@@ -731,8 +739,6 @@ const VermontUpstateGravelVsRoad = () => {
         }
       ]}
       content={content}
-      metaTitle="Vermont / Upstate Gravel vs Road: Pick Your Adventure | Zwift Calculator"
-      metaDescription="Complete guide to choosing between gravel and road cycling in Vermont and Upstate New York. Learn which adventure fits you, pacing strategies, Zwift training plans, and how to match Zwift worlds to your terrain choice."
     />
   );
 };

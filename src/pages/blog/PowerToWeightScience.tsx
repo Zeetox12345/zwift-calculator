@@ -7,7 +7,7 @@ const PowerToWeightScience = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Introduction: Why Power-to-Weight Ratio Rules Climbing</h2>
         <p className="mb-4">
-          In cycling, especially on climbs, your power-to-weight ratio (watts per kilogram, or W/kg) is the single most important predictor of performance. This isn't just cycling lore—it's physics. Understanding why W/kg matters so much, how it differs from absolute power, and how to improve it can transform your climbing performance.
+          In cycling, especially on climbs, your power-to-weight ratio (watts per kilogram, or W/kg) is the single most important predictor of performance. This isn't just cycling lore - it's physics. Understanding why W/kg matters so much, how it differs from absolute power, and how to improve it can transform your climbing performance.
         </p>
         <p className="mb-4">
           This article explores the science behind power-to-weight ratio, from the physics of climbing to the physiology of power production. We'll explain why a 60kg rider producing 240 watts can out-climb a 80kg rider producing 280 watts, why W/kg matters more on steeper climbs, and how to improve your power-to-weight ratio through training and weight management.
@@ -17,7 +17,7 @@ const PowerToWeightScience = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">The Physics: Why Weight Matters on Climbs</h2>
         <p className="mb-4">
-          On flat roads, absolute power matters most because you're fighting aerodynamic drag, which depends on speed, not weight. But on climbs, you're fighting gravity, and gravity doesn't care about your speed—it cares about your mass. The steeper the climb, the more gravity matters relative to aerodynamic drag.
+          On flat roads, absolute power matters most because you're fighting aerodynamic drag, which depends on speed, not weight. But on climbs, you're fighting gravity, and gravity doesn't care about your speed - it cares about your mass. The steeper the climb, the more gravity matters relative to aerodynamic drag.
         </p>
         <p className="mb-4">
           The power required to climb at a given speed is: Power = (Mass × Gravity × Vertical Speed) / Efficiency + Aerodynamic Drag + Rolling Resistance. On steep climbs (8%+ gradient), the gravitational term dominates, making mass (weight) the primary factor. On shallow climbs (3-5% gradient), aerodynamic drag and rolling resistance play larger roles, making absolute power relatively more important.
@@ -26,7 +26,7 @@ const PowerToWeightScience = () => {
           This is why power-to-weight ratio matters more on Alpe du Zwift (8.5% average gradient) than on flat roads. On Alpe du Zwift, roughly 85-90% of your power goes to fighting gravity. On flat roads, only 10-20% goes to fighting gravity, with the rest going to aerodynamic drag. This is also why lightweight riders excel on climbs while powerful riders excel on flat roads.
         </p>
         <p className="mb-4">
-          The relationship becomes more pronounced as gradients increase. On a 15% gradient, almost 95% of power goes to fighting gravity. On a 5% gradient, it might be 70-75%. This is why weight matters more on steeper climbs—the steeper the climb, the more your weight matters relative to your power.
+          The relationship becomes more pronounced as gradients increase. On a 15% gradient, almost 95% of power goes to fighting gravity. On a 5% gradient, it might be 70-75%. This is why weight matters more on steeper climbs - the steeper the climb, the more your weight matters relative to your power.
         </p>
       </div>
 
@@ -39,10 +39,10 @@ const PowerToWeightScience = () => {
           Our calculator predicts that Rider A (4.0 W/kg) will complete Alpe du Zwift in approximately 49 minutes. Rider B (3.5 W/kg) will complete it in approximately 57 minutes. That's an 8-minute difference, despite Rider B producing 40 more watts. This illustrates why power-to-weight ratio, not absolute power, determines climbing performance.
         </p>
         <p className="mb-4">
-          The difference becomes more dramatic on longer climbs. On Ven Top, Rider A (4.0 W/kg) will complete the climb in approximately 66 minutes, while Rider B (3.5 W/kg) will complete it in approximately 75 minutes—a 9-minute difference. The longer the climb, the more that power-to-weight ratio advantage compounds.
+          The difference becomes more dramatic on longer climbs. On Ven Top, Rider A (4.0 W/kg) will complete the climb in approximately 66 minutes, while Rider B (3.5 W/kg) will complete it in approximately 75 minutes - a 9-minute difference. The longer the climb, the more that power-to-weight ratio advantage compounds.
         </p>
         <p className="mb-4">
-          This is why professional climbers are typically lightweight. A 55kg climber producing 330 watts achieves 6.0 W/kg, enough to climb Alpe du Zwift in under 40 minutes. A 75kg rider would need to produce 450 watts to achieve the same W/kg—a power output that's physiologically impossible for most riders. This is why weight management is crucial for climbing performance.
+          This is why professional climbers are typically lightweight. A 55kg climber producing 330 watts achieves 6.0 W/kg, enough to climb Alpe du Zwift in under 40 minutes. A 75kg rider would need to produce 450 watts to achieve the same W/kg - a power output that's physiologically impossible for most riders. This is why weight management is crucial for climbing performance.
         </p>
       </div>
 
@@ -106,7 +106,7 @@ const PowerToWeightScience = () => {
           While power-to-weight ratio is crucial for climbing, there are limits to its importance. On flat roads or descents, absolute power matters more than W/kg because aerodynamic drag dominates. A 80kg rider producing 350 watts will be faster on flat roads than a 60kg rider producing 280 watts, despite the lighter rider having higher W/kg.
         </p>
         <p className="mb-4">
-          There's also a point of diminishing returns. Improving from 2.5 W/kg to 3.0 W/kg saves significant time. Improving from 5.0 W/kg to 5.5 W/kg saves less time proportionally, even though the absolute improvement is the same. This is because the relationship between power and time is non-linear—each additional W/kg provides less time savings than the previous one.
+          There's also a point of diminishing returns. Improving from 2.5 W/kg to 3.0 W/kg saves significant time. Improving from 5.0 W/kg to 5.5 W/kg saves less time proportionally, even though the absolute improvement is the same. This is because the relationship between power and time is non-linear - each additional W/kg provides less time savings than the previous one.
         </p>
         <p className="mb-4">
           There are also physiological limits. Very low body weights can lead to decreased power production, illness, and poor recovery. Very high power outputs require significant muscle mass, which increases weight. The optimal power-to-weight ratio balances these factors, and pushing beyond optimal can be counterproductive.
@@ -128,7 +128,7 @@ const PowerToWeightScience = () => {
           Use W/kg to compare yourself to benchmarks. Elite male riders typically have W/kg of 5.0-6.0 for 20-60 minute efforts. Well-trained amateur riders typically have 3.5-4.5 W/kg. Recreational riders typically have 2.5-3.5 W/kg. These benchmarks help you understand where you stand and what's possible with training.
         </p>
         <p className="mb-4">
-          Most importantly, use W/kg to inform your training focus. If your W/kg is limited by low power, focus on power development. If it's limited by high weight, focus on weight optimization. If it's limited by both, periodize your approach—focus on power first, then weight. Understanding which variable limits your W/kg helps you train more effectively.
+          Most importantly, use W/kg to inform your training focus. If your W/kg is limited by low power, focus on power development. If it's limited by high weight, focus on weight optimization. If it's limited by both, periodize your approach - focus on power first, then weight. Understanding which variable limits your W/kg helps you train more effectively.
         </p>
       </div>
 
@@ -138,10 +138,10 @@ const PowerToWeightScience = () => {
           Power-to-weight ratio is the foundation of climbing performance. Understanding why it matters, how to improve it, and how to use it to guide training can transform your climbing. But remember that W/kg is a tool, not a goal in itself. The goal is to climb faster, and W/kg is simply the most important variable that determines climbing speed.
         </p>
         <p className="mb-4">
-          Focus on sustainable improvement. Build power through structured training. Optimize weight through sensible nutrition. Periodize your approach to avoid trying to do everything at once. And remember that optimal W/kg is different for every rider—find your balance between power and weight that allows for sustainable performance.
+          Focus on sustainable improvement. Build power through structured training. Optimize weight through sensible nutrition. Periodize your approach to avoid trying to do everything at once. And remember that optimal W/kg is different for every rider - find your balance between power and weight that allows for sustainable performance.
         </p>
         <p className="mb-4">
-          Use our calculators to see how your current W/kg translates to climbing times. Use that information to set realistic goals and track progress. But also remember that W/kg isn't everything—pacing, equipment, mental fortitude, and technique all matter. Use W/kg as your guide, but develop all aspects of climbing performance.
+          Use our calculators to see how your current W/kg translates to climbing times. Use that information to set realistic goals and track progress. But also remember that W/kg isn't everything - pacing, equipment, mental fortitude, and technique all matter. Use W/kg as your guide, but develop all aspects of climbing performance.
         </p>
         <p className="mb-4">
           Most importantly, enjoy the process. Improving your power-to-weight ratio takes time and dedication, but the progress is rewarding. Every watt gained, every kilogram optimized, every W/kg improvement makes you a stronger climber. Use the science to guide your training, but let your passion for cycling drive your dedication.
@@ -193,8 +193,6 @@ const PowerToWeightScience = () => {
         }
       ]}
       content={content}
-      metaTitle="Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance | Zwift Calculator"
-      metaDescription="Comprehensive guide to power-to-weight ratio in cycling. Learn the physics, training implications, and practical applications of W/kg for improving your Zwift climbing performance."
     />
   );
 };

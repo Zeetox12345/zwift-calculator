@@ -1,15 +1,8 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BlogPost from "@/components/BlogPost";
 import { TrendingUp, Wind, Users, BarChart3, Zap } from "lucide-react";
 
 const ZwiftDraftingPhysicsAerodynamics = () => {
-  useEffect(() => {
-    document.title = "Zwift Drafting Physics & Aerodynamics: The Science Behind Virtual Pelotons | ZwiftCalculator.com";
-  }, []);
-
-  const metaTitle = "Zwift Drafting Physics & Aerodynamics: The Science Behind Virtual Pelotons";
-  const metaDescription = "Deep dive into Zwift's drafting mechanics. Learn how aerodynamics work in virtual cycling, optimal drafting strategies, power savings calculations, and how to maximize efficiency in group rides and races.";
 
   const relatedArticles = [
     {
@@ -58,7 +51,7 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
             Key Insight
           </h3>
           <p className="mb-0">
-            Zwift's drafting system uses computational fluid dynamics principles, reducing drag by up to 40% in optimal conditions. Understanding these mechanics can save you 50-100 watts during group rides—the difference between finishing with the pack or getting dropped.
+            Zwift's drafting system uses computational fluid dynamics principles, reducing drag by up to 40% in optimal conditions. Understanding these mechanics can save you 50-100 watts during group rides - the difference between finishing with the pack or getting dropped.
           </p>
         </div>
 
@@ -69,13 +62,13 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
         </p>
 
         <p>
-          In real-world cycling, drafting behind another rider can reduce aerodynamic drag by 20-40%. Zwift's algorithm approximates this through a <strong>positional drag coefficient system</strong> that dynamically adjusts based on your proximity to other riders. When you're positioned directly behind another rider within the drafting zone (approximately 2-3 virtual meters), your drag coefficient drops from a baseline of 0.9 to approximately 0.55—representing a 39% reduction in air resistance.
+          In real-world cycling, drafting behind another rider can reduce aerodynamic drag by 20-40%. Zwift's algorithm approximates this through a <strong>positional drag coefficient system</strong> that dynamically adjusts based on your proximity to other riders. When you're positioned directly behind another rider within the drafting zone (approximately 2-3 virtual meters), your drag coefficient drops from a baseline of 0.9 to approximately 0.55 - representing a 39% reduction in air resistance.
         </p>
 
         <h3 className="text-2xl font-bold mt-10 mb-4">Understanding Drag Coefficient Reduction</h3>
 
         <p>
-          The drag coefficient (Cd) in Zwift isn't static—it's calculated in real-time based on your position relative to other riders. Here's how it works:
+          The drag coefficient (Cd) in Zwift isn't static - it's calculated in real-time based on your position relative to other riders. Here's how it works:
         </p>
 
         <ul className="list-disc pl-6 space-y-2 mb-6">
@@ -86,7 +79,7 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
         </ul>
 
         <p>
-          This reduction translates directly to power savings. At 40 km/h (25 mph), a rider producing 250 watts solo would need only 152 watts to maintain the same speed in an optimal draft—a savings of 98 watts, or 39% of total power output.
+          This reduction translates directly to power savings. At 40 km/h (25 mph), a rider producing 250 watts solo would need only 152 watts to maintain the same speed in an optimal draft - a savings of 98 watts, or 39% of total power output.
         </p>
 
         <h2 className="text-3xl font-bold mt-12 mb-6">Group Size Dynamics: The Peloton Effect</h2>
@@ -106,7 +99,7 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
         </div>
 
         <p>
-          This phenomenon occurs because larger groups create a more stable "bubble" of reduced air pressure. In Zwift's physics engine, riders in the middle of a large peloton experience additional drag reduction beyond simple drafting—the system simulates the <strong>slipstream amplification</strong> effect observed in professional cycling.
+          This phenomenon occurs because larger groups create a more stable "bubble" of reduced air pressure. In Zwift's physics engine, riders in the middle of a large peloton experience additional drag reduction beyond simple drafting - the system simulates the <strong>slipstream amplification</strong> effect observed in professional cycling.
         </p>
 
         <h3 className="text-2xl font-bold mt-10 mb-4">The Mathematics Behind Power Savings</h3>
@@ -174,7 +167,7 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
         <h3 className="text-2xl font-bold mt-10 mb-4">Power Management Through Drafting</h3>
 
         <p>
-          Elite Zwift racers use drafting to create "power banks"—periods of reduced effort that allow for explosive attacks. Here's the strategy:
+          Elite Zwift racers use drafting to create "power banks" - periods of reduced effort that allow for explosive attacks. Here's the strategy:
         </p>
 
         <div className="bg-muted/50 p-6 rounded-lg mb-8">
@@ -307,7 +300,7 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
         <h3 className="text-2xl font-bold mt-10 mb-4">Mistake #1: Riding Too Close</h3>
 
         <p>
-          While closer seems better, riding within 0.5 meters causes the "rubber band" effect—Zwift's physics engine penalizes overlap, causing sudden speed fluctuations that waste energy.
+          While closer seems better, riding within 0.5 meters causes the "rubber band" effect - Zwift's physics engine penalizes overlap, causing sudden speed fluctuations that waste energy.
         </p>
 
         <h3 className="text-2xl font-bold mt-10 mb-4">Mistake #2: Constant Surges</h3>
@@ -349,7 +342,7 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
         <h2 className="text-3xl font-bold mt-12 mb-6">Conclusion: Mastering the Invisible Force</h2>
 
         <p>
-          Drafting in Zwift isn't just about staying behind someone—it's a complex interplay of physics, strategy, and skill. Understanding the underlying mechanics transforms your approach to group rides and races, allowing you to:
+          Drafting in Zwift isn't just about staying behind someone - it's a complex interplay of physics, strategy, and skill. Understanding the underlying mechanics transforms your approach to group rides and races, allowing you to:
         </p>
 
         <ul className="list-disc pl-6 space-y-2 mb-6">
@@ -366,7 +359,7 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
         <div className="bg-zwift-blue/10 dark:bg-zwift-blue/20 border-l-4 border-zwift-blue p-6 rounded-r-lg mt-8">
           <h3 className="text-xl font-bold mb-3">Ready to Apply This Knowledge?</h3>
           <p className="mb-4">
-            Use our <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline font-semibold">Alpe du Zwift Calculator</Link> and <Link to="/ventop-calculator" className="text-zwift-orange hover:underline font-semibold">Ven-Top Calculator</Link> to understand how power-to-weight ratio affects climbing performance—where drafting matters less. Combine this with drafting mastery on flats, and you'll have a complete performance strategy.
+            Use our <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline font-semibold">Alpe du Zwift Calculator</Link> and <Link to="/ventop-calculator" className="text-zwift-orange hover:underline font-semibold">Ven-Top Calculator</Link> to understand how power-to-weight ratio affects climbing performance - where drafting matters less. Combine this with drafting mastery on flats, and you'll have a complete performance strategy.
           </p>
           <p className="mb-0">
             For more data-driven insights, check out our <Link to="/blog/the-data-behind-zwift-climbing" className="text-zwift-orange hover:underline font-semibold">comprehensive Zwift climbing data analysis</Link>.
@@ -377,11 +370,8 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
 
   return (
     <BlogPost
-      title={metaTitle}
       date="31-12-2025"
       content={content}
-      metaTitle={metaTitle}
-      metaDescription={metaDescription}
       relatedArticles={relatedArticles}
     />
   );

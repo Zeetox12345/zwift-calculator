@@ -2,7 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
+# Every route is pre-rendered to its own HTML file, so there is no SPA
+# fallback. Unknown paths must return a real 404 rather than a 200 shell.
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200 
+  to = "/404.html"
+  status = 404

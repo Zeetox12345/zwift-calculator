@@ -1,15 +1,8 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BlogPost from "@/components/BlogPost";
 import { Route, Brain, TrendingUp, BarChart3 } from "lucide-react";
 
 const ZwiftRouteSelectionPsychology = () => {
-  useEffect(() => {
-    document.title = "Zwift Route Selection Psychology: How Your Choices Affect Training Outcomes | ZwiftCalculator.com";
-  }, []);
-
-  const metaTitle = "Zwift Route Selection Psychology: How Your Choices Affect Training Outcomes";
-  const metaDescription = "Explore the psychology behind Zwift route selection. Learn how route choice affects motivation, training adaptation, performance outcomes, and discover evidence-based strategies for optimal route selection.";
 
   const relatedArticles = [
     {
@@ -49,7 +42,7 @@ const ZwiftRouteSelectionPsychology = () => {
   const content = (
     <div className="prose prose-lg dark:prose-invert max-w-none">
         <p className="lead text-xl text-muted-foreground mb-8">
-          Route selection in Zwift isn't just about distance or elevation—it's a complex psychological decision that influences motivation, training adaptation, and long-term performance. This groundbreaking analysis reveals how your route choices shape your training outcomes and provides evidence-based strategies for optimal selection.
+          Route selection in Zwift isn't just about distance or elevation - it's a complex psychological decision that influences motivation, training adaptation, and long-term performance. This groundbreaking analysis reveals how your route choices shape your training outcomes and provides evidence-based strategies for optimal selection.
         </p>
 
         <div className="bg-zwift-orange/10 dark:bg-zwift-orange/20 border-l-4 border-zwift-orange p-6 rounded-r-lg mb-8">
@@ -65,7 +58,7 @@ const ZwiftRouteSelectionPsychology = () => {
         <h2 className="text-3xl font-bold mt-12 mb-6">The Psychology of Route Selection: What Drives Our Choices</h2>
         
         <p>
-          When you open Zwift's route selection screen, multiple psychological factors influence your decision—often subconsciously. Understanding these factors is the first step toward making optimal choices.
+          When you open Zwift's route selection screen, multiple psychological factors influence your decision - often subconsciously. Understanding these factors is the first step toward making optimal choices.
         </p>
 
         <h3 className="text-2xl font-bold mt-10 mb-4">Familiarity Bias: The Comfort Zone Trap</h3>
@@ -89,7 +82,7 @@ const ZwiftRouteSelectionPsychology = () => {
         </p>
 
         <p>
-          This "badge effect" demonstrates <strong>extrinsic motivation</strong>—external rewards driving behavior. While badges can provide motivation, over-reliance on them can lead to:
+          This "badge effect" demonstrates <strong>extrinsic motivation</strong> - external rewards driving behavior. While badges can provide motivation, over-reliance on them can lead to:
         </p>
 
         <ul className="list-disc pl-6 space-y-2 mb-6">
@@ -148,7 +141,7 @@ const ZwiftRouteSelectionPsychology = () => {
         </p>
 
         <p>
-          Our analysis reveals an interesting pattern: riders who select routes slightly longer than their comfort zone (10-15% increase) show the highest completion rates and satisfaction. This aligns with the <strong>optimal challenge theory</strong>—challenges that are achievable but require effort provide the greatest psychological reward.
+          Our analysis reveals an interesting pattern: riders who select routes slightly longer than their comfort zone (10-15% increase) show the highest completion rates and satisfaction. This aligns with the <strong>optimal challenge theory</strong> - challenges that are achievable but require effort provide the greatest psychological reward.
         </p>
 
         <h3 className="text-2xl font-bold mt-10 mb-4">Visual Variety: The Novelty Factor</h3>
@@ -170,7 +163,7 @@ const ZwiftRouteSelectionPsychology = () => {
         <h3 className="text-2xl font-bold mt-10 mb-4">Power Distribution Patterns</h3>
 
         <p>
-          Routes with varied terrain create <strong>stochastic training</strong>—irregular power distribution that mimics real-world cycling. Our analysis of power files shows:
+          Routes with varied terrain create <strong>stochastic training</strong> - irregular power distribution that mimics real-world cycling. Our analysis of power files shows:
         </p>
 
         <ul className="list-disc pl-6 space-y-2 mb-6">
@@ -344,7 +337,7 @@ const ZwiftRouteSelectionPsychology = () => {
         <h2 className="text-3xl font-bold mt-12 mb-6">Conclusion: Route Selection as a Training Tool</h2>
 
         <p>
-          Route selection in Zwift is far more than choosing a distance or elevation profile—it's a strategic decision that influences motivation, training adaptation, and long-term performance. By understanding the psychology behind route selection and applying evidence-based strategies, you can:
+          Route selection in Zwift is far more than choosing a distance or elevation profile - it's a strategic decision that influences motivation, training adaptation, and long-term performance. By understanding the psychology behind route selection and applying evidence-based strategies, you can:
         </p>
 
         <ul className="list-disc pl-6 space-y-2 mb-6">
@@ -372,11 +365,8 @@ const ZwiftRouteSelectionPsychology = () => {
 
   return (
     <BlogPost
-      title={metaTitle}
       date="31-12-2025"
       content={content}
-      metaTitle={metaTitle}
-      metaDescription={metaDescription}
       relatedArticles={relatedArticles}
     />
   );

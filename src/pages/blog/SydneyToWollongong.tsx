@@ -13,10 +13,12 @@ const SydneyToWollongong = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/australia_2_1.png" 
+            src="/pictures/blog/australia/australia_2_1.webp" 
             alt="Sea Cliff Bridge on Sydney to Wollongong route" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           This is not a multi-day epic. It's a one-day ride with a huge "wow factor." But it still rewards planning. Start times matter. Stop choices matter. Pacing matters more than most people expect. And if you can't ride it yet, or you want to show up with better legs, Zwift can do a surprisingly good job of preparing you for the rhythm of the day.
@@ -155,10 +157,12 @@ const SydneyToWollongong = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/australia_2_2.jpg" 
+            src="/pictures/blog/australia/australia_2_2.webp" 
             alt="Coastal beach town on Sydney to Wollongong route" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           A viewpoint stop before the Sea Cliff Bridge lets you absorb what's coming. If you rush straight onto the bridge without pause, you risk missing the emotional build-up.
@@ -237,10 +241,12 @@ const SydneyToWollongong = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/australia_2_3.png" 
+            src="/pictures/blog/australia/australia_2_3.webp" 
             alt="Cycling gear for Sydney to Wollongong ride" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">On the bike, focus on reliability. Two bottles. Basic tools. One or two spare tubes. A pump you trust.</p>
         <p className="mb-4">
@@ -436,10 +442,12 @@ const SydneyToWollongong = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/australia_2_4.png" 
+            src="/pictures/blog/australia/australia_2_4.webp" 
             alt="Wollongong finish on Sydney to Wollongong ride" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
       </div>
 
@@ -482,8 +490,6 @@ const SydneyToWollongong = () => {
         }
       ]}
       content={content}
-      metaTitle="Sydney to Wollongong: The Sea Cliff Bridge Ride That Feels Like a Movie | Zwift Calculator"
-      metaDescription="Complete guide to cycling from Sydney to Wollongong via the iconic Sea Cliff Bridge. Learn pacing strategies, stop recommendations, Zwift training plans, and how to prepare for this cinematic coastal ride."
     />
   );
 };

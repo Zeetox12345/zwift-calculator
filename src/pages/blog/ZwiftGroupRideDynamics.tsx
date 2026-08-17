@@ -1,15 +1,8 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BlogPost from "@/components/BlogPost";
 import { Users, TrendingUp, Heart, Zap } from "lucide-react";
 
 const ZwiftGroupRideDynamics = () => {
-  useEffect(() => {
-    document.title = "Zwift Group Ride Dynamics: Social Psychology Meets Performance | ZwiftCalculator.com";
-  }, []);
-
-  const metaTitle = "Zwift Group Ride Dynamics: Social Psychology Meets Performance";
-  const metaDescription = "Explore the social psychology behind Zwift group rides. Learn how group dynamics affect motivation, performance, adherence, and discover evidence-based strategies for maximizing group ride benefits.";
 
   const relatedArticles = [
     {
@@ -49,7 +42,7 @@ const ZwiftGroupRideDynamics = () => {
   const content = (
     <div className="prose prose-lg dark:prose-invert max-w-none">
         <p className="lead text-xl text-muted-foreground mb-8">
-          Zwift group rides represent one of the most powerful yet understudied aspects of virtual cycling. This comprehensive analysis reveals how social psychology principles shape group ride dynamics, affect individual performance, and influence long-term training adherence—insights that transform how you approach group training.
+          Zwift group rides represent one of the most powerful yet understudied aspects of virtual cycling. This comprehensive analysis reveals how social psychology principles shape group ride dynamics, affect individual performance, and influence long-term training adherence - insights that transform how you approach group training.
         </p>
 
         <div className="bg-zwift-green/10 dark:bg-zwift-green/20 border-l-4 border-zwift-green p-6 rounded-r-lg mb-8">
@@ -65,7 +58,7 @@ const ZwiftGroupRideDynamics = () => {
         <h2 className="text-3xl font-bold mt-12 mb-6">The Social Psychology of Virtual Group Rides</h2>
         
         <p>
-          Group rides in Zwift aren't just multiple riders on the same route—they're complex social systems governed by psychological principles that significantly impact individual behavior and performance.
+          Group rides in Zwift aren't just multiple riders on the same route - they're complex social systems governed by psychological principles that significantly impact individual behavior and performance.
         </p>
 
         <h3 className="text-2xl font-bold mt-10 mb-4">Social Facilitation: The Performance Boost</h3>
@@ -88,7 +81,7 @@ const ZwiftGroupRideDynamics = () => {
         <h3 className="text-2xl font-bold mt-10 mb-4">Social Loafing: When Groups Reduce Effort</h3>
 
         <p>
-          However, group dynamics can also reduce individual effort—a phenomenon called social loafing. In very large groups (30+ riders), individual accountability decreases, and some riders reduce their effort, relying on the group to maintain pace.
+          However, group dynamics can also reduce individual effort - a phenomenon called social loafing. In very large groups (30+ riders), individual accountability decreases, and some riders reduce their effort, relying on the group to maintain pace.
         </p>
 
         <p>
@@ -105,7 +98,7 @@ const ZwiftGroupRideDynamics = () => {
         <h3 className="text-2xl font-bold mt-10 mb-4">Group Cohesion: The Bonding Effect</h3>
 
         <p>
-          Regular participation in the same group rides creates <strong>group cohesion</strong>—a sense of belonging and shared identity. This cohesion drives:
+          Regular participation in the same group rides creates <strong>group cohesion</strong> - a sense of belonging and shared identity. This cohesion drives:
         </p>
 
         <div className="bg-muted/50 p-6 rounded-lg mb-8">
@@ -127,7 +120,7 @@ const ZwiftGroupRideDynamics = () => {
         <h3 className="text-2xl font-bold mt-10 mb-4">Social Rides: The Community Effect</h3>
 
         <p>
-          Social rides prioritize conversation and community over performance. These rides trigger <strong>intrinsic motivation</strong>—doing something for its own sake rather than external rewards.
+          Social rides prioritize conversation and community over performance. These rides trigger <strong>intrinsic motivation</strong> - doing something for its own sake rather than external rewards.
         </p>
 
         <p>
@@ -196,7 +189,7 @@ const ZwiftGroupRideDynamics = () => {
         <h3 className="text-2xl font-bold mt-10 mb-4">Transformational Leadership in Group Rides</h3>
 
         <p>
-          Effective group ride leaders exhibit <strong>transformational leadership</strong>—they inspire, motivate, and create positive group culture. Characteristics include:
+          Effective group ride leaders exhibit <strong>transformational leadership</strong> - they inspire, motivate, and create positive group culture. Characteristics include:
         </p>
 
         <ul className="list-disc pl-6 space-y-2 mb-6">
@@ -307,7 +300,7 @@ const ZwiftGroupRideDynamics = () => {
         </ul>
 
         <p>
-          This aligns with research on positive psychology in sports—positive communication triggers the release of endorphins and reduces perceived effort.
+          This aligns with research on positive psychology in sports - positive communication triggers the release of endorphins and reduces perceived effort.
         </p>
 
         <h3 className="text-2xl font-bold mt-10 mb-4">The "Ride-On" Effect</h3>
@@ -489,7 +482,7 @@ const ZwiftGroupRideDynamics = () => {
         </ul>
 
         <p>
-          The social aspect of Zwift isn't just a bonus—it's a powerful training tool. Harness it wisely, and you'll transform your training outcomes.
+          The social aspect of Zwift isn't just a bonus - it's a powerful training tool. Harness it wisely, and you'll transform your training outcomes.
         </p>
 
         <div className="bg-zwift-green/10 dark:bg-zwift-green/20 border-l-4 border-zwift-green p-6 rounded-r-lg mt-8">
@@ -506,11 +499,8 @@ const ZwiftGroupRideDynamics = () => {
 
   return (
     <BlogPost
-      title={metaTitle}
       date="31-12-2025"
       content={content}
-      metaTitle={metaTitle}
-      metaDescription={metaDescription}
       relatedArticles={relatedArticles}
     />
   );

@@ -24,7 +24,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
           Then you come home and your streak is gone. And you're not just annoyed. You feel like you broke momentum.
         </p>
         <p className="mb-4">
-          This article is about preventing that—without turning travel into a stressful training mission.
+          This article is about preventing that - without turning travel into a stressful training mission.
         </p>
         <p className="mb-4">
           It's not a "be disciplined" lecture. It's a practical playbook built around a simple goal:
@@ -51,10 +51,12 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/other/zwift_streak.png" 
+            src="/pictures/blog/other/zwift_streak.webp" 
             alt="Zwift streak travel guide showing how to maintain your training streak while travelling" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
       </div>
 
@@ -148,7 +150,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         </p>
         <p className="mb-4">A great "streak saver" ride is:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>15–30 minutes</li>
+          <li>15-30 minutes</li>
           <li>easy endurance</li>
           <li>a simple route or free ride</li>
           <li>no complicated warm-up</li>
@@ -170,7 +172,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>You have your bike and a trainer (best case)</li>
           <li>You have access to a gym bike or hotel equipment (common case)</li>
-          <li>You have nothing (hard case—still possible with planning)</li>
+          <li>You have nothing (hard case - still possible with planning)</li>
         </ul>
         <p className="mb-4">
           We'll cover all three.
@@ -222,7 +224,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
           Even with full setup, travel days are busy. Use the streak saver session:
         </p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>20–30 minutes easy</li>
+          <li>20-30 minutes easy</li>
           <li>done</li>
         </ul>
         <p className="mb-4">
@@ -234,7 +236,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Scenario 2: The hotel or gym bike situation (most common)</h2>
         <p className="mb-4">
-          This is where most streaks die—because it feels uncertain.
+          This is where most streaks die - because it feels uncertain.
         </p>
         <p className="mb-4">
           You arrive, you're tired, and you don't know what equipment exists. Or you do know, but it's a random stationary bike with no power.
@@ -317,7 +319,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         </p>
         <p className="mb-4">You can still "protect the habit chain" by doing:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>20–30 minutes on the gym bike</li>
+          <li>20-30 minutes on the gym bike</li>
           <li>easy effort</li>
           <li>then later, when you're home, the streak continues because the habit continued</li>
         </ul>
@@ -380,7 +382,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         </p>
         <p className="mb-4">A run can be:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>15–30 minutes</li>
+          <li>15-30 minutes</li>
           <li>from your door</li>
           <li>anywhere</li>
           <li>no equipment beyond shoes</li>
@@ -475,7 +477,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         </p>
         <p className="mb-4">The simplest approach:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>do a streak session once per 24–36 hours during travel</li>
+          <li>do a streak session once per 24-36 hours during travel</li>
           <li>aim for "one session per local day," but don't panic if a day is weird</li>
         </ul>
         <p className="mb-4">
@@ -511,7 +513,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         <h3 className="text-xl font-semibold mb-2 mt-6">Short sweet spot workout</h3>
         <p className="mb-4">Only if you feel fresh:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>30–45 minutes</li>
+          <li>30-45 minutes</li>
           <li>one or two steady blocks</li>
           <li>no complicated interval structure</li>
         </ul>
@@ -532,7 +534,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         <p className="mb-4">If you have a long day but want to feel alive:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
           <li>20 minutes easy</li>
-          <li>include a few 15–20 second spins</li>
+          <li>include a few 15-20 second spins</li>
         </ul>
         <p className="mb-4">
           This keeps legs from feeling dead after flights.
@@ -652,7 +654,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         </ul>
         <p className="mb-4">First, do a "re-entry phase":</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
-          <li>2–3 easy rides</li>
+          <li>2-3 easy rides</li>
           <li>one medium workout</li>
           <li>then return to normal intensity</li>
         </ul>
@@ -678,7 +680,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
           That combination makes it very hard to lose momentum.
         </p>
         <p className="mb-4">
-          Not because you're super disciplined—because you planned for reality.
+          Not because you're super disciplined - because you planned for reality.
         </p>
       </div>
 
@@ -721,8 +723,6 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         }
       ]}
       content={content}
-      metaTitle="How to Keep Your Streak in Zwift While Travelling: Travel-Proof Guide | Zwift Calculator"
-      metaDescription="Complete guide to maintaining your Zwift streak while travelling. Learn equipment strategies, hotel gym tips, time zone handling, and how to keep your training consistent without stress."
     />
   );
 };

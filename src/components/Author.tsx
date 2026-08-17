@@ -25,7 +25,9 @@ const Author = () => {
             src="/CLD_billede_4.jpg"
             alt="Christian Lassen Dam"
             className="w-12 h-12 rounded-full object-cover border-2 border-zwift-orange/20"
-          />
+          loading="lazy"
+          decoding="async"
+        />
           <span className="text-sm font-medium text-muted-foreground">
             Written by <span className="text-foreground">Christian L. Dam</span>
           </span>
@@ -49,7 +51,9 @@ const Author = () => {
                 src="/CLD_billede_4.jpg"
                 alt="Christian Lassen Dam"
                 className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-zwift-orange/20"
-              />
+              loading="lazy"
+              decoding="async"
+            />
             </div>
 
             {/* Author Info */}
@@ -59,7 +63,7 @@ const Author = () => {
               </p>
 
               <p>
-                I build tools and write about everything related to indoor cycling, triathlon training, and performance analysis—especially for athletes who use Zwift or train for endurance events like Ironman Copenhagen. My goal is to make complex performance data simple, accurate, and useful for everyday athletes who want to train smarter.
+                I build tools and write about everything related to indoor cycling, triathlon training, and performance analysis - especially for athletes who use Zwift or train for endurance events like Ironman Copenhagen. My goal is to make complex performance data simple, accurate, and useful for everyday athletes who want to train smarter.
               </p>
 
               <p>

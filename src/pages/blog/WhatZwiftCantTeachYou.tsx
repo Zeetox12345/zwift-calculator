@@ -12,7 +12,7 @@ const WhatZwiftCantTeachYou = () => {
           But Zwift can also quietly give you blind spots.
         </p>
         <p className="mb-4">
-          Not because Zwift is "bad." It's because indoor training is a controlled world. And real performance—especially if you ride outside, run, train for triathlon, or travel and try to stay fit on the road—doesn't happen in a controlled world.
+          Not because Zwift is "bad." It's because indoor training is a controlled world. And real performance - especially if you ride outside, run, train for triathlon, or travel and try to stay fit on the road - doesn't happen in a controlled world.
         </p>
         <p className="mb-4">
           It happens in wind, rain, heat, surprise hills, bad roads, tired legs, and mornings where you didn't sleep well. It happens when you have to make decisions, handle the bike, eat on the move, and stay calm when the day is messy.
@@ -126,17 +126,19 @@ const WhatZwiftCantTeachYou = () => {
           For some athletes, that social pull is the difference between consistent training and drifting.
         </p>
         <p className="mb-4">
-          So yes—Zwift can absolutely make you stronger. For many people, it's the reason they got fit at all.
+          So yes - Zwift can absolutely make you stronger. For many people, it's the reason they got fit at all.
         </p>
         <p className="mb-4">
           But now we need to talk about the gaps.
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/other/other_1.png" 
+            src="/pictures/blog/other/other_1.webp" 
             alt="Zwift indoor training setup showing controlled training environment" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
       </div>
 
@@ -267,14 +269,16 @@ const WhatZwiftCantTeachYou = () => {
           Zwift can't teach that because you can always stop, always step off, always be in control of the environment.
         </p>
         <p className="mb-4">
-          Outdoors—and especially travel and adventure—teaches you to keep going when it's not perfect.
+          Outdoors - and especially travel and adventure - teaches you to keep going when it's not perfect.
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/other/other_2.png" 
+            src="/pictures/blog/other/other_2.webp" 
             alt="Outdoor cycling adventure showing real-world training challenges" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
       </div>
 
@@ -305,7 +309,7 @@ const WhatZwiftCantTeachYou = () => {
 
         <h3 className="text-xl font-semibold mb-2 mt-6">Running also reconnects you to nature</h3>
         <p className="mb-4">
-          Zwift can feel like training in a box. Running—especially easy runs in parks, trails, or near water—can reset your brain.
+          Zwift can feel like training in a box. Running - especially easy runs in parks, trails, or near water - can reset your brain.
         </p>
         <p className="mb-4">
           That's valuable for consistency. When your mind is fresh, you train better indoors too.
@@ -333,7 +337,7 @@ const WhatZwiftCantTeachYou = () => {
           Indoor training can become repetitive. That repetition can dull your excitement. Outdoor time gives your brain variety.
         </p>
         <p className="mb-4">
-          If you're building long-term fitness—especially for triathlon—it's not just about the next workout. It's about staying in the game for months and years.
+          If you're building long-term fitness - especially for triathlon - it's not just about the next workout. It's about staying in the game for months and years.
         </p>
         <p className="mb-4">
           Nature helps you stay.
@@ -606,8 +610,6 @@ const WhatZwiftCantTeachYou = () => {
         }
       ]}
       content={content}
-      metaTitle="What Zwift Can't Teach You (and What It Can) | Zwift Calculator"
-      metaDescription="Discover what Zwift can and can't teach you. Learn how to combine indoor training with outdoor skills, running, nature, travel, and adventure to become a complete athlete."
     />
   );
 };

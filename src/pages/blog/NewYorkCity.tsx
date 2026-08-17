@@ -13,10 +13,12 @@ const NewYorkCity = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/newyork_1_1.png" 
+            src="/pictures/blog/australia/newyork_1_1.webp" 
             alt="New York City cycling route" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           This guide is written for first-timers. Not messengers. Not hardened urban cyclists who thrive on close calls. Real riders who want to experience New York from the saddle without turning the trip into an endurance test of nerves.
@@ -169,10 +171,12 @@ const NewYorkCity = () => {
           </p>
           <div className="my-6">
             <img 
-              src="/pictures/blog/australia/newyork_1_2.png" 
+              src="/pictures/blog/australia/newyork_1_2.webp" 
               alt="Brooklyn waterfront cycling path" 
               className="w-full rounded-lg shadow-lg"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           </div>
           <p className="mb-4">
             The Brooklyn Waterfront Greenway is still evolving, but many sections are already excellent. The views of Manhattan from across the river are some of the best in the city, especially at golden hour.
@@ -301,10 +305,12 @@ const NewYorkCity = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/newyork_1_3.png" 
+            src="/pictures/blog/australia/newyork_1_3.webp" 
             alt="Cycling gear for NYC urban riding" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           A reliable lock matters more here than almost anywhere else. Even for short stops.
@@ -465,10 +471,12 @@ const NewYorkCity = () => {
         </p>
         <div className="my-6">
           <img 
-            src="/pictures/blog/australia/newyork_1_4.jpg" 
+            src="/pictures/blog/australia/newyork_1_4.webp" 
             alt="New York City skyline from bike perspective" 
             className="w-full rounded-lg shadow-lg"
-          />
+          loading="lazy"
+          decoding="async"
+        />
         </div>
         <p className="mb-4">
           You see the city at human scale. You feel its tempo. You notice neighborhoods shift block by block. You become part of the flow instead of observing it from behind glass.
@@ -503,8 +511,6 @@ const NewYorkCity = () => {
         }
       ]}
       content={content}
-      metaTitle="New York City by Bike: A First-Timer's Ride Guide | Zwift Calculator"
-      metaDescription="Complete guide to cycling in New York City for first-timers. Learn where to ride, when to ride, pacing strategies, and how to use Zwift's New York world to prepare for urban cycling adventures."
     />
   );
 };

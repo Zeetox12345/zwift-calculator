@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { BookOpen, Calendar, ArrowRight, Activity, Trophy, Settings, BarChart3 } from "lucide-react";
+import { BookOpen, Calendar, ArrowRight, Activity, Trophy, Settings, BarChart3, type LucideIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface FeaturedArticle {
   title: string;
   excerpt: string;
-  date: string;
+  date?: string;
   readTime?: string;
   slug: string;
   category?: string;
@@ -14,7 +14,7 @@ interface FeaturedArticle {
 interface CategoryLink {
   name: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
   color: string;
 }
 

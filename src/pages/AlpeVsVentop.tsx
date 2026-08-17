@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Calculator as CalcIcon, Mountain, Trophy, Clock, Activity, ArrowRight, TrendingUp } from "lucide-react";
 import AnimatedText from "@/components/AnimatedText";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import AnimatedCard from "@/components/AnimatedCard";
 import FeaturedArticlesSidebar from "@/components/FeaturedArticlesSidebar";
 import { Button } from "@/components/ui/button";
@@ -9,7 +10,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
 import { useIsMobile } from "@/hooks/use-mobile";
-import SEOMetaTags from "@/components/SEOMetaTags";
 import Author from "@/components/Author";
 
 // Import calculator components
@@ -156,7 +156,6 @@ const AlpeVsVentop = () => {
 
   return (
     <>
-      <SEOMetaTags />
       
       <div className="min-h-screen flex flex-col overflow-hidden">
         {/* Hero Section */}
@@ -164,6 +163,9 @@ const AlpeVsVentop = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-zwift-blue/20 via-zwift-orange/10 to-transparent -z-10"></div>
           
           <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <Breadcrumbs className="mb-4" />
+            </div>
             <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
               <AnimatedText delay={100}>
                 <div className="inline-flex items-center space-x-2 bg-white/80 dark:bg-zwift-dark/80 backdrop-blur-sm px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-zwift-blue shadow-sm border border-blue-100 dark:border-blue-900/20 mb-4 sm:mb-6">
@@ -232,7 +234,7 @@ const AlpeVsVentop = () => {
                   
                   <div className="space-y-6 text-muted-foreground leading-relaxed">
                     <p>
-                      In the world of Zwift climbing, two names stand above all others: Alpe du Zwift and Ven Top. These iconic ascents represent different philosophies of suffering, different tests of fitness, and different paths to cycling achievement. Understanding their differences isn't just about choosing which climb to attempt—it's about understanding your own fitness profile, training goals, and what kind of challenge will make you stronger.
+                      In the world of Zwift climbing, two names stand above all others: Alpe du Zwift and Ven Top. These iconic ascents represent different philosophies of suffering, different tests of fitness, and different paths to cycling achievement. Understanding their differences isn't just about choosing which climb to attempt - it's about understanding your own fitness profile, training goals, and what kind of challenge will make you stronger.
                     </p>
 
                     <div>
@@ -241,7 +243,7 @@ const AlpeVsVentop = () => {
                         At their core, Alpe du Zwift and Ven Top test different energy systems and fitness attributes. Alpe du Zwift, at 12.2 kilometers with an average gradient of 8.5%, is a threshold power test. It rewards riders who can sustain high power-to-weight ratios for 50-70 minutes. Ven Top, at 20.9 kilometers with a gentler average gradient of 7-8%, is an aerobic endurance test. It rewards riders who can maintain sub-threshold power for 90-120 minutes.
                       </p>
                       <p className="mt-3">
-                        Our analysis of ZwiftPower data reveals this distinction clearly. Riders who excel on Alpe du Zwift typically show power profiles that hover at 95-100% of their Functional Threshold Power (FTP), with some variation as they attack steeper sections and recover on brief shallower sections. Ven Top performances, by contrast, show power profiles consistently at 85-90% of FTP, with less variation. This isn't because Ven Top riders are weaker—it's because Ven Top requires a different kind of fitness.
+                        Our analysis of ZwiftPower data reveals this distinction clearly. Riders who excel on Alpe du Zwift typically show power profiles that hover at 95-100% of their Functional Threshold Power (FTP), with some variation as they attack steeper sections and recover on brief shallower sections. Ven Top performances, by contrast, show power profiles consistently at 85-90% of FTP, with less variation. This isn't because Ven Top riders are weaker - it's because Ven Top requires a different kind of fitness.
                       </p>
                       <p className="mt-3">
                         Think of it this way: Alpe du Zwift is like a 60-minute time trial effort, while Ven Top is like a 90-minute tempo ride that gradually increases in difficulty. Both are brutally hard, but they're hard in different ways. Alpe du Zwift will leave your legs screaming from threshold efforts. Ven Top will leave you mentally drained from the unrelenting duration.
@@ -264,13 +266,13 @@ const AlpeVsVentop = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">Psychological Differences: The Mental Game</h3>
                       <p>
-                        The psychological challenges of each climb are as different as the physical challenges. Alpe du Zwift's 21 numbered hairpins provide natural mental markers. You can count down from 21, celebrate each hairpin conquered, and use the numbered signs as intermediate goals. This structure helps many riders manage the mental challenge—you're never more than a few minutes from the next milestone.
+                        The psychological challenges of each climb are as different as the physical challenges. Alpe du Zwift's 21 numbered hairpins provide natural mental markers. You can count down from 21, celebrate each hairpin conquered, and use the numbered signs as intermediate goals. This structure helps many riders manage the mental challenge - you're never more than a few minutes from the next milestone.
                       </p>
                       <p className="mt-3">
-                        Ven Top, by contrast, offers fewer obvious mental markers. The climb is longer and more consistent, which can make it feel endless. Many riders report that Ven Top's psychological challenge is harder than its physical challenge—the knowledge that you're only halfway done when you've been climbing for 45 minutes can be mentally crushing. This is why many riders who can break 60 minutes on Alpe du Zwift struggle to break 90 minutes on Ven Top, even though the power requirements are similar.
+                        Ven Top, by contrast, offers fewer obvious mental markers. The climb is longer and more consistent, which can make it feel endless. Many riders report that Ven Top's psychological challenge is harder than its physical challenge - the knowledge that you're only halfway done when you've been climbing for 45 minutes can be mentally crushing. This is why many riders who can break 60 minutes on Alpe du Zwift struggle to break 90 minutes on Ven Top, even though the power requirements are similar.
                       </p>
                       <p className="mt-3">
-                        Our data analysis supports this. Successful Alpe du Zwift attempts often show power variations that correspond with the hairpin sections—riders push harder on steep sections and ease slightly on transitions. Successful Ven Top attempts show more consistent power output, suggesting that mental discipline and the ability to avoid surges is more critical on Ven Top.
+                        Our data analysis supports this. Successful Alpe du Zwift attempts often show power variations that correspond with the hairpin sections - riders push harder on steep sections and ease slightly on transitions. Successful Ven Top attempts show more consistent power output, suggesting that mental discipline and the ability to avoid surges is more critical on Ven Top.
                       </p>
                     </div>
 
@@ -283,7 +285,7 @@ const AlpeVsVentop = () => {
                         Choose Ven Top if you want to test your aerobic endurance, improve your ability to sustain sub-threshold efforts, and challenge yourself with a longer but slightly less intense effort. Ven Top is ideal if you're training for longer events, want to improve your endurance base, or want to challenge your mental fortitude over extended periods.
                       </p>
                       <p className="mt-3">
-                        Many Zwift athletes use both climbs strategically. Alpe du Zwift becomes a regular threshold test and power-building tool. Ven Top becomes a monthly or quarterly endurance test and aerobic base builder. This approach provides comprehensive fitness development—the power from Alpe du Zwift training helps on Ven Top, and the endurance from Ven Top training helps on Alpe du Zwift.
+                        Many Zwift athletes use both climbs strategically. Alpe du Zwift becomes a regular threshold test and power-building tool. Ven Top becomes a monthly or quarterly endurance test and aerobic base builder. This approach provides comprehensive fitness development - the power from Alpe du Zwift training helps on Ven Top, and the endurance from Ven Top training helps on Alpe du Zwift.
                       </p>
                     </div>
 
@@ -293,17 +295,17 @@ const AlpeVsVentop = () => {
                         Our analysis of hundreds of ZwiftPower performances reveals several interesting patterns. First, riders who can break 60 minutes on Alpe du Zwift typically need 3.2-3.5 W/kg, while riders who can break 90 minutes on Ven Top typically need 3.0-3.2 W/kg. This suggests that Ven Top is slightly "easier" from a power perspective, but the longer duration makes it more challenging overall.
                       </p>
                       <p className="mt-3">
-                        Second, we've found that power consistency matters more on Ven Top than on Alpe du Zwift. Riders with power variations of 30+ watts perform relatively worse on Ven Top than on Alpe du Zwift. This suggests that pacing discipline is more critical on Ven Top—the length of the climb punishes those who can't maintain steady effort.
+                        Second, we've found that power consistency matters more on Ven Top than on Alpe du Zwift. Riders with power variations of 30+ watts perform relatively worse on Ven Top than on Alpe du Zwift. This suggests that pacing discipline is more critical on Ven Top - the length of the climb punishes those who can't maintain steady effort.
                       </p>
                       <p className="mt-3">
-                        Third, we've observed that many riders show improvement on Ven Top after focusing on Alpe du Zwift training, but the reverse is less common. This suggests that threshold power improvements transfer well to endurance efforts, but endurance improvements don't transfer as well to threshold efforts. This has important implications for training periodization—build your FTP first, then work on endurance.
+                        Third, we've observed that many riders show improvement on Ven Top after focusing on Alpe du Zwift training, but the reverse is less common. This suggests that threshold power improvements transfer well to endurance efforts, but endurance improvements don't transfer as well to threshold efforts. This has important implications for training periodization - build your FTP first, then work on endurance.
                       </p>
                     </div>
 
                     <div className="mt-8 p-6 bg-gradient-to-r from-zwift-orange/10 to-zwift-blue/10 dark:from-zwift-orange/20 dark:to-zwift-blue/20 rounded-lg border border-zwift-orange/30">
                       <p className="text-foreground font-semibold mb-2">💡 Key Insight:</p>
                       <p>
-                        Alpe du Zwift and Ven Top aren't competitors—they're complementary challenges that test different aspects of your fitness. Use Alpe du Zwift to build power and test your threshold. Use Ven Top to build endurance and test your mental fortitude. Master both, and you'll have the fitness and mental strength to conquer any challenge Zwift throws at you. Use the comparison tools below to see how your power-to-weight ratio translates to each climb, then choose the challenge that matches your current fitness and goals.
+                        Alpe du Zwift and Ven Top aren't competitors - they're complementary challenges that test different aspects of your fitness. Use Alpe du Zwift to build power and test your threshold. Use Ven Top to build endurance and test your mental fortitude. Master both, and you'll have the fitness and mental strength to conquer any challenge Zwift throws at you. Use the comparison tools below to see how your power-to-weight ratio translates to each climb, then choose the challenge that matches your current fitness and goals.
                       </p>
                     </div>
                   </div>

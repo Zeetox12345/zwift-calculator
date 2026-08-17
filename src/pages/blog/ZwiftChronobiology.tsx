@@ -1,15 +1,8 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BlogPost from "@/components/BlogPost";
 import { Clock, TrendingUp, Moon, Sun, BarChart3 } from "lucide-react";
 
 const ZwiftChronobiology = () => {
-  useEffect(() => {
-    document.title = "Zwift Chronobiology: How Time-of-Day Affects Virtual Cycling Performance | ZwiftCalculator.com";
-  }, []);
-
-  const metaTitle = "Zwift Chronobiology: How Time-of-Day Affects Virtual Cycling Performance";
-  const metaDescription = "Discover how circadian rhythms and chronotype affect Zwift performance. Learn optimal training timing, chronotype analysis, and evidence-based strategies for maximizing performance based on your body's natural rhythms.";
 
   const relatedArticles = [
     {
@@ -49,7 +42,7 @@ const ZwiftChronobiology = () => {
   const content = (
     <div className="prose prose-lg dark:prose-invert max-w-none">
       <p className="lead text-xl text-muted-foreground mb-8">
-        Your body's internal clock doesn't stop when you enter Watopia. This groundbreaking analysis reveals how circadian rhythms and chronotype affect Zwift performance—insights that can improve your power output by 5-15% simply by training at the right time of day.
+        Your body's internal clock doesn't stop when you enter Watopia. This groundbreaking analysis reveals how circadian rhythms and chronotype affect Zwift performance - insights that can improve your power output by 5-15% simply by training at the right time of day.
       </p>
 
       <div className="bg-zwift-blue/10 dark:bg-zwift-blue/20 border-l-4 border-zwift-blue p-6 rounded-r-lg mb-8">
@@ -90,7 +83,7 @@ const ZwiftChronobiology = () => {
       </div>
 
       <p>
-        However, this pattern varies significantly based on your chronotype—your natural tendency to be a morning person or evening person.
+        However, this pattern varies significantly based on your chronotype - your natural tendency to be a morning person or evening person.
       </p>
 
       <h2 className="text-3xl font-bold mt-12 mb-6">Chronotype Analysis: Morning Larks vs Night Owls</h2>
@@ -167,7 +160,7 @@ const ZwiftChronobiology = () => {
       </ul>
 
       <p>
-        Performance typically peaks when body temperature is highest—usually 2-6 hours after waking for your chronotype.
+        Performance typically peaks when body temperature is highest - usually 2-6 hours after waking for your chronotype.
       </p>
 
       <h3 className="text-2xl font-bold mt-10 mb-4">Hormone Levels</h3>
@@ -470,7 +463,7 @@ const ZwiftChronobiology = () => {
       </ul>
 
       <p>
-        Your body's internal clock doesn't stop when you enter Watopia—work with it, not against it.
+        Your body's internal clock doesn't stop when you enter Watopia - work with it, not against it.
       </p>
 
       <div className="bg-zwift-blue/10 dark:bg-zwift-blue/20 border-l-4 border-zwift-blue p-6 rounded-r-lg mt-8">
@@ -487,11 +480,8 @@ const ZwiftChronobiology = () => {
 
   return (
     <BlogPost
-      title={metaTitle}
       date="31-12-2025"
       content={content}
-      metaTitle={metaTitle}
-      metaDescription={metaDescription}
       relatedArticles={relatedArticles}
     />
   );
