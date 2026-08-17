@@ -58,6 +58,16 @@ The 77,000 words of articles already on the site were, from Google's point of vi
 - Images: 106 MB reduced to 7.4 MB. Several were 5-10 MB straight off a camera.
 - Two unused multi-megabyte uploads and a stray `testest.jpg` deleted.
 
+### Content integrity
+
+An adversarial review of the first pass found that seven articles reported findings from a dataset that does not exist - phrases like "our analysis of 2,000+ Zwift training sessions", "our analysis of 500+ group rides", and detailed within-climb power distributions.
+
+The site's only real dataset, as its own methodology page states, is roughly 500 verified Alpe du Zwift and 300 Ven-Top ZwiftPower records, each a power figure paired with a finishing time. It contains no timestamps, no chronotypes, no group-ride records and no power traces, so none of those claims could have come from it.
+
+Around a hundred invented figures were removed across those articles. Each one was either deleted and the idea rewritten as reasoning the reader can follow, relabelled explicitly as an estimate, or replaced with a number computed from the site's own published equations. The articles got longer in the process, not shorter.
+
+This mattered beyond honesty: the new editorial policy promises that "any number presented as measured carries a link to the place it was measured". Publishing that policy alongside invented research would have been worse than never writing it.
+
 ## What still needs a human
 
 1. **Deploy.** None of this reaches Google until the new build is live. Verify afterwards with:
@@ -68,6 +78,17 @@ The 77,000 words of articles already on the site were, from Google's point of vi
 2. **Submit the sitemap** at `https://www.zwiftcalculator.com/sitemap.xml` in Google Search Console, and use URL Inspection on a few pages to confirm Google now sees rendered content.
 3. **Wait for re-crawl before re-applying.** Applying again while Google still has the empty version cached invites the same answer. Give it one to two weeks and confirm in Search Console that pages are indexed with real content.
 4. **Then request the review** in AdSense.
+
+### Consent messaging (decide before or shortly after)
+
+The privacy policy names consent as a legal basis for advertising and analytics cookies, but there is no consent mechanism in this repository. If a GDPR message is already published in the AdSense console under Privacy & messaging, that is fine - it deploys through the existing AdSense tag and leaves no trace in the code, so it cannot be confirmed from here. If one is **not** published, publish it: the site is operated from Denmark, so GDPR applies by establishment regardless of where the traffic comes from.
+
+Separately, `gtag('config', ...)` in `index.html` fires with no `gtag('consent', 'default', ...)` call before it, so the Google Analytics cookie is set before any consent message can gate it. Adding the default consent state above the `config` call is the fix.
+
+### Two judgement calls left alone
+
+- **`/blog/the-mechanical-engineering-of-zwift-performance`** and **`/blog/the-calculus-of-the-pain-cave-a-mechanical-autopsy-of-speed`** cover overlapping ground - both work through drag, drivetrain efficiency and flywheel inertia. They are textually distinct, so this is not duplicate content in the policy sense, but merging them into one stronger article would be better than keeping two.
+- **Em dashes** were normalised to plain hyphens site-wide except on the Alpe du Zwift calculator page, which was left untouched by request. `src/components/calculator/AlpeFacts.tsx` still contains a few.
 
 ## Corrections to the previous analysis
 

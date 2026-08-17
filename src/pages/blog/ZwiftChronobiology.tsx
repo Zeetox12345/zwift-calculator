@@ -14,8 +14,8 @@ const ZwiftChronobiology = () => {
       category: "Training"
     },
     {
-      title: "The Data Behind Zwift Climbing: What 1,000+ Rides Tell Us About Performance",
-      excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances.",
+      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
+      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
       date: "20-12-2025",
       readTime: "18 min",
       slug: "/blog/the-data-behind-zwift-climbing",
@@ -42,7 +42,7 @@ const ZwiftChronobiology = () => {
   const content = (
     <div className="space-y-6">
       <p className="text-xl text-muted-foreground">
-        Your body's internal clock does not stop when you enter Watopia. The same rider, on the same trainer, at the same weight, produces different numbers at 6 AM and 6 PM. This article explains why that happens, what it is worth in minutes on a climb, and how to measure the effect on yourself instead of taking anyone's word for it.
+        Your body's internal clock does not stop when you enter Watopia. Plenty of riders report that the same trainer, the same weight and the same perceived effort give them different numbers at 6 AM and at 6 PM. This article explains the mechanisms that could produce a gap like that, what a gap of that size would be worth in minutes on a climb, and how to find out whether you actually have one instead of taking anyone's word for it.
       </p>
 
       <div className="bg-zwift-blue/10 dark:bg-zwift-blue/20 border-l-4 border-zwift-blue p-6 rounded-r-lg">
@@ -286,7 +286,7 @@ const ZwiftChronobiology = () => {
           Here is the single most useful idea in this whole article. Compare your two repeats within each slot first. The gap between them is your noise level. Only a difference between slots that is clearly larger than that noise level means anything at all.
         </p>
         <p className="mb-4">
-          If your two morning tests came in 8 watts apart, then a 5 watt gap between morning and evening is nothing, and you should conclude that time of day does not meaningfully move your power. That is a real, useful, liberating result. If instead your repeats sit within 2 or 3 watts of each other and the evening slot is 15 watts up on the morning slot, you have found something worth building a schedule around.
+          If your two morning tests came in 8 watts apart, then a 5 watt gap between morning and evening is buried inside your own noise, and the honest reading is that you have not detected a time-of-day effect. That is a real, useful, liberating result, and note that it is a different statement from proving there is no effect at all. If instead your repeats sit within 2 or 3 watts of each other and the evening slot is 15 watts up on the morning slot, you have found something worth building a schedule around.
         </p>
         <p className="mb-4">
           Once you have a power difference you trust, put both numbers into the{" "}

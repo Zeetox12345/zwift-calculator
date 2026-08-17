@@ -55,7 +55,7 @@ const MechanicalEngineeringZwift = () => {
           From a mechanical engineering perspective, the energy required to lift a mass up a climb is: Energy = Mass × Gravity × Height. On Alpe du Zwift, with 1,036 meters of elevation gain, a 1kg difference in bike weight requires approximately 10,150 Joules of additional energy. At a typical climbing speed of 10-15 km/h, this translates to roughly 30-60 seconds of additional time, depending on your power output.
         </p>
         <p className="mb-4">
-          Zwift simulates this physics, but with simplifications. The game uses a simplified gravity model and doesn't account for rotational inertia (the energy required to spin wheels and cranks). This means that Zwift might slightly overestimate or underestimate the impact of weight differences compared to real-world cycling. However, our data analysis shows that Zwift's weight simulation is reasonably accurate - riders using lightweight setups consistently perform better than those using heavy setups, assuming similar power output.
+          Zwift simulates this physics, but with simplifications. The game uses a simplified gravity model and doesn't account for rotational inertia (the energy required to spin wheels and cranks). This means that Zwift might slightly overestimate or underestimate the impact of weight differences compared to real-world cycling. Zwift's weight simulation is still the dominant term on a climb, though: on an 8.5% gradient almost all of your power goes into lifting mass, so a lighter total system is faster whatever the finer details of the model.
         </p>
         <p className="mb-4">
           The engineering insight here is that weight matters more on longer climbs. On Alpe du Zwift, a 1kg difference might cost 30-60 seconds. On Ven Top, with its longer duration, the same 1kg difference costs 60-90 seconds. This is because the energy cost accumulates over time - the longer you're climbing, the more that weight difference matters.
@@ -106,7 +106,7 @@ const MechanicalEngineeringZwift = () => {
           In Zwift, this effect is minimal because the game focuses on steady-state climbing rather than accelerations. However, understanding rotational inertia helps explain why maintaining steady power is more efficient than variable power - every acceleration requires extra energy to overcome rotational inertia, which is then lost when you decelerate.
         </p>
         <p className="mb-4">
-          This is why our data analysis shows that consistent power output is more efficient than variable power output, even when average power is the same. The energy required to accelerate (overcoming rotational inertia) is lost when you decelerate, making variable power less efficient than steady power. This mechanical principle explains why pacing discipline matters so much in climbing performance.
+          This is also the mechanical argument for steady power over variable power at the same average. Energy spent accelerating a mass is not returned when you slow down again, so every surge and fade costs something that a constant effort does not. It is a small effect next to the physiological cost of going anaerobic early, but it points the same way, which is why pacing discipline matters so much on a long climb.
         </p>
       </div>
 
@@ -148,7 +148,7 @@ const MechanicalEngineeringZwift = () => {
           Understanding the mechanical engineering principles behind Zwift performance isn't just academic - it's practical. Understanding why polynomial regression works helps you understand why power improvements have diminishing returns. Understanding equipment weight physics helps you optimize your setup. Understanding efficiency losses helps you focus on what matters most.
         </p>
         <p className="mb-4">
-          The key insight is that Zwift, while simplified, still simulates real physics. The relationships between power, weight, speed, and time follow the same mechanical principles as outdoor cycling. This is why our data-driven calculators work - they're based on real physics, even if simulated in a virtual environment.
+          The key insight is that Zwift, while simplified, still simulates real physics. The relationships between power, weight, speed, and time follow the same mechanical principles as outdoor cycling. That is why a curve fitted to real finishing times generalises at all: the underlying relationship it is describing is a physical one, even though the physics is simulated.
         </p>
         <p className="mb-4">
           Use these engineering principles to inform your training and strategy. Focus on the variables that matter most: power-to-weight ratio, pacing discipline, and equipment optimization. Understand that small improvements compound - a 1% improvement in multiple areas creates a significant overall improvement. And remember that Zwift is still cycling, just in a virtual environment - the same mechanical principles apply.

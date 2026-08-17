@@ -30,8 +30,8 @@ const ZwiftSubscriptionEconomics = () => {
       category: "Setup"
     },
     {
-      title: "The Data Behind Zwift Climbing: What 1,000+ Rides Tell Us About Performance",
-      excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances.",
+      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
+      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
       date: "20-12-2025",
       readTime: "18 min",
       slug: "/blog/the-data-behind-zwift-climbing",

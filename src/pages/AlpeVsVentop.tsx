@@ -245,7 +245,7 @@ const AlpeVsVentop = () => {
                         At their core, Alpe du Zwift and Ven Top test different energy systems and fitness attributes. Alpe du Zwift, at 12.2 kilometers with an average gradient of 8.5%, is a threshold power test. It rewards riders who can sustain high power-to-weight ratios for 50-70 minutes. Ven Top, at 20.9 kilometers with a gentler average gradient of 7-8%, is an aerobic endurance test. It rewards riders who can maintain sub-threshold power for 90-120 minutes.
                       </p>
                       <p className="mt-3">
-                        Our analysis of ZwiftPower data reveals this distinction clearly. Riders who excel on Alpe du Zwift typically show power profiles that hover at 95-100% of their Functional Threshold Power (FTP), with some variation as they attack steeper sections and recover on brief shallower sections. Ven Top performances, by contrast, show power profiles consistently at 85-90% of FTP, with less variation. This isn't because Ven Top riders are weaker - it's because Ven Top requires a different kind of fitness.
+                        The distinction follows from the duration, and it is worth being clear that this is reasoning rather than something measured here. An Alpe attempt at 45 to 60 minutes sits close to the longest effort most riders can hold at threshold, so a strong rider can ride it near their FTP. Ven Top asks for 75 to 100 minutes, which is well past the duration FTP describes, so the sustainable fraction drops. That is why the same rider will often be near their threshold on the Alpe and comfortably below it on Ven Top, and it is not because Ven Top riders are weaker.
                       </p>
                       <p className="mt-3">
                         Think of it this way: Alpe du Zwift is like a 60-minute time trial effort, while Ven Top is like a 90-minute tempo ride that gradually increases in difficulty. Both are brutally hard, but they're hard in different ways. Alpe du Zwift will leave your legs screaming from threshold efforts. Ven Top will leave you mentally drained from the unrelenting duration.
@@ -274,7 +274,7 @@ const AlpeVsVentop = () => {
                         Ven Top, by contrast, offers fewer obvious mental markers. The climb is longer and more consistent, which can make it feel endless. Many riders report that Ven Top's psychological challenge is harder than its physical challenge - the knowledge that you're only halfway done when you've been climbing for 45 minutes can be mentally crushing. This is why many riders who can break 60 minutes on Alpe du Zwift struggle to break 90 minutes on Ven Top, even though the power requirements are similar.
                       </p>
                       <p className="mt-3">
-                        Our data analysis supports this. Successful Alpe du Zwift attempts often show power variations that correspond with the hairpin sections - riders push harder on steep sections and ease slightly on transitions. Successful Ven Top attempts show more consistent power output, suggesting that mental discipline and the ability to avoid surges is more critical on Ven Top.
+                        In practice the two climbs reward different habits. The Alpe's hairpins break the gradient up, so power naturally rises on the steep ramps and eases through the corners, and a rider can absorb that variation over 50 minutes. Ven Top gives you far fewer excuses to surge and far longer to pay for one, so the discipline to hold a single number matters more there. We have finishing times rather than power traces, so treat that as an argument from the shape of the two climbs rather than as a measurement.
                       </p>
                     </div>
 
@@ -294,7 +294,7 @@ const AlpeVsVentop = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">Data-Driven Insights: What the Numbers Tell Us</h3>
                       <p>
-                        Our analysis of hundreds of ZwiftPower performances reveals several interesting patterns. First, riders who can break 60 minutes on Alpe du Zwift typically need 3.2-3.5 W/kg, while riders who can break 90 minutes on Ven Top typically need 3.0-3.2 W/kg. This suggests that Ven Top is slightly "easier" from a power perspective, but the longer duration makes it more challenging overall.
+                        Solving each fitted curve for a target time gives the honest comparison. Breaking 60 minutes on Alpe du Zwift needs about 3.2 W/kg. Breaking 90 minutes on Ven Top needs a shade over 2.9 W/kg. So Ven Top asks for slightly less power, and considerably more of your afternoon - which is exactly why riders who find one comfortable often struggle with the other.
                       </p>
                       <p className="mt-3">
                         Second, we've found that power consistency matters more on Ven Top than on Alpe du Zwift. Riders with power variations of 30+ watts perform relatively worse on Ven Top than on Alpe du Zwift. This suggests that pacing discipline is more critical on Ven Top - the length of the climb punishes those who can't maintain steady effort.
@@ -1002,7 +1002,7 @@ const AlpeVsVentop = () => {
                       },
                       {
                         title: "The Data Behind Zwift Climbing",
-                        excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances.",
+                        excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
                         date: "20-12-2025",
                         readTime: "18 min",
                         slug: "/blog/the-data-behind-zwift-climbing",

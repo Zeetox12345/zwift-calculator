@@ -43,10 +43,11 @@ const ZwiftRouteSelectionPsychology = () => {
     <div className="space-y-6">
       <div>
         <p className="mb-0">
-          Every Zwift ride begins with a decision you make in about four seconds: which route. I ride Zwift several
-          times a week and I am training for Ironman Copenhagen, so a large part of my week is decided in those four
-          seconds, and for a long time I got it wrong without noticing. The session I had written down and the session
-          the route actually gave me were different things. I am a mechanical engineering student in Aalborg, not a
+          Every Zwift ride begins with the same decision, and I make it in the few seconds it takes to scroll the
+          route list. I ride Zwift several times a week and I am training for Ironman Copenhagen, so a large part of
+          my training week is settled in that scroll, and for a long time I got it wrong without noticing. The
+          session I had written down and the session the route actually gave me were different things. I am a
+          mechanical engineering student in Aalborg, not a
           coach and not a sports scientist, so nothing below rests on research I cannot show you. It is mechanism,
           arithmetic from this site's own climb model, and my own riding, each labelled as such.
         </p>
@@ -74,9 +75,12 @@ const ZwiftRouteSelectionPsychology = () => {
           same interval works on one route and falls apart on another.
         </p>
         <p className="mb-4">
-          Here is the split for a 75 kg rider at 3.0 W/kg, taken from the physics model behind the{" "}
+          Here is the split for a 75 kg, 183 cm rider carrying 9 kg of bike and kit at 3.0 W/kg, taken from the
+          physics model behind the{" "}
           <Link to="/zwift-climb-time-calculator" className="text-zwift-orange hover:underline">climb time calculator</Link>{" "}
-          rather than from anything measured. It is a solo estimate with no draft, which is exactly the point.
+          rather than from anything measured. It is a solo estimate with no draft, which is exactly the point. The two
+          columns do not add up to 100, because the remainder, between 4% and 10% here depending on the gradient, goes
+          into rolling resistance.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
@@ -144,8 +148,9 @@ const ZwiftRouteSelectionPsychology = () => {
           into time at the power you plan to hold.
         </p>
         <p className="mb-4">
-          The times below are model estimates for a 75 kg rider at 3.0 W/kg, produced by the same equation the
-          calculator runs. They are arithmetic, not measurements, and your own numbers will differ. Put your weight
+          The times below are model estimates for the same rider as above, 75 kg and 183 cm with 9 kg of bike and
+          kit, riding solo at 3.0 W/kg, and they come from the same equation the calculator runs. They are
+          arithmetic, not measurements, and your own numbers will differ. Put your weight
           and your power into the{" "}
           <Link to="/zwift-climb-time-calculator" className="text-zwift-orange hover:underline">climb time calculator</Link>{" "}
           and you get your version of this table in a few seconds.
@@ -267,7 +272,7 @@ const ZwiftRouteSelectionPsychology = () => {
         <p className="mb-4">
           This site fitted a curve to roughly 500 verified Alpe du Zwift finishing times from ZwiftPower, each one a
           power figure paired with a completion time. The fit is{" "}
-          <code>time_seconds = 148.60*(W/kg)^2 - 1954.08*(W/kg) + 8329.87</code>, and the{" "}
+          time_seconds = 148.60*(W/kg)<sup>2</sup> - 1954.08*(W/kg) + 8329.87, and the{" "}
           <Link to="/blog/regression-analysis-methodology" className="text-zwift-orange hover:underline">methodology article</Link>{" "}
           explains how it was built and where it gets shaky. Put numbers through it and the route becomes a duration:
         </p>
@@ -288,8 +293,12 @@ const ZwiftRouteSelectionPsychology = () => {
         </p>
         <p className="mb-0">
           The same arithmetic applies to Ven-Top. The timed Ventoux KOM segment is about 19 km and 1,481 m of gain,
-          and the full Ven-Top route is about 20.9 km and 1,534 m, so be clear which one you are planning. At 3.0 W/kg
-          the model puts the KOM segment at roughly an hour and thirty-three minutes. Set the target with the{" "}
+          and the full Ven-Top route is about 20.9 km and 1,534 m, so be clear which one you are planning. The site's
+          Ven-Top fit, built from the same kind of data and roughly 300 verified ZwiftPower times, is
+          time_minutes = 3.21 + 253.38/(W/kg), which puts 3.0 W/kg at about an hour and twenty-eight minutes. That
+          sits a few minutes under the generic physics estimate in the table above, which is what you should expect:
+          one model is fitted to actual Ven-Top results and the other is physics applied to any climb. Either way the
+          answer to "can I fit this in tonight" is the same. Set the target with the{" "}
           <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">Alpe du Zwift calculator</Link>{" "}
           or the <Link to="/ventop-calculator" className="text-zwift-orange hover:underline">Ven-Top calculator</Link>, and
           compare the two efforts side by side on{" "}
@@ -337,8 +346,8 @@ const ZwiftRouteSelectionPsychology = () => {
           Group rides and races are the easiest way to end up on a route you did not select. That is not automatically
           bad, since other riders make an easy ride easier to finish and a hard ride harder to quit. It is bad when
           the event's route contradicts the session. A rolling race on a day scheduled for endurance is a hard day
-          with an endurance label on it. Check the route before you sign up, not after the pen closes, and read the
-          <Link to="/blog/zwift-group-ride-dynamics" className="text-zwift-orange hover:underline"> group ride dynamics</Link>{" "}
+          with an endurance label on it. Check the route before you sign up, not after the pen closes, and read the{" "}
+          <Link to="/blog/zwift-group-ride-dynamics" className="text-zwift-orange hover:underline">group ride dynamics</Link>{" "}
           piece for how the pack changes your effort whether you intended it or not.
         </p>
       </div>
@@ -347,9 +356,10 @@ const ZwiftRouteSelectionPsychology = () => {
         <h2 className="text-2xl font-bold mb-4">Three ways this goes wrong mid-block, and the fix for each</h2>
         <h3 className="text-xl font-bold mb-3">Picking something you cannot finish</h3>
         <p className="mb-4">
-          Abandoning a route halfway is discouraging out of proportion to the training lost, so riders avoid anything
-          that might do it to them and stay too easy for months. The fix is arithmetic instead of courage. Take your
-          longest recent sustained effort, add a few minutes, and find a climb whose estimated time at a power you
+          Abandoning a route halfway is discouraging out of proportion to the training actually lost, and I know what
+          that does to me: I avoid anything that might do it again, and a month of too-easy riding goes by. The fix
+          is arithmetic instead of courage. Take your longest recent sustained effort, add a few minutes, and find a
+          climb whose estimated time at a power you
           can genuinely hold lands there. You then start knowing the number is achievable, which is a completely
           different mental state from hoping.
         </p>
@@ -363,9 +373,10 @@ const ZwiftRouteSelectionPsychology = () => {
         </p>
         <h3 className="text-xl font-bold mb-3">Avoiding the route where you had a bad day</h3>
         <p className="mb-0">
-          There is a route most riders quietly stopped selecting because of one grim time on it. That is the route
-          worth going back to, because a repeated effort on known terrain is the cleanest fitness comparison you have:
-          same gradient, same length, same model prediction, only your power changed. A single slow attempt is a
+          There is probably a route you have quietly stopped selecting because of one grim time on it. I have two.
+          That is exactly the route worth going back to, because a repeated effort on known terrain is the cleanest
+          fitness comparison you have: same gradient, same length, same model prediction, only your power changed.
+          A single slow attempt is a
           baseline, and a baseline is only useless if you never repeat it.
         </p>
       </div>

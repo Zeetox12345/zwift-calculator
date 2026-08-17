@@ -158,7 +158,7 @@ const RegressionAnalysisMethodology = () => {
           </li>
           <li>
             <Link to="/blog/the-data-behind-zwift-climbing" className="text-zwift-orange hover:underline">
-              The Data Behind Zwift Climbing: What 1,000+ Rides Tell Us
+              The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show
             </Link>
           </li>
           <li>

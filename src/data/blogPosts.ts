@@ -104,6 +104,7 @@ export const blogPosts: BlogPostMeta[] = [
     category: "Physics",
     metaTitle: "How Zwift Drafting Works: Watts You Save | ZwiftCalculator",
     metaDescription: "Zwift drafting saves real watts, but only from certain positions. Where to sit in the pack, when to hold on, and when the draft stops paying.",
+    dateModified: "2026-08-18",
   },
   {
     slug: "/blog/zwift-route-selection-psychology",
@@ -149,13 +150,13 @@ export const blogPosts: BlogPostMeta[] = [
   },
   {
     slug: "/blog/the-data-behind-zwift-climbing",
-    title: "The Data Behind Zwift Climbing: What 1,000+ Rides Tell Us About Performance",
-    excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances. Learn about pacing patterns, power distribution, common mistakes, and training implications for Zwift climbing performance.",
+    title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
+    excerpt: "About 800 verified ZwiftPower finishing times, fitted to two curves, and nothing else. What those equations really say about the value of a power gain, how to read a target time backwards into a wattage, and exactly where the model stops being trustworthy.",
     date: "2025-12-20",
     readTime: "18 min",
     category: "Data Analysis",
-    metaTitle: "What 1,000 Zwift Climbs Say About Pacing | ZwiftCalculator",
-    metaDescription: "Pacing data from 1,000+ ZwiftPower climbs: what fast ascents have in common, where riders blow up, and what it all means for your training.",
+    metaTitle: "What 800 Zwift Climb Times Show | ZwiftCalculator",
+    metaDescription: "Two curves fitted to about 800 verified Alpe du Zwift and Ven Top finishes: what a power gain is really worth, and where the model stops working.",
   },
   {
     slug: "/blog/the-mechanical-engineering-of-zwift-performance",

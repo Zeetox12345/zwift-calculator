@@ -155,7 +155,7 @@ const VentopCalculator = () => {
                       While both climbs are iconic in their own right, Ven Top presents a fundamentally different challenge compared to Alpe du Zwift. While Alpe du Zwift is shorter at 12.2 kilometers but steeper at an average 8.5% gradient, Ven Top is significantly longer at 20.9 kilometers with a slightly gentler average gradient of 7-8%. This difference in profile creates distinct physiological and psychological demands.
                     </p>
                     <p className="mt-3">
-                      Our analysis of ZwiftPower data reveals that the average Zwifter takes approximately 1 hour 33 minutes to complete Ven Top, compared to roughly 65 minutes for Alpe du Zwift. This 28-minute difference isn't just about distance - it's about the sustained nature of the effort. While Alpe du Zwift feels like a series of hard intervals with brief recovery sections, Ven Top is more like a sustained time trial effort that requires exceptional endurance and mental fortitude.
+                      ZwiftInsider reported a ZwiftPower average of roughly 1 hour 33 minutes for Ven Top back in December 2021, against roughly 65 minutes for Alpe du Zwift. Those are old figures and the population has moved since, but the gap between the two is the part that matters. This 28-minute difference isn't just about distance - it's about the sustained nature of the effort. While Alpe du Zwift feels like a series of hard intervals with brief recovery sections, Ven Top is more like a sustained time trial effort that requires exceptional endurance and mental fortitude.
                     </p>
                     <p className="mt-3">
                       The power-to-weight ratio requirements differ significantly between the two climbs. While a rider might sustain 4.0 W/kg for 50 minutes on Alpe du Zwift, maintaining that same power for 90+ minutes on Ven Top requires a different kind of fitness - one built on aerobic endurance rather than pure climbing power. This is why many riders find Ven Top more challenging despite its gentler average gradient.
@@ -333,8 +333,8 @@ const VentopCalculator = () => {
                       category: "Training"
                     },
                     {
-                      title: "The Data Behind Zwift Climbing: What 1,000+ Rides Tell Us About Performance",
-                      excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances.",
+                      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
+                      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
                       date: "20-12-2025",
                       readTime: "18 min",
                       slug: "/blog/the-data-behind-zwift-climbing",
@@ -379,7 +379,7 @@ const VentopCalculator = () => {
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-3">What power-to-weight ratio do I need for Ven Top?</h3>
                     <p>
-                      Solving the formula above for a target time gives you the power you need. To break 90 minutes on Ven Top you need to sustain about 2.9 W/kg. A sub-75-minute time needs about 3.5 W/kg, and breaking 60 minutes needs about 4.5 W/kg. These are sustained averages - you'll need to maintain this power for 60-90+ minutes, which requires exceptional aerobic fitness. Our calculator provides precise time estimates based on your specific power-to-weight ratio.
+                      Solving the formula above for a target time gives you the power you need. To break 90 minutes on Ven Top you need to sustain a shade over 2.9 W/kg. A sub-75-minute time needs about 3.5 W/kg, and breaking 60 minutes needs about 4.5 W/kg. These are sustained averages - you'll need to maintain this power for 60-90+ minutes, which requires exceptional aerobic fitness. Our calculator provides precise time estimates based on your specific power-to-weight ratio.
                     </p>
                   </div>
 

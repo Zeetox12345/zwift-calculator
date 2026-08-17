@@ -30,8 +30,8 @@ const ZwiftGroupRideDynamics = () => {
       category: "Physics"
     },
     {
-      title: "The Data Behind Zwift Climbing: What 1,000+ Rides Tell Us About Performance",
-      excerpt: "Discover data-driven insights from analyzing 1,000+ ZwiftPower performances.",
+      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
+      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
       date: "20-12-2025",
       readTime: "18 min",
       slug: "/blog/the-data-behind-zwift-climbing",
@@ -133,12 +133,13 @@ const ZwiftGroupRideDynamics = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold mb-4">Diffusion of responsibility: why big groups feel easy</h2>
+        <h2 className="text-2xl font-bold mb-4">Social loafing: why big groups feel easy</h2>
         <p className="mb-4">
-          The mirror image of social facilitation is just as old. When a task is shared and individual
-          contributions cannot be separated out, effort per person falls. Ringelmann found it with people pulling
-          on a rope more than a century ago, and it is usually called social loafing now. The key word is
-          identifiability. Effort drops when nobody can tell what you did.
+          The mirror image of social facilitation is just as old. Ringelmann measured it with people pulling on a
+          rope more than a century ago: add rope pullers and the total force goes up, but the force per person
+          goes down. Part of that drop is coordination, people simply not pulling in time with each other, and
+          part of it is motivation. The motivational part is the one later work named social loafing, and the key
+          word in it is identifiability. Effort falls when nobody can tell what you did.
         </p>
         <p className="mb-4">
           Zwift amplifies this in a way outdoor riding does not, because the game pays you for hiding. Sitting in
@@ -399,8 +400,8 @@ const ZwiftGroupRideDynamics = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Choosing the right group for the day</h2>
         <p className="mb-4">
-          Most bad group ride experiences are a matching problem rather than a fitness problem. Two failure modes,
-          both fixable before you press join.
+          Most bad group ride experiences are a matching problem rather than a fitness problem. There are two ways
+          to get the match wrong, both fixable before you press join, and one way to get it right.
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Too fast.</strong> You get dropped, the draft vanishes, and the remaining hour is a solo time trial you did not plan, usually at an intensity that costs you the next day too.</li>
@@ -416,8 +417,8 @@ const ZwiftGroupRideDynamics = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">A protocol for getting a real session out of a group ride</h2>
         <p className="mb-4">
-          Group rides go wrong when you arrive without a plan and let the bunch write one for you. Five steps, all
-          of which take place before or during the ride and none of which require anybody else to cooperate.
+          Group rides go wrong when you arrive without a plan and let the bunch write one for you. Five steps,
+          two before the start, two in the ride, one afterwards, and none of them require anybody else to cooperate.
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Decide the day's job first.</strong> Easy, steady, or hard. Pick the event to fit the job. If no event fits, ride solo. A group ride is a tool, not an obligation.</li>
