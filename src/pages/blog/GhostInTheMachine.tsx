@@ -125,8 +125,6 @@ const GhostInTheMachine = () => {
 
   return (
     <BlogPost
-      title="The Ghost in the Machine: Why Your Brain Allows You to Suffer More in Watopia"
-      date="16-12-2025"
       content={content}
     />
   );

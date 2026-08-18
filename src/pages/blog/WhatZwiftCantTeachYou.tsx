@@ -134,7 +134,7 @@ const WhatZwiftCantTeachYou = () => {
         <div className="my-6">
           <img 
             src="/pictures/blog/other/other_1.webp" 
-            alt="Zwift indoor training setup showing controlled training environment" 
+            alt="Split image: on the left a rider on an indoor trainer facing a Zwift screen, on the right the same rider on a windswept coastal road" 
             className="w-full rounded-lg shadow-lg"
           loading="lazy"
           decoding="async"
@@ -274,7 +274,7 @@ const WhatZwiftCantTeachYou = () => {
         <div className="my-6">
           <img 
             src="/pictures/blog/other/other_2.webp" 
-            alt="Outdoor cycling adventure showing real-world training challenges" 
+            alt="A cyclist riding hard on a coastal road above breaking surf, with a second rider following some way behind" 
             className="w-full rounded-lg shadow-lg"
           loading="lazy"
           decoding="async"
@@ -595,8 +595,6 @@ const WhatZwiftCantTeachYou = () => {
 
   return (
     <BlogPost
-      title="What Zwift Can't Teach You (and What It Can)"
-      date="19-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

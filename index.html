@@ -35,23 +35,55 @@
       </style>
     </noscript>
 
+    <!--
+      Google Consent Mode v2.
+
+      This block must run before gtag.js and before the AdSense tag, so that
+      the default consent state is known before either of them can set a
+      cookie. Denied is the default across the EEA, the UK and Switzerland;
+      the consent message published in the AdSense console is what calls
+      gtag('consent', 'update', ...) to grant it.
+
+      Everywhere else defaults to granted, which is why the two calls are
+      region-scoped rather than one global default.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+        region: [
+          'AT','BE','BG','CH','CY','CZ','DE','DK','EE','ES','FI','FR','GB','GR',
+          'HR','HU','IE','IS','IT','LI','LT','LU','LV','MT','NL','NO','PL','PT',
+          'RO','SE','SI','SK'
+        ]
+      });
+
+      gtag('consent', 'default', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted'
+      });
+    </script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1362391794000925" crossorigin="anonymous"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-89LRQB47YH"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-89LRQB47YH');
     </script>
   </head>
 
   <body>
     <div id="root"><!--app-html--></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

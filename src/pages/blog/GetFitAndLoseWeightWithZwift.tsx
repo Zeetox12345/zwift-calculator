@@ -1,138 +1,239 @@
+import { Link } from "react-router-dom";
+
 import BlogPost from "@/components/BlogPost";
 
 const GetFitAndLoseWeightWithZwift = () => {
   const content = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* Introduction */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Introduction</h2>
+        <p className="mb-4 text-lg leading-relaxed">
+          Cycling is a mediocre weight-loss tool on its own and a very good one alongside the right eating. The
+          difference between those two outcomes is almost entirely about what happens off the bike.
+        </p>
         <p className="mb-4">
-          Can Zwift help you shed those extra pounds? Absolutely - indoor cycling is a fantastic calorie burner, and Zwift's engaging platform can keep you motivated to stick to a routine. Many people have used Zwift through winter (or year-round) to not only get fitter but also lose weight in a sustainable way. In this article, we'll cover how to approach Zwift for weight loss, including what types of rides or workouts burn the most calories, how to keep it fun so you stay consistent, and other tips like diet integration. Remember, weight loss ultimately comes down to burning more calories than you consume (a calorie deficit), and Zwift can significantly boost the "calories out" side of that equation{" "}
-          <a href="https://www.cyclingweekly.com/fitness/training/the-best-workouts-and-training-plans-on-zwift-the-coachs-choice" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-            <em>[1]</em>
-          </a>
-          . Let's dive in on how to turn your virtual miles into real-world results on the scale!
+          This article does the arithmetic rather than the encouragement. There is a genuine tension between losing
+          weight and getting faster that most articles on the subject skip, and it is worth understanding before you
+          start, because the version of this that goes wrong goes wrong in a specific and predictable way.
         </p>
       </div>
 
+      {/* The calorie arithmetic */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Calorie Burn on Zwift</h2>
+        <h2 className="text-2xl font-bold mb-4">What an hour on Zwift actually costs you</h2>
         <p className="mb-4">
-          The number of calories you burn cycling depends on your weight, effort (power), and duration. The harder and longer you ride, the more you burn. A rough estimate: a 150-pound (68 kg) person might burn ~500 calories in an hour of moderate cycling (around 2.5 W/kg effort). Up the intensity or body weight, and it could be 600-800 in an hour. Zwift conveniently shows calorie burn at the end of your ride summary, which is handy for tracking. It's quite possible to burn <strong>600+ calories per hour in a solid Zwift session</strong>, which is significant - do that 5 times a week and that's 3000 calories, nearly a pound of fat (3500 cals) potentially burned each week, all else equal. Of course, be careful not to immediately eat all that back (the post-ride muffin is okay, just account for it 😉).
+          Start with the number Zwift shows you, because there is a neat reason it is roughly trustworthy.
+        </p>
+        <p className="mb-4">
+          Your trainer measures mechanical work. An hour at 200 W is 200 &times; 3,600 = 720,000 joules, or 720 kJ.
+          But your body is not efficient: only about 20 to 25% of the energy you burn turns into work at the pedals,
+          and the rest leaves as heat. So the metabolic cost is:
+        </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="text-sm mb-2">720 kJ of work &divide; 0.24 efficiency &asymp; 3,000 kJ burned</p>
+          <p className="text-sm mb-2">3,000 kJ &divide; 4.184 &asymp; <strong>717 kcal</strong></p>
+          <p className="text-sm text-muted-foreground">
+            Which is almost exactly the 720 kJ of work you did. The conversion factor and the human efficiency
+            figure very nearly cancel, so <strong>kilojoules of work is a good approximation of kilocalories
+            burned</strong>. That coincidence is why the number on your screen is usually about right.
+          </p>
+        </div>
+        <p className="mb-4">
+          So an hour at 200 W costs you somewhere near 700 kcal. Five of those a week is roughly 3,500 kcal, which
+          is the figure usually quoted for a pound of fat. On paper, a pound a week.
+        </p>
+        <p className="mb-4">
+          On paper. The efficiency range of 20 to 25% is a standard physiological figure rather than something
+          measured here, and individual variation is real. More importantly, the paper version assumes the rest of
+          your life holds still, and it does not.
         </p>
       </div>
 
+      {/* Why the deficit shrinks */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Structured Workouts vs Just Riding</h2>
+        <h2 className="text-2xl font-bold mb-4">Why the deficit is smaller than the arithmetic says</h2>
         <p className="mb-4">
-          For weight loss, the key is to find activities that raise your heart rate and you can do consistently. Zwift offers both structured workouts (intervals, HIIT, etc.) and unstructured riding (free ride, group rides). Both work. Some studies suggest <strong>interval training</strong> can be efficient for weight loss because it not only burns calories during but also may slightly increase post-exercise calorie burn (EPOC effect){" "}
-          <a href="https://www.cyclingweekly.com/fitness/training/the-best-workouts-and-training-plans-on-zwift-the-coachs-choice" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-            <em>[2]</em>
-          </a>
-          . For example, a high-intensity interval session (like 30s on/off repeats, or a Zwift HIIT workout) can torch a lot of calories quickly and might boost metabolism for hours after. On Zwift, there are specific workouts labeled for burning fat or increasing endurance. But don't stress too much about "fat-burning zone" - higher intensity burns more total calories (even if proportionally a bit less fat), and at the end of the day, total calories matter most for weight loss.
+          Three things eat into it, and together they explain why people who start training hard often lose far less
+          weight than their ride totals predict.
         </p>
-        <p className="mb-4">
-          If you're starting out, doing some longer steady rides (Zone 2 endurance rides) are great too - they burn a ton of fat calories and can be easier to recover from so you can do more volume. A mix is ideal: perhaps 2 days of intervals (e.g., Zwift HIIT workout or a race or hard group ride) and 2-3 days of longer, moderate-paced rides per week. The long ride can be your "big calorie burn" day - e.g., doing a 2-hour weekend ride on Zwift, maybe a group event like a fondo, could burn 1000+ calories in one go. Combined with mindful eating, that makes a big dent.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Zwift Training Plans for Weight Loss</h2>
-        <p className="mb-4">
-          There isn't a specific "weight loss plan" in Zwift, but interestingly, <strong>Cycling Weekly</strong> highlighted that the <em>Gran Fondo</em> training plan is great for weight loss because it has the highest volume (more riding hours = more calories burned){" "}
-          <a href="https://www.cyclingweekly.com/fitness/training/the-best-workouts-and-training-plans-on-zwift-the-coachs-choice" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-            <em>[3]</em>
-          </a>
-          . It shows ~5 hours a week, but with "endurance free rides" on weekends that can be much longer{" "}
-          <a href="https://www.cyclingweekly.com/fitness/training/the-best-workouts-and-training-plans-on-zwift-the-coachs-choice" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-            <em>[3]</em>
-          </a>
-          . Essentially, a plan that makes you ride a lot (especially moderate and some high intensity) will contribute to weight loss as long as diet is controlled. Also, consider mixing in the "Burn" workouts - Zwift has some under Training &gt; Less than 60 min &gt; e.g. "Fat Burner" which might be interval-like.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Fun = Consistency</h2>
-        <p className="mb-4">
-          Perhaps the biggest advantage of Zwift is it makes exercise <strong>enjoyable</strong> (or at least engaging). This is huge for weight loss because the <em>best</em> exercise is the one you'll do regularly. Zwift's gamification - leveling up, unlocking achievements, social interactions - can give you that extra push to get on the bike on days you might skip a boring gym session. So use that to your advantage: - Join group rides or races. They're scheduled, which can keep you accountable ("I'll do the 7pm ride with my club on Zwift"). They're social, making an hour go by faster. And racing especially can burn a heap of calories because you're motivated to push hard. - Explore new routes. Maybe set a goal to complete all routes in Watopia, etc. This goal-oriented approach keeps you riding longer (and thus burning more calories) than if you were just staring at a wall. - Use music, if it pumps you up, or watch TV while freeriding. Some people watch Netflix or sports during easier rides - if that helps you go an extra 30 minutes, that's more calories. - Keep it comfortable: get a good fan (sweating buckets is fine but if you overheat, you might cut workouts short{" "}
-          <a href="https://www.reddit.com/r/Zwift/comments/ztgwdz/indoor_vs_outdoor_power" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-            <em>[4]</em>
-          </a>
-          ), have water and maybe a small snack for longer sessions so you don't bonk (though note: don't overdo sports drinks or gels if weight loss is the goal, those can sometimes put back a lot of calories - for rides under 90 minutes, water is usually fine).
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Diet is Key</h2>
-        <p className="mb-4">
-          We can't talk weight loss without mentioning diet. You can out-eat any exercise if you try hard enough 😅. For example, one doughnut might be ~300 calories, which could negate half your hour ride's burn. That doesn't mean you can't enjoy treats - just budget them. Many find that <strong>training on Zwift helps control appetite</strong> - after a hard ride, you might not want junk food; you might crave something healthier to recover. Also, seeing your effort in terms of calories burned can be eye-opening (like "I worked super hard to burn 500 calories - which is like that big muffin I sometimes eat in 5 minutes"). It can shift perspective and foster better choices.
-        </p>
-        <p className="mb-4">
-          It often works best to combine exercise and a moderate diet change. Perhaps aim for a 250-500 calorie daily deficit via diet and another 250-500 via exercise. That could net ~1 to 2 pounds loss per week, which is a healthy pace. Always ensure you still eat enough to fuel your rides - you may want to time your meals so you have energy to workout, but maybe cut back slightly on non-workout days or later in the day if you did your exercise already. Some people use Zwift's calorie count to decide how much to eat extra (e.g., "I burned 600, I'll eat back 300 of those to refuel, and keep 300 as net deficit").
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Zwift Community Support</h2>
-        <p className="mb-4">
-          There are many on Zwift with similar goals. Check out forums or Facebook groups - e.g., "Zwift Riders" group - where people share success stories of weight loss using Zwift, or even challenges like "Zwift Weight Loss Challenge" where they encourage each other. Having a community can keep you accountable and motivated. Also, some group rides are specifically beginner-friendly or targeted for fat burning (like lower intensity longer rides - sometimes called "Swedish Zwift Riders #slowburn ride" or such - look at the event calendar for descriptions). Join those if you like group encouragement at a mellow pace.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Build Muscle, Boost Metabolism</h2>
-        <p className="mb-4">
-          While pure cardio like cycling doesn't build a ton of muscle (especially upper body), it does build your leg muscles and improve their efficiency. Adding a bit of muscle from training can slightly increase your resting metabolic rate - not huge, but every bit helps. More importantly, consistent cardio can improve your body's ability to burn fat. People often find their body composition improves - not just weight down, but perhaps inches lost, clothes fitting better - because cycling can tone your legs and reduce fat.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Non-Scale Victories</h2>
-        <p className="mb-4">
-          Pay attention to fitness gains, not just the scale. Zwift will tangibly show you improvement: your watts go up, you move up categories in racing, or you can complete that big climb faster. These achievements can be super motivating in a weight loss journey because sometimes weight fluctuates due to water or other factors, but performance improvements are clear. And often, as you lose weight, your watts per kilo improve dramatically - climbs get easier in Zwift <em>and</em> outside. It's rewarding to see both the avatar and yourself in the mirror getting fitter!
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Be Patient and Enjoyable</h2>
-        <p className="mb-4">
-          Weight loss is a marathon, not a sprint. Crash diets or overtraining will backfire. Use Zwift as a tool for sustainable habit change. If you're short on time, even 30 minutes of a high-intensity workout on Zwift can burn a good amount and boost your fitness - far better than doing nothing. Mix short hard days and longer moderate days if your schedule allows. One effective approach some do: 2 short weekday interval sessions (~45 min each), plus one long ride on weekend (say 90-120 min). That covers intensity and volume.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Celebrate Milestones</h2>
-        <p className="mb-4">
-          Set mini-goals - like "ride 100 km in a week" or "complete Zwift Academy" or "do 10 rides this month". These are not directly weight goals but they drive the behaviors that cause weight loss, and they are within your control. When you hit them, reward yourself (maybe with new cycling gear, not just cake 😜). As you progress, you might find you fall in love with the process - many start for weight loss but get hooked on improving their race results or collecting badges. That's great because then exercise isn't a chore, it's a game and a sport.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Success Stories</h2>
-        <p className="mb-4">
-          There are plenty - people have lost 20, 50, 100 lbs using Zwift combined with diet changes. It works. One caution: as you lose weight, re-calibrate your in-game weight for accurate w/kg, especially if you race - honesty is important and also it's just satisfying to update that number downward. Also, lighter weight might change your speed in Zwift uphill (you'll be faster at same watts since w/kg is higher).
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
-        <p className="mb-4">
-          Zwift can be your personal training ground for weight loss - providing structure, motivation, and a fun environment to burn calories and improve fitness. By consistently riding - whether it's hammering in virtual races or cruising through Watopia's landscapes - you'll increase your calorie expenditure significantly. Pair that with sensible eating and you have a recipe for steady weight loss. Plus, as you get lighter and fitter, you'll likely find cycling (both virtual and real) becomes even more enjoyable, creating a positive feedback loop. So hop on that trainer, start pedaling, and watch the pounds begin to fall as your avatar (and you) get stronger every week. Remember, it's not about instant results; it's about building a healthier lifestyle one ride at a time. You've got this - Ride On towards a lighter, fitter you! 💪🚴
-        </p>
-      </div>
-
-      <div className="border-t pt-6 mt-8">
-        <h3 className="text-xl font-bold mb-4">Sources</h3>
-        <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
           <li>
-            <a href="https://www.cyclingweekly.com/fitness/training/the-best-workouts-and-training-plans-on-zwift-the-coachs-choice" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-              [1-3] Cycling Weekly - Best Zwift Workouts and Training Plans
-            </a>
+            <strong>Appetite rises to meet the training.</strong> Not consciously, and not immediately. This is the
+            largest of the three by a wide margin, and it is why the post-ride sense of having earned something is
+            worth being sceptical about.
           </li>
           <li>
-            <a href="https://www.reddit.com/r/Zwift/comments/ztgwdz/indoor_vs_outdoor_power" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-              [4] Reddit - Indoor vs Outdoor Power Discussion
-            </a>
+            <strong>You move less the rest of the day.</strong> A hard morning session makes an afternoon on the
+            sofa more likely. The energy saved there can cancel a meaningful share of the energy spent riding.
           </li>
+          <li>
+            <strong>Fuelling the session is not optional.</strong> A hard interval workout needs carbohydrate
+            beforehand or it becomes a worse session. That fuel counts.
+          </li>
+        </ul>
+        <p className="mb-4">
+          None of this means the riding is pointless. It means the riding is the smaller lever, and treating it as
+          the main one is the usual reason six months of consistent training produces a fitter rider at the same
+          weight.
+        </p>
+      </div>
+
+      {/* The tension */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The part nobody mentions: losing weight can cost you watts</h2>
+        <p className="mb-4">
+          Here is where this site can be more useful than most, because it has a fitted curve that turns a change in
+          power-to-weight into a change in minutes. Take a rider at 80 kg holding 240 W, which is 3.0 W/kg, and use
+          the Alpe du Zwift equation:
+        </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="font-mono text-sm mb-3">
+            time in seconds = 148.60 &times; (W/kg)&sup2; &minus; 1954.08 &times; (W/kg) + 8329.87
+          </p>
+          <p className="text-sm mb-2">
+            <strong>Now:</strong> 80 kg, 240 W = 3.00 W/kg &rarr; about <strong>63:25</strong>
+          </p>
+          <p className="text-sm mb-2">
+            <strong>Lose 4 kg, keep the power:</strong> 76 kg, 240 W = 3.16 W/kg &rarr; about{" "}
+            <strong>60:41</strong>, nearly three minutes faster
+          </p>
+          <p className="text-sm mb-2">
+            <strong>Lose 4 kg and 10 W with it:</strong> 76 kg, 230 W = 3.03 W/kg &rarr; about{" "}
+            <strong>62:57</strong>
+          </p>
+          <p className="text-sm text-muted-foreground">
+            The second scenario gains 2 minutes 44 seconds. The third gains 28 seconds. Same weight loss, almost all
+            of the benefit gone.
+          </p>
+        </div>
+        <p className="mb-4">
+          That is the whole problem in one table. Weight loss only pays if your power survives it, and an aggressive
+          deficit is precisely the thing that stops power surviving. Cut too hard and you underfuel your training,
+          lose muscle along with fat, and end up lighter and slower.
+        </p>
+        <p className="mb-4">
+          This is also why the{" "}
+          <Link to="/faq" className="text-zwift-orange hover:underline">
+            FAQ on this site
+          </Link>{" "}
+          says to chase watts first. A 20 W gain beats a 2 kg loss, it helps on the flat as well as the climbs, and
+          nothing about pursuing it makes you weaker.
+        </p>
+      </div>
+
+      {/* What actually works */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">A structure that loses fat without costing watts</h2>
+        <p className="mb-4">
+          The approach that works is a modest deficit alongside training that is mostly easy, with the hard sessions
+          properly fuelled. Concretely:
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Aim for a deficit of around 300 to 500 kcal a day, not more.</strong> That is a slow rate. Slow
+            is the point: it is the rate at which power tends to survive.
+          </li>
+          <li>
+            <strong>Most of your riding should be easy.</strong> Easy riding burns a high proportion of fat, is
+            cheap to recover from, and lets you do more total hours, which is what actually moves the energy
+            balance. Volume beats intensity here.
+          </li>
+          <li>
+            <strong>Fuel the hard sessions properly.</strong> Two hard sessions a week, each with carbohydrate
+            before and after. Do not try to run a deficit through your key workouts; that is where watts get lost.
+          </li>
+          <li>
+            <strong>Take the deficit on easy days and rest days instead.</strong> Same weekly total, far less
+            damage to training quality.
+          </li>
+          <li>
+            <strong>Protein matters more than it does when you are not training.</strong> It is what makes the
+            weight you lose predominantly fat rather than muscle.
+          </li>
+        </ul>
+        <p className="mb-4">
+          These are widely accepted principles from sports nutrition rather than anything derived from this site's
+          data, and the specific numbers vary between people. The structure is the part worth keeping: modest
+          deficit, mostly easy riding, hard days fully fuelled.
+        </p>
+      </div>
+
+      {/* Tracking */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What to watch instead of the scale</h2>
+        <p className="mb-4">
+          Bodyweight moves several kilograms a week on water alone, so daily readings mostly measure noise. Zwift
+          happens to give you better signals than a scale does.
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Power at a fixed perceived effort.</strong> If your endurance rides are getting faster at the
+            same effort, things are working.
+          </li>
+          <li>
+            <strong>Heart rate at a fixed power.</strong> Falling over weeks is a good sign. Rising while your
+            weight falls is a warning that the deficit is too aggressive.
+          </li>
+          <li>
+            <strong>Your W/kg on a repeated climb.</strong> The most honest single number, because it combines both
+            variables into the one that decides your climbing.
+          </li>
+          <li>
+            <strong>Whether the second hard session of the week still feels possible.</strong> When it stops
+            feeling possible, you are eating too little, whatever the scale says.
+          </li>
+          <li>
+            <strong>The scale, weekly, as a seven-day average.</strong> Useful at that resolution and misleading at
+            any finer one.
+          </li>
+        </ul>
+        <p className="mb-4">
+          If you want to see what a given change is worth before you chase it, put both versions of your numbers
+          into the{" "}
+          <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">
+            Alpe du Zwift calculator
+          </Link>{" "}
+          and compare the times. Seeing that four kilograms is worth under three minutes, and only if your power
+          holds, is a useful corrective to how much attention weight tends to get.
+        </p>
+      </div>
+
+      {/* When it is the wrong goal */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">When this is the wrong goal</h2>
+        <p className="mb-4">
+          Worth saying plainly, since it is the part an article like this usually leaves out.
+        </p>
+        <p className="mb-4">
+          If you are already at a normal weight and riding well, chasing a lower one is likely to cost you more in
+          power and health than it returns in W/kg. Weight loss has a floor, and it is higher than the numbers
+          quoted for professional riders would suggest, because those numbers describe people at the extreme end of
+          a selected population, held for short parts of the year, with medical support.
+        </p>
+        <p className="mb-4">
+          Cycling also does very little for bone density, and combining that with a sustained energy deficit is a
+          genuinely poor idea. If you are considering an aggressive cut, that is a conversation for a doctor or a
+          registered dietitian, not for a website about climbing times. I build calculators and I am neither of
+          those things.
+        </p>
+      </div>
+
+      {/* Summary */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The short version</h2>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            Kilojoules of work is a good approximation of kilocalories burned, so an hour at 200 W costs around 700
+            kcal.
+          </li>
+          <li>Appetite, reduced daily movement and session fuelling all shrink that deficit in practice.</li>
+          <li>
+            Losing 4 kg is worth nearly three minutes on the Alpe if your power holds, and 28 seconds if it costs
+            you 10 W. The deficit size decides which of those you get.
+          </li>
+          <li>Modest deficit, mostly easy riding, hard sessions fully fuelled, deficit taken on the easy days.</li>
+          <li>Track power at a fixed effort and heart rate at a fixed power. Weigh weekly, as an average.</li>
+          <li>Chase watts first. They help everywhere and cost you nothing.</li>
         </ul>
       </div>
     </div>
@@ -140,12 +241,21 @@ const GetFitAndLoseWeightWithZwift = () => {
 
   return (
     <BlogPost
-      title="Get Fit and Lose Weight with Zwift: Indoor Cycling for Weight Loss"
-      date="12-11-2025"
       content={content}
+      relatedCalculators={[
+        {
+          name: "Alpe du Zwift Calculator",
+          path: "/alpeduzwiftcalculator",
+          description: "See what a weight or power change is actually worth in minutes",
+        },
+        {
+          name: "FTP & Training Zones",
+          path: "/zwift-ftp-calculator",
+          description: "Work out the easy zone most of this riding should sit in",
+        },
+      ]}
     />
   );
 };
 
 export default GetFitAndLoseWeightWithZwift;
-

@@ -4,41 +4,6 @@ import { Route, Brain, TrendingUp, BarChart3 } from "lucide-react";
 
 const ZwiftRouteSelectionPsychology = () => {
 
-  const relatedArticles = [
-    {
-      title: "Zwift Training Plans 101",
-      excerpt: "Complete guide to structured Zwift training.",
-      date: "Recent",
-      readTime: "14 min",
-      slug: "/blog/zwift-training-plans-101",
-      category: "Training"
-    },
-    {
-      title: "ZwiftPower Regression Analysis: How We Built Accurate Time Predictors",
-      excerpt: "The data and the model behind the climb time predictions on this site.",
-      date: "20-12-2025",
-      readTime: "15 min",
-      slug: "/blog/regression-analysis-methodology",
-      category: "Data Analysis"
-    },
-    {
-      title: "Conquer the Alpe du Zwift: Tips for a Faster Climb",
-      excerpt: "Master Alpe du Zwift with expert pacing strategies.",
-      date: "12-11-2025",
-      readTime: "8 min",
-      slug: "/blog/conquer-alpe-du-zwift",
-      category: "Training"
-    },
-    {
-      title: "Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance",
-      excerpt: "Comprehensive guide to power-to-weight ratio in cycling.",
-      date: "20-12-2025",
-      readTime: "17 min",
-      slug: "/blog/power-to-weight-ratio-science",
-      category: "Training"
-    }
-  ];
-
   const content = (
     <div className="space-y-6">
       <div>
@@ -470,9 +435,7 @@ const ZwiftRouteSelectionPsychology = () => {
 
   return (
     <BlogPost
-      date="31-12-2025"
       content={content}
-      relatedArticles={relatedArticles}
     />
   );
 };

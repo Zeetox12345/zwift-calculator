@@ -39,8 +39,10 @@ const ArticleListItem = ({ title, excerpt, date, readTime, category, slug }: Art
               </span>
               <div className="flex items-center text-xs text-muted-foreground">
                 <Calendar size={12} className="mr-1" />
-                <span className="hidden sm:inline">{date}</span>
-                <span className="sm:hidden">{date.split('-')[0]}</span>
+                {/* The mobile variant used to show only the day of the month,
+                    which on its own tells the reader nothing. The row wraps,
+                    so the full date fits at every width. */}
+                <span>{date}</span>
               </div>
               <span className="text-xs text-muted-foreground">{readTime} read</span>
             </div>

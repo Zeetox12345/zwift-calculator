@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import BlogPost from "@/components/BlogPost";
 
 const ShimanamiKaido = () => {
@@ -6,557 +8,368 @@ const ShimanamiKaido = () => {
       {/* Introduction */}
       <div>
         <p className="mb-4 text-lg leading-relaxed">
-          Some rides challenge your fitness.
+          A long touring day is an endurance problem, not a fitness problem, and most riders train for the wrong one.
         </p>
         <p className="mb-4">
-          Some rides challenge your logistics.
-        </p>
-        <p className="mb-4">
-          And some rides quietly reset how you think about cycling altogether.
-        </p>
-        <p className="mb-4">
-          The Shimanami Kaido belongs firmly in the last category.
-        </p>
-        <p className="mb-4">
-          This is not a ride you conquer. It's a ride you enter. A ribbon of road and bridges floating across the Seto Inland Sea, connecting islands that feel suspended between mountains and water, tradition and modernity, silence and subtle motion. You pedal past citrus groves, fishing harbors, temple bells, tidal currents, and views that feel composed rather than accidental.
+          The pattern is familiar. Someone plans a big day out on the bike, gets nervous about whether they are
+          strong enough, and responds by adding intensity. Intervals, threshold sessions, a hard group ride at the
+          weekend. Then the day comes and it turns out that six hours of easy riding with a dozen stops asks for
+          almost nothing they trained, and quite a lot of something they did not.
         </p>
         <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/japan_1_1.webp" 
-            alt="Shimanami Kaido cycling route across Seto Inland Sea" 
+          <img
+            src="/pictures/blog/australia/japan_1_1.webp"
+            alt="Cycling route crossing between coastal islands"
             className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <p className="mb-4">
-          At roughly seventy kilometers end to end, the Shimanami Kaido is often described as a "one-day ride." That description is technically correct and emotionally misleading. Yes, you can ride it in a day. But if you treat it like a workout, you miss what makes it special.
+          Japan's Shimanami Kaido is the example here because it is close to the perfect version of this kind of
+          day: long, mostly flat, spectacular, and best ridden slowly with frequent stops. I have not ridden it. The
+          preparation, and the week afterwards, is what this article is actually about.
+        </p>
+      </div>
+
+      {/* Touring is different */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What a stop-often day actually asks for</h2>
+        <p className="mb-4">
+          A touring day and a training ride of identical distance are different events. Four things separate them.
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Total time on the bike is much longer than moving time.</strong> A six-hour ride can easily be
+            an eight or nine hour day once stops are counted, and your body is out in it the whole time.
+          </li>
+          <li>
+            <strong>You restart cold, repeatedly.</strong> Every stop lets muscles cool and stiffen. The first ten
+            minutes after each one is harder than the ten minutes before it.
+          </li>
+          <li>
+            <strong>Fuelling drifts.</strong> Long stops in the sun feel like meals but often are not, and the
+            regular hourly intake that works on a training ride falls apart when the day has no rhythm.
+          </li>
+          <li>
+            <strong>The intensity is genuinely low.</strong> Which sounds easy, and is exactly why people
+            under-prepare for it. Low intensity for a very long time is its own demand.
+          </li>
+        </ul>
+        <p className="mb-4">
+          None of that is trained by intervals. All of it is trained by time.
+        </p>
+      </div>
+
+      {/* Why threshold is wrong */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Why threshold work is the wrong preparation</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/japan_1_2.webp"
+            alt="Bridge span above calm water"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          Threshold training raises the ceiling. A touring day never approaches the ceiling. Raising it changes
+          nothing about how the sixth hour feels.
         </p>
         <p className="mb-4">
-          This guide is written for first-timers who want to experience the Shimanami Kaido properly. Not rushed. Not stressed. Not underprepared. We'll cover how to ride it in a single day without turning it into a blur, what the road actually feels like, how to pace it, what nature surrounds you the entire way, and how to use Zwift intelligently before and after travel so your body stays consistent instead of wrecked.
+          What decides the sixth hour is a set of adaptations that come from duration rather than from intensity:
+          how much fat you can use at a given effort, how comfortable your position stays over time, how well your
+          gut keeps working, and how used your head is to simply continuing. Those are built by riding for a long
+          time at an easy pace, which is unglamorous and therefore widely skipped.
         </p>
-        <p className="mb-4 font-medium">
-          This is cycling as travel, not performance. And that changes everything.
+        <p className="mb-4">
+          There is a further reason to keep the intensity down in the weeks before a trip, which is that arriving
+          tired is worse than arriving slightly undertrained. A big block finished three days before you fly leaves
+          you carrying fatigue into a holiday. That is the argument made at greater length in{" "}
+          <Link to="/blog/zwift-training-periodization" className="text-zwift-orange hover:underline">
+            the periodisation article
+          </Link>
+          .
         </p>
-        
+      </div>
+
+      {/* The block */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">A six-week build for a long touring day</h2>
+        <p className="mb-4">
+          The whole plan is one long ride a week that gets longer, plus enough easy riding around it to keep things
+          ticking over. There is deliberately almost no intensity in it.
+        </p>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-border">
+                <th className="text-left py-2 pr-4 font-semibold">Week</th>
+                <th className="text-left py-2 pr-4 font-semibold">Long ride</th>
+                <th className="text-left py-2 font-semibold">What you are practising</th>
+              </tr>
+            </thead>
+            <tbody className="align-top">
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">1</td>
+                <td className="py-2 pr-4">2 h easy</td>
+                <td className="py-2">Holding a genuinely easy power without drifting up</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">2</td>
+                <td className="py-2 pr-4">2 h 30 easy</td>
+                <td className="py-2">Eating on a schedule rather than on appetite</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">3</td>
+                <td className="py-2 pr-4">3 h easy, with two 10 min breaks off the bike</td>
+                <td className="py-2">Restarting cold, which is the touring-specific bit</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">4</td>
+                <td className="py-2 pr-4">90 min easy</td>
+                <td className="py-2">Recovery week</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">5</td>
+                <td className="py-2 pr-4">4 h easy, with three breaks</td>
+                <td className="py-2">The rehearsal. Treat it as a dress run for the day</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4">6</td>
+                <td className="py-2 pr-4">2 h easy</td>
+                <td className="py-2">Arrive fresh</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mb-4">
+          Week three is the session people are tempted to skip the breaks in, and the breaks are the entire point.
+          Getting off the bike for ten minutes and then riding again is the specific thing a touring day does over
+          and over, and it is genuinely unpleasant to practise indoors, which tells you something about how much
+          harder it is than it sounds.
+        </p>
+      </div>
+
+      {/* Riding easy on Zwift */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Riding easy on Zwift is harder than riding hard</h2>
+        <p className="mb-4">
+          This is the practical obstacle, and it deserves its own section because it defeats more people than the
+          duration does.
+        </p>
+        <p className="mb-4">
+          Zwift is built to reward effort. Riders come past you and there is a pull to follow. Segments have timers
+          on them. The category you are shown next to is a comparison whether you asked for one or not. The result
+          is that easy rides quietly become moderate rides, moderate rides become tempo, and a training plan that
+          looked polarised on paper turns into six weeks of the same middling intensity. That drift is the most
+          common way indoor training goes wrong.
+        </p>
+        <p className="mb-4">The things that actually work, in rough order of effectiveness:</p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Use ERG mode with a low fixed target.</strong> Take the decision away from yourself entirely.
+            This is the one that works when nothing else does.
+          </li>
+          <li>
+            <strong>Ride a route where nothing is happening.</strong> No climbs, no sprint segments, no reason to
+            press.
+          </li>
+          <li>
+            <strong>Put something on that you actually want to watch.</strong> A film for the middle two hours makes
+            an easy ride pass and makes it much less likely you will start racing strangers out of boredom.
+          </li>
+          <li>
+            <strong>Set an upper power alarm rather than a target.</strong> The goal is a ceiling, not a number to
+            hit.
+          </li>
+          <li>
+            <strong>Ride without the leaderboards if you find them pulling at you.</strong> Nobody is watching.
+          </li>
+        </ul>
+        <p className="mb-4">
+          A concrete definition of easy, since the word does too much work: you should be able to breathe through
+          your nose and speak in complete sentences. In zone terms that is roughly 55 to 70% of FTP, which the{" "}
+          <Link to="/zwift-ftp-calculator" className="text-zwift-orange hover:underline">
+            FTP calculator
+          </Link>{" "}
+          will work out for you. If you finish the ride feeling like you could have done it again, that was correct.
+        </p>
+      </div>
+
+      {/* The recovery week */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The week after, which matters more than the week before</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/japan_1_3.webp"
+            alt="Quiet coastal road beside the sea"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          Riders plan the trip in detail and then plan nothing at all for the week that follows, which is where the
+          fitness from the trip either gets absorbed or gets thrown away.
+        </p>
+        <p className="mb-4">
+          Two failure modes, and they are opposites. Some people take the whole week off, get stiff, lose rhythm and
+          find it hard to start again. Others come back inspired and immediately do a hard session on legs that
+          have absorbed several days of unaccustomed volume, which is a good way to get ill or injured.
+        </p>
+        <p className="mb-4">
+          Easy riding beats both. It moves blood through tired muscles, keeps the habit intact, and asks for
+          nothing. A week that works:
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Days 1 and 2:</strong> nothing, or 30 minutes of very easy spinning if you feel like moving.
+          </li>
+          <li>
+            <strong>Day 3:</strong> 45 minutes easy. Flat route, no segments, no company.
+          </li>
+          <li>
+            <strong>Day 4:</strong> off.
+          </li>
+          <li>
+            <strong>Day 5:</strong> 60 minutes easy with three 1-minute efforts at the end, purely to remind your
+            legs what fast feels like.
+          </li>
+          <li>
+            <strong>Day 6:</strong> off, or easy.
+          </li>
+          <li>
+            <strong>Day 7:</strong> 90 minutes endurance. If this feels good, you are ready for normal training
+            again. If it does not, take another easy week and do not argue with it.
+          </li>
+        </ul>
+        <p className="mb-4">
+          The day-seven test is the useful part. It is an honest signal, and overriding it is the most common way a
+          good trip turns into three bad weeks.
+        </p>
+      </div>
+
+      {/* Why easy riding recovers */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Why easy riding recovers you better than rest does</h2>
+        <p className="mb-4">
+          This claim gets made constantly and is rarely explained, which makes it sound like folklore. It is not,
+          and the reasoning is worth having because it tells you how easy is easy enough.
+        </p>
+        <p className="mb-4">
+          Riding gently raises blood flow through the muscles that did the work without adding any meaningful new
+          damage. More blood moving through tired tissue means faster delivery of what repair needs and faster
+          removal of what it produces. Complete rest does neither. It is not that rest is harmful, it is that a very
+          light ride does the same job plus something extra, at no cost.
+        </p>
+        <p className="mb-4">
+          There is a second and less physiological reason. Stopping entirely for a week breaks the habit, and the
+          habit is worth more over a season than any individual session. Coming back after seven days off is
+          disproportionately hard for reasons that have nothing to do with fitness, which barely moves in a week.
+        </p>
+        <p className="mb-4">
+          The condition attached to all of this is that easy has to actually mean easy. A recovery ride done at
+          tempo is simply another training session, adding fatigue to a body that is trying to shed it, and it is
+          the most common way a recovery week fails. If you cannot hold yourself back, use ERG at a low fixed
+          target and let the trainer make the decision.
+        </p>
+        <p className="mb-4">
+          The mechanism above is standard exercise physiology rather than anything measured on this site, and the
+          size of the effect is genuinely debated. What is not debated is the direction, or the fact that easy
+          riding does not slow recovery.
+        </p>
+      </div>
+
+      {/* The example */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The example itself</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/Japan_1_4.webp"
+            alt="View across the Seto Inland Sea from a cycling route"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          The Shimanami Kaido is a cycling route across the Seto Inland Sea in Japan, linking Honshu to Shikoku via
+          a chain of islands and a series of bridges built with dedicated cycle paths. It is around 70 km end to
+          end, is described consistently as mostly flat with gentle spiral ramps up to each bridge, and is signposted
+          throughout. The recurring advice in every account is to allow far more time than the distance suggests,
+          because the stopping is the point.
+        </p>
+        <p className="mb-4">
+          Seventy flat kilometres is well within a day for most riders who have done the build above. What makes it
+          a long day is everything that is not pedalling, which is exactly why the preparation is about duration and
+          restarting rather than about power.
+        </p>
+        <p className="mb-4">
+          Beyond that I have no first-hand knowledge, and the{" "}
+          <Link to="/editorial-policy" className="text-zwift-orange hover:underline">
+            editorial policy
+          </Link>{" "}
+          on this site keeps me from inventing it.
+        </p>
         <div className="my-8">
-          <p className="text-xl font-semibold mb-4 text-foreground">Experience the Shimanami Kaido</p>
-          <p className="mb-4 text-sm text-muted-foreground">
-            Watch this video to see the stunning beauty of Japan's Shimanami Kaido cycling route across the Seto Inland Sea.
-          </p>
+          <p className="text-xl font-semibold mb-4 text-foreground">Riders who have actually been there</p>
           <div className="aspect-video w-full rounded-lg overflow-hidden">
             <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/2KIdOBX2uoE"
-              title="SHIMANAMI KAIDO - Japan's most famous cycling route!"
-              frameBorder="0"
+              title="Cycling Japan's Shimanami Kaido route"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full border-0"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
       </div>
 
-      {/* Why it feels different */}
+      {/* Summary */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Why the Shimanami Kaido feels different from other "iconic" rides</h2>
-        <p className="mb-4">
-          Many famous cycling routes are famous because they are hard. High altitude. Big gradients. Brutal weather. They demand suffering as proof of experience.
-        </p>
-        <p className="mb-4">
-          The Shimanami Kaido is famous for the opposite reason. It is gentle. Intentionally so.
-        </p>
-        <p className="mb-4">
-          The route was designed not just for cars or cyclists, but for movement. Bridges have separated cycling lanes. Gradients are shallow. Surfaces are smooth. Towns are frequent. Services exist without being intrusive.
-        </p>
-        <p className="mb-4">
-          But the real difference is emotional.
-        </p>
-        <p className="mb-4">
-          The Shimanami Kaido never asks for urgency. It invites attention.
-        </p>
-        <p className="mb-4">
-          You don't feel like you're trying to "get through" it. You feel like you're moving with it.
-        </p>
-      </div>
-
-      {/* Geography */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The geography that makes it magical</h2>
-        <p className="mb-4">
-          The ride stretches across the Seto Inland Sea, a sheltered body of water dotted with thousands of islands. Unlike open ocean coastlines, the Seto Inland Sea feels calm, layered, and intimate.
-        </p>
-        <p className="mb-4">
-          Water here doesn't roar. It glides.
-        </p>
-        <p className="mb-4">
-          Mountains rise gently from the sea on every side. The islands feel close enough to touch, yet distinct. Light behaves differently here. It reflects off water, stone, foliage, and sky in soft gradients rather than harsh contrasts.
-        </p>
-        <p className="mb-4">
-          You're never far from the sea. Even inland sections carry its presence through air, smell, and sound.
-        </p>
-        <p className="mb-4">
-          This is important because it shapes how the ride feels in your body. Calm surroundings create calm pacing. Calm pacing makes the ride feel easier than the numbers suggest.
-        </p>
-      </div>
-
-      {/* One-day tour myth */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The "one-day tour" myth and how to ride it correctly</h2>
-        <p className="mb-4">
-          Yes, the Shimanami Kaido can be ridden comfortably in one day by almost anyone with basic cycling fitness. But the phrase "one-day tour" often tricks riders into compressing the experience.
-        </p>
-        <p className="mb-4">
-          The right mental model is not "seventy kilometers to finish."
-        </p>
-        <p className="mb-4">
-          It is "a full day of gentle movement through extraordinary surroundings."
-        </p>
-        <p className="mb-4">
-          If you start early, ride steadily, stop often, and eat well, the ride never feels long. It feels complete.
-        </p>
-        <p className="mb-4">
-          The danger comes from starting late, rushing bridges, skipping islands, and arriving tired but oddly unsatisfied.
-        </p>
-        <p className="mb-4">
-          This is a ride that rewards spaciousness.
-        </p>
-      </div>
-
-      {/* Where the route goes */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Where the route actually goes (and what it feels like)</h2>
-        <p className="mb-4">
-          The Shimanami Kaido connects Honshu to Shikoku via a chain of islands. You cross multiple long bridges, each with a gradual spiral ramp designed to keep gradients manageable.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/japan_1_2.webp" 
-            alt="Shimanami Kaido bridge crossing" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-        <p className="mb-4">
-          Between bridges, the route dips into towns, climbs gently through greenery, and hugs coastlines where fishing boats drift slowly below.
-        </p>
-        <p className="mb-4">
-          The elevation gain is modest, but constant. You're rarely climbing hard, but you're rarely completely flat. The road encourages a steady cadence and relaxed breathing.
-        </p>
-        <p className="mb-4">
-          This matters for pacing. Riders who surge waste energy unnecessarily. Riders who settle in feel like the kilometers dissolve.
-        </p>
-      </div>
-
-      {/* Nature */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Nature is not background here. It is the subject.</h2>
-        <p className="mb-4">
-          One of the reasons the Shimanami Kaido feels so restorative is that nature is present in every dimension.
-        </p>
-        <p className="mb-4">
-          You see it, obviously. But you also hear it, smell it, and feel it.
-        </p>
-        <p className="mb-4">
-          The soundscape changes constantly. Wind across bridge cables. Water moving around pilings. Birds in citrus trees. Occasional boat engines, softened by distance.
-        </p>
-        <p className="mb-4">
-          The smell shifts too. Salt near the water. Earth in shaded inland sections. Citrus blossoms depending on season. Warm asphalt and sea air mixing in the afternoon.
-        </p>
-        <p className="mb-4">
-          The temperature changes subtly as you move between exposed bridges and shaded island roads. Your body never fully settles into monotony.
-        </p>
-        <p className="mb-4">
-          This sensory variety reduces perceived effort. You don't stare at a number. You move through scenes.
-        </p>
-      </div>
-
-      {/* Citrus groves */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Citrus groves, hillsides, and island agriculture</h2>
-        <p className="mb-4">
-          Many of the islands along the Shimanami Kaido are known for citrus farming. Oranges, lemons, and other varieties grow on terraced hillsides that catch sunlight from morning to evening.
-        </p>
-        <p className="mb-4">
-          These groves shape the landscape. Slopes are gentle but persistent. Roads curve naturally around hills rather than cutting through them aggressively.
-        </p>
-        <p className="mb-4">
-          As you ride, you'll pass small family plots, weathered sheds, and roadside stands selling fresh fruit or juice. It's common to see farmers working quietly as you pass.
-        </p>
-        <p className="mb-4">
-          This creates a sense of coexistence rather than intrusion. You're not riding through a tourist zone. You're passing through lived-in places.
-        </p>
-      </div>
-
-      {/* Coastal villages */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Coastal villages and harbors that slow you down (in a good way)</h2>
-        <p className="mb-4">
-          Between bridges, the route often dips into fishing villages. Harbors are small. Boats are practical, not decorative. Nets dry along seawalls.
-        </p>
-        <p className="mb-4">
-          These sections are slow by design. Narrow streets. Curves. Pedestrians. Cats sunning themselves near storefronts.
-        </p>
-        <p className="mb-4">
-          This is where many riders accidentally rush, thinking they need to "get back up to speed." But these are the moments that give the ride texture.
-        </p>
-        <p className="mb-4">
-          If you slow here, coast quietly, and observe, the ride becomes something you remember as scenes rather than statistics.
-        </p>
-      </div>
-
-      {/* Temples */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Temples, shrines, and the quiet vertical dimension</h2>
-        <p className="mb-4">
-          You don't need to be religious to feel the presence of temples and shrines along the route.
-        </p>
-        <p className="mb-4">
-          They appear subtly. A stone staircase disappearing into trees. A torii gate framing a side road. A bell heard but not seen.
-        </p>
-        <p className="mb-4">
-          These vertical elements contrast beautifully with the horizontal flow of the ride. You are constantly reminded that this land has layers of time, not just kilometers.
-        </p>
-        <p className="mb-4">
-          Even if you never dismount, their presence changes the mood. It anchors the experience in something older than cycling tourism.
-        </p>
-      </div>
-
-      {/* Wildlife */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Wildlife and the rhythm of the Seto Inland Sea</h2>
-        <p className="mb-4">
-          The Seto Inland Sea is biologically rich. You'll see seabirds riding thermals near bridges. Fish visible in clear water near shorelines. Occasionally dolphins or larger marine life if you're lucky and attentive.
-        </p>
-        <p className="mb-4">
-          But more than individual sightings, it's the rhythm that stands out.
-        </p>
-        <p className="mb-4">
-          Tides move water visibly between islands. Currents swirl under bridges. Boats align their schedules to these flows. Everything responds to something larger.
-        </p>
-        <p className="mb-4">
-          Riding through this environment encourages humility. You are not the main event. You are passing through a system that existed long before bicycles.
-        </p>
-      </div>
-
-      {/* Pacing */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Pacing the ride so it feels effortless</h2>
-        <p className="mb-4">
-          The biggest mistake first-timers make is riding it like a fondo.
-        </p>
-        <p className="mb-4">
-          The correct pacing strategy is deceptively simple.
-        </p>
+        <h2 className="text-2xl font-bold mb-4">The short version</h2>
         <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Ride at a pace where breathing stays relaxed.</li>
-          <li>Shift early.</li>
-          <li>Spin rather than push.</li>
-          <li>Let speed vary naturally.</li>
+          <li>A touring day asks for duration, not intensity. Threshold work does not prepare you for it.</li>
+          <li>
+            Practise the stops. Restarting cold, repeatedly, is the touring-specific demand and it is genuinely
+            harder than it sounds.
+          </li>
+          <li>Six weeks of one progressively longer easy ride a week is enough. Arrive fresh, not fit.</li>
+          <li>
+            Riding easy on Zwift is the hard part. Use ERG with a low target if discipline fails, and pick a route
+            where nothing is happening.
+          </li>
+          <li>
+            Plan the week after the trip. Easy riding beats both total rest and an enthusiastic return to intervals,
+            and day seven tells you whether you are ready.
+          </li>
         </ul>
-        <p className="mb-4">
-          The route rewards smoothness. Because gradients are gentle, pushing harder doesn't save much time. It only increases fatigue.
-        </p>
-        <p className="mb-4">
-          If you finish the day feeling like you "never really tried," you did it perfectly.
-        </p>
-      </div>
-
-      {/* Eating and drinking */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Eating and drinking without turning it into a plan</h2>
-        <p className="mb-4">
-          One of the joys of the Shimanami Kaido is that fueling can be intuitive.
-        </p>
-        <p className="mb-4">
-          Small cafés, convenience stores, vending machines, and local food spots appear regularly. You don't need to overcarry. You just need to be aware.
-        </p>
-        <p className="mb-4">
-          Eat small amounts often. Drink consistently. Try local flavors. Citrus products are everywhere for a reason.
-        </p>
-        <p className="mb-4">
-          Food here feels integrated into the ride, not a logistical necessity.
-        </p>
-      </div>
-
-      {/* Stopping */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why stopping is part of the ride, not a break from it</h2>
-        <p className="mb-4">
-          On many rides, stopping feels like interrupting momentum. On the Shimanami Kaido, stopping creates momentum.
-        </p>
-        <p className="mb-4">
-          Stopping to look at the water from a bridge viewpoint.
-        </p>
-        <p className="mb-4">
-          Stopping for juice from a roadside stand.
-        </p>
-        <p className="mb-4">
-          Stopping because the light hit the islands just right.
-        </p>
-        <p className="mb-4">
-          These pauses don't slow the day. They define it.
-        </p>
-        <p className="mb-4">
-          Plan to stop. Embrace it.
-        </p>
-      </div>
-
-      {/* Finishing */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Finishing the ride without feeling "done"</h2>
-        <p className="mb-4">
-          The end of the Shimanami Kaido doesn't feel like a finish line. It feels like a gentle landing.
-        </p>
-        <p className="mb-4">
-          There is no dramatic summit. No triumphant descent. You simply arrive somewhere new, having crossed water slowly and intentionally.
-        </p>
-        <p className="mb-4">
-          Many riders are surprised by how fresh they feel at the end. That's not a fluke. It's a result of good design and good pacing.
-        </p>
-        <p className="mb-4">
-          This freshness matters, because it sets up what you do next.
-        </p>
-      </div>
-
-      {/* Zwift preparation */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why you should not "train hard" right before the Shimanami Kaido</h2>
-        <p className="mb-4">
-          This ride does not reward peak fitness. It rewards freshness.
-        </p>
-        <p className="mb-4">
-          Arriving tired dulls your perception. You'll ride past beauty without absorbing it. You'll rush stops. You'll feel pressure to "get it done."
-        </p>
-        <p className="mb-4">
-          The best preparation is consistency, not intensity.
-        </p>
-        <p className="mb-4">
-          This is where Zwift becomes useful - not as a way to smash workouts, but as a way to stay gently sharp.
-        </p>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Using Zwift before the trip: staying consistent without fatigue</h3>
-          <p className="mb-4">
-            In the weeks leading up to travel, your goal is simple.
-          </p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Maintain aerobic fitness.</li>
-            <li>Keep legs responsive.</li>
-            <li>Avoid deep fatigue.</li>
-          </ul>
-          <p className="mb-4">
-            Zwift excels at this because it removes external stress. No traffic. No weather. No logistics.
-          </p>
-          <p className="mb-4">
-            Short, steady rides. Moderate intensity. Nothing heroic.
-          </p>
-          <p className="mb-4">
-            Think of Zwift as a way to protect your freshness, not build something new.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">The mindset shift: Zwift as a complement, not a substitute</h3>
-          <p className="mb-4">
-            Zwift is not meant to simulate the Shimanami Kaido. That would miss the point.
-          </p>
-          <p className="mb-4">
-            Instead, Zwift should support the type of riding you'll do.
-          </p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Smooth cadence.</li>
-            <li>Controlled effort.</li>
-            <li>Comfort over duration.</li>
-          </ul>
-          <p className="mb-4">
-            If your Zwift sessions feel calm and repeatable, you're doing it right.
-          </p>
-        </div>
-      </div>
-
-      {/* Recovery week */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">After the ride: why a recovery week matters more than you think</h2>
-        <p className="mb-4">
-          Travel plus riding creates a specific kind of fatigue. Not muscular destruction, but nervous system load.
-        </p>
-        <p className="mb-4">New environment.</p>
-        <p className="mb-4">New routines.</p>
-        <p className="mb-4">Long days.</p>
-        <p className="mb-4">Constant sensory input.</p>
-        <p className="mb-4">
-          Even if the ride itself felt easy, your body benefits from intentional recovery afterward.
-        </p>
-        <p className="mb-4">
-          This is where many riders either lose momentum completely or overcompensate with intensity.
-        </p>
-        <p className="mb-4">
-          The smart move is a Zwift recovery and fun week.
-        </p>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">The purpose of a post-trip Zwift recovery week</h3>
-          <p className="mb-4">
-            This week is not about getting fitter. It's about absorbing the experience.
-          </p>
-          <p className="mb-4">You want to:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Restore rhythm.</li>
-            <li>Maintain habit.</li>
-            <li>Flush fatigue gently.</li>
-            <li>Reconnect with movement without pressure.</li>
-          </ul>
-          <p className="mb-4">
-            Zwift works well here because it keeps cycling present without demanding planning or commitment.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">What a perfect Zwift recovery week looks like</h3>
-          <p className="mb-4">
-            Ride more often than usual.
-          </p>
-          <p className="mb-4">
-            Ride shorter than usual.
-          </p>
-          <p className="mb-4">
-            Ride easier than you think you should.
-          </p>
-          <p className="mb-4">
-            Sessions should feel like permission, not obligation.
-          </p>
-          <p className="mb-4">
-            Spin. Explore virtual routes. Ignore numbers. Let the legs decide.
-          </p>
-          <p className="mb-4">
-            This keeps consistency intact while allowing travel fatigue to dissipate naturally.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Why this works better than total rest</h3>
-          <p className="mb-4">
-            Total rest often breaks rhythm. After travel, it's easy to slip out of routine completely.
-          </p>
-          <p className="mb-4">
-            Gentle Zwift rides act as bridges between experiences. They keep cycling woven into daily life rather than compartmentalized as a "trip thing."
-          </p>
-          <p className="mb-4">
-            This matters if you want cycling to feel sustainable rather than episodic.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Keeping the Shimanami feeling alive indoors</h3>
-          <p className="mb-4">
-            You can't recreate island light or sea air indoors. But you can recreate the emotional tone.
-          </p>
-          <div className="my-6">
-            <img 
-              src="/pictures/blog/australia/japan_1_3.webp" 
-              alt="Zwift recovery week training" 
-              className="w-full rounded-lg shadow-lg"
-            loading="lazy"
-            decoding="async"
-          />
-          </div>
-          <p className="mb-4">
-            Choose Zwift routes that feel calm. Rolling rather than aggressive. Visually open. Avoid constant surges.
-          </p>
-          <p className="mb-4">
-            Ride without music sometimes. Listen to the trainer, your breathing, the quiet.
-          </p>
-          <p className="mb-4">
-            The goal is not distraction. It's reflection.
-          </p>
-        </div>
-      </div>
-
-      {/* Long-term effect */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The long-term effect of riding the Shimanami Kaido</h2>
-        <p className="mb-4">
-          Many riders notice something subtle after this trip.
-        </p>
-        <p className="mb-4">
-          They ride differently.
-        </p>
-        <p className="mb-4">They pace more calmly.</p>
-        <p className="mb-4">They stop more often.</p>
-        <p className="mb-4">They notice surroundings more.</p>
-        <p className="mb-4">They care less about averages.</p>
-        <p className="mb-4">
-          The Shimanami Kaido has a way of recalibrating what "a good ride" means.
-        </p>
-        <p className="mb-4">
-          That's its real gift.
-        </p>
-      </div>
-
-      {/* Final thoughts */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Final thoughts: why this ride stays with you</h2>
-        <p className="mb-4">
-          The Shimanami Kaido doesn't impress you by force. It impresses you by invitation.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/Japan_1_4.webp" 
-            alt="Shimanami Kaido finish and reflection" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-        <p className="mb-4">
-          It invites you to slow down without feeling lazy.
-        </p>
-        <p className="mb-4">
-          To admire without feeling indulgent.
-        </p>
-        <p className="mb-4">
-          To ride a full day without feeling spent.
-        </p>
-        <p className="mb-4">
-          If you approach it with patience, it rewards you with clarity.
-        </p>
-        <p className="mb-4">
-          And if you support that experience with smart Zwift consistency - before and after - you don't just have a great trip. You integrate it into how you ride going forward.
-        </p>
-        <p className="mb-4 text-lg font-medium">
-          That's rare.
-        </p>
-        <p className="mb-4 text-lg font-medium">
-          And that's why, long after the bridges fade from memory, the feeling of this ride remains.
-        </p>
       </div>
     </div>
   );
 
   return (
     <BlogPost
-      title="Japan's Shimanami Kaido: The Most Beautiful &quot;One-Day Tour&quot; Ride (Then Do a Zwift Recovery Week Like a Pro)"
-      date="18-12-2025"
+      content={content}
       relatedCalculators={[
         {
-          name: "Alpe du Zwift Calculator",
-          path: "/alpeduzwiftcalculator",
-          description: "Calculate your climbing time and power requirements for Zwift's iconic climbs"
+          name: "FTP & Training Zones",
+          path: "/zwift-ftp-calculator",
+          description: "Work out what your easy zone actually is in watts",
         },
         {
-          name: "Ven Top Calculator",
-          path: "/ventop-calculator",
-          description: "Predict your performance on Zwift's longest climb"
-        }
+          name: "Climb Time Calculator",
+          path: "/zwift-climb-time-calculator",
+          description: "Estimate how long any climb on your route will take",
+        },
       ]}
-      content={content}
     />
   );
 };
 
 export default ShimanamiKaido;
-

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import BlogPost from "@/components/BlogPost";
 
 const LevelUpFastInZwift = () => {
@@ -35,18 +37,45 @@ const LevelUpFastInZwift = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Level Unlocks</h2>
         <p className="mb-4">
-          Why level up? Because of the <strong>cool stuff</strong>! Most levels up to 33 give you either a new kit, accessory, or unlock in the Drop Shop. For instance: - Early on you got some basic jerseys and such. - Notably, <strong>Level 6</strong> unlocks Alpe du Zwift route (the game gated it to level 6 or above) - but they might have removed that barrier now. Historically though, that was a carrot: reach level 6, go climb the Alpe. - <strong>Level 10</strong> unlocked access to Jungle Circuit (again, Zwift had some worlds/areas gated by level, to encourage progression){" "}
-          <a href="https://zwiftinsider.com/points-levels-unlocks" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-            <em>[4]</em>
-          </a>
-          . - <strong>Level 12</strong> gave the ability to do Alpe du Zwift (if not unlocked at 6, memory fuzzy as they changed it). - Many levels unlock frames or wheels: e.g., Level 13 unlocks the Zwift Aero frame (decent starter aero bike), level 25 unlocks Lightweight Meilenstein wheels in shop (great climbing wheels). Level 33 famously unlocked the Tron bike <em>look</em>, but Tron is now separate by challenge. - Past level 30, lots of fun kits (level 37 gives you the Dino costume kit, for example - rawr 🦖). - In the new scheme, level 50-60 unlocks some futuristic kits and such. And 60 maybe unlocked some concept wheels? ZwiftInsider has a list of unlocks per level{" "}
-          <a href="https://zwiftinsider.com/points-levels-unlocks" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-            <em>[5]</em>
-          </a>
+          Levelling unlocks two different kinds of thing, and only one of them matters for how fast you go.
+        </p>
+        <p className="mb-4">
+          The first kind is cosmetic: kits, socks, accessories and the various novelty outfits that appear at higher
+          levels. These change nothing. The second kind is equipment, meaning frames and wheelsets that become
+          available in the Drop Shop as you level, and these do change your in-game speed, because Zwift assigns
+          every frame and wheelset its own weight and drag values.
+        </p>
+        <p className="mb-4">
+          The practical effect is front-loaded. The gap between the starter bike and a decent mid-level frame with
+          good wheels is real and worth having. The gap between that and the best equipment in the game is small
+          enough that it will be outweighed by a few weeks of training. There is a full account of how much
+          equipment is actually worth in{" "}
+          <Link to="/blog/zwift-equipment-optimization-aerodynamics" className="text-zwift-orange hover:underline">
+            the equipment article
+          </Link>
           .
         </p>
         <p className="mb-4">
-          So leveling is partly about showing dedication (higher level means you've ridden a lot of virtual miles) and partly about getting those gear unlocks that often can improve your in-game speed. For example, a Zwift level 1 rider only has the basic bike, whereas a level 20 rider could have something like a Specialized Tarmac Pro frame with Zipp 808 wheels - notably faster in game.
+          Which unlock arrives at which level changes with game updates often enough that listing them here would be
+          wrong within a season, and route level requirements in particular have been reworked more than once.
+          ZwiftInsider maintains{" "}
+          <a
+            href="https://zwiftinsider.com/points-levels-unlocks"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zwift-orange hover:underline"
+          >
+            a current list of unlocks by level
+          </a>
+          , which is the right place to check rather than any article with a publication date on it.
+        </p>
+        <p className="mb-4">
+          One thing worth knowing is that the Tron bike is not a level unlock at all. It comes from the Climb Mt
+          Everest challenge, which is a separate 50,000 m of climbing, and it is covered properly in{" "}
+          <Link to="/blog/unlocking-zwift-achievements" className="text-zwift-orange hover:underline">
+            the achievements article
+          </Link>
+          .
         </p>
       </div>
 
@@ -132,30 +161,55 @@ const LevelUpFastInZwift = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold mb-4">Patience and Enjoyment</h2>
+        <h2 className="text-2xl font-bold mb-4">Where optimising stops being worth it</h2>
         <p className="mb-4">
-          While it's fine to optimize, remember to enjoy the journey. Leveling should happen naturally as you explore and ride consistently. If you focus too much on XP per hour, you might burn out. Mix up your riding - do some races (races are sometimes shorter distance but intense; however, you might cover 40 km in a race which is good XP and you had fun racing), do social rides that maybe go longer than you'd do solo, etc. Before you know it, you'll hit big milestones. For example, reaching <strong>Level 30</strong> is a big deal, unlocking lots of gear. And the gap from 30 to 40 might seem long, but if you keep Zwifting regularly, you'll get there.
+          Everything above is real, and the total effect is smaller than the effort of thinking about it. Switching
+          to metric is free and you should do it. Picking up route badges you have not ridden is free and you should
+          do that too. Beyond those two, the returns fall away quickly.
         </p>
         <p className="mb-4">
-          One positive: Zwift sometimes retroactively credits XP for past work when they raise the level cap. E.g., when they increased max from 25 to 50, people already had miles that went beyond 25, so some jumped straight to like 35 on day one of new cap. Same for 50 to 60. So no effort is lost; you keep accumulating XP even if at cap (it just doesn't show until they raise cap).
+          The failure mode is specific: you start choosing rides by XP rate rather than by what your training
+          actually needs. Because XP rewards distance, that biases you towards long moderate rides and away from
+          both hard sessions and genuinely easy ones. Do that for a few months and you have a rider who levels
+          quickly and improves slowly, which is the exact trap described in{" "}
+          <Link to="/blog/zwift-training-periodization" className="text-zwift-orange hover:underline">
+            the periodisation article
+          </Link>{" "}
+          as the permanent middle-intensity block.
         </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">High Level Perks</h2>
         <p className="mb-4">
-          At the highest currently, Level 60, you unlock a special kit and some wheels, and it's a badge of honor (very few are 60 yet because that's a ton of XP). If you want to be among those elites, you now have the road map: ride lots, capitalize on bonuses, and maybe embrace some of the grind!
+          Worth knowing, and genuinely reassuring: XP keeps accruing when you are at the level cap. When Zwift has
+          raised the ceiling in the past, riders who had been sitting at the old maximum moved up several levels
+          immediately, because the distance had been counted all along. Nothing you ride is wasted, which is a good
+          argument for not thinking about this very much.
         </p>
       </div>
 
       <div>
         <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
         <p className="mb-4">
-          Leveling up in Zwift is part commitment, part strategy. The more you ride, the more you earn - but using the tips above, you can speed things up and gain those levels efficiently. Knock out route badges for big XP boosts{" "}
-          <a href="https://zwiftinsider.com/badges" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
+          XP in Zwift tracks distance and time rather than effort, and once you accept that, every optimisation
+          follows from it. Ride in metric for the roughly 7% edge, take route badges you have not done yet for the
+          one-off bonuses{" "}
+          <a
+            href="https://zwiftinsider.com/badges"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zwift-orange hover:underline"
+          >
             <em>[6]</em>
           </a>
-          , participate in events to rack up miles, and don't forget to have fun. Every pedal stroke is progress not just in-game but also improving your fitness in real life. So even if you're chasing that next level, remember it's about the journey (and the watts and the sweat) as much as the destination. With consistent riding and these XP hacks, you'll see that progress bar zooming across in no time. Now go get those levels and unlock some shiny new toys in Zwift - see you out there, level up! 🚴💨
+          , and choose longer events over shorter ones when the level is what you care about.
+        </p>
+        <p className="mb-4">
+          The honest caveat is that none of this makes you faster. XP rewards volume, and the ride that maximises XP
+          per hour is a long easy one, which is a perfectly good training session but is not the same thing as the
+          session you needed that day. If levelling starts dictating what you ride, you have quietly swapped a
+          training plan for a progress bar. There is more on choosing rides for the right reason in{" "}
+          <Link to="/blog/zwift-route-selection-psychology" className="text-zwift-orange hover:underline">
+            the route selection article
+          </Link>
+          .
         </p>
       </div>
 
@@ -189,8 +243,6 @@ const LevelUpFastInZwift = () => {
 
   return (
     <BlogPost
-      title="Level Up Fast in Zwift: Earning XP and Unlocking New Gear Quickly"
-      date="12-11-2025"
       content={content}
     />
   );

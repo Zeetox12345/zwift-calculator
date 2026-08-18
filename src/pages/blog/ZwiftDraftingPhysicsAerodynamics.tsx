@@ -4,41 +4,6 @@ import { TrendingUp, Wind, Users, BarChart3, Zap } from "lucide-react";
 
 const ZwiftDraftingPhysicsAerodynamics = () => {
 
-  const relatedArticles = [
-    {
-      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
-      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
-      date: "20-12-2025",
-      readTime: "18 min",
-      slug: "/blog/the-data-behind-zwift-climbing",
-      category: "Data Analysis"
-    },
-    {
-      title: "The Mechanical Engineering of Zwift Performance: Why Physics Matters in Virtual Cycling",
-      excerpt: "Explore Zwift performance through mechanical engineering principles.",
-      date: "20-12-2025",
-      readTime: "20 min",
-      slug: "/blog/the-mechanical-engineering-of-zwift-performance",
-      category: "Physics"
-    },
-    {
-      title: "Zwift Racing For Beginners",
-      excerpt: "Complete guide to getting started with Zwift racing.",
-      date: "Recent",
-      readTime: "12 min",
-      slug: "/blog/zwift-racing-for-beginners",
-      category: "Racing"
-    },
-    {
-      title: "Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance",
-      excerpt: "Comprehensive guide to power-to-weight ratio in cycling.",
-      date: "20-12-2025",
-      readTime: "17 min",
-      slug: "/blog/power-to-weight-ratio-science",
-      category: "Training"
-    }
-  ];
-
   const content = (
     <div className="space-y-6">
       <div>
@@ -412,9 +377,7 @@ const ZwiftDraftingPhysicsAerodynamics = () => {
 
   return (
     <BlogPost
-      date="31-12-2025"
       content={content}
-      relatedArticles={relatedArticles}
     />
   );
 };

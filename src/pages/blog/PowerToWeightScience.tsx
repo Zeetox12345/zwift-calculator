@@ -141,7 +141,7 @@ const PowerToWeightScience = () => {
           Focus on sustainable improvement. Build power through structured training. Optimize weight through sensible nutrition. Periodize your approach to avoid trying to do everything at once. And remember that optimal W/kg is different for every rider - find your balance between power and weight that allows for sustainable performance.
         </p>
         <p className="mb-4">
-          Use our calculators to see how your current W/kg translates to climbing times. Use that information to set realistic goals and track progress. But also remember that W/kg isn't everything - pacing, equipment, mental fortitude, and technique all matter. Use W/kg as your guide, but develop all aspects of climbing performance.
+          Use the calculators on this site to see how your current W/kg translates to climbing times. Use that information to set realistic goals and track progress. But also remember that W/kg isn't everything - pacing, equipment, mental fortitude, and technique all matter. Use W/kg as your guide, but develop all aspects of climbing performance.
         </p>
         <p className="mb-4">
           Most importantly, enjoy the process. Improving your power-to-weight ratio takes time and dedication, but the progress is rewarding. Every watt gained, every kilogram optimized, every W/kg improvement makes you a stronger climber. Use the science to guide your training, but let your passion for cycling drive your dedication.
@@ -178,8 +178,6 @@ const PowerToWeightScience = () => {
 
   return (
     <BlogPost
-      title="Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance"
-      date="20-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

@@ -63,10 +63,10 @@ const HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney = () => {
               height="100%"
               src="https://www.youtube.com/embed/lhI7evdTWzw"
               title="AverageRob & Arno Ironman Journey - Episode 1"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full border-0"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
@@ -80,10 +80,10 @@ const HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney = () => {
               height="100%"
               src="https://www.youtube.com/embed/VCrMyg9DVkI"
               title="AverageRob & Arno Ironman Journey - Episode 2"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full border-0"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
@@ -97,10 +97,10 @@ const HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney = () => {
               height="100%"
               src="https://www.youtube.com/embed/qVZOKel-gpE"
               title="AverageRob & Arno Ironman Journey - Episode 3"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full border-0"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
@@ -114,10 +114,10 @@ const HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney = () => {
               height="100%"
               src="https://www.youtube.com/embed/EP2rD6lr2Xk?start=923"
               title="AverageRob & Arno Ironman Journey - Episode 4"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full border-0"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
@@ -462,8 +462,6 @@ const HowIStartedZwiftingAndHowAverageRobArnoInspiredMyIronmanJourney = () => {
 
   return (
     <BlogPost
-      title="How I Started Zwifting - And How AverageRob & Arno Inspired My Ironman Journey"
-      date="19-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

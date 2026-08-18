@@ -680,8 +680,6 @@ const VirtualHillsRealWind = () => {
 
   return (
     <BlogPost
-      title="Virtual Hills, Real Wind: What's Harder?"
-      date="19-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

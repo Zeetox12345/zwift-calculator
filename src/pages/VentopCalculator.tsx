@@ -16,8 +16,36 @@ import VentopCalculatorInfo from "@/components/calculator/VentopCalculatorInfo";
 import VentopFacts from "@/components/calculator/VentopFacts";
 import CallToAction from "@/components/calculator/CallToAction";
 import Author from "@/components/Author";
+import { displayDate, getPostBySlug } from "@/data/blogPosts";
 
 const VentopCalculator = () => {
+  /**
+   * Related reading is derived from the article index so the titles, summaries
+   * and read times shown here can never drift from the articles themselves.
+   * /alpe-vs-ventop is a page rather than an article, so it is described inline.
+   */
+  const relatedReading = [
+    "/blog/mastering-ven-top",
+    "/blog/power-to-weight-ratio-science",
+    "/blog/the-data-behind-zwift-climbing",
+  ]
+    .map(getPostBySlug)
+    .filter((post): post is NonNullable<typeof post> => Boolean(post))
+    .map((post) => ({
+      title: post.title,
+      excerpt: post.excerpt,
+      date: displayDate(post.date),
+      readTime: post.readTime,
+      slug: post.slug,
+      category: post.category as string,
+    }));
+
+  const comparisonPage = {
+    title: "Alpe du Zwift vs Ven-Top, Compared",
+    excerpt:
+      "The two climbs side by side: length, gradient, how the pacing differs, and which one your numbers suit today.",
+    slug: "/alpe-vs-ventop",
+  };
   const [weight, setWeight] = useState(75);
   const [power, setPower] = useState(250);
   const [resultMinutes, setResultMinutes] = useState<number | null>(null);
@@ -306,43 +334,7 @@ const VentopCalculator = () => {
             {/* Sidebar - 30% (3 columns) - Below content on mobile */}
             <aside className="lg:col-span-3 order-2 lg:order-2">
               <div className="lg:sticky lg:top-24">
-                <FeaturedArticlesSidebar
-                  articles={[
-                    {
-                      title: "Mastering Ven-Top: Surviving Zwift's Toughest Ascent",
-                      excerpt: "Conquer Zwift's longest climb - Ven-Top (Mont Ventoux). Learn pacing strategies, fueling tips, and mental tactics.",
-                      date: "12-11-2025",
-                      readTime: "9 min",
-                      slug: "/blog/mastering-ven-top",
-                      category: "Training"
-                    },
-                    {
-                      title: "Alpe du Zwift vs Ven Top: Complete Comparison",
-                      excerpt: "Detailed comparison of Zwift's two iconic climbs. Learn which climb matches your fitness profile and goals.",
-                      date: "Recent",
-                      readTime: "15 min",
-                      slug: "/alpe-vs-ventop",
-                      category: "Training"
-                    },
-                    {
-                      title: "Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance",
-                      excerpt: "Comprehensive guide to power-to-weight ratio in cycling. Learn the physics, training implications, and practical applications.",
-                      date: "20-12-2025",
-                      readTime: "17 min",
-                      slug: "/blog/power-to-weight-ratio-science",
-                      category: "Training"
-                    },
-                    {
-                      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
-                      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
-                      date: "20-12-2025",
-                      readTime: "18 min",
-                      slug: "/blog/the-data-behind-zwift-climbing",
-                      category: "Data Analysis"
-                    }
-                  ]}
-                  title="Related Articles"
-                />
+                <FeaturedArticlesSidebar articles={relatedReading} title="Related Articles" />
               </div>
             </aside>
           </div>
@@ -431,69 +423,30 @@ const VentopCalculator = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Link 
-                    to="/blog/mastering-ven-top"
-                    className="group block p-6 bg-white dark:bg-zwift-dark rounded-xl border-2 border-transparent hover:border-zwift-orange/50 transition-all"
-                  >
-                    <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-zwift-orange transition-colors">
-                      Mastering Ven-Top: Surviving Zwift's Toughest Ascent
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Complete guide to conquering Ven Top with pacing strategies, fueling tips, and mental tactics.
-                    </p>
-                    <div className="flex items-center text-zwift-orange text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                      Read Article
-                      <ArrowDown size={16} className="ml-2 rotate-[-90deg]" />
-                    </div>
-                  </Link>
-
-                  <Link 
-                    to="/alpe-vs-ventop"
-                    className="group block p-6 bg-white dark:bg-zwift-dark rounded-xl border-2 border-transparent hover:border-zwift-orange/50 transition-all"
-                  >
-                    <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-zwift-orange transition-colors">
-                      Alpe du Zwift vs Ven Top: Complete Comparison
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Detailed comparison of Zwift's two iconic climbs. Learn which climb matches your fitness profile and goals.
-                    </p>
-                    <div className="flex items-center text-zwift-orange text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                      Compare Climbs
-                      <ArrowDown size={16} className="ml-2 rotate-[-90deg]" />
-                    </div>
-                  </Link>
-
-                  <Link 
-                    to="/blog/zwift-training-plans-101"
-                    className="group block p-6 bg-white dark:bg-zwift-dark rounded-xl border-2 border-transparent hover:border-zwift-orange/50 transition-all"
-                  >
-                    <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-zwift-orange transition-colors">
-                      Zwift Training Plans 101: Boost Your FTP and Fitness
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Discover how Zwift's structured training plans can help you build the fitness needed for Ven Top.
-                    </p>
-                    <div className="flex items-center text-zwift-orange text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                      Read Article
-                      <ArrowDown size={16} className="ml-2 rotate-[-90deg]" />
-                    </div>
-                  </Link>
-
-                  <Link 
-                    to="/blog"
-                    className="group block p-6 bg-white dark:bg-zwift-dark rounded-xl border-2 border-transparent hover:border-zwift-orange/50 transition-all"
-                  >
-                    <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-zwift-orange transition-colors">
-                      Browse All Training Articles
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Explore our complete library of Zwift training guides, data analysis, and performance insights.
-                    </p>
-                    <div className="flex items-center text-zwift-orange text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                      View All Articles
-                      <ArrowDown size={16} className="ml-2 rotate-[-90deg]" />
-                    </div>
-                  </Link>
+                  {[...relatedReading.map((a) => ({ ...a, cta: "Read Article" })),
+                    { ...comparisonPage, cta: "Compare Climbs" },
+                    {
+                      title: "Browse the Full Library",
+                      excerpt:
+                        "Every article on the site, grouped into training, racing, setup and data analysis.",
+                      slug: "/blog",
+                      cta: "View All Articles",
+                    }].map((item) => (
+                    <Link
+                      key={item.slug}
+                      to={item.slug}
+                      className="group block p-6 bg-white dark:bg-zwift-dark rounded-xl border-2 border-transparent hover:border-zwift-orange/50 transition-all"
+                    >
+                      <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-zwift-orange transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-4">{item.excerpt}</p>
+                      <div className="flex items-center text-zwift-orange text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                        {item.cta}
+                        <ArrowDown size={16} className="ml-2 rotate-[-90deg]" />
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </AnimatedCard>

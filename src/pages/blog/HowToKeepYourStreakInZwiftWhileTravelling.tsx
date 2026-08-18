@@ -52,7 +52,7 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
         <div className="my-6">
           <img 
             src="/pictures/blog/other/zwift_streak.webp" 
-            alt="Zwift streak travel guide showing how to maintain your training streak while travelling" 
+            alt="Illustration of a cyclist trailing a loop of orange light along a coastal road at sunset" 
             className="w-full rounded-lg shadow-lg"
           loading="lazy"
           decoding="async"
@@ -708,8 +708,6 @@ const HowToKeepYourStreakInZwiftWhileTravelling = () => {
 
   return (
     <BlogPost
-      title="How to Keep Your Streak in Zwift While Travelling"
-      date="19-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

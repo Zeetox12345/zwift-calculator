@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import BlogPost from "@/components/BlogPost";
 
 const SydneyToWollongong = () => {
@@ -6,493 +8,385 @@ const SydneyToWollongong = () => {
       {/* Introduction */}
       <div>
         <p className="mb-4 text-lg leading-relaxed">
-          Some rides feel athletic. Some feel scenic. And then there are rides that feel cinematic.
+          The step from a two-hour ride to a five-hour one is not a fitness step. It is a fuelling and pacing step,
+          and it catches out riders who are demonstrably strong enough.
         </p>
         <p className="mb-4">
-          Sydney to Wollongong is one of those. You roll out before the city wakes up, trace the coastline south, slip through quiet beach towns, and suddenly you're riding across a bridge that looks like it was designed for a drone shot. The ocean crashes below, cliffs rise beside you, and for a few minutes the whole thing feels staged. It isn't. That's just the Sea Cliff Bridge doing what it does best.
+          This comes up most often when someone signs up for their first proper day out: a coastal classic, a
+          charity ride, a sportive. They have been riding an hour or two several times a week for a year and they
+          are fit. Then the day arrives and something goes wrong at hour three that has nothing to do with the
+          numbers they have been training.
         </p>
         <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/australia_2_1.webp" 
-            alt="Sea Cliff Bridge on Sydney to Wollongong route" 
+          <img
+            src="/pictures/blog/australia/australia_2_1.webp"
+            alt="Coastal road curving along a cliff edge"
             className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <p className="mb-4">
-          This is not a multi-day epic. It's a one-day ride with a huge "wow factor." But it still rewards planning. Start times matter. Stop choices matter. Pacing matters more than most people expect. And if you can't ride it yet, or you want to show up with better legs, Zwift can do a surprisingly good job of preparing you for the rhythm of the day.
+          I use the Sydney to Wollongong ride as the example because it is close to the standard shape of a first
+          long day: five-ish hours, coastal, one famous feature, achievable by a normally fit rider who paces it
+          properly. I have not ridden it. The preparation is the part I can actually help with, and it is the part
+          that decides how the day goes.
+        </p>
+      </div>
+
+      {/* Why five hours is different */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Five hours is not two hours plus three</h2>
+        <p className="mb-4">
+          At two hours you can get away with almost anything. You can start too hard and hang on. You can eat one
+          bar and finish. You can wear whatever shorts were clean. None of that is true at five.
+        </p>
+        <p className="mb-4">Roughly in the order they arrive, here is what actually fails:</p>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-border">
+                <th className="text-left py-2 pr-4 font-semibold">Roughly when</th>
+                <th className="text-left py-2 pr-4 font-semibold">What goes</th>
+                <th className="text-left py-2 font-semibold">What actually caused it</th>
+              </tr>
+            </thead>
+            <tbody className="align-top">
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Hour 2</td>
+                <td className="py-2 pr-4">Contact points start talking</td>
+                <td className="py-2">Position you have never held this long, not fitness</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Hour 3</td>
+                <td className="py-2 pr-4">Power quietly drops, effort feels the same</td>
+                <td className="py-2">Carbohydrate deficit that started in hour one</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Hour 3 to 4</td>
+                <td className="py-2 pr-4">Appetite disappears entirely</td>
+                <td className="py-2">Riding too hard for the gut to keep working</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">Hour 4</td>
+                <td className="py-2 pr-4">Decisions get worse</td>
+                <td className="py-2">Low fuel plus accumulated concentration</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4">Hour 4 to 5</td>
+                <td className="py-2 pr-4">Everything at once</td>
+                <td className="py-2">All of the above, compounding</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mb-4">
+          Notice that fitness does not appear in the right-hand column. This ordering is my own from long rides and
+          from watching people come apart on them, not a measured sequence, but the pattern is consistent enough
+          that I would plan around it.
+        </p>
+      </div>
+
+      {/* The pacing number */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The pacing number, and why it feels insultingly easy</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/australia_2_2.webp"
+            alt="Cyclists riding along a coastal highway"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          For a five-hour ride you want to average somewhere around 55 to 65% of FTP. If you do not know your FTP,
+          the{" "}
+          <Link to="/zwift-ftp-calculator" className="text-zwift-orange hover:underline">
+            FTP calculator
+          </Link>{" "}
+          will turn a 20-minute or ramp test into a number and a set of zones.
         </p>
         <p className="mb-4">
-          This guide is built to be practical. Where to start. Where to stop. How to pace it so the bridge doesn't come when you're already cooked. How to manage traffic and wind. And how to keep the coastal rhythm alive indoors when outdoor riding isn't an option, or when you want to add volume before the trip.
+          For a rider with an FTP of 250 W that is 138 to 163 W as a five-hour average. Written down like that it
+          looks like almost nothing, and this is precisely why people ignore it. On the road, at hour one, 150 W
+          feels like you are being lazy.
         </p>
-        
-        <div className="my-8">
-          <p className="text-xl font-semibold mb-4 text-foreground">Riding the Sea Cliff Bridge</p>
-          <p className="mb-4 text-sm text-muted-foreground">
-            See what makes the Sea Cliff Bridge such a cinematic cycling experience in this video showcasing the iconic Sydney to Wollongong route.
+        <p className="mb-4">
+          Two things make that number less silly than it looks. First, it is an average across the whole ride
+          including the climbs, so the flat sections have to sit below it for the climbs to fit above it. Second,
+          the ride is not five hours of steady effort; it is five hours of terrain, and terrain always costs more
+          than the plan.
+        </p>
+        <p className="mb-4">
+          The practical test, and this one is old and reliable, is that you should be able to hold a conversation in
+          full sentences for the first three hours. If you cannot, you are riding your five-hour day at your
+          three-hour pace, and the last two hours will collect the debt.
+        </p>
+      </div>
+
+      {/* Fuelling */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Eating: the rate matters more than the total</h2>
+        <p className="mb-4">
+          The single most common mistake is eating reactively. You feel fine, so you do not eat. Two hours later you
+          feel empty, so you eat a lot, and now you have a gut problem on top of a fuel problem.
+        </p>
+        <p className="mb-4">
+          Carbohydrate absorption is rate-limited. You can take in roughly 60 g an hour of a single sugar source,
+          and up to about 90 g an hour if the mix combines glucose and fructose, which is why most modern sports
+          drinks do exactly that. You cannot bank it in advance and you cannot catch up later. Whatever you missed
+          in hour one is gone.
+        </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="text-sm mb-2">
+            <strong>The rule:</strong> start eating at 30 to 45 minutes, then every 20 to 30 minutes after that,
+            whether or not you feel like it.
           </p>
+          <p className="text-sm text-muted-foreground">
+            Setting a repeating timer is not excessive. At hour four you will not remember, and hour four is when it
+            matters most.
+          </p>
+        </div>
+        <p className="mb-4">
+          Those absorption ranges are standard sports-nutrition figures, not something measured on this site. The
+          practical point stands regardless of where in the range you personally sit: the rate is the constraint,
+          and it starts binding from the first hour.
+        </p>
+      </div>
+
+      {/* Bonking */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What hitting the wall actually is</h2>
+        <p className="mb-4">
+          Worth understanding properly, because knowing the mechanism tells you both how to avoid it and what to do
+          if it happens anyway.
+        </p>
+        <p className="mb-4">
+          Your body stores carbohydrate in two places. Muscle glycogen, somewhere around 300 to 400 g, fuels the
+          working muscle and is only available to that muscle. Liver glycogen, around 80 to 100 g, does a completely
+          different job: it maintains the glucose concentration in your blood, and your brain runs almost entirely
+          on that.
+        </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="text-sm mb-2">
+            <strong>Heavy legs and falling power</strong> is muscle glycogen running low. Unpleasant, gradual, and
+            you can ride through it at reduced output.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            <strong>Hitting the wall</strong> is liver glycogen running out and blood glucose falling. Sudden,
+            disproportionate, and it feels mental before it feels physical: everything becomes overwhelming, small
+            decisions become difficult, and the world narrows.
+          </p>
+        </div>
+        <p className="mb-4">
+          Those are different failures and the second one is the frightening one. It is also the one that eating on
+          a schedule prevents outright, because liver glycogen is small enough that regular modest carbohydrate
+          intake keeps it topped up indefinitely.
+        </p>
+        <p className="mb-4">
+          If it happens: stop, eat something with fast sugar in it, and wait twenty minutes. Do not try to ride
+          through it, because you cannot absorb much while working hard and you will simply prolong it. Twenty
+          minutes and 60 g of carbohydrate turns a ruined day back into a slow one.
+        </p>
+        <p className="mb-4">
+          The storage figures are standard physiological ranges rather than anything measured here, and they vary
+          with training status and body size. The distinction between the two failures is the part worth carrying.
+        </p>
+      </div>
+
+      {/* The progression */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Building to it on Zwift</h2>
+        <p className="mb-4">
+          The useful thing about doing this indoors is that a long ride is entirely controllable. No traffic, no
+          mechanical stopping you, no getting cold, and your food is three metres away. That makes Zwift a better
+          place to rehearse a long day than the road, right up until the point where you need to rehearse being
+          outdoors.
+        </p>
+        <p className="mb-4">
+          A six-week build, on top of whatever else you do, with the long ride once a week:
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Week 1:</strong> 2 h at endurance pace. Eat 60 g of carbohydrate an hour even though you do not
+            need to. This is a practice run for the eating, not the riding.
+          </li>
+          <li>
+            <strong>Week 2:</strong> 2 h 30. Same fuelling. Note what your saddle has to say at the two-hour mark.
+          </li>
+          <li>
+            <strong>Week 3:</strong> 3 h. This is usually the first ride where boredom becomes the limiter rather
+            than the legs. Deal with that now rather than on the day.
+          </li>
+          <li>
+            <strong>Week 4:</strong> 90 min easy. Recovery week.
+          </li>
+          <li>
+            <strong>Week 5:</strong> 3 h 30 to 4 h, with the last hour deliberately at the effort you intend to
+            finish the real ride on.
+          </li>
+          <li>
+            <strong>Week 6:</strong> 2 h easy, then the ride itself.
+          </li>
+        </ul>
+        <p className="mb-4">
+          You do not need to have ridden five hours to ride five hours. Four is enough, because the last hour on the
+          day is carried by the occasion. Three is not enough, in my experience, because three hours is roughly
+          where the problems start rather than where they finish.
+        </p>
+      </div>
+
+      {/* Long indoor rides */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Making a four-hour indoor ride survivable</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/australia_2_3.webp"
+            alt="Long coastal road stretching into the distance"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          This is the part nobody warns you about. A four-hour indoor ride is a genuinely different proposition from
+          a four-hour outdoor one, and there is a craft to it.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6">Cooling, which is not optional at this length</h3>
+        <p className="mb-4">
+          Indoor sweat rates commonly run somewhere between 1 and 1.5 litres an hour with reasonable airflow, and
+          higher without it. Over four hours that is four to six litres. You will not drink that much and you do not
+          need to, but you do need to take it seriously enough to plan for, because dehydration on a long indoor
+          ride arrives quietly and then all at once.
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>More fan than you think, aimed at your chest and face rather than your legs.</li>
+          <li>Two bottles within reach and a plan for refilling without stopping the ride.</li>
+          <li>Electrolytes in at least one of them. Four hours of sweat is a meaningful sodium loss.</li>
+          <li>A towel over the bars and another over the frame. The reasons are covered in the sweat article.</li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6">Boredom is a real limiter, so plan for it</h3>
+        <p className="mb-4">
+          Break the ride into segments with something happening at each transition. Ride a route that changes world
+          or terrain. Put a film on for the middle two hours. Join a long group event so that the structure comes
+          from outside you. What works is personal; what does not work is starting a four-hour ride with no plan for
+          hours two and three.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6">Get off the saddle deliberately</h3>
+        <p className="mb-4">
+          The bike cannot move, so you have to. Stand for thirty seconds every ten or fifteen minutes even when you
+          do not need to. It is the single most effective thing for making long indoor rides tolerable, and it is
+          the same underlying problem described in{" "}
+          <Link to="/blog/zwift-biomechanics" className="text-zwift-orange hover:underline">
+            the article on what a fixed bike does to your body
+          </Link>
+          .
+        </p>
+      </div>
+
+      {/* What the road adds */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What the road adds that the trainer cannot</h2>
+        <p className="mb-4">
+          Do at least two rides of three hours or more outdoors before the day, even if all your training has been
+          indoors. Not for fitness. For the things fitness does not cover:
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>Eating and drinking while moving, in traffic, with gloves on.</li>
+          <li>Whether your kit actually works for five hours, which you cannot learn in ninety minutes.</li>
+          <li>Descending with tired hands.</li>
+          <li>Riding near other people, if the day involves a group.</li>
+          <li>
+            The simple business of being outside for that long. There is a fuller version of this argument in{" "}
+            <Link to="/blog/what-zwift-cant-teach-you-and-what-it-can" className="text-zwift-orange hover:underline">
+              what Zwift can and cannot teach you
+            </Link>
+            .
+          </li>
+        </ul>
+      </div>
+
+      {/* The ride itself */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The example itself</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/australia_2_4.webp"
+            alt="Bridge crossing above a coastline"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          Sydney to Wollongong runs south down the New South Wales coast, and its famous feature is the Sea Cliff
+          Bridge, a curved span built out over the water where the road was cut into the cliff. It is ridden as an
+          organised event as well as independently, the terrain is described as rolling with a substantial climb
+          leaving Sydney, and the consistent advice is to start early.
+        </p>
+        <p className="mb-4">
+          That is as far as I will go, because I have not ridden it and route-specific advice from someone who has
+          not been there is worth nothing. For the details, ask someone local or watch someone who has done it.
+        </p>
+        <div className="my-8">
+          <p className="text-xl font-semibold mb-4 text-foreground">Riders who have actually done it</p>
           <div className="aspect-video w-full rounded-lg overflow-hidden">
             <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/Ayn9f2q3fRA"
-              title="Sydney to Wollongong Sea Cliff Bridge Cycling"
-              frameBorder="0"
+              title="Cycling Sydney to Wollongong via the Sea Cliff Bridge"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full border-0"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
       </div>
 
-      {/* Why this ride works */}
+      {/* Summary */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Why this ride works so well as a one-day classic</h2>
-        <p className="mb-4">
-          Sydney to Wollongong isn't about distance bragging rights. It's about flow.
-        </p>
-        <p className="mb-4">The ride strings together:</p>
+        <h2 className="text-2xl font-bold mb-4">The short version</h2>
         <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Urban calm in the early morning</li>
-          <li>Long, steady coastal stretches</li>
-          <li>Short rises that keep you engaged</li>
-          <li>Iconic visual moments that reset your mood instantly</li>
+          <li>The jump to five hours is a fuelling and pacing problem, not a fitness one.</li>
+          <li>Target 55 to 65% of FTP as the whole-ride average. It will feel too easy for the first two hours.</li>
+          <li>
+            Eat from 30 to 45 minutes in, then every 20 to 30 minutes. Absorption is rate-limited, so you cannot
+            catch up.
+          </li>
+          <li>Six weeks with one long ride a week gets you there. Four hours in training is enough for five on the day.</li>
+          <li>
+            For long indoor rides: more fan than you think, stand up every ten minutes, and have a plan for hours two
+            and three.
+          </li>
+          <li>Do at least two long rides outdoors before the day, for everything that is not fitness.</li>
         </ul>
-        <p className="mb-4">
-          It also has a clean narrative arc. City to coast. Coast to cliffs. Cliffs to bridge. Bridge to beach town finish. There's a reason so many riders describe it as "feeling like a movie." It has scenes.
-        </p>
-        <p className="mb-4">
-          Because it's doable in one day, it's perfect for riders who want something memorable without planning logistics for a week. You can ride it hard, ride it steady, or ride it socially. It still delivers.
-        </p>
-      </div>
-
-      {/* Distance and elevation */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Distance, elevation, and what your legs will actually feel</h2>
-        <p className="mb-4">
-          Depending on your exact start point and finish, Sydney to Wollongong typically lands somewhere around a long endurance day. The elevation profile is rarely brutal, but it is not flat. What catches people out is the constant engagement.
-        </p>
-        <p className="mb-4">You'll experience:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Long sections where you settle into tempo</li>
-          <li>Short climbs that spike heart rate if you're not ready</li>
-          <li>Rolling terrain that never fully switches off</li>
-        </ul>
-        <p className="mb-4">
-          This means the ride feels easier if you pace it like a sustained effort, not a series of attacks. If you treat every rise like a challenge, you'll arrive at Sea Cliff Bridge more tired than you want to be.
-        </p>
-        <p className="mb-4">
-          The smart approach is to ride the first half slightly easier than you think you should. The payoff comes later.
-        </p>
-      </div>
-
-      {/* When to ride */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">When to ride: early starts are non-negotiable</h2>
-        <p className="mb-4">
-          This route shares space with traffic, tourists, and daily commuters. Timing changes everything.
-        </p>
-        <p className="mb-4">An early start gives you:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Cooler air and calmer wind</li>
-          <li>Less traffic on narrow sections</li>
-          <li>A smoother experience through beach towns</li>
-          <li>Better light hitting the cliffs and water</li>
-        </ul>
-        <p className="mb-4">
-          Many riders aim to be rolling around sunrise. Not because it's heroic, but because it's practical. The ride feels safer, quieter, and more immersive when the day hasn't fully kicked in yet.
-        </p>
-        <p className="mb-4">
-          If you start late, you don't ruin the ride, but you do change its character. It becomes busier, noisier, and more stop-start. For a route that thrives on flow, that matters.
-        </p>
-      </div>
-
-      {/* Where to start */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Where to start: shaping the opening act</h2>
-        <p className="mb-4">
-          You have options for your Sydney start, and each slightly changes the feel of the ride.
-        </p>
-        <p className="mb-4">
-          Starting closer to the city adds a sense of journey. You feel the transition from urban environment to open coast more clearly. It also adds mental weight early, which makes pacing discipline important.
-        </p>
-        <p className="mb-4">
-          Starting further south trims the urban section and gets you into coastal riding faster. This is a good option if time is limited or if you want the highlight moments without the full build-up.
-        </p>
-        <p className="mb-4">
-          Whichever you choose, the principle stays the same. Start gently. The ride is long enough that patience always wins.
-        </p>
-      </div>
-
-      {/* Coastal rhythm */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The coastal rhythm: how the road asks you to ride</h2>
-        <p className="mb-4">
-          Sydney to Wollongong rewards riders who understand rhythm.
-        </p>
-        <p className="mb-4">
-          The terrain doesn't beg for constant power spikes. It asks for consistency. Think in terms of ranges rather than numbers. Smooth pressure on the pedals. Calm breathing. Quick gear changes before a rise, not halfway up it.
-        </p>
-        <p className="mb-4">You'll feel best if you:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Stay just under your all-day pace early</li>
-          <li>Let the road dictate small changes rather than forcing them</li>
-          <li>Accept that some sections are about scenery, not speed</li>
-        </ul>
-        <p className="mb-4">
-          This mindset keeps your legs fresh for the final third, which is where the ride really shines.
-        </p>
-      </div>
-
-      {/* Key stops */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Key stops that enhance the ride without breaking it</h2>
-        <p className="mb-4">
-          One of the strengths of this route is that you don't need many stops. The scenery does a lot of the work for you. But a few well-chosen pauses can elevate the experience.
-        </p>
-        <p className="mb-4">
-          A beach-town coffee stop works well once you've been riding long enough to feel settled, but not so long that you're stiff. This is a chance to reset mentally and physically.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/australia_2_2.webp" 
-            alt="Coastal beach town on Sydney to Wollongong route" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-        <p className="mb-4">
-          A viewpoint stop before the Sea Cliff Bridge lets you absorb what's coming. If you rush straight onto the bridge without pause, you risk missing the emotional build-up.
-        </p>
-        <p className="mb-4">
-          A relaxed stop in Wollongong at the end is non-negotiable. Eat. Hydrate. Sit near the water. Let the ride land properly.
-        </p>
-        <p className="mb-4">
-          The goal with stops is not recovery. It's narrative. Each one marks a chapter.
-        </p>
-      </div>
-
-      {/* Sea Cliff Bridge */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The Sea Cliff Bridge moment: how to ride it right</h2>
-        <p className="mb-4">
-          The Sea Cliff Bridge is short, but it carries a lot of emotional weight.
-        </p>
-        <p className="mb-4">
-          This is not the place to sprint. It's the place to be present.
-        </p>
-        <p className="mb-4">
-          Ride it smoothly. Hold your line. Look out to the ocean when it's safe. Let the scale of it sink in. If you're riding with others, spread out slightly so everyone has space to experience it.
-        </p>
-        <p className="mb-4">
-          Many riders remember this section more vividly than any watt number or Strava segment. Treat it accordingly.
-        </p>
-      </div>
-
-      {/* Traffic and safety */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Traffic and safety: realistic advice, not fear-mongering</h2>
-        <p className="mb-4">
-          This route is popular for a reason, which means you will share it.
-        </p>
-        <p className="mb-4">The smartest safety moves are simple:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Start early to avoid peak congestion</li>
-          <li>Ride predictably and visibly</li>
-          <li>Use lights even in daylight</li>
-          <li>Avoid sudden movements around debris</li>
-        </ul>
-        <p className="mb-4">
-          Confidence helps, but calm helps more. You don't need to dominate the road. You need to be clear and consistent.
-        </p>
-        <p className="mb-4">
-          If conditions feel wrong, it's okay to adjust. Slow down. Take a longer break. The ride isn't a test. It's an experience.
-        </p>
-      </div>
-
-      {/* Wind */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Wind: the invisible character in the story</h2>
-        <p className="mb-4">
-          Wind plays a role on this ride, even on days that don't look windy on paper.
-        </p>
-        <p className="mb-4">
-          Coastal sections can amplify small breezes. Cliffs can funnel gusts. Bridges can expose you suddenly.
-        </p>
-        <p className="mb-4">
-          The best response is not to fight it. Adjust your expectations and your gearing. A headwind section is not the place to prove fitness. It's the place to stay relaxed and save energy.
-        </p>
-        <p className="mb-4">
-          If you plan your pacing assuming perfect conditions, you'll feel frustrated when reality intervenes. If you plan for variability, the ride stays enjoyable.
-        </p>
-      </div>
-
-      {/* What to pack */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">What to pack for a one-day cinematic ride</h2>
-        <p className="mb-4">
-          This is not a heavy touring setup. But it's also not a café loop.
-        </p>
-        <p className="mb-4">
-          You want to be self-sufficient without feeling burdened.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/australia_2_3.webp" 
-            alt="Cycling gear for Sydney to Wollongong ride" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-        <p className="mb-4">On the bike, focus on reliability. Two bottles. Basic tools. One or two spare tubes. A pump you trust.</p>
-        <p className="mb-4">
-          Clothing should prioritize comfort over aerodynamics. A light layer you can remove. Bright elements for visibility. Nothing that distracts you from the ride.
-        </p>
-        <p className="mb-4">
-          Food should be simple and familiar. This is not the day to experiment. Eat what you know works, and eat earlier than you think you need to.
-        </p>
-      </div>
-
-      {/* Fueling strategy */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Fueling strategy that keeps the rhythm intact</h2>
-        <p className="mb-4">
-          The ride feels best when your energy stays level.
-        </p>
-        <p className="mb-4">
-          Aim to eat consistently rather than reactively. Small, regular intake works better than waiting for hunger. Hydrate even when it's cool. Coastal air can be deceptive.
-        </p>
-        <p className="mb-4">
-          If you stop for a proper coffee or snack, don't turn it into a long sit unless you want the legs to stiffen. Keep the story moving.
-        </p>
-      </div>
-
-      {/* Common mistakes */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Common mistakes that flatten the experience</h2>
-        <ul className="list-disc list-inside space-y-3 ml-4">
-          <li><strong>Going out too hard early</strong> is the biggest one. The excitement of the idea of the ride often overrides pacing sense.</li>
-          <li><strong>Stopping too often</strong> breaks flow. Every restart costs a little rhythm.</li>
-          <li><strong>Treating the Sea Cliff Bridge like a finish line</strong> instead of a highlight leaves the final kilometers feeling flat.</li>
-          <li><strong>Ignoring wind and trying to force average speed</strong> leads to unnecessary fatigue.</li>
-        </ul>
-        <p className="mt-4">
-          Avoid these, and the ride almost takes care of itself.
-        </p>
-      </div>
-
-      {/* Zwift preparation */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why Zwift actually works for preparing this ride</h2>
-        <p className="mb-4">
-          At first glance, Zwift and coastal riding seem mismatched. One is virtual. One is cinematic. But the physical demands line up surprisingly well.
-        </p>
-        <p className="mb-4">
-          This ride is not about sustained climbs. It's about steady pressure with frequent small changes. Zwift excels at that.
-        </p>
-        <p className="mb-4">What you want to train is:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Comfort at endurance and tempo</li>
-          <li>Ability to handle short rises without surging</li>
-          <li>Mental tolerance for long, steady efforts</li>
-        </ul>
-        <p className="mb-4">
-          Zwift gives you control. You can target exactly those elements.
-        </p>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Zwift routes that match the coastal feel</h3>
-          <p className="mb-4">
-            You're not looking for epic climbs here. You're looking for routes that never quite settle.
-          </p>
-          <p className="mb-4">
-            Rolling routes with frequent small elevation changes are ideal. They force you to stay engaged without blowing you up.
-          </p>
-          <p className="mb-4">
-            Routes that mix flat sections with gentle rises work well for simulating coastal pacing. You learn to stay smooth when the gradient shifts by just enough to matter.
-          </p>
-          <p className="mb-4">
-            Routes with visual variety also help. Even indoors, scenery changes keep your brain from drifting. That matters on longer sessions.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Zwift workouts that build the right kind of fitness</h3>
-          <p className="mb-4">
-            The mistake many riders make is overemphasizing high-intensity work for this type of ride.
-          </p>
-          <p className="mb-4">What you really need is:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Strong aerobic base</li>
-            <li>Efficient cadence changes</li>
-            <li>Calm responses to small power demands</li>
-          </ul>
-          <p className="mb-4">
-            Tempo-based workouts with short rises are perfect. They teach you to absorb changes without overreacting.
-          </p>
-          <p className="mb-4">
-            Workouts that include seated and standing transitions help, because the Sea Cliff Bridge approach includes moments where body position matters more than raw power.
-          </p>
-          <p className="mb-4">
-            Short hill-style intervals are useful, but only if you focus on control, not max output.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">A Zwift week that fits around real life</h3>
-          <p className="mb-4">
-            You don't need a complex plan. You need consistency.
-          </p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>One longer steady ride builds endurance and mental patience.</li>
-            <li>One session with short rises teaches control.</li>
-            <li>One easier spin keeps the legs loose.</li>
-          </ul>
-          <p className="mb-4">
-            If you have extra time, add volume at low intensity rather than more intensity. This ride rewards durability, not fireworks.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Using Zwift as a substitute when outdoor riding isn't possible</h3>
-          <p className="mb-4">
-            Weather, daylight, or schedule might block outdoor rides. Zwift keeps the rhythm alive.
-          </p>
-          <p className="mb-4">
-            The key is mindset. Don't treat indoor rides as punishment. Treat them as rehearsal.
-          </p>
-          <p className="mb-4">
-            Ride steady. Practice fueling. Practice patience. Visualize the real route. When you finally roll onto the actual coast, it will feel familiar rather than foreign.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Adding Zwift volume before the trip without overdoing it</h3>
-          <p className="mb-4">
-            If you're already riding outdoors, Zwift is still useful.
-          </p>
-          <p className="mb-4">
-            Use it to add controlled volume without traffic stress. Shorter indoor rides can top up fitness without the mental load of navigating roads.
-          </p>
-          <p className="mb-4">
-            Keep intensity moderate. The goal is freshness, not fatigue.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Translating indoor fitness to the real ride</h3>
-          <p className="mb-4">
-            Indoor fitness transfers best when you don't chase numbers obsessively.
-          </p>
-          <p className="mb-4">
-            If you can ride steady indoors without boredom or frustration, you'll handle the real ride well.
-          </p>
-          <p className="mb-4">
-            Outdoors, remember that speed fluctuates for reasons that have nothing to do with fitness. Wind, corners, and traffic all play a role. Focus on effort, not outcome.
-          </p>
-        </div>
-      </div>
-
-      {/* Riding with others */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Riding with others: when it enhances the experience</h2>
-        <p className="mb-4">
-          This route works beautifully as a small group ride.
-        </p>
-        <p className="mb-4">
-          Riding with one or two others lets you share the moments without turning it into a pace war.
-        </p>
-        <p className="mb-4">
-          Take turns on the front. Communicate clearly. Respect each other's space on the bridge.
-        </p>
-        <p className="mb-4">
-          Large groups can be fun, but they add complexity. If it's your first time, smaller is smoother.
-        </p>
-      </div>
-
-      {/* Riding solo */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Riding solo: a different kind of movie</h2>
-        <p className="mb-4">
-          Solo, this ride becomes introspective.
-        </p>
-        <p className="mb-4">
-          You notice more details. The sound of the ocean. The way light changes on the cliffs. Your own breathing rhythm.
-        </p>
-        <p className="mb-4">
-          There's no wrong way to ride it. Solo or group both work. Choose the version that fits your personality.
-        </p>
-      </div>
-
-      {/* The finish */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The finish in Wollongong: let it land</h2>
-        <p className="mb-4">
-          Don't rush the finish.
-        </p>
-        <p className="mb-4">
-          Find a place to sit. Eat something real. Walk a bit. Stretch lightly. Let the effort settle.
-        </p>
-        <p className="mb-4">
-          The memory of this ride isn't just the bridge. It's the full arc from early morning calm to coastal crescendo to relaxed finish.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/australia_2_4.webp" 
-            alt="Wollongong finish on Sydney to Wollongong ride" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-      </div>
-
-      {/* Why it sticks */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why this ride sticks with people</h2>
-        <p className="mb-4">
-          Sydney to Wollongong works because it balances effort and reward perfectly.
-        </p>
-        <p className="mb-4">
-          It asks enough of you to feel earned. It gives enough back to feel special.
-        </p>
-        <p className="mb-4">
-          It's accessible without being trivial. Iconic without being gimmicky.
-        </p>
-        <p className="mb-4">
-          And whether you prepare for it on quiet coastal roads or in a garage with a trainer and a screen, the core remains the same. Steady effort. Open eyes. Willingness to let the road lead.
-        </p>
-        <p className="mb-4 text-lg font-medium">
-          Ride it once, and you'll understand why people talk about it the way they do. Ride it twice, and you'll start planning the next time before the legs have even fully recovered.
-        </p>
       </div>
     </div>
   );
 
   return (
     <BlogPost
-      title="Sydney to Wollongong: The Sea Cliff Bridge Ride That Feels Like a Movie (Plus a Zwift Substitute)"
-      date="18-12-2025"
+      content={content}
       relatedCalculators={[
         {
-          name: "Alpe du Zwift Calculator",
-          path: "/alpeduzwiftcalculator",
-          description: "Calculate your climbing time and power requirements for Zwift's iconic climbs"
+          name: "FTP & Training Zones",
+          path: "/zwift-ftp-calculator",
+          description: "Turn a test into the endurance zone this ride should be paced in",
         },
         {
-          name: "Ven Top Calculator",
-          path: "/ventop-calculator",
-          description: "Predict your performance on Zwift's longest climb"
-        }
+          name: "Climb Time Calculator",
+          path: "/zwift-climb-time-calculator",
+          description: "Work out how long the climbs on your route will take",
+        },
       ]}
-      content={content}
     />
   );
 };
 
 export default SydneyToWollongong;
-

@@ -415,8 +415,6 @@ const UnlockingZwiftAchievements = () => {
 
   return (
     <BlogPost
-      title="Unlocking Zwift Achievements: From Route Badges to the Coveted Tron Bike"
-      date="12-11-2025"
       content={content}
     />
   );

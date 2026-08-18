@@ -118,8 +118,6 @@ const ArchitectureOfSweat = () => {
 
   return (
     <BlogPost
-      title="The Architecture of Sweat: A Field Guide to the Invisible Nation of Watopia"
-      date="16-12-2025"
       content={content}
     />
   );

@@ -83,8 +83,7 @@ const FeaturedArticlesSidebar = ({
                   {article.date && (
                     <div className="flex items-center text-xs text-muted-foreground">
                       <Calendar size={10} className="mr-1" />
-                      <span className="hidden sm:inline">{article.date}</span>
-                      <span className="sm:hidden">{article.date.split('-')[0]}</span>
+                      <span>{article.date}</span>
                       {article.readTime && <span className="ml-2">• {article.readTime}</span>}
                     </div>
                   )}

@@ -4,41 +4,6 @@ import { Wifi, AlertCircle, Zap, BarChart3 } from "lucide-react";
 
 const ZwiftNetworkPerformance = () => {
 
-  const relatedArticles = [
-    {
-      title: "Zwift Drafting Physics & Aerodynamics: The Science Behind Virtual Pelotons",
-      excerpt: "Deep dive into Zwift's drafting mechanics.",
-      date: "31-12-2025",
-      readTime: "22 min",
-      slug: "/blog/zwift-drafting-physics-aerodynamics",
-      category: "Physics"
-    },
-    {
-      title: "Zwift Equipment Optimization: Beyond Weight to Aerodynamics",
-      excerpt: "Comprehensive guide to optimizing your Zwift setup beyond weight.",
-      date: "31-12-2025",
-      readTime: "20 min",
-      slug: "/blog/zwift-equipment-optimization-aerodynamics",
-      category: "Setup"
-    },
-    {
-      title: "Zwift Racing For Beginners",
-      excerpt: "Complete guide to getting started with Zwift racing.",
-      date: "Recent",
-      readTime: "12 min",
-      slug: "/blog/zwift-racing-for-beginners",
-      category: "Racing"
-    },
-    {
-      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
-      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
-      date: "20-12-2025",
-      readTime: "18 min",
-      slug: "/blog/the-data-behind-zwift-climbing",
-      category: "Data Analysis"
-    }
-  ];
-
   const content = (
     <div className="space-y-6">
       <div>
@@ -425,9 +390,7 @@ const ZwiftNetworkPerformance = () => {
 
   return (
     <BlogPost
-      date="31-12-2025"
       content={content}
-      relatedArticles={relatedArticles}
     />
   );
 };

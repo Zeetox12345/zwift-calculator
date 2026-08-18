@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import BlogPost from "@/components/BlogPost";
 
 const ZwiftRacingForBeginners = () => {
@@ -6,11 +8,28 @@ const ZwiftRacingForBeginners = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Introduction</h2>
         <p className="mb-4">
-          So you've been riding on Zwift and are thinking about jumping into a race - awesome! 🏁 Zwift racing is an absolute blast and a fantastic workout, but it can also be a bit intimidating for first-timers. Races in Zwift are known for <strong>fast starts, tactical draft battles, and all-out finishes</strong> that rival real-life racing in intensity. The good news is that beginners are <em>more than welcome</em> - there are race categories and events for all levels. In fact, Zwift racing can rapidly boost your fitness and give you a taste of competitive cycling from the comfort of home{" "}
-          <a href="https://www.bicycling.com/skills-tips/a65267077/zwift-racing-for-beginners" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
+          The single most useful thing anyone can tell you before your first Zwift race is that the start is far
+          harder than the rest of it, and that almost everyone gets it wrong.
+        </p>
+        <p className="mb-4">
+          A Zwift race does not roll out. The clock hits zero and the entire field sprints, because the pack sorts
+          itself in the first few minutes and being dropped in that window means riding alone for the rest of the
+          event. The result is that a race you expected to be a hard hour begins with two to five minutes at close
+          to your maximum, and that opening is what shocks people rather than the distance{" "}
+          <a
+            href="https://www.bicycling.com/skills-tips/a65267077/zwift-racing-for-beginners"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zwift-orange hover:underline"
+          >
             <em>[1]</em>
           </a>
-          . This guide will walk you through how Zwift races work, how to prepare, and key tips to help you not just survive but thrive in your first races. Pin on that virtual number - you've got this!
+          .
+        </p>
+        <p className="mb-4">
+          What follows covers how the categories work, what to do in that opening kilometre, when a power-up is
+          worth holding rather than spending, and how the finish is actually decided. It assumes you can already
+          ride for an hour and that you have never pinned on a number.
         </p>
       </div>
 
@@ -36,14 +55,14 @@ const ZwiftRacingForBeginners = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Before the Race - Preparation</h2>
         <p className="mb-4">
-          Just like an IRL race, showing up prepared will set you up for success. <strong>Do a warm-up.</strong> Zwift races notoriously start fast (more on that in a second), so you don't want your first hard effort to be when the gun goes off. A 10-15 minute warm-up with a few short sprints or hard pulls will get your heart rate up and muscles ready. Many riders will actually join a short event or do a "warm-up ride" in Watopia before hopping into the race pen. Next, check the <strong>course details</strong>. Know the route distance, number of laps, and importantly if there are any significant climbs or sprint points. Zwift Companion app or the event description will tell you the course profile. For example, if it's a flat criterium in Crit City vs. a hilly race up Epic KOM, your strategy and pacing will differ. Knowing that a climb is coming at 10km in means you can position yourself in the group before it hits, etc. Also, ensure your <strong>equipment is ready</strong>: calibrate your trainer if needed, have your water bottle, a towel, and maybe a fan on max. It helps to arrange your screen or pain cave so you can easily see the race - maybe set the camera view to a rear-view to watch others, or whatever you prefer. Lastly, do a quick bio break; races are often 30-45 minutes of non-stop effort, so you won't get a chance later!
+          Turning up prepared matters more here than it does for a training ride. <strong>Do a warm-up.</strong> Zwift races notoriously start fast (more on that in a second), so you don't want your first hard effort to be when the gun goes off. A 10-15 minute warm-up with a few short sprints or hard pulls will get your heart rate up and muscles ready. Many riders will actually join a short event or do a "warm-up ride" in Watopia before hopping into the race pen. Next, check the <strong>course details</strong>. Know the route distance, number of laps, and importantly if there are any significant climbs or sprint points. Zwift Companion app or the event description will tell you the course profile. For example, if it's a flat criterium in Crit City vs. a hilly race up Epic KOM, your strategy and pacing will differ. Knowing that a climb is coming at 10km in means you can position yourself in the group before it hits, etc. Also, ensure your <strong>equipment is ready</strong>: calibrate your trainer if needed, have your water bottle, a towel, and maybe a fan on max. It helps to arrange your screen or pain cave so you can easily see the race - maybe set the camera view to a rear-view to watch others, or whatever you prefer. Lastly, do a quick bio break; races are often 30-45 minutes of non-stop effort, so you will not get a chance later.
         </p>
       </div>
 
       <div>
         <h2 className="text-2xl font-bold mb-4">Fast and Furious Start</h2>
         <p className="mb-4">
-          Alright, you're in the start pen (which appears a few minutes before the race). Heart's thumping a bit - that's normal! One thing every beginner should know: <strong>Zwift races start <em>extremely</em> fast</strong>. When the clock hits zero, everyone will sprint out of the pen like it's the Tour de France - because if you don't, you risk being dropped immediately as the group forms{" "}
+          You are in the start pen, which appears a few minutes before the race, and your heart rate is already up. That is normal. One thing every beginner should know: <strong>Zwift races start <em>extremely</em> fast</strong>. When the clock hits zero, everyone will sprint out of the pen like it's the Tour de France - because if you don't, you risk being dropped immediately as the group forms{" "}
           <a href="https://www.zwift.com/eu-fr/news/24335-race-recon-watopia-road-to-sky" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[5]</em>
           </a>
@@ -69,7 +88,7 @@ const ZwiftRacingForBeginners = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Use Your PowerUps Wisely</h2>
         <p className="mb-4">
-          Zwift races allow powerups in many cases (unless the organizer turns them off). A powerup is that little icon you might get when going through a banner - use it smartly! Common ones in races: <strong>Aero (helmet icon)</strong> - makes you more aero for 15s, huge advantage in a sprint or breakaway; <strong>Draft (van icon)</strong> - increases draft effect for 30s, use when sitting in the pack to save energy or on a fast flat; <strong>Feather (feather icon)</strong> - lightens you by 10% for 15s, best used on a steep climb to gain a few seconds or hang on; others like Burrito (no draft for others) or Anvil (heavier on descents) appear only in select events. A beginner tip: don't waste your powerup the second you get it. Have a plan. If there's a climb, save the feather for it. If you have an Aero and the finish line is coming - definitely save it for the final sprint to dramatically increase your chances. Timing an Aero powerup with ~200-250m to go in a sprint can be race-winning, as it significantly reduces drag{" "}
+          Zwift races allow powerups in many cases (unless the organizer turns them off). A power-up is the icon you pick up passing through a banner, and when you spend it matters more than which one you get. Common ones in races: <strong>Aero (helmet icon)</strong> - makes you more aero for 15s, huge advantage in a sprint or breakaway; <strong>Draft (van icon)</strong> - increases draft effect for 30s, use when sitting in the pack to save energy or on a fast flat; <strong>Feather (feather icon)</strong> - lightens you by 10% for 15s, best used on a steep climb to gain a few seconds or hang on; others like Burrito (no draft for others) or Anvil (heavier on descents) appear only in select events. A beginner tip: don't waste your powerup the second you get it. Have a plan. If there's a climb, save the feather for it. If you have an Aero and the finish line is coming - definitely save it for the final sprint to dramatically increase your chances. Timing an Aero powerup with ~200-250m to go in a sprint can be race-winning, as it significantly reduces drag{" "}
           <a href="https://zwiftinsider.com/powerups" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[7]</em>
           </a>
@@ -88,7 +107,7 @@ const ZwiftRacingForBeginners = () => {
           <a href="https://zwiftinsider.com/zwift-racing-tips-from-a-pro" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[9]</em>
           </a>
-          {" "} - it's easy to get distracted at home, but a lapse where you stop pedaling can drop you out of the group. Try to treat it like a real race: for that 30-45 min, you're <em>in the zone</em>. One tip: many racers watch their <strong>heart rate</strong> and know what they can sustain. If you're redlining early, maybe ease slightly and hope the pace normalizes. But expect to suffer - part of racing is embracing the discomfort! The good thing is Zwift racing is <em>fun</em> suffering, especially when you know everyone else is hurting too.
+          {" "} - it's easy to get distracted at home, but a lapse where you stop pedaling can drop you out of the group. Try to treat it like a real race: for that 30-45 min, you're <em>in the zone</em>. One tip: many racers watch their <strong>heart rate</strong> and know what they can sustain. If you're redlining early, maybe ease slightly and hope the pace normalizes. Expect it to hurt for most of the duration. That is what the event is, and knowing the rest of the field is in the same state makes it considerably easier to tolerate.
         </p>
       </div>
 
@@ -109,11 +128,11 @@ const ZwiftRacingForBeginners = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Benefits of Racing</h2>
         <p className="mb-4">
-          Zwift racing is not just about the result - it's one of the best high-intensity workouts you can get. It pushes you in a way that solo training often doesn't. You'll likely break personal records for power in various time ranges. Many beginners report that after doing races, they see improvements in their outdoor riding too - being able to hang in faster group rides, better understanding of drafting, and an increased ability to suffer (that sounds funny, but it's true!). As <em>Bicycling</em> magazine noted, Zwift racing helps you develop pack skills and learn to modulate your efforts and pacing through a race scenario{" "}
+          Zwift racing is not just about the result - it's one of the best high-intensity workouts you can get. It pushes you in a way that solo training often doesn't. You'll likely break personal records for power in various time ranges. Many beginners report that after doing races, they see improvements in their outdoor riding too - being able to hang in faster group rides, better understanding of drafting, and and a greater tolerance for sustained discomfort. As <em>Bicycling</em> magazine noted, Zwift racing helps you develop pack skills and learn to modulate your efforts and pacing through a race scenario{" "}
           <a href="https://www.bicycling.com/skills-tips/a65267077/zwift-racing-for-beginners" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[1]</em>
           </a>
-          . Plus, it's a huge motivation boost. Having a race on the calendar can get you on the bike when you might otherwise skip a workout. And the thrill of competing (without the logistics of real racing) is addictive. Don't be surprised if after your first race you're immediately browsing for the next one!
+          . Plus, it's a huge motivation boost. Having a race on the calendar can get you on the bike when you might otherwise skip a workout. Competing without the logistics of a real race removes most of the reasons people stop entering them, which is the honest explanation for why the second one usually gets booked the same evening.
         </p>
       </div>
 
@@ -139,7 +158,23 @@ const ZwiftRacingForBeginners = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
         <p className="mb-4">
-          Zwift racing might seem intense, but it's incredibly rewarding and enjoyable once you get the hang of it. The first race will likely shock you (those watts! that heart rate!). But as you do more, you'll start developing tactics and the initial chaos turns into calculated strategy. Remember that ultimately, you're doing this to challenge yourself and spice up your indoor riding. Even if you're not on the podium, finishing a hard Zwift race feels like a victory. You'll climb off the bike knowing you gave it your all - and probably be excited to do it again. So clip in, embrace the hurt, and go tear up the virtual tarmac! With these tips in mind, you'll be well on your way to enjoying Zwift races and maybe even snagging some wins as a beginner. Ride on and race on! 🚴💨
+          Your first race will produce numbers you have not seen in training, and it will probably not go well in
+          any conventional sense. That is normal and it is not a fitness problem. Race craft is a separate skill
+          from fitness, it is learned by racing, and the first few are the tuition fee.
+        </p>
+        <p className="mb-4">
+          Three things to take into the second one. Warm up properly, because the start punishes cold legs more than
+          anything else in the sport. Accept that being in the front third at the two-minute mark is worth more than
+          anything you save for later. And judge the race on whether you executed the plan rather than on where you
+          finished, because the placing depends on who else entered.
+        </p>
+        <p className="mb-4">
+          If you find that your judgement falls apart in the closing kilometres rather than your legs, that is a
+          separate and very common problem, and it is the subject of{" "}
+          <Link to="/blog/zwift-cognitive-load" className="text-zwift-orange hover:underline">
+            the article on decision-making under fatigue
+          </Link>
+          .
         </p>
       </div>
 
@@ -178,8 +213,6 @@ const ZwiftRacingForBeginners = () => {
 
   return (
     <BlogPost
-      title="Zwift Racing for Beginners: Tips to Ride and Win Your First Virtual Race"
-      date="12-11-2025"
       content={content}
     />
   );

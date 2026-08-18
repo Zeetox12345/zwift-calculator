@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import BlogPost from "@/components/BlogPost";
 
 const NewYorkCity = () => {
@@ -6,514 +8,386 @@ const NewYorkCity = () => {
       {/* Introduction */}
       <div>
         <p className="mb-4 text-lg leading-relaxed">
-          New York City is not a place you casually "try" on a bike.
+          I have ridden Zwift's New York a great many times. I have never ridden the real one.
         </p>
         <p className="mb-4">
-          It's loud. It's fast. It's chaotic in ways that don't exist anywhere else. But it's also one of the most rewarding cities in the world to ride once you understand how it works. The trick is knowing where cycling feels joyful, where it feels stressful, and how to stitch together routes that show you the city instead of fighting it.
+          That split is worth stating at the top, because it decides what this article can honestly be about. I can
+          tell you what the in-game world does to your legs, which routes suit which session, and why urban riding
+          is an interval workout wearing a commuter's clothes. I cannot tell you what it feels like to cross the
+          Brooklyn Bridge at seven in the morning, and I am not going to pretend otherwise.
         </p>
         <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/newyork_1_1.webp" 
-            alt="New York City cycling route" 
+          <img
+            src="/pictures/blog/australia/newyork_1_1.webp"
+            alt="Cyclist riding through a dense city street"
             className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <p className="mb-4">
-          This guide is written for first-timers. Not messengers. Not hardened urban cyclists who thrive on close calls. Real riders who want to experience New York from the saddle without turning the trip into an endurance test of nerves.
+          So this is mostly a training article. The through-line is that stop-start city riding and Zwift's New York
+          world happen to demand the same physiological quality, which is the ability to produce a large number of
+          hard accelerations without the gaps between them turning into recovery. That quality is trainable indoors,
+          and most riders train the opposite of it by accident.
+        </p>
+      </div>
+
+      {/* What Zwift's New York actually is */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What Zwift's New York actually is</h2>
+        <p className="mb-4">
+          Zwift's New York is two worlds stacked on top of each other, and they ride nothing like one another.
         </p>
         <p className="mb-4">
-          We'll cover where NYC cycling shines, where it demands extra caution, how to plan rides that feel iconic instead of overwhelming, and how to keep the New York vibe alive at home using Zwift's expanded New York world and its increasingly detailed "future-city" routes.
+          At ground level there is Central Park, laid out with roughly the geometry of the real thing. It is a
+          rolling loop rather than a flat one, with a long drag on the western side and a short sharp rise near the
+          northern end that will take more out of you than its length suggests. Ridden at a steady effort it is one
+          of the better endurance loops in the game, because the gradient changes often enough to keep you honest
+          without ever becoming a climb.
         </p>
-        <p className="mb-4 font-medium">
-          This is not about riding everything. It's about riding the right things.
+        <p className="mb-4">
+          Above the park there is a network of elevated transparent roads that exist only in the game. These carry
+          the steepest gradients in the world and the ramps on and off them are abrupt. The transitions are what
+          make the world interesting to train on: you leave a rolling park loop, hit a short steep ramp, sit up on a
+          fast elevated section, and then drop back down. The pattern repeats.
         </p>
-        
+        <p className="mb-4">
+          Route names, distances and elevation figures change with game updates often enough that quoting them here
+          would be out of date within a season. Check the route list in-game for current numbers. What does not
+          change is the shape of the effort each type of route asks for, and that is the part worth planning around.
+        </p>
+      </div>
+
+      {/* The three kinds of route */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Three kinds of route, three different sessions</h2>
+        <p className="mb-4">
+          Whatever the current route list looks like, everything in the world falls into one of three buckets.
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Park-only loops.</strong> Rolling, continuous, no long climb. These are endurance and tempo
+            routes. Nothing forces a surge, so if you ride one hard it is because you chose to.
+          </li>
+          <li>
+            <strong>Mixed park and elevated.</strong> The park loop with one or more trips up onto the glass. These
+            are the interval routes, whether or not you intended to do intervals, because the ramps are steep
+            enough that you cannot hold a steady power through them without changing effort.
+          </li>
+          <li>
+            <strong>Elevated-heavy.</strong> Repeated short steep sections with fast recovery between them. Closest
+            thing the world has to a structured over-under session with scenery attached.
+          </li>
+        </ul>
+        <p className="mb-4">
+          The mistake I made for a long time was picking the second kind of route and then trying to ride it at a
+          single steady wattage. It does not work. The ramps force you above threshold whether you like it or not,
+          and the fast sections afterwards make it almost impossible to keep the average where you wanted it. You
+          finish having done a poor version of two different sessions.
+        </p>
+      </div>
+
+      {/* Why city riding is intervals */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Why riding in a city is an interval session</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/newyork_1_2.webp"
+            alt="City street with traffic signals and cycle traffic"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          Here is the part that is worth doing the arithmetic on, because it explains why people come back from a
+          week of city riding more tired than the distance suggests they should be.
+        </p>
+        <p className="mb-4">
+          Getting a bike and rider back up to speed costs energy, and that cost is set by kinetic energy, which
+          scales with the square of the speed. Take a rider and bike at 85 kg total, accelerating from a standstill
+          to 25 km/h. 25 km/h is 6.94 m/s, so:
+        </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="font-mono text-sm mb-2">E = &frac12; &times; m &times; v&sup2;</p>
+          <p className="font-mono text-sm mb-2">
+            E = 0.5 &times; 85 &times; 6.94&sup2; &asymp; 2,050 joules
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Do that in 8 seconds and the acceleration alone asks for about 256 W, on top of whatever rolling
+            resistance and air drag are already taking.
+          </p>
+        </div>
+        <p className="mb-4">
+          Two thousand joules does not sound like much. The point is how often it repeats. Forty stops in an hour,
+          which is not an unusual number for dense city riding, is roughly 82 kJ spent purely on getting back up to
+          speed. An hour of steady riding at 200 W is about 720 kJ in total, so those accelerations are on the order
+          of a tenth of the whole ride, and every one of them is delivered in a short, hard burst rather than spread
+          out.
+        </p>
+        <p className="mb-4">
+          That is the real physiological signature of urban riding. The average power looks unremarkable. The
+          distribution is brutal. And it is exactly what Zwift's New York world produces when you ride the ramps,
+          which is why the world is a better preparation for city riding than a flat route would be, despite the
+          flat route matching the terrain more closely.
+        </p>
+      </div>
+
+      {/* Why the average lies */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Why the average power on that ride lies to you</h2>
+        <p className="mb-4">
+          Two rides can finish with the same average power and cost you completely different amounts. This is the
+          single most useful thing to understand about stop-start riding, and it is why a city ride wrecks you while
+          a steady ride of the same average leaves you fine.
+        </p>
+        <p className="mb-4">
+          Consider two hours, both averaging 180 W.
+        </p>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-border">
+                <th className="text-left py-2 pr-4 font-semibold"></th>
+                <th className="text-left py-2 pr-4 font-semibold">Steady ride</th>
+                <th className="text-left py-2 font-semibold">City ride</th>
+              </tr>
+            </thead>
+            <tbody className="align-top">
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">How the power arrives</td>
+                <td className="py-2 pr-4">180 W, continuously</td>
+                <td className="py-2">80 sprints at 500 W, a lot of soft-pedalling between</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Average power</td>
+                <td className="py-2 pr-4">180 W</td>
+                <td className="py-2">180 W</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Time above threshold</td>
+                <td className="py-2 pr-4">None</td>
+                <td className="py-2">Roughly 15 minutes, in 10 second pieces</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Anaerobic contribution</td>
+                <td className="py-2 pr-4">Negligible</td>
+                <td className="py-2">Substantial, and repeatedly depleted</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4 font-medium">How you feel afterwards</td>
+                <td className="py-2 pr-4">Like a two-hour endurance ride</td>
+                <td className="py-2">Like an interval session</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mb-4">
+          The anaerobic contribution is the part that matters. Every effort above threshold draws on a capacity
+          that refills slowly, and refilling it requires riding easier than you were before. In a city you rarely
+          get to, because the next junction arrives before you have recovered from the last one. Do that eighty
+          times and you finish genuinely fatigued from a ride whose average says you were barely trying.
+        </p>
+        <p className="mb-4">
+          This is also why the average power figure is worth ignoring on rides like this. Look at time above
+          threshold instead, or at the number of efforts. Those describe what actually happened.
+        </p>
+      </div>
+
+      {/* The session */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">A session that actually trains it</h2>
+        <p className="mb-4">
+          Repeated hard accelerations with short recoveries is a well-defined training stimulus, and you do not need
+          a bespoke workout file for it. Pick a route with several elevated sections and ride it deliberately.
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Warm-up:</strong> 15 minutes easy on the park loop, with three 20-second openers in the last
+            five minutes.
+          </li>
+          <li>
+            <strong>The work:</strong> every time a ramp arrives, get out of the saddle and take it hard, aiming for
+            roughly 150% of FTP for the 20 to 40 seconds it lasts. Do not pace it. The whole point is that you did
+            not get to choose when it started.
+          </li>
+          <li>
+            <strong>Between ramps:</strong> ride at endurance pace, not recovery pace. This is the part people get
+            wrong. If you soft-pedal back to fresh between efforts you are training something else entirely.
+          </li>
+          <li>
+            <strong>Volume:</strong> start at eight to ten ramps. Build toward fifteen or twenty across a block.
+          </li>
+          <li>
+            <strong>Cool-down:</strong> 10 minutes easy.
+          </li>
+        </ul>
+        <p className="mb-4">
+          The session is harder than it reads, mostly because of the third bullet. Holding endurance power between
+          maximal efforts is the specific thing that city riding demands and that structured indoor training usually
+          omits, because a normal interval session gives you genuine rest between reps.
+        </p>
+        <p className="mb-4">
+          If you want a number to judge it by, watch how much your power in the last three ramps drops relative to
+          the first three. Losing more than about 15% means you started too hard or you took too few of them. That
+          is a judgement I have arrived at from riding these sessions rather than from any dataset, so treat it as a
+          working rule and not a measurement.
+        </p>
+      </div>
+
+      {/* What Zwift cannot do */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What the game cannot prepare you for</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/newyork_1_3.webp"
+            alt="Riverside cycle path beside a city skyline"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          The engine transfers. Almost nothing else does, and it is worth being blunt about that, because the gap is
+          where people get hurt.
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Braking and reading traffic.</strong> Zwift has no brakes and nothing to avoid. The single most
+            important skill in city riding gets zero practice indoors.
+          </li>
+          <li>
+            <strong>Starting from a track stand or a foot down.</strong> Repeatedly, in cleats, next to a kerb.
+          </li>
+          <li>
+            <strong>Surface.</strong> Expansion joints, tram rails, drain covers and potholes.
+          </li>
+          <li>
+            <strong>Cognitive load.</strong> There is a whole article on this site about{" "}
+            <Link to="/blog/zwift-cognitive-load" className="text-zwift-orange hover:underline">
+              how decision quality degrades as effort rises
+            </Link>
+            . Indoors that costs you a race position. In traffic it costs more than that.
+          </li>
+        </ul>
+        <p className="mb-4">
+          The honest framing is that a winter on Zwift means you will arrive fit enough for a day in the city and
+          under-practised at everything except the pedalling. Give yourself a couple of quiet rides somewhere
+          forgiving before the traffic gets a vote.
+        </p>
+      </div>
+
+      {/* If you are actually going */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">If you are actually going</h2>
+        <p className="mb-4">
+          I am outside my expertise here, so this section is short and consists only of things that are widely
+          agreed on by people who do ride there. Treat it as a starting point for your own research rather than as
+          local knowledge.
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            The Hudson River Greenway on Manhattan's west side is largely separated from traffic and is the usual
+            recommendation as a first ride and as a connector between other rides.
+          </li>
+          <li>
+            The Central Park loop is one-way for cyclists and is busiest in the middle of the day. Early morning is
+            the consistent advice.
+          </li>
+          <li>
+            Protected infrastructure varies enormously block to block. Planning around the corridors that have it,
+            rather than taking the direct line, is what most first-timers say they wish they had done.
+          </li>
+        </ul>
         <div className="my-8">
-          <p className="text-xl font-semibold mb-4 text-foreground">Cycling New York City</p>
+          <p className="text-xl font-semibold mb-4 text-foreground">Someone who has actually ridden it</p>
           <p className="mb-4 text-sm text-muted-foreground">
-            Get a first-hand look at cycling in NYC, including the Hudson River Greenway and Central Park, in this video guide.
+            Since I have not, here is a video from a rider who has. It covers the Hudson River Greenway and Central
+            Park, which are the two places every account of cycling in New York seems to start.
           </p>
           <div className="aspect-video w-full rounded-lg overflow-hidden">
             <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/oKHXFsSgni4"
-              title="New York City Cycling Guide"
-              frameBorder="0"
+              title="Cycling in New York City: Hudson River Greenway and Central Park"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full border-0"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
       </div>
 
-      {/* What makes NYC different */}
+      {/* Bringing it home */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">What makes New York cycling different from anywhere else</h2>
-        <p className="mb-4">
-          New York is not hostile to bikes. But it is indifferent.
-        </p>
-        <p className="mb-4">
-          The city does not slow down for you. It doesn't adapt. You adapt to it. Once you accept that, cycling here starts to make sense.
-        </p>
-        <p className="mb-4">What's different compared to most cities:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Traffic is constant, not occasional</li>
-          <li>Streets can change personality block by block</li>
-          <li>Bike lanes range from excellent to purely symbolic</li>
-          <li>Pedestrians do unpredictable things, often confidently</li>
-          <li>The visual density is extreme</li>
-        </ul>
-        <p className="mb-4">
-          At the same time, New York offers something few cities do: scale and variety. In a single ride, you can pass waterfront parks, historic neighborhoods, industrial edges, dense urban canyons, and quiet greenways that feel almost peaceful.
-        </p>
-        <p className="mb-4">
-          The goal for a first trip is not to "ride everywhere." The goal is to curate your exposure.
-        </p>
-      </div>
-
-      {/* Golden rule */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The golden rule for first-time NYC riding</h2>
-        <p className="mb-4">
-          If you remember only one thing, remember this:
-        </p>
-        <p className="mb-4 text-lg font-semibold text-zwift-orange">
-          Ride where the city wants you to ride.
-        </p>
-        <p className="mb-4">
-          New York has invested heavily in certain corridors. These areas feel intentional. Predictable. Human-scaled. When you stay mostly within them, the city opens up.
-        </p>
-        <p className="mb-4">
-          When you fight the grid on its terms, especially as a visitor, stress rises fast.
-        </p>
-        <p className="mb-4">
-          This guide prioritizes routes and areas where cycling feels like part of the city's rhythm, not an interruption to it.
-        </p>
-      </div>
-
-      {/* When to ride */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">When to ride: timing is everything</h2>
-        <p className="mb-4">
-          Time of day matters more in New York than almost anywhere else.
-        </p>
-        <p className="mb-4">
-          <strong>Early morning is magic.</strong> The city breathes. Traffic is lighter. The visual drama is still there, but the noise is lower. If you can ride between sunrise and mid-morning, you get a different city.
-        </p>
-        <p className="mb-4">
-          Late morning and early afternoon are manageable, especially on weekends and on greenways.
-        </p>
-        <p className="mb-4">
-          <strong>Rush hour is not for first-timers.</strong> It's not that it's impossible. It's that it demands constant attention, assertiveness, and familiarity with driver behavior. There is no shame in avoiding it.
-        </p>
-        <p className="mb-4">
-          Late night can be surprisingly calm in some areas and chaotic in others. Unless you know the neighborhoods well, save nighttime riding for well-lit paths and greenways.
-        </p>
-      </div>
-
-      {/* Where NYC cycling is fun */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Where NYC cycling is genuinely fun</h2>
-        <p className="mb-4">
-          Let's start with the good stuff. These are the places that make people fall in love with cycling in New York.
-        </p>
-
+        <h2 className="text-2xl font-bold mb-4">Keeping the pattern after the trip</h2>
         <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">The Hudson River Greenway: your anchor route</h3>
-          <p className="mb-4">
-            If New York cycling had a backbone, this would be it.
-          </p>
-          <p className="mb-4">
-            The Hudson River Greenway runs along Manhattan's west side and is almost entirely separated from traffic. It's flat, scenic, continuous, and forgiving. For first-timers, it's the single most important piece of infrastructure to know.
-          </p>
-          <p className="mb-4">Why it works so well:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Minimal interaction with cars</li>
-            <li>Clear direction and flow</li>
-            <li>Constant visual reward from the river and skyline</li>
-            <li>Easy access points</li>
-          </ul>
-          <p className="mb-4">
-            You can ride it casually or use it as a connector to almost anything else. Many great NYC rides are simply variations that start or end here.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Central Park: controlled chaos that works</h3>
-          <p className="mb-4">
-            Central Park is busy, but it's busy in a predictable way.
-          </p>
-          <p className="mb-4">
-            The park loop is one-way for cyclists, clearly marked, and shared with runners and pedestrians who generally understand the rules. It has rolling terrain, gentle climbs, and a sense of escape from the city grid.
-          </p>
-          <p className="mb-4">For a first-timer, it offers:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>A taste of elevation without danger</li>
-            <li>A social cycling atmosphere</li>
-            <li>A chance to ride "in" New York without traffic pressure</li>
-          </ul>
-          <p className="mb-4">
-            Early morning is ideal here. You'll share the road with commuters, fitness riders, and people quietly going about their routines. It feels authentic, not touristy.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Brooklyn waterfronts: space and personality</h3>
-          <p className="mb-4">
-            Brooklyn often feels more forgiving than Manhattan on a bike.
-          </p>
-          <p className="mb-4">
-            Neighborhoods like Brooklyn Heights, DUMBO, and Williamsburg have embraced cycling culture more openly, with wider lanes, calmer streets, and strong waterfront paths.
-          </p>
-          <div className="my-6">
-            <img 
-              src="/pictures/blog/australia/newyork_1_2.webp" 
-              alt="Brooklyn waterfront cycling path" 
-              className="w-full rounded-lg shadow-lg"
+          <img
+            src="/pictures/blog/australia/newyork_1_4.webp"
+            alt="Cyclist on an urban bridge crossing at dusk"
+            className="w-full rounded-lg shadow-lg"
             loading="lazy"
             decoding="async"
           />
-          </div>
-          <p className="mb-4">
-            The Brooklyn Waterfront Greenway is still evolving, but many sections are already excellent. The views of Manhattan from across the river are some of the best in the city, especially at golden hour.
-          </p>
-          <p className="mb-4">
-            Brooklyn riding tends to feel more human-scaled. Less vertical. Less rushed. It's a great counterbalance to Manhattan intensity.
-          </p>
         </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Bridges as experiences, not obstacles</h3>
-          <p className="mb-4">
-            Bridges in New York are more than connectors. They're moments.
-          </p>
-          <p className="mb-4">
-            The Brooklyn Bridge, Manhattan Bridge, Williamsburg Bridge, and Queensboro Bridge all offer different cycling experiences. Some are busy. Some are loud. Some are windy. But they are unforgettable.
-          </p>
-          <p className="mb-4">For first-timers, a few principles help:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Ride bridges early in the day</li>
-            <li>Expect wind and noise</li>
-            <li>Hold a straight line and stay predictable</li>
-            <li>Don't rush the experience</li>
-          </ul>
-          <p className="mb-4">
-            The Manhattan Bridge bike path, in particular, delivers dramatic views with slightly less foot traffic than the Brooklyn Bridge.
-          </p>
-        </div>
+        <p className="mb-4">
+          The reason I keep coming back to this world in winter is that the repeated-acceleration stimulus is
+          genuinely useful and genuinely unpleasant, which is a good combination for something you would otherwise
+          talk yourself out of. A structured over-under file does the same physiological job, and I skip it far more
+          often, because a workout screen asking for the eleventh rep is easier to quit than a ramp that is simply
+          there in front of you.
+        </p>
+        <p className="mb-4">
+          That is not a physiological argument. It is a behavioural one, and it is the honest reason the world earns
+          a place in my week. If you want the physiological case for choosing routes deliberately rather than by
+          mood, it is set out in{" "}
+          <Link to="/blog/zwift-route-selection-psychology" className="text-zwift-orange hover:underline">
+            the article on route selection
+          </Link>
+          .
+        </p>
       </div>
 
-      {/* Where NYC cycling becomes stressful */}
+      {/* Summary */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Where NYC cycling becomes stressful (and why)</h2>
-        <p className="mb-4">
-          Not all parts of the city are equally welcoming. Knowing where tension spikes helps you plan around it.
-        </p>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Midtown Manhattan: sensory overload</h3>
-          <p className="mb-4">
-            Midtown is intense even on foot. On a bike, it can feel overwhelming.
-          </p>
-          <p className="mb-4">
-            Traffic is dense. Tourists spill unpredictably into bike lanes. Delivery vehicles stop wherever they feel like it. Signals are frequent, which breaks rhythm.
-          </p>
-          <p className="mb-4">
-            This doesn't mean you should avoid Midtown entirely. But it's not where you want to "wander." If you need to pass through, do it deliberately and efficiently.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Complex intersections and avenue crossings</h3>
-          <p className="mb-4">
-            New York's grid is logical, but intersections can be chaotic.
-          </p>
-          <p className="mb-4">
-            Multiple turn lanes, buses, and aggressive drivers all converge. As a visitor, this is where hesitation can create risk.
-          </p>
-          <p className="mb-4">When in doubt:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Take the lane confidently if it's safer</li>
-            <li>Or dismount and cross like a pedestrian</li>
-          </ul>
-          <p className="mb-4">
-            There is no rule that says you must ride everything.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Areas with "paint-only" bike lanes</h3>
-          <p className="mb-4">
-            Some bike lanes exist mostly in theory. Painted lines without protection on fast roads demand more confidence and awareness.
-          </p>
-          <p className="mb-4">
-            If you feel uncomfortable, trust that instinct. Reroute. New York offers alternatives if you're willing to adjust.
-          </p>
-        </div>
-      </div>
-
-      {/* How to plan a first NYC bike day */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">How to plan a first NYC bike day that actually works</h2>
-        <p className="mb-4">
-          A successful first day follows a simple structure.
-        </p>
-        <p className="mb-4">
-          Start with a greenway or park to settle in. Let your nervous system adapt. Then add one or two "city moments." Finish somewhere calm.
-        </p>
-        <p className="mb-4 font-semibold">Example flow:</p>
+        <h2 className="text-2xl font-bold mb-4">The short version</h2>
         <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Begin on the Hudson River Greenway</li>
-          <li>Cut into Central Park for a loop</li>
-          <li>Cross one iconic bridge</li>
-          <li>Finish along a waterfront path in Brooklyn</li>
+          <li>Zwift's New York is a rolling park loop plus a set of steep elevated ramps that exist only in-game.</li>
+          <li>
+            City riding is physiologically an interval session: around 2,050 J per acceleration from a stop, forty
+            of them an hour, roughly a tenth of the ride delivered in short bursts.
+          </li>
+          <li>
+            The ramps reproduce that pattern better than a flat route would, despite matching the real terrain less
+            well.
+          </li>
+          <li>Ride endurance pace between ramps, not recovery pace. That is the whole session.</li>
+          <li>None of the handling, braking or traffic-reading transfers. Plan for that separately.</li>
         </ul>
-        <p className="mb-4">
-          This gives you variety without overload.
-        </p>
-        <p className="mb-4">
-          Avoid zig-zagging across dense grids early in the trip. Save that for later, once your comfort level rises.
-        </p>
-      </div>
-
-      {/* Pacing in the city */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Pacing in the city: effort is not just physical</h2>
-        <p className="mb-4">
-          Urban riding costs mental energy.
-        </p>
-        <p className="mb-4">
-          Stops. Signals. Visual input. Noise. All of it adds up. A ride that looks easy on paper can feel tiring because of attention demand.
-        </p>
-        <p className="mb-4">
-          Plan shorter rides than you would in a quiet area. Take real breaks. Sit. Watch the city. That's part of the experience.
-        </p>
-        <p className="mb-4">
-          If you try to ride New York like a rural endurance route, you'll miss what makes it special.
-        </p>
-      </div>
-
-      {/* What to pack */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">What to pack for NYC cycling as a visitor</h2>
-        <p className="mb-4">
-          You don't need a touring setup. You need urban-smart essentials.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/newyork_1_3.webp" 
-            alt="Cycling gear for NYC urban riding" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-        <p className="mb-4">
-          A reliable lock matters more here than almost anywhere else. Even for short stops.
-        </p>
-        <p className="mb-4">
-          Lights are non-negotiable, day or night. Visibility is safety currency.
-        </p>
-        <p className="mb-4">
-          Clothing should be comfortable and flexible. You may walk. You may stop spontaneously. You want to feel like part of the city, not sealed off from it.
-        </p>
-        <p className="mb-4">
-          Navigation is best handled with offline maps and a general plan, not turn-by-turn micromanagement. Let yourself adapt.
-        </p>
-      </div>
-
-      {/* Riding etiquette */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Riding etiquette that makes NYC smoother</h2>
-        <p className="mb-4">
-          Predictability is kindness in New York.
-        </p>
-        <p className="mb-4">
-          Signal your moves. Hold your line. Don't weave. Don't assume anyone sees you. Make eye contact when possible.
-        </p>
-        <p className="mb-4">
-          Respect pedestrians, even when they're wrong. You will never win an argument with someone stepping into a bike lane while staring at their phone.
-        </p>
-        <p className="mb-4">
-          The city rewards calm confidence. Not aggression.
-        </p>
-      </div>
-
-      {/* Zwift's New York world */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why Zwift's New York world is such a good indoor match</h2>
-        <p className="mb-4">
-          Zwift's New York environment is not a literal recreation. It's a future-city interpretation. And that's exactly why it works.
-        </p>
-        <p className="mb-4">It captures the feeling of:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Constant engagement</li>
-          <li>Short rises and flats</li>
-          <li>Visual stimulation</li>
-          <li>Urban scale</li>
-        </ul>
-        <p className="mb-4">
-          You don't ride Zwift New York to simulate traffic. You ride it to simulate rhythm.
-        </p>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">The expanded New York map: what it gets right</h3>
-          <p className="mb-4">
-            Zwift's New York world has grown over time. More routes. More connections. More variation.
-          </p>
-          <p className="mb-4">What makes it useful for NYC prep and theme-riding:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Rolling terrain that mimics stop-start effort</li>
-            <li>Long flat sections broken by short climbs</li>
-            <li>A sense of speed without long sustained gradients</li>
-          </ul>
-          <p className="mb-4">
-            You're rarely locked into one effort. You're constantly adjusting. That's New York cycling in a nutshell.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Zwift routes that feel most "NYC"</h3>
-          <p className="mb-4">
-            Routes that mix flats and short climbs work best. You want frequent but manageable changes.
-          </p>
-          <p className="mb-4">
-            Routes that encourage steady pressure rather than max efforts translate well. You're training durability and responsiveness, not mountain climbing.
-          </p>
-          <p className="mb-4">
-            The visual density of Zwift's cityscape helps too. It keeps your brain engaged, which matters more than people think when preparing for urban riding.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">How to structure a "New York style" Zwift ride</h3>
-          <p className="mb-4">
-            Think in chapters, not numbers.
-          </p>
-          <p className="mb-4">
-            Start steady. Let your legs warm into the rhythm.
-          </p>
-          <p className="mb-4">
-            Add controlled surges. Short increases in power that settle quickly. This mimics intersections, accelerations, and short climbs.
-          </p>
-          <p className="mb-4">
-            Finish with sustained tempo. This mirrors the feeling of locking into a greenway or long avenue stretch.
-          </p>
-          <p className="mb-4">
-            Avoid chasing every sprint. That's not how the city rides.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Using Zwift to add volume before your NYC trip</h3>
-          <p className="mb-4">
-            Indoor volume works well for New York prep because you can control stress.
-          </p>
-          <p className="mb-4">
-            Use Zwift for longer, calmer rides where traffic would otherwise drain you. Build aerobic depth without mental overload.
-          </p>
-          <p className="mb-4">
-            Save outdoor rides for skill and confidence building. Zwift handles fitness. The city handles awareness.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Keeping the NYC theme alive after the trip</h3>
-          <p className="mb-4">
-            Zwift's New York world is a great way to revisit the vibe once you're home.
-          </p>
-          <p className="mb-4">
-            Ride the same routes at similar times of day. Put on music that reminds you of the city. Let the memory feed the effort.
-          </p>
-          <p className="mb-4">
-            Indoor riding often feels better when it's tied to a story. New York gives you a strong one.
-          </p>
-        </div>
-      </div>
-
-      {/* Common mistakes */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Common first-timer mistakes in NYC</h2>
-        <ul className="list-disc list-inside space-y-3 ml-4">
-          <li><strong>Trying to ride everywhere on day one</strong> is the biggest one. You don't need to earn the city.</li>
-          <li><strong>Ignoring mental fatigue</strong> leads to sloppy riding. Take breaks before you feel fried.</li>
-          <li><strong>Underestimating how much stopping and starting</strong> affects legs and mood.</li>
-          <li><strong>Treating Zwift as a separate thing</strong> instead of a continuation of the experience.</li>
-        </ul>
-      </div>
-
-      {/* Riding solo vs with others */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Riding solo vs riding with others in New York</h2>
-        <p className="mb-4">
-          Solo riding lets you adapt quickly. You can stop, reroute, and respond to the city instinctively.
-        </p>
-        <p className="mb-4">
-          Group riding adds visibility and confidence but requires coordination. In busy areas, groups can become harder to manage.
-        </p>
-        <p className="mb-4">
-          For a first trip, solo or very small groups work best.
-        </p>
-      </div>
-
-      {/* Why NYC by bike stays with people */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why New York by bike stays with people</h2>
-        <p className="mb-4">
-          Cycling in New York is not about speed or distance.
-        </p>
-        <p className="mb-4">
-          It's about perspective.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/newyork_1_4.webp" 
-            alt="New York City skyline from bike perspective" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-        <p className="mb-4">
-          You see the city at human scale. You feel its tempo. You notice neighborhoods shift block by block. You become part of the flow instead of observing it from behind glass.
-        </p>
-        <p className="mb-4">
-          Then, when you get home and clip into a trainer, Zwift's New York world doesn't feel random. It feels like an echo.
-        </p>
-        <p className="mb-4">
-          Not the city itself, but the rhythm of it. Constant motion. Short efforts. Big scenery. No autopilot.
-        </p>
-        <p className="mb-4 text-lg font-medium">
-          That's what makes New York by bike special. And that's why it's worth riding twice. Once in the streets. Once in the future city on a screen.
-        </p>
       </div>
     </div>
   );
 
   return (
     <BlogPost
-      title="New York City by Bike: A First-Timer's Ride Guide (Then Ride Future-New-York on Zwift)"
-      date="18-12-2025"
+      content={content}
       relatedCalculators={[
         {
-          name: "Alpe du Zwift Calculator",
-          path: "/alpeduzwiftcalculator",
-          description: "Calculate your climbing time and power requirements for Zwift's iconic climbs"
+          name: "FTP & Training Zones",
+          path: "/zwift-ftp-calculator",
+          description: "Set the zones the ramp efforts above are described in",
         },
         {
-          name: "Ven Top Calculator",
-          path: "/ventop-calculator",
-          description: "Predict your performance on Zwift's longest climb"
-        }
+          name: "Climb Time Calculator",
+          path: "/zwift-climb-time-calculator",
+          description: "Point the physics model at any climb in the game",
+        },
       ]}
-      content={content}
     />
   );
 };
 
 export default NewYorkCity;
-

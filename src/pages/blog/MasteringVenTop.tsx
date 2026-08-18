@@ -232,11 +232,8 @@ const MasteringVenTop = () => {
           <strong>During:</strong> around 60 g of carbohydrate per hour is the standard target for this length of effort, reachable with a single glucose-based source. Going meaningfully above it needs a glucose-plus-fructose mix, because the two sugars use different intestinal transporters and glucose alone saturates its own transporter near that rate. Over 90 minutes that is about 90 g total, replacing a bit over a third of what you burn. It is not meant to break even, only to stop the tank hitting the bottom in the last 20 minutes, which is where Ven-Top is decided. Cheap homemade mixes do the job, as I covered in <Link to="/blog/the-glucose-alchemist-how-to-fuel-a-world-tour-effort-on-a-ramen-budget" className="text-zwift-orange hover:underline">The Glucose Alchemist</Link>.
         </p>
         <p className="mb-4">
-          <strong>Fluid and cooling:</strong> sweat rates of 1-1.5 litres per hour are ordinary indoors, so 90 minutes costs 1.5-2.25 litres, and a 75 kg rider only has to lose about 1.5 kg to reach the 2% of body mass mark where performance measurably suffers. Two bottles is a minimum here. Many riders find indoor efforts harder specifically because of heat buildup and lack of airflow{" "}
-          <a href="https://www.reddit.com/r/Zwift/comments/ztgwdz/indoor_vs_outdoor_power/#:~:text=It%27s%20the%20heat%20and%20lack,put%20out%20a%20lot" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-            <em>[5]</em>
-          </a>
-          . Point your fan at your chest and face rather than your legs, and switch it on before you start climbing rather than when you first start to suffer.
+          <strong>Fluid and cooling:</strong> sweat rates of 1-1.5 litres per hour are ordinary indoors, so 90 minutes costs 1.5-2.25 litres, and a 75 kg rider only has to lose about 1.5 kg to reach the 2% of body mass mark where performance measurably suffers. Two bottles is a minimum here. Many riders find indoor efforts harder specifically because of heat buildup and lack of airflow.
+          Point your fan at your chest and face rather than your legs, and switch it on before you start climbing rather than when you first start to suffer.
         </p>
       </div>
 
@@ -358,11 +355,6 @@ const MasteringVenTop = () => {
               [3] Zwift Insider - Ven-Top Route Details
             </a>
           </li>
-          <li>
-            <a href="https://www.reddit.com/r/Zwift/comments/ztgwdz/indoor_vs_outdoor_power" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
-              [5] Reddit - Indoor vs Outdoor Power Discussion
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -370,8 +362,6 @@ const MasteringVenTop = () => {
 
   return (
     <BlogPost
-      title="Mastering Ven-Top: Surviving Zwift's Toughest Ascent"
-      date="12-11-2025"
       content={content}
       relatedCalculators={[
         {

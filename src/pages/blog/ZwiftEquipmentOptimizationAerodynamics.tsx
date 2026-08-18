@@ -4,41 +4,6 @@ import { Settings, Wind, Zap, TrendingUp } from "lucide-react";
 
 const ZwiftEquipmentOptimizationAerodynamics = () => {
 
-  const relatedArticles = [
-    {
-      title: "Zwift Setup Guide",
-      excerpt: "Complete guide to setting up your Zwift training environment.",
-      date: "Recent",
-      readTime: "15 min",
-      slug: "/blog/zwift-setup-guide",
-      category: "Setup"
-    },
-    {
-      title: "The Mechanical Engineering of Zwift Performance: Why Physics Matters in Virtual Cycling",
-      excerpt: "Explore Zwift performance through mechanical engineering principles.",
-      date: "20-12-2025",
-      readTime: "20 min",
-      slug: "/blog/the-mechanical-engineering-of-zwift-performance",
-      category: "Physics"
-    },
-    {
-      title: "Zwift Drafting Physics & Aerodynamics: The Science Behind Virtual Pelotons",
-      excerpt: "Deep dive into Zwift's drafting mechanics.",
-      date: "21-12-2025",
-      readTime: "22 min",
-      slug: "/blog/zwift-drafting-physics-aerodynamics",
-      category: "Physics"
-    },
-    {
-      title: "Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance",
-      excerpt: "Comprehensive guide to power-to-weight ratio in cycling.",
-      date: "20-12-2025",
-      readTime: "17 min",
-      slug: "/blog/power-to-weight-ratio-science",
-      category: "Training"
-    }
-  ];
-
   const content = (
     <div className="space-y-6">
       <div>
@@ -453,9 +418,7 @@ const ZwiftEquipmentOptimizationAerodynamics = () => {
 
   return (
     <BlogPost
-      date="31-12-2025"
       content={content}
-      relatedArticles={relatedArticles}
     />
   );
 };

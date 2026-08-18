@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import BlogPost from "@/components/BlogPost";
 
 const ColoradoMountainRiding = () => {
@@ -6,703 +8,435 @@ const ColoradoMountainRiding = () => {
       {/* Introduction */}
       <div>
         <p className="mb-4 text-lg leading-relaxed">
-          Colorado has a reputation problem.
+          Altitude takes power away before you turn a pedal, and no amount of indoor training gives it back.
         </p>
         <p className="mb-4">
-          Not because the riding isn't incredible - it is - but because so much of the conversation is dominated by superhumans. Riders who casually drop numbers that sound like typos. Climbs described as "steady" that would qualify as life events anywhere else. Casual mentions of altitude like it's just another weather variable.
-        </p>
-        <p className="mb-4">
-          If you're a normal cyclist - a motivated amateur, a fit recreational rider, someone who trains consistently but does not live at 2,000 meters - Colorado riding can feel intimidating before you even arrive.
+          That is the uncomfortable starting point for anyone planning a mountain trip. You can arrive in the best
+          form of your life and still find yourself riding 10% below the numbers you have spent all winter building,
+          for reasons that have nothing to do with fitness and everything to do with the air.
         </p>
         <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/colorado_1_1.webp" 
-            alt="Colorado mountain cycling route" 
+          <img
+            src="/pictures/blog/australia/colorado_1_1.webp"
+            alt="Mountain road climbing towards a high pass"
             className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <p className="mb-4">
-          This guide is for mortals.
+          I use Colorado as the example because it is the trip a lot of riders make: passes well above 3,000 m,
+          reachable by ordinary amateurs, with a strong tradition of people going out too hard on day one. I have
+          not ridden there. What I can do is the arithmetic on what thin air costs, what does and does not transfer
+          from indoor training, and how to set a target that is not a fantasy.
+        </p>
+      </div>
+
+      {/* What altitude costs */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What thin air actually costs</h2>
+        <p className="mb-4">
+          The air at altitude is not short of oxygen as a proportion. It is still about 21% oxygen at 3,000 m, the
+          same as at sea level. What has changed is the pressure driving that oxygen across your lung membranes.
         </p>
         <p className="mb-4">
-          For riders who want to experience Colorado's mountains without detonating halfway up the first real climb. For people who want to enjoy the scenery, finish rides upright, and still feel like they earned something. For cyclists who understand that altitude changes the rules - and want a plan that respects that reality instead of fighting it.
+          Barometric pressure at sea level is around 1,013 hPa. At 3,000 m it is around 700 hPa, roughly 69% of it.
+          The oxygen fraction is unchanged, so the partial pressure of oxygen falls in the same proportion, and it
+          is partial pressure, not percentage, that determines how much oxygen ends up in your blood.
         </p>
         <p className="mb-4">
-          We'll talk about what altitude actually does to your body, why your normal pacing instincts lie to you in Colorado, how to ride long climbs without blowing up, and how to prepare at home using Zwift - even if the tallest thing near you is a freeway overpass.
+          The broadly accepted figure in exercise physiology is that maximal oxygen uptake declines by somewhere
+          around 6 to 8% per 1,000 m above roughly 1,500 m. It is a range rather than a constant because individual
+          responses vary enormously, and it is not something measured on this site. Taken at face value it puts a
+          rider at 3,000 m somewhere in the region of 9 to 12% down on their sea-level ceiling.
         </p>
-        <p className="mb-4 font-medium">
-          This is not about turning you into a mountain goat. It's about helping you ride smart enough to survive and enjoy the mountains.
+        <p className="mb-4">
+          Sustained sub-threshold power is affected less than maximal efforts are, which is genuinely good news and
+          which shapes everything below.
         </p>
-        
-        <div className="my-8">
-          <p className="text-xl font-semibold mb-4 text-foreground">Colorado Mountain Cycling</p>
-          <p className="mb-4 text-sm text-muted-foreground">
-            Watch this video to see what Colorado mountain riding looks like and understand the challenges of cycling at altitude.
+      </div>
+
+      {/* What that costs in minutes */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What a 10% power loss is worth in minutes</h2>
+        <p className="mb-4">
+          Percentages are hard to feel. This site has a fitted curve for Alpe du Zwift built from about 500 verified
+          finishing times, and although the Alpe is a virtual climb at virtual sea level, the curve is a perfectly
+          good translator from a power change into a time change on a long climb. The methodology is written up in{" "}
+          <Link to="/blog/regression-analysis-methodology" className="text-zwift-orange hover:underline">
+            the regression article
+          </Link>
+          .
+        </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="font-mono text-sm mb-3">
+            time in seconds = 148.60 &times; (W/kg)&sup2; &minus; 1954.08 &times; (W/kg) + 8329.87
           </p>
-          <div className="aspect-video w-full rounded-lg overflow-hidden">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/6NECDeWhpL8"
-              title="Colorado Mountain Cycling at Altitude"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
-          </div>
+          <p className="text-sm mb-2">
+            <strong>At 3.20 W/kg:</strong> about 59:58, the familiar sub-hour benchmark
+          </p>
+          <p className="text-sm mb-2">
+            <strong>At 2.88 W/kg,</strong> which is 10% less power: about <strong>65:35</strong>
+          </p>
+          <p className="text-sm text-muted-foreground">
+            A 10% power loss costs roughly 5 minutes 36 seconds on a climb of this length. On a longer mountain pass
+            it costs proportionally more.
+          </p>
         </div>
+        <p className="mb-4">
+          That is the number to plan around. Not "I will be a bit slower", but "the climb I have been imagining as a
+          one-hour effort is a sixty-five to seventy minute effort, and I should pace it as one".
+        </p>
+        <p className="mb-4">
+          The equation is a model of a specific virtual climb, so treat this as a translation aid rather than a
+          prediction of your time on a real mountain. What it gets right is the shape: a small power loss costs more
+          time than people expect, and it costs more the slower you already are.
+        </p>
       </div>
 
-      {/* Altitude reality check */}
+      {/* Heart rate */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">The altitude reality check nobody gives you</h2>
+        <h2 className="text-2xl font-bold mb-4">Your heart rate stops meaning what it used to</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/colorado_1_2.webp"
+            alt="High alpine landscape above the treeline"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
         <p className="mb-4">
-          Altitude doesn't care how fit you are.
+          This is the single most practically important thing to understand before a mountain trip, and it is where
+          riders who train by heart rate get into trouble fastest.
         </p>
         <p className="mb-4">
-          That's the first thing to understand.
+          At altitude, less oxygen arrives per unit of blood, so your body moves more blood to compensate. Your
+          heart rate at any given power is therefore higher than it would be at sea level. Meanwhile your maximum
+          heart rate tends to be slightly lower. The whole scale has been squashed and shifted, and the zones on
+          your head unit are describing a rider who is not currently present.
         </p>
         <p className="mb-4">
-          At higher elevations, the air contains less oxygen. Your lungs still work. Your heart still beats. But each breath delivers less oxygen to your muscles. The result is simple and brutal: the same effort costs more.
+          The practical consequences, in order of how much trouble they cause:
         </p>
-        <p className="mb-4">
-          At around 1,500-2,000 meters (roughly where many Colorado towns already sit), most sea-level riders feel a noticeable drop in sustainable power. Above that, the effect becomes impossible to ignore.
-        </p>
-        <p className="mb-4">What this means in practice:</p>
         <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Your "easy" pace feels harder</li>
-          <li>Your threshold arrives earlier than expected</li>
-          <li>Recovery between efforts takes longer</li>
-          <li>Small surges feel disproportionately expensive</li>
+          <li>
+            <strong>Riding to your sea-level heart rate zones will have you going too hard.</strong> The same
+            perceived zone is now a harder effort in real terms.
+          </li>
+          <li>
+            <strong>Power is the more honest guide,</strong> if you have it, because a watt is a watt regardless of
+            the air. It just costs you more.
+          </li>
+          <li>
+            <strong>Perceived effort is the most honest of all.</strong> On a first mountain trip I would ride to
+            breathing and legs, and treat both screens as information rather than instruction.
+          </li>
+        </ul>
+      </div>
+
+      {/* What transfers */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The one thing that genuinely transfers</h2>
+        <p className="mb-4">
+          You cannot train the altitude response indoors. Zwift does not simulate air density, hypoxic tents are a
+          different subject entirely, and nothing about a garage in a lowland country prepares your blood chemistry
+          for 3,000 m.
+        </p>
+        <p className="mb-4">
+          What does transfer, completely, is the ability to hold a sub-threshold effort for a very long time without
+          it degrading. And that turns out to be most of what a mountain pass asks for, because the pass is going to
+          force you to ride sub-threshold whether you planned to or not.
+        </p>
+        <p className="mb-4">
+          This reframes the whole preparation. A rider heading to the mountains does not need more VO2 work. They
+          need to be extremely comfortable at 65 to 80% of FTP for two hours at a time, because that is the effort
+          a long climb at altitude will permit, and the person who can sit there calmly will ride past the person
+          with the higher ceiling who cannot.
+        </p>
+      </div>
+
+      {/* The block */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">A Zwift block for mountain preparation</h2>
+        <p className="mb-4">
+          Eight weeks, three key sessions a week, everything else easy. The bias is deliberately towards long
+          sustained work rather than intensity.
+        </p>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-border">
+                <th className="text-left py-2 pr-4 font-semibold">Session</th>
+                <th className="text-left py-2 pr-4 font-semibold">What it is</th>
+                <th className="text-left py-2 font-semibold">Why it is in here</th>
+              </tr>
+            </thead>
+            <tbody className="align-top">
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Long climb</td>
+                <td className="py-2 pr-4">
+                  Alpe du Zwift or Ven-Top, ridden whole at a genuinely steady effort
+                </td>
+                <td className="py-2">
+                  Rehearses an hour or more of uninterrupted climbing, which almost nothing else does
+                </td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Sustained tempo</td>
+                <td className="py-2 pr-4">
+                  3 &times; 20 min at 75 to 85% of FTP, building to 2 &times; 40 min
+                </td>
+                <td className="py-2">Builds the ability to sit in the zone the mountain will hand you</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4 font-medium">Long endurance</td>
+                <td className="py-2 pr-4">2 h 30 to 4 h, easy, fuelled properly</td>
+                <td className="py-2">Durability, and rehearsal of eating on a long day</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mb-4">
+          Ride the long climb sessions on the actual climbs rather than on a flat route at climbing power. The
+          gradient changes your position, your cadence and where the effort sits, and none of that is reproduced by
+          a flat road. There is a longer argument for this in{" "}
+          <Link to="/blog/zwift-route-selection-psychology" className="text-zwift-orange hover:underline">
+            the route selection article
+          </Link>
+          .
+        </p>
+        <p className="mb-4">
+          If you want a target for the block, take your intended climb, estimate the sustained power you think you
+          can hold for it, subtract 10%, and make that number comfortable for ninety minutes indoors. If you can do
+          that, you will get up the pass.
+        </p>
+      </div>
+
+      {/* Acclimatisation */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The first few days at altitude</h2>
+        <div className="my-6">
+          <img
+            src="/pictures/blog/australia/colorado_1_3.webp"
+            alt="Cyclist on a high mountain road"
+            className="w-full rounded-lg shadow-lg"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="mb-4">
+          Acclimatisation is a real physiological process and it is not fast. The broad picture, which is well
+          established and not controversial:
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Days 1 to 3 are the worst.</strong> Breathing rate is up, sleep is often poor, and performance
+            is at its lowest. Riding hard here is close to pointless.
+          </li>
+          <li>
+            <strong>The first week brings partial adaptation.</strong> Plasma volume adjusts, breathing settles, and
+            things start feeling more normal.
+          </li>
+          <li>
+            <strong>Full adaptation takes weeks.</strong> Longer than any normal holiday, so plan around being
+            partly adapted rather than fully.
+          </li>
+          <li>
+            <strong>Hydration needs go up.</strong> Dry air and higher breathing rates mean more fluid lost through
+            respiration alone.
+          </li>
         </ul>
         <p className="mb-4">
-          The mistake most riders make is assuming they can "push through" this. You can't. You can only pace around it.
+          If your trip includes a big objective, put it late in the week rather than early. The version of you that
+          arrives on day six is meaningfully better than the one that landed on day one.
         </p>
         <p className="mb-4">
-          Altitude is not a challenge you overcome with grit. It's a condition you manage with restraint.
-        </p>
-      </div>
-
-      {/* Why Colorado climbs feel harder */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why Colorado climbs feel harder than the numbers suggest</h2>
-        <p className="mb-4">
-          Many Colorado climbs don't look outrageous on paper.
-        </p>
-        <p className="mb-4">
-          The gradients are often steady rather than brutally steep. The roads are wide. The scenery is calming. Everything looks manageable.
-        </p>
-        <p className="mb-4">
-          And yet riders crack. Repeatedly. Often early.
-        </p>
-        <p className="mb-4">Why?</p>
-        <p className="mb-4">
-          Because the climbs are long, the altitude is constant, and the temptation to ride at familiar effort levels is strong.
-        </p>
-        <p className="mb-4">
-          At sea level, you might comfortably sit near threshold for extended periods. In Colorado, that same perceived effort can push you into a slow-motion collapse.
-        </p>
-        <p className="mb-4">
-          The danger zone is not maximal effort. It's moderately-too-hard effort sustained for too long.
-        </p>
-        <p className="mb-4">
-          That's where people blow up.
-        </p>
-      </div>
-
-      {/* What blowing up looks like */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">What "blowing up" actually looks like at altitude</h2>
-        <p className="mb-4">
-          Blowing up at altitude is rarely dramatic.
-        </p>
-        <p className="mb-4">
-          It doesn't feel like hitting a wall. It feels like the wall slowly leaning toward you until there's nowhere left to go.
-        </p>
-        <p className="mb-4">Common signs:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Breathing becomes shallow and frantic</li>
-          <li>Legs feel heavy but not sharp</li>
-          <li>Heart rate climbs while power falls</li>
-          <li>Small changes in gradient suddenly feel overwhelming</li>
-          <li>Motivation drops along with speed</li>
-        </ul>
-        <p className="mb-4">
-          Once this happens, recovery is slow. You can't just soft-pedal for a minute and resume. At altitude, overshooting your limit has a long tail.
-        </p>
-        <p className="mb-4">
-          The goal is not to recover from blow-ups. It's to avoid them entirely.
-        </p>
-      </div>
-
-      {/* Most important pacing rule */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The most important pacing rule in Colorado</h2>
-        <p className="mb-4">
-          Ride easier than you think you should. Especially early.
-        </p>
-        <p className="mb-4">
-          This sounds obvious. It is not easy.
-        </p>
-        <p className="mb-4">
-          The first real climb of a Colorado ride is where most damage happens. You're fresh. Excited. Surrounded by mountains. Everything tells you to ride like you belong there.
-        </p>
-        <p className="mb-4">
-          That instinct is wrong.
-        </p>
-        <p className="mb-4">
-          The correct approach is almost always conservative to the point of discomfort - for your ego, not your legs.
-        </p>
-        <p className="mb-4">
-          If you finish the first climb thinking, "I probably could have gone a bit harder," you did it right.
-        </p>
-        <p className="mb-4">
-          If you finish thinking, "That was about perfect," you probably went too hard.
-        </p>
-        <p className="mb-4">
-          Altitude rewards patience with interest.
-        </p>
-      </div>
-
-      {/* Power and heart rate */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Power, heart rate, and why neither behaves normally</h2>
-        <p className="mb-4">
-          At altitude, your usual metrics become less reliable.
-        </p>
-        <p className="mb-4">
-          Power drops across the board. That's expected. But heart rate often behaves strangely. Some riders see elevated heart rates for the same power. Others see suppressed heart rates due to dehydration or fatigue.
-        </p>
-        <p className="mb-4">
-          Perceived exertion becomes your most honest signal.
-        </p>
-        <p className="mb-4">
-          If it feels sustainably hard at sea level, it is unsustainably hard at altitude.
-        </p>
-        <p className="mb-4">
-          Learn to trust the sensation of breathing control. If you can't speak in short sentences on a climb you expect to last an hour, you're likely riding too hard.
+          If you feel genuinely unwell rather than simply unfit, that is altitude sickness and it is a medical
+          matter rather than a training one. Descending is the treatment, and it is not something to negotiate with.
         </p>
       </div>
 
       {/* Gearing */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Gearing is not optional in Colorado</h2>
+        <h2 className="text-2xl font-bold mb-4">Gearing, which decides whether you ride or walk</h2>
         <p className="mb-4">
-          This is not a place to be proud of your cassette.
+          This is the most under-considered part of a mountain trip and it is entirely solvable with arithmetic
+          before you travel. Indoors a bad gear choice is an annoyance. On a real 10% ramp at 3,000 m it is the
+          difference between turning the pedals and pushing the bike.
         </p>
         <p className="mb-4">
-          Colorado climbs are long enough that cadence matters more than pride. Grinding a big gear at altitude is a fast way to cook your legs and your lungs simultaneously.
+          Work it out in two steps. First, how fast will you actually be going? On a climb, nearly all your power
+          goes into lifting your mass, so speed is roughly power divided by the weight being lifted per second:
         </p>
-        <p className="mb-4">Lower gears give you options:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>You can keep cadence high when oxygen is limited</li>
-          <li>You can respond to gradient changes without spiking effort</li>
-          <li>You reduce muscular fatigue over long durations</li>
-        </ul>
-        <p className="mb-4">
-          If you think you might need an easier gear, you will need it.
-        </p>
-        <p className="mb-4">
-          Mortals ride Colorado best when they spin, not when they stomp.
-        </p>
-      </div>
-
-      {/* Fueling mistakes */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Fueling mistakes get amplified at altitude</h2>
-        <p className="mb-4">
-          Altitude increases carbohydrate reliance. You burn through glycogen faster, even at lower absolute power.
-        </p>
-        <p className="mb-4">
-          At the same time, appetite often drops. Breathing feels like work. Eating feels optional. This combination is dangerous.
-        </p>
-        <p className="mb-4">
-          You need to fuel proactively.
-        </p>
-        <p className="mb-4">That means:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Eating earlier than you think you need to</li>
-          <li>Eating consistently, not reactively</li>
-          <li>Choosing foods that go down easily when breathing is heavy</li>
-        </ul>
-        <p className="mb-4">
-          Bonking at altitude feels worse and recovers slower than at sea level. Don't wait for hunger. Treat fueling as part of pacing.
-        </p>
-      </div>
-
-      {/* Hydration */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Hydration is harder than you think</h2>
-        <p className="mb-4">
-          Colorado's air is dry. You lose more fluid through breathing alone. Sweat evaporates quickly, masking how much you're actually losing.
-        </p>
-        <p className="mb-4">
-          Dehydration increases cardiovascular strain. At altitude, that strain compounds.
-        </p>
-        <p className="mb-4">
-          Drink regularly. Add electrolytes. Don't rely on thirst as a signal.
-        </p>
-        <p className="mb-4">
-          A slightly overhydrated rider rides better in the mountains than a perfectly lean one.
-        </p>
-      </div>
-
-      {/* Mental game */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">How long climbs change the mental game</h2>
-        <p className="mb-4">
-          Long climbs are not about strength. They're about acceptance.
-        </p>
-        <p className="mb-4">
-          Colorado climbs don't end quickly. You don't "get through" them. You settle into them.
-        </p>
-        <p className="mb-4">
-          Riders who struggle mentally often fight the climb. They watch the gradient. They chase numbers. They bargain with themselves.
-        </p>
-        <p className="mb-4">
-          Riders who succeed pick a rhythm and let the climb happen.
-        </p>
-        <p className="mb-4">
-          The skill here is not motivation. It's emotional neutrality.
-        </p>
-        <p className="mb-4">
-          You don't need to feel good. You just need to feel stable.
-        </p>
-      </div>
-
-      {/* Stopping on climbs */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why stopping on climbs is expensive</h2>
-        <p className="mb-4">
-          At altitude, restarting is harder than continuing.
-        </p>
-        <p className="mb-4">
-          Every stop breaks rhythm. Every restart spikes breathing and heart rate. On long climbs, frequent stops can be more damaging than steady slow movement.
-        </p>
-        <p className="mb-4">
-          If you must stop, keep it brief. Don't sit down. Don't let your system cool completely.
-        </p>
-        <p className="mb-4">
-          Better yet, pace conservatively enough that you don't need to stop at all.
-        </p>
-      </div>
-
-      {/* First-time mindset */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">A realistic first-time Colorado riding mindset</h2>
-        <p className="mb-4">
-          If this is your first time riding in Colorado, success is not measured in speed or power.
-        </p>
-        <p className="mb-4">Success looks like:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Finishing climbs without imploding</li>
-          <li>Feeling stronger in the second half of rides</li>
-          <li>Enjoying the scenery instead of fighting your bike</li>
-          <li>Ending the day tired but functional</li>
-        </ul>
-        <p className="mb-4">
-          Leave the hero rides to locals and pros. Your job is to learn how the mountains feel.
-        </p>
-        <p className="mb-4">
-          You can always come back faster.
-        </p>
-      </div>
-
-      {/* Zwift preparation */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why you don't need mountains to prepare for mountains</h2>
-        <p className="mb-4">
-          Here's the good news: you don't need elevation outside your door to prepare for Colorado.
-        </p>
-        <p className="mb-4">You need:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Sustained aerobic strength</li>
-          <li>Comfort with long, steady efforts</li>
-          <li>Familiarity with pacing below threshold</li>
-          <li>Mental patience</li>
-        </ul>
-        <p className="mb-4">
-          Zwift is exceptionally good at building these qualities - if you use it correctly.
-        </p>
-        <p className="mb-4">
-          The mistake is trying to simulate altitude with intensity. That backfires.
-        </p>
-        <p className="mb-4">
-          The goal is to simulate duration and restraint.
-        </p>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">The biggest Zwift mistake riders make before mountain trips</h3>
-          <p className="mb-4">
-            They overdo intensity.
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="font-mono text-sm mb-3">v &asymp; P &divide; (m &times; g &times; gradient)</p>
+          <p className="text-sm mb-2">
+            A 75 kg rider at sea level holding 225 W on 8%: 225 &divide; (75 &times; 9.81 &times; 0.08) &asymp; 3.8
+            m/s, about <strong>13.8 km/h</strong>
           </p>
-          <p className="mb-4">
-            Hard intervals feel productive. Long climbs feel intimidating. So riders default to short, sharp efforts.
+          <p className="text-sm mb-2">
+            The same rider at altitude, 10% down at 202 W, on a 10% ramp: 202 &divide; (75 &times; 9.81 &times;
+            0.10) &asymp; 2.7 m/s, about <strong>9.9 km/h</strong>
           </p>
-          <p className="mb-4">
-            Colorado doesn't reward that.
-          </p>
-          <p className="mb-4">
-            What matters most is the ability to ride for long periods just below your limit without drifting upward.
-          </p>
-          <p className="mb-4">
-            That's a trainable skill. And Zwift is perfect for it.
+          <p className="text-sm text-muted-foreground">
+            Rolling resistance and drag shave a little off both, so treat these as slightly optimistic.
           </p>
         </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">What kind of fitness actually transfers to altitude</h3>
-          <p className="mb-4">Three things matter most:</p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Aerobic depth</li>
-            <li>Muscular endurance</li>
-            <li>Effort discipline</li>
-          </ul>
-          <p className="mb-4">
-            You want to be able to ride at a "moderately uncomfortable" pace for a very long time without panic.
-          </p>
-          <p className="mb-4">
-            That's it.
-          </p>
-          <p className="mb-4">
-            You don't need a massive sprint. You don't need explosive VO₂ max work. You need calm strength.
-          </p>
+        <p className="mb-4">
+          Now turn that into a cadence. A 700c wheel with a 25 mm tyre rolls about 2.1 m per revolution, so the
+          distance you travel per pedal stroke is 2.1 multiplied by your chainring divided by your sprocket.
+        </p>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-border">
+                <th className="text-left py-2 pr-4 font-semibold">Gearing</th>
+                <th className="text-left py-2 pr-4 font-semibold">Metres per pedal stroke</th>
+                <th className="text-left py-2 font-semibold">Cadence at 9.9 km/h</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">34 &times; 28</td>
+                <td className="py-2 pr-4">2.55 m</td>
+                <td className="py-2">about 65 rpm</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">34 &times; 32</td>
+                <td className="py-2 pr-4">2.23 m</td>
+                <td className="py-2">about 74 rpm</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4">34 &times; 34</td>
+                <td className="py-2 pr-4">2.10 m</td>
+                <td className="py-2">about 79 rpm</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <p className="mb-4">
+          Sixty-five rpm on a 10% gradient, an hour into a climb, at altitude, is a genuinely unpleasant place to
+          be. It is high force per stroke, it recruits fast-twitch fibres you would rather save, and it is the
+          classic route to cramping. The same rider on a 34 &times; 34 is spinning at nearly 80 rpm at the identical
+          speed and effort, and will arrive at the top in far better condition.
+        </p>
+        <p className="mb-4">
+          Run these numbers for the steepest gradient on your intended route, using your altitude-adjusted power.
+          If the answer is below about 70 rpm, change your cassette before you travel. It is the cheapest
+          performance improvement available on the entire trip.
+        </p>
+      </div>
 
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">The Zwift climb-prep philosophy for mortals</h3>
-          <p className="mb-4">
-            Forget chasing KOMs. Forget ERG heroics.
-          </p>
-          <p className="mb-4">
-            Your Zwift sessions should feel almost boring. That's a good sign.
-          </p>
-          <p className="mb-4">
-            If you finish a workout thinking, "I could have gone harder," you're doing it right.
-          </p>
-          <p className="mb-4">
-            Altitude punishes riders who rely on intensity. It rewards those who build resilience.
-          </p>
-        </div>
+      {/* Honest limits */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What indoor training cannot help with at all</h2>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>The altitude response itself.</strong> Nothing on a trainer touches it.
+          </li>
+          <li>
+            <strong>Descending a mountain pass.</strong> Long, cold, fast, and demanding in a way that has nothing
+            to do with fitness.
+          </li>
+          <li>
+            <strong>Temperature swings.</strong> A summit can be twenty degrees colder than the valley you left.
+            That is a clothing problem and it is a serious one.
+          </li>
+          <li>
+            <strong>Gearing.</strong> Indoors, a bad gear choice is an inconvenience. On a real 10% ramp at 3,000 m
+            it decides whether you are riding or walking. Work out your gearing before you travel.
+          </li>
+        </ul>
+      </div>
 
+      {/* The example */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The example itself</h2>
         <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">The Zwift routes that best mimic Colorado climbing</h3>
-          <p className="mb-4">
-            You're not looking for steep walls. You're looking for long, steady gradients.
-          </p>
-          <div className="my-6">
-            <img 
-              src="/pictures/blog/australia/colorado_1_2.webp" 
-              alt="Long steady climb on Zwift" 
-              className="w-full rounded-lg shadow-lg"
+          <img
+            src="/pictures/blog/australia/colorado_1_4.webp"
+            alt="Summit view over a mountain range"
+            className="w-full rounded-lg shadow-lg"
             loading="lazy"
             decoding="async"
           />
-          </div>
-          <p className="mb-4">
-            Routes with extended climbs at moderate gradients are ideal. They teach you how to sit in an effort without distraction.
-          </p>
-          <p className="mb-4">
-            Long climbs also force you to manage cadence, breathing, and mental focus - all critical skills at altitude.
-          </p>
-          <p className="mb-4">
-            Short climbs don't do this. They encourage surging. That's the opposite of what you want.
-          </p>
         </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">How to ride Zwift climbs for mountain prep</h3>
-          <p className="mb-4">
-            When you're on a long virtual climb:
-          </p>
-          <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-            <li>Settle into a pace you could hold for an hour</li>
-            <li>Ignore other riders passing you</li>
-            <li>Keep breathing smooth and controlled</li>
-            <li>Resist the urge to increase effort "just a little"</li>
-          </ul>
-          <p className="mb-4">
-            Practice staying calm when it feels slightly too easy early on. That restraint is the exact skill you'll use in Colorado.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">A Zwift training block for altitude confidence</h3>
-          <p className="mb-4">
-            This is a simple, repeatable block designed for real people with real schedules.
-          </p>
-          <p className="mb-4">
-            The goal is not peak fitness. The goal is confidence.
-          </p>
-          <div className="space-y-4">
-            <div>
-              <h4 className="font-semibold mb-2">Session one: long steady climb</h4>
-              <p className="mb-2">
-                Choose a route with a sustained climb. Ride it at a steady, sub-threshold effort.
-              </p>
-              <p className="mb-2">
-                Focus on breathing. Focus on cadence. Stay seated most of the time.
-              </p>
-              <p className="mb-2">
-                This builds aerobic durability and teaches patience.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">Session two: low-cadence strength</h4>
-              <p className="mb-2">
-                Ride a climb at slightly lower cadence than usual, but at controlled power.
-              </p>
-              <p className="mb-2">
-                This builds muscular endurance without high cardiovascular stress - useful when oxygen is limited.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">Session three: tempo with discipline</h4>
-              <p className="mb-2">
-                Ride rolling terrain at tempo, but never above it.
-              </p>
-              <p className="mb-2">
-                The goal is to practice restraint when the road encourages you to push.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">Session four: long easy volume</h4>
-              <p className="mb-2">
-                Ride longer than usual at an easy pace.
-              </p>
-              <p className="mb-2">
-                Altitude rides are long. Your body needs to be comfortable being on the bike for hours without fatigue creeping in.
-              </p>
-            </div>
+        <p className="mb-4">
+          Colorado's road passes reach well above 3,000 m, with several paved climbs topping out higher than
+          anything in the Alps, and the towns riders base themselves in are frequently at 2,000 m or more, which
+          means you are at altitude before you start climbing. Weather changes fast at elevation and afternoon
+          storms are a recurring theme in every account I have read, which is the usual reason for the advice to
+          start early.
+        </p>
+        <p className="mb-4">
+          Beyond that I would be inventing local knowledge, and this site's{" "}
+          <Link to="/editorial-policy" className="text-zwift-orange hover:underline">
+            editorial policy
+          </Link>{" "}
+          exists partly to stop me doing that. For the roads themselves, ask someone who rides them.
+        </p>
+        <div className="my-8">
+          <p className="text-xl font-semibold mb-4 text-foreground">Riders who have actually been there</p>
+          <div className="aspect-video w-full rounded-lg overflow-hidden">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/6NECDeWhpL8"
+              title="Cycling in the Colorado mountains"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full border-0"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">How long this block should last</h3>
-          <p className="mb-4">
-            Four to six weeks is plenty.
-          </p>
-          <p className="mb-4">
-            More is fine, but not necessary. What matters is consistency, not hero sessions.
-          </p>
-          <p className="mb-4">
-            If you can complete this block without feeling wrecked, you're building the right kind of fitness.
-          </p>
-        </div>
-
-        <div className="my-6">
-          <h3 className="text-xl font-semibold mb-3">Translating Zwift fitness to real altitude</h3>
-          <p className="mb-4">
-            When you arrive in Colorado, forget your indoor numbers.
-          </p>
-          <p className="mb-4">
-            Expect lower power. Expect higher effort. That's normal.
-          </p>
-          <p className="mb-4">
-            What transfers is not watts - it's confidence.
-          </p>
-          <p className="mb-4">
-            You'll recognize the feeling of settling into a long effort. You'll know how to back off before things spiral. You'll trust that going easier early pays off later.
-          </p>
-          <p className="mb-4">
-            That's the real preparation.
-          </p>
-        </div>
       </div>
 
-      {/* Acclimatization */}
+      {/* Summary */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Acclimatization: what to expect in the first days</h2>
-        <p className="mb-4">
-          If you're coming from low altitude, the first few days matter.
-        </p>
-        <p className="mb-4">
-          You don't need to hide indoors, but you should ride easier than planned.
-        </p>
-        <p className="mb-4">
-          Day one is about movement, not performance. Short rides. Low intensity. Let your body start adapting.
-        </p>
-        <p className="mb-4">
-          Sleep might feel off. Appetite might be weird. That's normal.
-        </p>
-        <p className="mb-4">
-          Don't test yourself immediately. Altitude adapts slowly.
-        </p>
-      </div>
-
-      {/* Walking and resting */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why walking and resting help more than extra riding</h2>
-        <p className="mb-4">
-          Acclimatization is not trained by suffering.
-        </p>
-        <p className="mb-4">
-          Light activity helps. Hard efforts don't.
-        </p>
-        <p className="mb-4">
-          Short walks. Easy spins. Good meals. Sleep.
-        </p>
-        <p className="mb-4">
-          The urge to "get after it" is strong. Resist it.
-        </p>
-        <p className="mb-4">
-          Your best Colorado rides happen after patience, not before.
-        </p>
-      </div>
-
-      {/* Common errors */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The most common Colorado rookie errors</h2>
-        <ul className="list-disc list-inside space-y-3 ml-4">
-          <li><strong>Trying to match locals</strong></li>
-          <li><strong>Ignoring early signs of overexertion</strong></li>
-          <li><strong>Undergearing</strong></li>
-          <li><strong>Underfueling</strong></li>
-          <li><strong>Treating altitude as a challenge instead of a condition</strong></li>
-        </ul>
-        <p className="mt-4">
-          Every one of these leads to the same outcome: a slow, miserable climb.
-        </p>
-      </div>
-
-      {/* How to tell if pacing correctly */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">How to tell if you're pacing correctly</h2>
-        <p className="mb-4">You should feel:</p>
+        <h2 className="text-2xl font-bold mb-4">The short version</h2>
         <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li>Slightly uncomfortable, but in control</li>
-          <li>Able to breathe rhythmically</li>
-          <li>Mentally calm</li>
-          <li>Like you could continue indefinitely at that effort</li>
+          <li>
+            Air at 3,000 m is still 21% oxygen, but at about 69% of sea-level pressure, and pressure is what moves
+            oxygen into your blood.
+          </li>
+          <li>
+            Expect roughly 9 to 12% off your ceiling at 3,000 m. On this site's Alpe curve, a 10% power loss is
+            about 5 minutes 36 seconds on a one-hour climb.
+          </li>
+          <li>Heart rate zones lie at altitude. Ride to power or to breathing, not to your sea-level zones.</li>
+          <li>
+            The altitude response cannot be trained indoors. Sustained sub-threshold durability can, and it is most
+            of what a pass demands.
+          </li>
+          <li>Days one to three are the worst. Put the big objective late in the trip.</li>
+          <li>
+            Run the gearing arithmetic before you travel. If your steepest gradient puts you under about 70 rpm,
+            fit a bigger cassette. It is the cheapest gain available on the whole trip.
+          </li>
         </ul>
-        <p className="mb-4">
-          If you feel urgency, panic, or desperation, you're too hard.
-        </p>
-      </div>
-
-      {/* Riding with others */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Riding with others at altitude</h2>
-        <p className="mb-4">
-          Group rides amplify mistakes.
-        </p>
-        <p className="mb-4">
-          If you're new to altitude, ride your own pace - even in a group.
-        </p>
-        <p className="mb-4">
-          Let people go. They're not judging you. And if they are, they don't matter.
-        </p>
-        <p className="mb-4">
-          Altitude is deeply personal. Ride yours.
-        </p>
-      </div>
-
-      {/* Why Colorado is worth it */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Why Colorado is worth the humility</h2>
-        <p className="mb-4">
-          Colorado riding is spectacular because it forces you to slow down.
-        </p>
-        <p className="mb-4">
-          You notice things. Light. Silence. Scale.
-        </p>
-        <p className="mb-4">
-          When you stop trying to dominate the mountains, they let you stay.
-        </p>
-        <p className="mb-4">
-          That's the trade.
-        </p>
-      </div>
-
-      {/* Quiet reward */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The quiet reward of riding smart</h2>
-        <p className="mb-4">
-          The best feeling in Colorado is not crushing a climb.
-        </p>
-        <p className="mb-4">
-          It's cresting one feeling steady, breathing controlled, knowing you didn't empty the tank.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/colorado_1_3.webp" 
-            alt="Colorado mountain summit view" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-        <p className="mb-4">
-          It's realizing you still have legs when the road keeps going.
-        </p>
-        <p className="mb-4">
-          It's finishing rides tired but intact.
-        </p>
-        <p className="mb-4">
-          That's not weakness. That's mastery.
-        </p>
-      </div>
-
-      {/* Final thoughts */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Final thoughts for mortal mountain riders</h2>
-        <p className="mb-4">
-          You don't need to become someone else to ride Colorado.
-        </p>
-        <p className="mb-4">
-          You don't need elite numbers. You don't need mountain DNA.
-        </p>
-        <p className="mb-4">
-          You need humility, patience, and preparation that respects reality.
-        </p>
-        <div className="my-6">
-          <img 
-            src="/pictures/blog/australia/colorado_1_4.webp" 
-            alt="Colorado mountain cycling finish" 
-            className="w-full rounded-lg shadow-lg"
-          loading="lazy"
-          decoding="async"
-        />
-        </div>
-        <p className="mb-4">
-          Train steady. Gear low. Fuel early. Pace conservatively.
-        </p>
-        <p className="mb-4">
-          Use Zwift to build calm strength, not explosive ego.
-        </p>
-        <p className="mb-4 text-lg font-medium">
-          Do that, and Colorado stops being intimidating.
-        </p>
-        <p className="mb-4 text-lg font-medium">
-          It becomes what it should be: challenging, beautiful, and deeply rewarding - for mortals too.
-        </p>
       </div>
     </div>
   );
 
   return (
     <BlogPost
-      title="Colorado Mountain Riding for Mortals: How Not to Blow Up at Altitude (Zwift Climb Prep Included)"
-      date="18-12-2025"
+      content={content}
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",
           path: "/alpeduzwiftcalculator",
-          description: "Calculate your climbing time and power requirements for Zwift's iconic climbs"
+          description: "Translate a power change into a time change on a long climb",
         },
         {
-          name: "Ven Top Calculator",
-          path: "/ventop-calculator",
-          description: "Predict your performance on Zwift's longest climb"
-        }
+          name: "Climb Time Calculator",
+          path: "/zwift-climb-time-calculator",
+          description: "Point the physics model at a climb of your own dimensions",
+        },
       ]}
-      content={content}
     />
   );
 };
 
 export default ColoradoMountainRiding;
-

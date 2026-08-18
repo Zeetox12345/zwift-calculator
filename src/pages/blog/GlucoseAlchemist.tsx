@@ -162,8 +162,6 @@ const GlucoseAlchemist = () => {
 
   return (
     <BlogPost
-      title="The Glucose Alchemist: How to Fuel a World Tour Effort on a Ramen Budget"
-      date="16-12-2025"
       content={content}
     />
   );

@@ -18,10 +18,6 @@ interface RelatedArticle {
 }
 
 interface BlogPostProps {
-  /** Overrides the H1. Defaults to the article's title in `src/data/blogPosts.ts`. */
-  title?: string;
-  /** Overrides the published date. Defaults to the date in the article index. */
-  date?: string;
   content: React.ReactNode;
   relatedCalculators?: Array<{ name: string; path: string; description: string }>;
   relatedArticles?: RelatedArticle[];
@@ -75,7 +71,7 @@ const DEFAULT_CALCULATORS = [
   },
 ];
 
-const BlogPost = ({ title, date, content, relatedCalculators, relatedArticles }: BlogPostProps) => {
+const BlogPost = ({ content, relatedCalculators, relatedArticles }: BlogPostProps) => {
   const location = useLocation();
   const post = getPostBySlug(location.pathname);
 
@@ -86,8 +82,11 @@ const BlogPost = ({ title, date, content, relatedCalculators, relatedArticles }:
   const related = relatedArticles && relatedArticles.length > 0 ? relatedArticles : autoRelated(post);
   const calculators = relatedCalculators && relatedCalculators.length > 0 ? relatedCalculators : DEFAULT_CALCULATORS;
   const updated = post?.dateModified ? displayDate(post.dateModified) : null;
-  const heading = title ?? post?.title ?? "";
-  const published = date ?? (post ? displayDate(post.date) : "");
+  // The article index is the single source of truth for the title and dates.
+  // These used to be overridable per page, which let the H1 drift out of sync
+  // with the card text shown for the same article everywhere else.
+  const heading = post?.title ?? "";
+  const published = post ? displayDate(post.date) : "";
 
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
@@ -154,9 +153,9 @@ const BlogPost = ({ title, date, content, relatedCalculators, relatedArticles }:
                       measured, and then linked to where they were measured, or modelled and estimated, and then
                       labelled as such in the text. Spotted something wrong?{" "}
                       <Link to="/contact" className="text-zwift-orange hover:underline font-medium">
-                        Tell us
+                        Tell me
                       </Link>{" "}
-                      and it gets corrected - our{" "}
+                      and it gets corrected - the{" "}
                       <Link to="/editorial-policy" className="text-zwift-orange hover:underline font-medium">
                         editorial policy
                       </Link>{" "}
@@ -172,10 +171,10 @@ const BlogPost = ({ title, date, content, relatedCalculators, relatedArticles }:
                     <div className="mt-12 pt-8 border-t border-border">
                       <h2 className="text-xl font-bold mb-4 text-foreground flex items-center">
                         <Calculator size={20} className="mr-2 text-zwift-orange" />
-                        Try Our Calculators
+                        Run your own numbers
                       </h2>
                       <p className="text-muted-foreground mb-4">
-                        Use our data-driven calculators to predict your performance on these iconic Zwift climbs:
+                        Every calculator on this site runs in your browser and publishes the equation behind it:
                       </p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {calculators.map((calc) => (

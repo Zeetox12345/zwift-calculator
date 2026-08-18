@@ -18,7 +18,7 @@ const TowelsDuringZwifting = () => {
           And yes - towels can help a lot, but they can also create problems if you use the wrong towel, place it poorly, trap moisture, or ignore what sweat does behind the scenes.
         </p>
         <p className="mb-4">
-          This article is a complete guide to using towels during Zwift in a way that protects your bike, your trainer setup, your floor, and your sanity. It's written for real life: messy workouts, limited space, and the kind of fatigue that makes "proper cleanup" feel like an impossible task.
+          What follows is how to use towels during Zwift in a way that actually protects your bike, your trainer, your floor and your sanity. It's written for real life: messy workouts, limited space, and the kind of fatigue that makes "proper cleanup" feel like an impossible task.
         </p>
         <p className="mb-4">We'll cover:</p>
         <ul className="list-disc list-inside mb-4 space-y-1 ml-4">
@@ -37,7 +37,7 @@ const TowelsDuringZwifting = () => {
         <div className="my-6">
           <img 
             src="/pictures/blog/other/towel_zwift.webp" 
-            alt="Proper towel setup for Zwift training to protect bike from sweat damage" 
+            alt="A white Specialized time trial bike on a direct-drive trainer, with a grey towel folded over the aerobars and shoes on the mat" 
             className="w-full rounded-lg shadow-lg"
           loading="lazy"
           decoding="async"
@@ -685,8 +685,6 @@ const TowelsDuringZwifting = () => {
 
   return (
     <BlogPost
-      title="Towels During Zwifting? Can It Ruin Your Bike?"
-      date="19-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

@@ -1,177 +1,329 @@
-import BlogPost from "@/components/BlogPost";
 import { Link } from "react-router-dom";
+
+import BlogPost from "@/components/BlogPost";
 
 const MechanicalEngineeringZwift = () => {
   const content = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* Intro */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Introduction: An Engineering Perspective on Virtual Cycling</h2>
-        <p className="mb-4">
-          As a mechanical engineering student and Zwift enthusiast, I've always been fascinated by the physics behind virtual cycling performance. While Zwift simplifies many real-world variables, it still simulates a complex system of forces, torques, and energy transformations. Understanding these principles isn't just academic - it can help you train smarter, optimize your performance, and understand why certain strategies work while others don't.
+        <p className="mb-4 text-lg leading-relaxed">
+          Between the contraction of a muscle fibre and the avatar moving on your screen, your effort crosses six or
+          seven interfaces. Every one of them takes a cut, and one of them decides what number you are shown.
         </p>
         <p className="mb-4">
-          In this article, we'll explore Zwift performance through the lens of mechanical engineering. We'll examine the physics of power production, the mechanics of climbing, the role of equipment weight, and why certain mathematical models (like polynomial regression) work better than others for predicting performance. This isn't just theory - it's the foundation that makes our calculators accurate and your training effective.
+          This is the part of indoor cycling that mechanical engineering is actually useful for, and it is the part
+          riders most often get wrong when their numbers disagree with someone else's. If you have ever wondered why
+          your trainer and your power meter differ by a few percent, why low cadence feels so different at the same
+          wattage, or what exactly Zwift is doing with the figure it receives, this is the chain that answers all
+          three.
+        </p>
+        <p className="mb-4">
+          Two companion articles cover the neighbouring ground:{" "}
+          <Link
+            to="/blog/the-calculus-of-the-pain-cave-a-mechanical-autopsy-of-speed"
+            className="text-zwift-orange hover:underline"
+          >
+            the physics of what makes you fast
+          </Link>{" "}
+          once the power exists, and{" "}
+          <Link to="/blog/regression-analysis-methodology" className="text-zwift-orange hover:underline">
+            how this site's prediction models were fitted
+          </Link>
+          . This one is about the machinery in between.
         </p>
       </div>
 
+      {/* The chain */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">The Physics of Power Production: From Muscles to Watts</h2>
+        <h2 className="text-2xl font-bold mb-4">The chain, end to end</h2>
+        <p className="mb-4">Laid out in order, with what each stage does to the signal:</p>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-border">
+                <th className="text-left py-2 pr-4 font-semibold">Stage</th>
+                <th className="text-left py-2 font-semibold">What happens to your power</th>
+              </tr>
+            </thead>
+            <tbody className="align-top">
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Muscle</td>
+                <td className="py-2">
+                  Chemical energy becomes mechanical work at roughly 20 to 25% efficiency. The rest is heat
+                </td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Pedal and crank</td>
+                <td className="py-2">Force becomes torque. This is where the true figure exists</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Chain and drivetrain</td>
+                <td className="py-2">Roughly 2 to 5% lost to friction, depending on condition</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Cassette and trainer</td>
+                <td className="py-2">Whatever arrives is what a trainer can measure</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">The measurement</td>
+                <td className="py-2">A number with its own accuracy specification, plus drift</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4 font-medium">Transmission</td>
+                <td className="py-2">Sent over ANT+ or Bluetooth, typically about once a second</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4 font-medium">Zwift</td>
+                <td className="py-2">Treated as truth, and fed into the game's own physics model</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p className="mb-4">
-          At its core, cycling is about converting chemical energy (from food) into mechanical energy (pedal rotation) and then into kinetic energy (forward motion). As a mechanical engineer, I think of this as a series of energy transformations with efficiency losses at each stage.
-        </p>
-        <p className="mb-4">
-          Your muscles convert chemical energy to mechanical work at roughly 20-25% efficiency - meaning 75-80% of the energy is lost as heat. This mechanical work creates torque on the pedals, which rotates the cranks and drives the chain. The chain drives the rear wheel, which propels you forward. At each stage, there are efficiency losses: drivetrain friction (2-3%), rolling resistance (1-2%), and aerodynamic drag (varies with speed).
-        </p>
-        <p className="mb-4">
-          In Zwift, these efficiency losses are simplified but still present. The game simulates drivetrain efficiency, rolling resistance, and aerodynamic drag, though in a simplified form compared to real-world cycling. This is why Zwift power doesn't always translate directly to outdoor power - the physics engines are different, even if they're based on similar principles.
-        </p>
-        <p className="mb-4">
-          Understanding this energy transformation chain helps explain why improving your power-to-weight ratio has such a dramatic impact on climbing performance. On a climb, you're fighting gravity, which requires energy proportional to your weight and the height gained. The power required is: Power = (Weight × Gravity × Vertical Speed) / Efficiency. Since efficiency is relatively constant, reducing weight or increasing power has a direct, linear impact on climbing speed. But because time is inversely related to speed, the relationship between power and time becomes non-linear - which is why we use polynomial regression instead of linear regression.
+          The last row is the important one. Zwift does not know what you actually produced. It knows what it was
+          told, and it treats that as fact. Everything downstream of the measurement, including every estimate on
+          this site, inherits whatever error was introduced at that point.
         </p>
       </div>
 
+      {/* Torque and cadence */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Why Polynomial Regression? The Math Behind Accurate Predictions</h2>
+        <h2 className="text-2xl font-bold mb-4">Torque and cadence: the same watts, very different loads</h2>
         <p className="mb-4">
-          When we first started analyzing ZwiftPower data to build our calculators, we tried linear regression. It seemed logical: more power should mean proportionally faster times. But the data didn't fit a straight line. Riders with 4.0 W/kg weren't twice as fast as riders with 2.0 W/kg - they were only about 1.6x faster.
+          Power is not something your legs produce directly. What they produce is force on a pedal, which becomes
+          torque about the bottom bracket, and power is that torque multiplied by how fast the cranks are turning:
+        </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="font-mono text-sm mb-3">P = &tau; &times; &omega;</p>
+          <p className="text-sm text-muted-foreground">
+            Power in watts, torque in newton metres, angular velocity in radians per second. 90 rpm is 9.42 rad/s.
+          </p>
+        </div>
+        <p className="mb-4">
+          Run 250 W through that at two different cadences and the difference is larger than most riders expect.
+          Assuming 172.5 mm cranks:
+        </p>
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-border">
+                <th className="text-left py-2 pr-4 font-semibold">Cadence</th>
+                <th className="text-left py-2 pr-4 font-semibold">Average torque</th>
+                <th className="text-left py-2 font-semibold">Average force on the pedal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">90 rpm</td>
+                <td className="py-2 pr-4">26.5 N&middot;m</td>
+                <td className="py-2">154 N, about 16 kg</td>
+              </tr>
+              <tr className="border-b border-border">
+                <td className="py-2 pr-4">70 rpm</td>
+                <td className="py-2 pr-4">34.1 N&middot;m</td>
+                <td className="py-2">198 N, about 20 kg</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4">60 rpm</td>
+                <td className="py-2 pr-4">39.8 N&middot;m</td>
+                <td className="py-2">231 N, about 24 kg</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mb-4">
+          Identical power, 50% more force per stroke at 60 rpm than at 90. That is why grinding feels muscular and
+          spinning feels cardiovascular: they are genuinely different loads on the tissue, even though the number on
+          the screen has not moved.
         </p>
         <p className="mb-4">
-          This is where mechanical engineering principles helped explain what we were seeing. The relationship between power and speed isn't linear because of the physics involved. As speed increases, aerodynamic drag increases with the square of velocity (F_drag = 0.5 × ρ × Cd × A × v²). Even on climbs where aerodynamic drag is minimal, rolling resistance and drivetrain losses increase with speed. The result is a non-linear relationship between power and speed, which translates to a non-linear relationship between power and time.
+          These are averages across a full revolution, and the real picture is spikier still. You cannot apply
+          useful force at the top and bottom of the stroke, so the peak torque during the downstroke is well above
+          the average, and the numbers above understate what your knee actually experiences.
         </p>
         <p className="mb-4">
-          Polynomial regression (specifically, a second-degree polynomial) captures this non-linearity. Our Alpe du Zwift formula, Time = 148.60 × (W/kg)² - 1954.08 × (W/kg) + 8329.87, includes both linear and quadratic terms. The quadratic term (W/kg)² captures the diminishing returns effect - as power increases, each additional watt per kilogram provides less time savings. The linear term captures the direct relationship between power and time. The constant term accounts for baseline factors like rolling resistance and drivetrain losses.
-        </p>
-        <p className="mb-4">
-          Why not use a higher-degree polynomial? We tested cubic and quartic models, but they didn't significantly improve accuracy and were more prone to overfitting - fitting the training data perfectly but performing poorly on new data. A second-degree polynomial provides the best balance between accuracy and generalizability.
+          Two practical consequences follow. Low-cadence work is strength work, and should be programmed and
+          recovered from as such rather than treated as ordinary tempo. And if your knees complain on climbs,
+          cadence is the first thing to look at, well before saddle height.
         </p>
       </div>
 
+      {/* Where power is measured */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Equipment Weight: The Mechanical Impact of Virtual Mass</h2>
+        <h2 className="text-2xl font-bold mb-4">Where the power is measured, and why two devices disagree</h2>
         <p className="mb-4">
-          In real-world cycling, bike weight matters on climbs because you're accelerating that mass against gravity. In Zwift, bike weight matters for the same reason - the game simulates the physics of accelerating mass. But Zwift simplifies this in ways that make equipment weight differences more or less impactful than in real life.
+          This is the single most useful thing in the article, because it resolves an argument that happens
+          constantly and has a completely mundane answer.
         </p>
         <p className="mb-4">
-          From a mechanical engineering perspective, the energy required to lift a mass up a climb is: Energy = Mass × Gravity × Height. On Alpe du Zwift, with 1,036 meters of elevation gain, a 1kg difference in bike weight requires approximately 10,150 Joules of additional energy. At a typical climbing speed of 10-15 km/h, this translates to roughly 30-60 seconds of additional time, depending on your power output.
+          Power meters measure at different points along the chain, and the chain loses energy as it goes. So they
+          are not measuring the same quantity:
         </p>
-        <p className="mb-4">
-          Zwift simulates this physics, but with simplifications. The game uses a simplified gravity model and doesn't account for rotational inertia (the energy required to spin wheels and cranks). This means that Zwift might slightly overestimate or underestimate the impact of weight differences compared to real-world cycling. Zwift's weight simulation is still the dominant term on a climb, though: on an 8.5% gradient almost all of your power goes into lifting mass, so a lighter total system is faster whatever the finer details of the model.
-        </p>
-        <p className="mb-4">
-          The engineering insight here is that weight matters more on longer climbs. On Alpe du Zwift, a 1kg difference might cost 30-60 seconds. On Ven Top, with its longer duration, the same 1kg difference costs 60-90 seconds. This is because the energy cost accumulates over time - the longer you're climbing, the more that weight difference matters.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Torque, Cadence, and Power: The Mechanical Relationship</h2>
-        <p className="mb-4">
-          Power in cycling is the product of torque and angular velocity: Power = Torque × Angular Velocity. In cycling terms, this is Power = Torque × Cadence × (2π/60). This mechanical relationship explains why different cadences can produce the same power, and why optimal cadence varies between riders and situations.
-        </p>
-        <p className="mb-4">
-          On climbs, most riders naturally gravitate toward lower cadences (70-85 RPM) because it allows them to produce more torque per pedal stroke. This is mechanically efficient because muscles are stronger at slower contraction speeds. However, lower cadence also means more force per pedal stroke, which can lead to faster muscle fatigue.
-        </p>
-        <p className="mb-4">
-          Zwift simulates this relationship, though in a simplified way. The game calculates power from your trainer's resistance and cadence, then uses that power to determine speed. This means that your cadence choice in Zwift matters just like it does outdoors - find your optimal cadence (usually 80-95 RPM for most riders) and stick to it for optimal efficiency.
-        </p>
-        <p className="mb-4">
-          From an engineering perspective, the optimal cadence balances muscular efficiency (better at lower cadences) with cardiovascular efficiency (better at higher cadences). Most riders find their sweet spot between 80-90 RPM, where they can produce power efficiently without excessive muscular or cardiovascular stress. This is why maintaining consistent cadence is as important as maintaining consistent power - both contribute to overall efficiency.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Aerodynamic Drag in Virtual Cycling: Simplified but Significant</h2>
-        <p className="mb-4">
-          While aerodynamic drag matters less on steep climbs than on flat roads, it's still a factor in Zwift. The game simulates aerodynamic drag using a simplified model: F_drag = 0.5 × ρ × Cd × A × v², where ρ is air density, Cd is drag coefficient, A is frontal area, and v is velocity.
-        </p>
-        <p className="mb-4">
-          On climbs, velocity is lower, so aerodynamic drag is reduced. But it's not eliminated. At 15 km/h (a typical climbing speed), aerodynamic drag might account for 5-10% of total resistance. At 20 km/h (a fast climbing speed), it might account for 10-15%. This is why drafting matters less on steep climbs but can still provide a small benefit on shallower sections.
-        </p>
-        <p className="mb-4">
-          Zwift simplifies aerodynamic drag compared to real-world cycling. The game uses fixed drag coefficients for different body positions and doesn't account for wind direction or yaw angles. This simplification makes Zwift's aerodynamic model less accurate than real-world models, but it's sufficient for gameplay and performance prediction.
-        </p>
-        <p className="mb-4">
-          The engineering insight is that aerodynamic drag becomes more significant as speed increases. This is why improving your power-to-weight ratio has diminishing returns - as you go faster, aerodynamic drag takes a larger share of your power output. This is captured in our polynomial regression models, which show that each additional W/kg provides less time savings as power increases.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The Flywheel Effect: Rotational Inertia in Virtual Cycling</h2>
-        <p className="mb-4">
-          One aspect of cycling physics that Zwift doesn't fully simulate is rotational inertia - the energy required to spin wheels, cranks, and other rotating components. In real-world cycling, rotational inertia matters when accelerating or changing speed. In Zwift, this effect is simplified or ignored.
-        </p>
-        <p className="mb-4">
-          From an engineering perspective, rotational kinetic energy is: E_rotational = 0.5 × I × ω², where I is moment of inertia and ω is angular velocity. For a bike wheel, the moment of inertia depends on the mass distribution - heavier rims require more energy to spin up to speed.
-        </p>
-        <p className="mb-4">
-          In Zwift, this effect is minimal because the game focuses on steady-state climbing rather than accelerations. However, understanding rotational inertia helps explain why maintaining steady power is more efficient than variable power - every acceleration requires extra energy to overcome rotational inertia, which is then lost when you decelerate.
-        </p>
-        <p className="mb-4">
-          This is also the mechanical argument for steady power over variable power at the same average. Energy spent accelerating a mass is not returned when you slow down again, so every surge and fade costs something that a constant effort does not. It is a small effect next to the physiological cost of going anaerobic early, but it points the same way, which is why pacing discipline matters so much on a long climb.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Efficiency and Losses: Where Your Energy Actually Goes</h2>
-        <p className="mb-4">
-          Understanding where energy is lost in the cycling system helps optimize performance. In mechanical engineering terms, efficiency is: Efficiency = Useful Output / Total Input. In cycling, useful output is forward motion, and total input is metabolic energy.
-        </p>
-        <p className="mb-4">
-          The efficiency chain looks like this: Muscular efficiency (20-25%) → Drivetrain efficiency (97-98%) → Rolling resistance (98-99%) → Aerodynamic efficiency (varies with speed). The overall efficiency from food to forward motion is roughly 20-25%, meaning 75-80% of energy is lost as heat.
-        </p>
-        <p className="mb-4">
-          In Zwift, these efficiency losses are simulated but simplified. The game accounts for drivetrain losses and rolling resistance but uses simplified models. This is why Zwift power might feel different from outdoor power - the efficiency models are different.
-        </p>
-        <p className="mb-4">
-          The engineering insight is that small improvements in efficiency are worth having because they cost nothing to keep. Improving drivetrain efficiency from 97% to 98% means 1% more of your power reaches the road: at 250 watts that is 2.5 watts, held for every second of the climb, for the price of cleaning and lubricating a chain. It is not a transformation, but it is free, and a neglected drivetrain can give away several times that.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">The Thermodynamics of the Human Engine</h2>
-        <p className="mb-4">
-          From a mechanical engineering perspective, your body is a heat engine - it converts chemical energy (food) into mechanical work (pedaling) and heat. The efficiency of this conversion is roughly 20-25%, meaning 75-80% of energy is released as heat that must be dissipated.
-        </p>
-        <p className="mb-4">
-          This is why cooling is critical in indoor cycling. In Zwift, you're not moving through air, so convective cooling is minimal. Without fans or air conditioning, your body temperature rises, leading to decreased performance. From a thermodynamics perspective, your body is a heat engine operating in a hot environment, which reduces efficiency.
-        </p>
-        <p className="mb-4">
-          The engineering solution is to maximize heat dissipation. Fans provide convective cooling, moving air across your skin to carry away heat. Proper hydration helps with evaporative cooling through sweating. These aren't just comfort measures - they're essential for maintaining performance during long Zwift sessions.
-        </p>
-        <p className="mb-4">
-          This thermodynamic perspective explains why many riders find indoor efforts harder than outdoor efforts at the same power. It's not just psychological - it's physiological. Your body is working harder to dissipate heat, which reduces the energy available for pedaling. This is why proper cooling setup is as important as proper training setup for Zwift performance.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Conclusion: Engineering Your Zwift Performance</h2>
-        <p className="mb-4">
-          Understanding the mechanical engineering principles behind Zwift performance isn't just academic - it's practical. Understanding why polynomial regression works helps you understand why power improvements have diminishing returns. Understanding equipment weight physics helps you optimize your setup. Understanding efficiency losses helps you focus on what matters most.
-        </p>
-        <p className="mb-4">
-          The key insight is that Zwift, while simplified, still simulates real physics. The relationships between power, weight, speed, and time follow the same mechanical principles as outdoor cycling. That is why a curve fitted to real finishing times generalises at all: the underlying relationship it is describing is a physical one, even though the physics is simulated.
-        </p>
-        <p className="mb-4">
-          Use these engineering principles to inform your training and strategy. Focus on the variables that matter most: power-to-weight ratio, pacing discipline, and equipment optimization. Understand that small improvements compound - a 1% improvement in multiple areas creates a significant overall improvement. And remember that Zwift is still cycling, just in a virtual environment - the same mechanical principles apply.
-        </p>
-      </div>
-
-      <div className="border-t pt-6 mt-8">
-        <h3 className="text-xl font-bold mb-4">Related Resources</h3>
-        <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
           <li>
-            <Link to="/blog/the-calculus-of-the-pain-cave-a-mechanical-autopsy-of-speed" className="text-zwift-orange hover:underline">
-              The Calculus of the Pain Cave: A Mechanical Autopsy of Speed
-            </Link>
+            <strong>Pedal and crank-based meters</strong> measure before the chain. They see the full output of
+            your legs.
           </li>
           <li>
-            <Link to="/blog/regression-analysis-methodology" className="text-zwift-orange hover:underline">
-              ZwiftPower Regression Analysis: How We Built Accurate Time Predictors
-            </Link>
+            <strong>Hub-based meters</strong> measure after the chain, so drivetrain losses have already been
+            subtracted.
           </li>
           <li>
-            <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">
-              Alpe du Zwift Calculator - See the physics in action
-            </Link>
+            <strong>Smart trainers</strong> measure after the chain too, and usually infer power from resistance
+            and speed rather than measuring torque directly.
+          </li>
+        </ul>
+        <p className="mb-4">
+          Chain efficiency is commonly quoted between 95 and 98% depending on cleanliness, lubrication and how
+          cross-chained you are. So a crank meter reading 250 W and a trainer reading 242 W are not in conflict.
+          They are both right, about different things, and the 8 W gap is the chain.
+        </p>
+        <p className="mb-4">
+          Add each device's own accuracy specification, frequently plus or minus 1 to 2%, and two devices can
+          legitimately differ by 4 to 5% while both remain within tolerance. If yours differ by that much, nothing
+          is broken.
+        </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="text-sm">
+            <strong>What follows from this:</strong> pick one device and use it for everything. Consistency matters
+            far more than accuracy for tracking your own progress, because a meter reading 3% high still shows a
+            genuine improvement as a genuine improvement. Switching devices mid-season is what makes a training
+            history uninterpretable.
+          </p>
+        </div>
+      </div>
+
+      {/* Drift */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Drift, and why calibration is not optional on some trainers</h2>
+        <p className="mb-4">
+          A measurement can be accurate on day one and wrong three months later. Two mechanisms cause this and both
+          are mechanical rather than electronic.
+        </p>
+        <p className="mb-4">
+          <strong>Temperature.</strong> A trainer that has been running for twenty minutes is warmer than one that
+          has just been switched on, and warmer components deform slightly differently under the same load. This is
+          why a spindown calibration is supposed to happen after a warm-up rather than before one. Calibrating cold
+          and then riding warm calibrates for a machine that no longer exists.
+        </p>
+        <p className="mb-4">
+          <strong>Belt tension and tyre pressure.</strong> On wheel-on trainers, the force pressing the roller
+          against the tyre determines how much of your effort reaches the flywheel. Tyre pressure drops over a
+          week, the contact changes, and the reported power drifts with it. This is the main reason wheel-on units
+          are less repeatable than direct-drive ones, and it is entirely fixable by checking pressure before every
+          ride.
+        </p>
+        <p className="mb-4">
+          Several modern direct-drive trainers need no user calibration at all and say so. If yours does, follow
+          the manufacturer's procedure and do it after ten minutes of riding, not before.
+        </p>
+        <p className="mb-4">
+          Practical guidance for the setup around all this is in{" "}
+          <Link to="/blog/zwift-setup-guide" className="text-zwift-orange hover:underline">
+            the setup guide
+          </Link>
+          .
+        </p>
+      </div>
+
+      {/* What Zwift does with it */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What Zwift does with the number</h2>
+        <p className="mb-4">
+          Once the figure arrives, Zwift runs its own physics. It takes your power, your profile weight and height,
+          the in-game weight and drag of your equipment, the gradient and surface you are on, and any draft you are
+          receiving, and returns a speed.
+        </p>
+        <p className="mb-4">
+          Two things about that are worth knowing. The first is that your profile weight is an input to the physics
+          rather than a display value, so a wrong number there changes your speed, not just your statistics. The
+          second is that Zwift has never published the exact values it uses for drag area or rolling resistance,
+          which is precisely why the calculators on this site fit curves to recorded finishing times rather than
+          modelling the game from first principles. You cannot model a system whose constants are unpublished, but
+          you can fit a curve to what it produces.
+        </p>
+        <p className="mb-4">
+          The consequence for the equipment question is covered in{" "}
+          <Link to="/blog/zwift-equipment-optimization-aerodynamics" className="text-zwift-orange hover:underline">
+            the equipment article
+          </Link>
+          : in Zwift, a bike is a small set of numbers rather than a machine.
+        </p>
+      </div>
+
+      {/* Why indoor differs */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Why the same legs make fewer watts indoors</h2>
+        <p className="mb-4">
+          The chain above explains part of a common complaint, and it is worth separating the parts that are
+          measurement from the parts that are real.
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>Measurement, not fitness:</strong> if you compare a crank meter outdoors with a trainer
+            indoors, several percent of the difference is simply the drivetrain sitting between them.
+          </li>
+          <li>
+            <strong>Real, and thermal:</strong> without a 30 km/h headwind your core temperature climbs, and heart
+            rate rises for the same power. This one is genuine and it is the largest effect for most riders.
+          </li>
+          <li>
+            <strong>Real, and mechanical:</strong> a bike locked to a frame cannot move underneath you, so a sprint
+            recruits less of your upper body and core. This matters for short efforts far more than for an hour.
+          </li>
+          <li>
+            <strong>Real, and continuity:</strong> outdoors you coast. Indoors you do not, so the same average
+            power represents more total work.
+          </li>
+        </ul>
+        <p className="mb-4">
+          The fix for the largest of those is a bigger fan, which resolves more indoor power complaints than any
+          other single change. The rest is covered in{" "}
+          <Link to="/blog/zwift-vs-outdoor-cycling" className="text-zwift-orange hover:underline">
+            the comparison of indoor and outdoor riding
+          </Link>
+          .
+        </p>
+      </div>
+
+      {/* What this means for the site */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What this means for every number on this site</h2>
+        <p className="mb-4">
+          Everything the calculators here produce sits downstream of a measurement made by a device with a
+          tolerance. The curve behind the Alpe estimate was fitted to times posted by riders whose own trainers had
+          their own errors, and it will be applied to a power figure supplied by yours.
+        </p>
+        <p className="mb-4">
+          That is not a reason to distrust the output. It is a reason to read it at the precision it deserves. A 2%
+          trainer tolerance on a 3.33 W/kg rider is roughly the same size as the model's own error band, which is
+          why{" "}
+          <Link to="/blog/the-data-behind-zwift-climbing" className="text-zwift-orange hover:underline">
+            the data article
+          </Link>{" "}
+          argues that knowing your W/kg to better than about a tenth is not realistically available to you.
+        </p>
+        <p className="mb-4">
+          Use the estimate as a target to pace against and a way to compare two scenarios, which is what it is
+          genuinely good for. Do not read the seconds.
+        </p>
+      </div>
+
+      {/* Summary */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">The short version</h2>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>Power is torque times angular velocity, so 250 W at 60 rpm is 50% more pedal force than at 90 rpm.</li>
+          <li>
+            Crank meters measure before the chain and trainers after it, so a 2 to 5% disagreement is the drivetrain
+            rather than a fault.
+          </li>
+          <li>Pick one measuring device and keep it. Consistency beats accuracy for tracking progress.</li>
+          <li>Calibrate after a warm-up, not before, and check tyre pressure on wheel-on trainers.</li>
+          <li>
+            Zwift treats the number it receives as truth, and every estimate on this site inherits whatever error
+            came with it.
           </li>
         </ul>
       </div>
@@ -180,24 +332,21 @@ const MechanicalEngineeringZwift = () => {
 
   return (
     <BlogPost
-      title="The Mechanical Engineering of Zwift Performance: Why Physics Matters in Virtual Cycling"
-      date="20-12-2025"
+      content={content}
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",
           path: "/alpeduzwiftcalculator",
-          description: "See the physics-based calculations in action"
+          description: "The fitted curve this whole chain eventually feeds",
         },
         {
-          name: "Ven Top Calculator",
-          path: "/ventop-calculator",
-          description: "Experience the engineering behind accurate predictions"
-        }
+          name: "FTP & Training Zones",
+          path: "/zwift-ftp-calculator",
+          description: "Turn a test on your own device into zones you can use",
+        },
       ]}
-      content={content}
     />
   );
 };
 
 export default MechanicalEngineeringZwift;
-

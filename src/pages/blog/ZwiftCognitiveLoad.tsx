@@ -4,41 +4,6 @@ import { Brain, AlertCircle, Target, BarChart3 } from "lucide-react";
 
 const ZwiftCognitiveLoad = () => {
 
-  const relatedArticles = [
-    {
-      title: "Zwift Group Ride Dynamics: Social Psychology Meets Performance",
-      excerpt: "Explore the social psychology behind Zwift group rides.",
-      date: "31-12-2025",
-      readTime: "21 min",
-      slug: "/blog/zwift-group-ride-dynamics",
-      category: "Psychology"
-    },
-    {
-      title: "Zwift Route Selection Psychology: How Your Choices Affect Training Outcomes",
-      excerpt: "Explore the psychology behind Zwift route selection.",
-      date: "31-12-2025",
-      readTime: "19 min",
-      slug: "/blog/zwift-route-selection-psychology",
-      category: "Psychology"
-    },
-    {
-      title: "Zwift Racing For Beginners",
-      excerpt: "Complete guide to getting started with Zwift racing.",
-      date: "Recent",
-      readTime: "12 min",
-      slug: "/blog/zwift-racing-for-beginners",
-      category: "Racing"
-    },
-    {
-      title: "Zwift Drafting Physics & Aerodynamics: The Science Behind Virtual Pelotons",
-      excerpt: "Deep dive into Zwift's drafting mechanics.",
-      date: "31-12-2025",
-      readTime: "22 min",
-      slug: "/blog/zwift-drafting-physics-aerodynamics",
-      category: "Physics"
-    }
-  ];
-
   const content = (
     <div className="space-y-6">
       <div>
@@ -451,9 +416,7 @@ const ZwiftCognitiveLoad = () => {
 
   return (
     <BlogPost
-      date="31-12-2025"
       content={content}
-      relatedArticles={relatedArticles}
     />
   );
 };

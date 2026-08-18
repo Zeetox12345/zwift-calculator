@@ -1,201 +1,280 @@
-import BlogPost from "@/components/BlogPost";
 import { Link } from "react-router-dom";
+
+import BlogPost from "@/components/BlogPost";
 
 const RegressionAnalysisMethodology = () => {
   const content = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* What this is */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Introduction: The Science Behind Accurate Predictions</h2>
-        <p className="mb-4">
-          Building accurate time prediction calculators for Zwift climbs required more than just collecting data - it required understanding which statistical methods would work best, why certain approaches failed, and how to validate that our models would work for riders we hadn't yet analyzed. This article takes you behind the scenes of our methodology, explaining the decisions we made, the challenges we faced, and why we're confident our calculators provide accurate predictions.
+        <p className="mb-4 text-lg leading-relaxed">
+          Every number this site produces for Alpe du Zwift or Ven-Top comes out of one of two fitted equations.
+          This is how those equations were made, and where they should not be trusted.
         </p>
         <p className="mb-4">
-          This isn't just a technical deep-dive - it's a transparent look at how we built something useful. We believe in showing our work, explaining our methods, and being honest about limitations. If you understand how our calculators work, you can use them more effectively and understand when to trust their predictions versus when to account for other factors.
+          I should set expectations first. This is one person with a spreadsheet, a statistics course and a lot of
+          hours on Zwift. It is not a laboratory, it is not peer-reviewed, and the dataset is small enough that I
+          will keep saying so. What I can offer is that every step is described plainly enough for you to disagree
+          with it, and both equations are published in full so you can check any output by hand.
+        </p>
+        <p className="mb-4">
+          If you want the results rather than the method, they are in{" "}
+          <Link to="/blog/the-data-behind-zwift-climbing" className="text-zwift-orange hover:underline">
+            the article on what the data actually shows
+          </Link>
+          . This one is about how the curves were built.
         </p>
       </div>
 
+      {/* The data */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Data Collection: Building a Reliable Dataset</h2>
+        <h2 className="text-2xl font-bold mb-4">The data, and what a single record contains</h2>
         <p className="mb-4">
-          The foundation of any statistical model is the quality of its data. For our calculators, we needed verified ZwiftPower performances with accurate power and time data. We collected data from hundreds of verified rides across a wide range of power outputs, from recreational riders (2.5-3.0 W/kg) to elite Zwift racers (5.0+ W/kg).
+          The dataset is roughly 500 Alpe du Zwift results and roughly 300 Ven-Top results, taken from ZwiftPower.
+          Each record is exactly two things: a power-to-weight figure, and a finishing time for the timed segment.
         </p>
         <p className="mb-4">
-          We focused on verified rides to ensure data quality. ZwiftPower verification requires that rides meet certain criteria, including minimum duration and power consistency checks. This filtering helped ensure that our dataset contained realistic performances rather than glitched rides or data errors.
+          That is worth stating precisely, because it defines what the whole site can honestly claim. There are no
+          timestamps, so nothing here can say anything about time of day. There are no power traces, so nothing here
+          can describe how riders distribute their effort within a climb. There are no repeat attempts linked to
+          individuals, so nothing here can describe improvement over time. Roughly 800 pairs of numbers is the
+          entire evidence base, and any claim on this site that needs more than that is either labelled as reasoning
+          and personal experience or should not be there at all.
         </p>
         <p className="mb-4">
-          We also ensured our dataset covered the full range of performance levels. If we only analyzed elite performances, our model would be inaccurate for recreational riders. If we only analyzed recreational performances, it would be inaccurate for elite riders. By including the full spectrum, we built a model that works across ability levels.
+          I used verified results specifically. ZwiftPower's verification requires a rider to have a recognised
+          power source and applies consistency checks, which filters out a good deal of the obviously impossible.
+          It does not catch everything. A miscalibrated trainer reporting 5% high produces a perfectly plausible
+          record that is simply wrong, and nothing in this method can detect that.
         </p>
         <p className="mb-4">
-          The final dataset included over 500 verified Alpe du Zwift performances and over 300 verified Ven Top performances. This sample size is sufficient for building reliable regression models while remaining manageable for analysis. Larger datasets would provide marginal improvements in accuracy but would require significantly more processing time.
+          I deliberately kept the full spread of abilities rather than concentrating on fast riders. A curve fitted
+          only to 4.5 W/kg and above would be useless to most of the people who visit this site, and the
+          interesting part of the shape happens lower down.
         </p>
       </div>
 
+      {/* Model selection */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Why Polynomial Regression? Testing Different Models</h2>
+        <h2 className="text-2xl font-bold mb-4">Why not a straight line</h2>
         <p className="mb-4">
-          Our first attempts used simple linear regression: Time = a × (W/kg) + b. This seemed logical - more power should mean proportionally faster times. But when we plotted the data, it was clear that the relationship wasn't linear. Riders with 4.0 W/kg weren't twice as fast as riders with 2.0 W/kg.
+          The first thing anyone tries is a straight line: time equals some constant times W/kg, plus another
+          constant. It does not work, and the reason is worth understanding because it is a property of the problem
+          rather than of the data.
         </p>
         <p className="mb-4">
-          We tested several model types: linear, polynomial (degree 2 and 3), logarithmic, and exponential. For each model, we calculated R² (coefficient of determination) to measure how well the model fit the data. We also used cross-validation, splitting our data into training and testing sets to ensure the model would work on new data.
+          Time is the inverse of speed. If you double your speed you halve your time, so equal increases in power
+          do not buy equal savings in time. Going from 2.5 to 3.0 W/kg on the Alpe saves far more than going from
+          4.5 to 5.0 does, even though both are a 0.5 W/kg improvement. A straight line cannot represent that; it
+          insists every 0.5 W/kg is worth the same number of minutes, which contradicts both the data and the
+          physics.
         </p>
         <p className="mb-4">
-          The second-degree polynomial model performed best, with R² values above 0.95 for both Alpe du Zwift and Ven Top. This means the model explains over 95% of the variance in climbing times, which is excellent for a real-world dataset. The linear model, by contrast, had R² values around 0.85, meaning it explained only 85% of variance.
-        </p>
-        <p className="mb-4">
-          Why did polynomial regression work better? Because the relationship between power and time is inherently non-linear. As power increases, speed increases, but aerodynamic drag and rolling resistance increase with speed. This creates a diminishing returns effect that linear models can't capture. Polynomial models capture this non-linearity through their quadratic terms.
+          So the model has to bend. The question is what shape to use, and there is more than one defensible answer.
         </p>
       </div>
 
+      {/* The two curves */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Model Validation: Ensuring Accuracy on New Data</h2>
+        <h2 className="text-2xl font-bold mb-4">Two climbs, two different shapes</h2>
         <p className="mb-4">
-          Building a model that fits your data well is one thing. Building a model that works on new data is another. This is the difference between overfitting (memorizing the training data) and generalizing (learning patterns that apply broadly). We used several techniques to ensure our models would generalize.
+          The two climbs ended up with different functional forms, which was not the original plan.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6">Alpe du Zwift: a quadratic</h3>
+        <div className="my-4 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="font-mono text-sm">
+            time in seconds = 148.60 &times; (W/kg)&sup2; &minus; 1954.08 &times; (W/kg) + 8329.87
+          </p>
+        </div>
+        <p className="mb-4">
+          A second-order polynomial fitted the Alpe data well across the range where the records actually sit,
+          roughly 2.5 to 5.0 W/kg. The quadratic term is what produces the flattening: each additional 0.1 W/kg
+          saves less time than the one before it.
         </p>
         <p className="mb-4">
-          First, we used cross-validation. We split our data into multiple folds, trained the model on some folds, and tested it on others. This process was repeated multiple times with different splits. If the model performed consistently across different data splits, we could be confident it would work on new data.
+          It also has a known and serious failure mode, which I would rather point out myself. A parabola turns
+          around. This one turns at 1954.08 divided by twice 148.60, which is 6.57 W/kg, and beyond that point the
+          equation claims a stronger rider climbs slower. That is obviously false. It is not a flaw in the fitting,
+          it is what happens when a shape is evaluated far outside the data that produced it.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6">Ven-Top: an inverse</h3>
+        <div className="my-4 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="font-mono text-sm">time in minutes = 3.205 + 253.38 &divide; (W/kg)</p>
+        </div>
+        <p className="mb-4">
+          Ven-Top is longer and slightly shallower, and an inverse relationship described it better than a
+          polynomial did. That form is also closer to what the physics suggests, since on a sustained climb vertical
+          speed is roughly proportional to power per kilogram, and time is distance over speed.
         </p>
         <p className="mb-4">
-          Second, we tested the model on a holdout set - data we set aside and didn't use for training. This final test showed how the model would perform on completely new data. Our models showed mean absolute errors of less than 3% on the holdout set, meaning predictions were within 3% of actual times on average.
+          It fails differently and more quietly. An inverse never turns around, so it never produces obvious
+          nonsense. Instead it tends towards its constant, so the equation implies a rider with infinite power would
+          still need 3.2 minutes for 20.9 km and 1,534 m. Long before that it has stopped being credible.
         </p>
         <p className="mb-4">
-          Third, we compared our predictions to known performance benchmarks. For example, we know that approximately 3.2 W/kg typically yields a sub-60-minute Alpe du Zwift time. Our model predicts 59:58 for 3.2 W/kg, which matches real-world observations. This external validation gave us confidence that our model captured real patterns, not just noise in our dataset.
+          Both failure modes, and the ranges where each curve is worth believing, are worked through in detail in{" "}
+          <Link to="/blog/the-data-behind-zwift-climbing" className="text-zwift-orange hover:underline">
+            the data article
+          </Link>
+          .
         </p>
       </div>
 
+      {/* Validation */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Different Models for Different Climbs</h2>
+        <h2 className="text-2xl font-bold mb-4">Checking the fit against data it had not seen</h2>
         <p className="mb-4">
-          One key insight from our analysis is that Alpe du Zwift and Ven Top require different models. While both use polynomial regression, the coefficients are different because the climbs have different characteristics. Alpe du Zwift is shorter and steeper, while Ven Top is longer and slightly gentler.
+          A curve fitted to a set of points will always describe those points reasonably. The question is whether it
+          describes points it was never shown, so part of the data was held back from the fitting and used only to
+          test the result afterwards.
         </p>
         <p className="mb-4">
-          For Alpe du Zwift, we use: Time (seconds) = 148.60 × (W/kg)² - 1954.08 × (W/kg) + 8329.87. This model shows a stronger quadratic effect, meaning power improvements have more dramatic effects at lower power levels and diminishing returns at higher power levels.
+          On that held-out data the mean absolute error came out under 3% within the fitted range. That is the
+          number quoted everywhere on this site, and it is worth being concrete about what it means rather than
+          letting it sound better than it is.
         </p>
+        <div className="my-6 p-4 rounded-lg bg-muted/50 border border-border">
+          <p className="text-sm mb-2">
+            At 3.33 W/kg the Alpe estimate is <strong>57:51</strong>.
+          </p>
+          <p className="text-sm mb-2">
+            A 3% band around that runs from <strong>56:06 to 59:35</strong>.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Three and a half minutes wide, which is the difference between beating the hour and missing it. The
+            model is a guide to what is likely, not a promise.
+          </p>
+        </div>
         <p className="mb-4">
-          For Ven Top, we use: Time (minutes) = 3.21 + (253.38 / W/kg). This is an inverse relationship rather than a polynomial, which better captures Ven Top's characteristics. The longer duration of Ven Top means that the relationship between power and time is different - small power differences have larger time impacts due to the extended duration.
-        </p>
-        <p className="mb-4">
-          Why different models? Because the physics are different. Alpe du Zwift's steeper gradient means that power-to-weight ratio matters more, and the relationship is more non-linear. Ven Top's longer duration means that time differences compound, making the relationship more inverse. Using the same model for both climbs would reduce accuracy for both.
+          There is a second, cruder check that I find more convincing than the first. Roughly 3.2 W/kg is widely
+          treated among Zwift riders as the sub-hour benchmark for the Alpe, and that consensus formed independently
+          of anything on this site. The equation returns 59:58 at 3.2 W/kg. Agreeing with a number the community
+          arrived at separately is weak evidence, but it is evidence, and it would have been a strong warning sign
+          if the fit had disagreed.
         </p>
       </div>
 
+      {/* Outliers */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Handling Outliers: When Data Doesn't Fit the Pattern</h2>
+        <h2 className="text-2xl font-bold mb-4">What I did about outliers</h2>
         <p className="mb-4">
-          Not every ride fits the pattern. Some riders perform better than predicted due to exceptional pacing, equipment, or conditions. Others perform worse due to poor pacing, equipment issues, or fatigue. These outliers can skew regression models if not handled properly.
+          Some records sit a long way off the trend. The temptation is to delete them until the curve looks tidy,
+          which is also the fastest way to produce a model that describes your preferences rather than the sport.
         </p>
         <p className="mb-4">
-          We used several techniques to handle outliers. First, we used robust regression methods that are less sensitive to outliers than standard least-squares regression. Second, we manually reviewed outliers to understand why they didn't fit the pattern - were they data errors, exceptional performances, or something else?
+          The distinction I worked to was between noise and signal. A record that is physically impossible, or that
+          shows a finishing time inconsistent with the segment itself, is an error and was removed. A record that is
+          merely surprising, from a rider who paced it unusually well or unusually badly, is real variation and was
+          kept. Most of the scatter in these plots is genuine: two riders at the same W/kg do finish minutes apart,
+          for reasons the model cannot see.
         </p>
         <p className="mb-4">
-          Some outliers were data errors - rides with impossible power outputs or times that didn't match the power data. These were removed from the dataset. Other outliers were legitimate but exceptional performances - riders who performed significantly better or worse than their power suggested. These were kept in the dataset but given less weight in the regression model.
-        </p>
-        <p className="mb-4">
-          The goal wasn't to remove all variation - variation is natural and expected. The goal was to remove noise (data errors) while keeping signal (legitimate variation). Our final models include some outliers because they represent real variation in performance, but they don't unduly influence the model coefficients.
+          Keeping legitimate outliers is part of why the error band is as wide as it is. A tighter band would look
+          better and mean less.
         </p>
       </div>
 
+      {/* Limits */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Limitations and Uncertainty: Being Honest About Accuracy</h2>
+        <h2 className="text-2xl font-bold mb-4">What the models assume, and cannot know</h2>
         <p className="mb-4">
-          No model is perfect, and ours is no exception. Our calculators provide estimates accurate to within approximately ±2-3% for most riders, but several factors can affect accuracy. Understanding these limitations helps you use the calculators more effectively.
+          Every estimate on this site carries these assumptions, whether or not the page says so.
         </p>
-        <p className="mb-4">
-          First, our models assume consistent power output. If you surge on steep sections and recover on shallow sections, your actual time might differ from the prediction. The model assumes steady power, so if your power is variable, the prediction will be less accurate.
-        </p>
-        <p className="mb-4">
-          Second, our models assume standard equipment. If you're using an extremely heavy or light bike setup, the prediction might be less accurate. The models assume average equipment weight, so extreme setups will produce different results.
-        </p>
-        <p className="mb-4">
-          Third, our models assume solo efforts. If you're drafting or riding in a group, the prediction will be less accurate. Drafting provides a small benefit even on steep climbs, which our models don't account for.
-        </p>
-        <p className="mb-4">
-          Fourth, our models can't account for individual variation. Some riders are more efficient than others due to biomechanics, technique, or physiology. Our models predict average performance, so individual results will vary.
-        </p>
-        <p className="mb-4">
-          These limitations don't make the calculators useless - they make them tools to be used intelligently. Use the predictions as targets, but understand that actual performance will vary based on pacing, equipment, conditions, and individual factors. The calculators are most accurate when used as intended: for solo efforts with consistent power and standard equipment.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Continuous Improvement: Updating Models with New Data</h2>
-        <p className="mb-4">
-          Statistical models aren't static - they should improve as new data becomes available. As we collect more ZwiftPower performances, we can refine our models, improve accuracy, and expand to cover more scenarios. This process of continuous improvement ensures our calculators remain accurate as Zwift evolves and our understanding improves.
-        </p>
-        <p className="mb-4">
-          We periodically re-run our analysis with updated datasets, checking whether model coefficients have changed. If Zwift updates its physics engine or if rider behavior changes, our models might need adjustment. This ongoing validation ensures our calculators remain accurate over time.
-        </p>
-        <p className="mb-4">
-          We also monitor feedback from users. If riders consistently report that predictions are off in certain scenarios, we investigate. Are there systematic errors in our model? Are there factors we're not accounting for? This feedback loop helps us improve accuracy and expand functionality.
-        </p>
-        <p className="mb-4">
-          The goal isn't perfection - it's continuous improvement. Every new data point, every user feedback, every validation test makes our models slightly better. This iterative process is how good models become great models, and how useful tools become indispensable tools.
-        </p>
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Conclusion: Transparent Methodology for Trustworthy Predictions</h2>
-        <p className="mb-4">
-          Building accurate time prediction calculators required careful data collection, thoughtful model selection, rigorous validation, and honest acknowledgment of limitations. We've shared our methodology not to impress with technical details, but to build trust through transparency.
-        </p>
-        <p className="mb-4">
-          When you use our calculators, you're not just getting numbers - you're getting predictions based on hundreds of verified performances, analyzed using sound statistical methods, and validated on data we didn't use for training. This process ensures accuracy, but it also ensures that you understand what the predictions mean and when to trust them.
-        </p>
-        <p className="mb-4">
-          Use our calculators as tools to inform your training and strategy. Use them to set realistic goals, plan pacing strategies, and track progress. But also understand their limitations. They predict average performance for steady efforts with standard equipment. Your actual performance will vary based on many factors, and that's okay - variation is normal and expected.
-        </p>
-        <p className="mb-4">
-          Most importantly, remember that these calculators are tools, not oracles. They provide estimates based on data and statistics, but they can't account for everything. Use them wisely, understand their limitations, and combine them with your own experience and judgment. That's how you'll get the most value from data-driven performance prediction.
-        </p>
-      </div>
-
-      <div className="border-t pt-6 mt-8">
-        <h3 className="text-xl font-bold mb-4">Related Resources</h3>
-        <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
           <li>
-            <Link to="/blog/the-mechanical-engineering-of-zwift-performance" className="text-zwift-orange hover:underline">
-              The Mechanical Engineering of Zwift Performance: Why Physics Matters
-            </Link>
+            <strong>Steady power.</strong> The riders who post verified times mostly ride near-constant efforts, so
+            that is what the curve describes. Ride the Alpe in bursts and you will be slower than the estimate.
           </li>
           <li>
-            <Link to="/blog/the-data-behind-zwift-climbing" className="text-zwift-orange hover:underline">
-              The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show
-            </Link>
+            <strong>Ordinary equipment.</strong> Frames and wheels carry different in-game weight and drag. The fit
+            reflects whatever the sampled riders were on, which is presumably sensible climbing setups.
           </li>
           <li>
-            <Link to="/alpeduzwiftcalculator" className="text-zwift-orange hover:underline">
-              Try the Alpe du Zwift Calculator
-            </Link>
+            <strong>Solo effort.</strong> Drafting is worth little on a gradient this steep, but it is not zero, and
+            the model does not represent it.
           </li>
           <li>
-            <Link to="/ventop-calculator" className="text-zwift-orange hover:underline">
-              Try the Ven Top Calculator
-            </Link>
+            <strong>Nothing about you specifically.</strong> The curve returns one number per W/kg. It has no view
+            on your pacing, your cooling, your trainer's calibration or how the day is going.
+          </li>
+          <li>
+            <strong>A snapshot of the game.</strong> If Zwift changes its physics, the fit describes the old
+            version until the data is rebuilt.
           </li>
         </ul>
+      </div>
+
+      {/* What would make it better */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">What would actually improve this</h2>
+        <p className="mb-4">
+          In descending order of how much difference it would make:
+        </p>
+        <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+          <li>
+            <strong>More records, especially at the extremes.</strong> The thin ends of the range are where both
+            curves are least reliable, and that is a sample size problem rather than a modelling one.
+          </li>
+          <li>
+            <strong>Rider mass as a separate variable.</strong> At the same W/kg a heavier rider pushes slightly
+            more air. On an 8.5% gradient that is minor, but it is not nothing, and a two-variable fit could
+            capture it.
+          </li>
+          <li>
+            <strong>Split times.</strong> These would allow something to be said about pacing, which is currently
+            the largest unexplained source of variation and about which this site can say nothing quantitative.
+          </li>
+          <li>
+            <strong>A published uncertainty band on the calculator output</strong> rather than a single number.
+            This is the change I most want to make, because a single figure invites more confidence than the data
+            supports.
+          </li>
+        </ul>
+      </div>
+
+      {/* Check it yourself */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Check it yourself</h2>
+        <p className="mb-4">
+          Both equations are above in full. A 75 kg rider at 250 W is at 3.33 W/kg: 148.60 &times; 11.09 is about
+          1,648; 1954.08 &times; 3.33 is about 6,507; so 1,648 &minus; 6,507 + 8,330 is about 3,471 seconds, or
+          57:51. That is a phone calculator's worth of arithmetic, and it is the whole model.
+        </p>
+        <p className="mb-4">
+          If your own verified time disagrees with the estimate by more than the error band, I would genuinely like
+          to know, because reader reports are the main way the fits get better.{" "}
+          <Link to="/contact" className="text-zwift-orange hover:underline">
+            Send the numbers over
+          </Link>
+          , and if a correction is needed it gets made and logged under the{" "}
+          <Link to="/editorial-policy" className="text-zwift-orange hover:underline">
+            editorial policy
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );
 
   return (
     <BlogPost
-      title="ZwiftPower Regression Analysis: How We Built Accurate Time Predictors"
-      date="20-12-2025"
+      content={content}
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",
           path: "/alpeduzwiftcalculator",
-          description: "See the regression analysis in action"
+          description: "The quadratic fit described above, running in your browser",
         },
         {
-          name: "Ven Top Calculator",
+          name: "Ven-Top Calculator",
           path: "/ventop-calculator",
-          description: "Experience the methodology behind accurate predictions"
-        }
+          description: "The inverse fit, for Zwift's version of Mont Ventoux",
+        },
       ]}
-      content={content}
     />
   );
 };
 
 export default RegressionAnalysisMethodology;
-

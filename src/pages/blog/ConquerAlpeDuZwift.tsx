@@ -424,8 +424,6 @@ const ConquerAlpeDuZwift = () => {
 
   return (
     <BlogPost
-      title="Conquer the Alpe du Zwift: Tips for a Faster Climb"
-      date="12-11-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

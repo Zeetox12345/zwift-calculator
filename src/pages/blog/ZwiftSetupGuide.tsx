@@ -235,7 +235,7 @@ const ZwiftSetupGuide = () => {
       <div>
         <h2 className="text-2xl font-bold mb-4">5. The Environment - Your Pain Cave Setup</h2>
         <p className="mb-4">
-          Now that hardware is sorted, let's talk environment. Riding indoors can generate a <em>lot</em> of heat and sweat. So two absolutely crucial (yet often overlooked) items are: <strong>A Fan (or two)</strong> - Indoor cooling is a game changer. Unlike riding outside, indoors you have no wind to whisk away heat, so you overheat quickly which saps performance. A strong fan is your best friend. Many Zwifters use high-powered blower fans (like Lasko fans) and position them in front. ZwiftInsider humorously asks "How much fan do you need?" - basically, <em>a lot</em>, because cooling makes workouts way more comfortable{" "}
+          With the hardware settled, the environment is next, and it matters more than most of the hardware does. Riding indoors generates a <em>lot</em> of heat and sweat, so two frequently overlooked items are: <strong>A Fan (or two)</strong> - cooling does more for your indoor power than any component you can buy. Unlike riding outside, indoors you have no wind to whisk away heat, so you overheat quickly which saps performance. A strong fan is your best friend. Many Zwifters use high-powered blower fans (like Lasko fans) and position them in front. ZwiftInsider humorously asks "How much fan do you need?" - basically, <em>a lot</em>, because cooling makes workouts way more comfortable{" "}
           <a href="https://zwiftinsider.com/getting-started-smart-trainer" target="_blank" rel="noopener noreferrer" className="text-zwift-orange hover:underline">
             <em>[5]</em>
           </a>
@@ -355,8 +355,6 @@ const ZwiftSetupGuide = () => {
 
   return (
     <BlogPost
-      title="Zwift Setup Guide: Essential Gear for Your Ultimate Indoor Pain Cave"
-      date="12-11-2025"
       content={content}
     />
   );

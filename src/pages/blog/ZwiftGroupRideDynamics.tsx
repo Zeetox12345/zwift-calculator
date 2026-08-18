@@ -4,41 +4,6 @@ import { Users, AlertCircle, Target } from "lucide-react";
 
 const ZwiftGroupRideDynamics = () => {
 
-  const relatedArticles = [
-    {
-      title: "Zwift Racing For Beginners",
-      excerpt: "Complete guide to getting started with Zwift racing.",
-      date: "Recent",
-      readTime: "12 min",
-      slug: "/blog/zwift-racing-for-beginners",
-      category: "Racing"
-    },
-    {
-      title: "Zwift Route Selection Psychology: How Your Choices Affect Training Outcomes",
-      excerpt: "Explore the psychology behind Zwift route selection.",
-      date: "31-12-2025",
-      readTime: "19 min",
-      slug: "/blog/zwift-route-selection-psychology",
-      category: "Psychology"
-    },
-    {
-      title: "Zwift Drafting Physics & Aerodynamics: The Science Behind Virtual Pelotons",
-      excerpt: "Deep dive into Zwift's drafting mechanics.",
-      date: "31-12-2025",
-      readTime: "22 min",
-      slug: "/blog/zwift-drafting-physics-aerodynamics",
-      category: "Physics"
-    },
-    {
-      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
-      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
-      date: "20-12-2025",
-      readTime: "18 min",
-      slug: "/blog/the-data-behind-zwift-climbing",
-      category: "Data Analysis"
-    }
-  ];
-
   const content = (
     <div className="space-y-6">
       <div>
@@ -533,9 +498,7 @@ const ZwiftGroupRideDynamics = () => {
 
   return (
     <BlogPost
-      date="31-12-2025"
       content={content}
-      relatedArticles={relatedArticles}
     />
   );
 };

@@ -4,41 +4,6 @@ import { Activity, AlertTriangle, Target, BarChart3 } from "lucide-react";
 
 const ZwiftBiomechanics = () => {
 
-  const relatedArticles = [
-    {
-      title: "Zwift Equipment Optimization: Beyond Weight to Aerodynamics",
-      excerpt: "Comprehensive guide to optimizing your Zwift setup beyond weight.",
-      date: "31-12-2025",
-      readTime: "20 min",
-      slug: "/blog/zwift-equipment-optimization-aerodynamics",
-      category: "Setup"
-    },
-    {
-      title: "Zwift Setup Guide",
-      excerpt: "Complete guide to setting up your Zwift training environment.",
-      date: "Recent",
-      readTime: "15 min",
-      slug: "/blog/zwift-setup-guide",
-      category: "Setup"
-    },
-    {
-      title: "Zwift Training Periodization: Long-Term Performance Planning",
-      excerpt: "Master Zwift training periodization for long-term performance gains.",
-      date: "31-12-2025",
-      readTime: "23 min",
-      slug: "/blog/zwift-training-periodization",
-      category: "Training"
-    },
-    {
-      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
-      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
-      date: "20-12-2025",
-      readTime: "18 min",
-      slug: "/blog/the-data-behind-zwift-climbing",
-      category: "Data Analysis"
-    }
-  ];
-
   const content = (
     <div className="space-y-6">
       <div>
@@ -428,9 +393,7 @@ const ZwiftBiomechanics = () => {
 
   return (
     <BlogPost
-      date="31-12-2025"
       content={content}
-      relatedArticles={relatedArticles}
     />
   );
 };

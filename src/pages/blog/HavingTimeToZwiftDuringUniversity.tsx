@@ -650,8 +650,6 @@ const HavingTimeToZwiftDuringUniversity = () => {
 
   return (
     <BlogPost
-      title="Having Time to Zwift During University"
-      date="19-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

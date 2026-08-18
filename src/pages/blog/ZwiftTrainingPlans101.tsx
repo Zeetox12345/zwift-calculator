@@ -429,8 +429,6 @@ const ZwiftTrainingPlans101 = () => {
 
   return (
     <BlogPost
-      title="Zwift Training Plans 101: How to Boost Your FTP and Fitness"
-      date="12-11-2025"
       content={content}
     />
   );

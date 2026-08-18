@@ -31,7 +31,7 @@ const TenDayZwiftTrainingWeek = () => {
         <div className="my-6">
           <img 
             src="/pictures/blog/other/10_day_grind.webp" 
-            alt="10 day Zwift training week structure showing balanced cycling and running schedule" 
+            alt="A sweating rider on a road bike on an indoor trainer, riding towards a large screen running Zwift with a fan alongside" 
             className="w-full rounded-lg shadow-lg"
           loading="lazy"
           decoding="async"
@@ -269,7 +269,7 @@ const TenDayZwiftTrainingWeek = () => {
         <div className="my-6">
           <img 
             src="/pictures/blog/other/10_day_grind_1.webp" 
-            alt="Zwift endurance ride showing steady pacing and fueling strategy" 
+            alt="A kitchen counter laid out with porridge and banana, energy bars, a shaker, drinks bottles and a pair of cycling shoes" 
             className="w-full rounded-lg shadow-lg"
           loading="lazy"
           decoding="async"
@@ -343,7 +343,7 @@ const TenDayZwiftTrainingWeek = () => {
         <div className="my-6">
           <img 
             src="/pictures/blog/other/10_day_grind_2.webp" 
-            alt="Long easy run showing aerobic resilience and mental steadiness" 
+            alt="A road bike on a trainer in a living room, facing a wall-mounted screen running Zwift, with a fan and drinks to one side" 
             className="w-full rounded-lg shadow-lg"
           loading="lazy"
           decoding="async"
@@ -603,8 +603,6 @@ const TenDayZwiftTrainingWeek = () => {
 
   return (
     <BlogPost
-      title="10 Day Zwift Training Week"
-      date="19-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

@@ -464,8 +464,6 @@ const ZwiftClimbingDataAnalysis = () => {
 
   return (
     <BlogPost
-      title="The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show"
-      date="20-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

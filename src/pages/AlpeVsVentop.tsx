@@ -185,9 +185,8 @@ const AlpeVsVentop = () => {
               
               <AnimatedText delay={300} className="mt-4 sm:mt-6 max-w-3xl px-2">
                 <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  The ultimate guide comparing Zwift's two most iconic climbing challenges. 
-                  Discover detailed route analysis, interactive time calculators, and expert insights 
-                  to help you conquer both legendary ascents.
+                  Two long climbs, two different problems. Side-by-side route profiles, both time
+                  calculators, and an honest account of which one your current numbers suit.
                 </p>
               </AnimatedText>
 
@@ -1085,7 +1084,7 @@ const AlpeVsVentop = () => {
                     <div className="pt-6 border-t border-border/50">
                       <p className="text-lg text-muted-foreground">
                         <strong>Pro Tip:</strong> Use both routes in your training plan. Start with Ven-Top for base building, 
-                        then progress to Alpe du Zwift for intensity work. Use our calculators above to track your improvement 
+                        then progress to Alpe du Zwift for intensity work. Use the calculators above to track your improvement 
                         and set realistic goals for both climbs.
                       </p>
                     </div>

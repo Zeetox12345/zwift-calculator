@@ -34,7 +34,7 @@ const WhatTerminologyDoZwiftersUse = () => {
         <div className="my-6">
           <img 
             src="/pictures/blog/other/Zwift_terms.webp" 
-            alt="Zwift terminology guide showing key terms and definitions" 
+            alt="Four riders on indoor trainers in front of Zwift screens, with jargon such as FTP, ERG, sandbagging and ride ons overlaid" 
             className="w-full rounded-lg shadow-lg"
           loading="lazy"
           decoding="async"
@@ -948,8 +948,6 @@ const WhatTerminologyDoZwiftersUse = () => {
 
   return (
     <BlogPost
-      title="What Terminology Do Zwifters Use?"
-      date="19-12-2025"
       relatedCalculators={[
         {
           name: "Alpe du Zwift Calculator",

@@ -145,10 +145,10 @@ const CalculusOfPainCave = () => {
               height="100%"
               src="https://www.youtube.com/embed/aFwkW0CY7qA"
               title="Dirty Chain vs Clean Chain Efficiency Test"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full"
+              className="w-full h-full border-0"
+              loading="lazy"
             ></iframe>
           </div>
         </div>
@@ -217,8 +217,6 @@ const CalculusOfPainCave = () => {
 
   return (
     <BlogPost
-      title="The Calculus of the Pain Cave: A Mechanical Autopsy of Speed"
-      date="16-12-2025"
       content={content}
     />
   );

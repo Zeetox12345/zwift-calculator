@@ -4,41 +4,6 @@ import { Calendar, TrendingUp, Target, BarChart3 } from "lucide-react";
 
 const ZwiftTrainingPeriodization = () => {
 
-  const relatedArticles = [
-    {
-      title: "Zwift Training Plans 101",
-      excerpt: "Complete guide to structured Zwift training.",
-      date: "Recent",
-      readTime: "14 min",
-      slug: "/blog/zwift-training-plans-101",
-      category: "Training"
-    },
-    {
-      title: "Power-to-Weight Ratio Deep Dive: The Science Behind Climbing Performance",
-      excerpt: "Comprehensive guide to power-to-weight ratio in cycling.",
-      date: "20-12-2025",
-      readTime: "17 min",
-      slug: "/blog/power-to-weight-ratio-science",
-      category: "Training"
-    },
-    {
-      title: "Zwift Route Selection Psychology: How Your Choices Affect Training Outcomes",
-      excerpt: "Explore the psychology behind Zwift route selection.",
-      date: "31-12-2025",
-      readTime: "19 min",
-      slug: "/blog/zwift-route-selection-psychology",
-      category: "Psychology"
-    },
-    {
-      title: "The Data Behind Zwift Climbing: What 800 Verified Finishing Times Show",
-      excerpt: "What about 800 verified ZwiftPower finishing times can and cannot tell you.",
-      date: "20-12-2025",
-      readTime: "18 min",
-      slug: "/blog/the-data-behind-zwift-climbing",
-      category: "Data Analysis"
-    }
-  ];
-
   const content = (
     <div className="space-y-6">
       <div>
@@ -439,9 +404,7 @@ const ZwiftTrainingPeriodization = () => {
 
   return (
     <BlogPost
-      date="31-12-2025"
       content={content}
-      relatedArticles={relatedArticles}
     />
   );
 };
