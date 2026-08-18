@@ -224,8 +224,8 @@ const TermsOfService = () => {
                   <p className="mt-2">
                     CLD Consulting<br />
                     CVR: 45654230<br />
-                    Rendsburggade 28, 4, 9<br />
-                    9000 Aalborg<br />
+                    Krøyer Kielbergsvej 10<br />
+                    8660 Skanderborg<br />
                     Denmark
                   </p>
                 </div>

@@ -45,9 +45,9 @@ export const ORGANIZATION = {
   legalName: "CLD Consulting",
   vatId: "DK45654230",
   registrationNumber: "45654230",
-  street: "Rendsburggade 28, 4, 9",
-  postalCode: "9000",
-  city: "Aalborg",
+  street: "Krøyer Kielbergsvej 10",
+  postalCode: "8660",
+  city: "Skanderborg",
   country: "DK",
   countryName: "Denmark",
 } as const;

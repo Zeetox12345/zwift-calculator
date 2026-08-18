@@ -559,8 +559,8 @@ const AboutUs = () => {
                       <div>
                         <p className="font-semibold text-foreground mb-1">Address</p>
                         <p className="leading-relaxed">
-                          Rendsburggade 28, 4, 9<br />
-                          9000 Aalborg<br />
+                          Krøyer Kielbergsvej 10<br />
+                          8660 Skanderborg<br />
                           Denmark
                         </p>
                       </div>
